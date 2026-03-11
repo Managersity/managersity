@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import BannerCTA from "@/components/BannerCTA";
 import ValueProp from "@/components/ValueProp";
 import Partners from "@/components/Partners";
 import MissionBanner from "@/components/MissionBanner";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="min-h-screen font-sans bg-white">
       <Navbar />
       <Hero />
+      <BannerCTA />
       <ValueProp />
       <Partners />
       <MissionBanner />
