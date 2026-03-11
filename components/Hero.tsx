@@ -11,7 +11,7 @@ export default function Hero() {
     >
       <div className="max-w-3xl px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide leading-tight mb-6">
-          Dopez vos compétences managériales&nbsp;!
+          Dopez vos compétences<br />managériales&nbsp;!
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-8 leading-relaxed">
           Avec MANAGERSITY by H&C, choisissez parmi plus de 100 modules de formation
