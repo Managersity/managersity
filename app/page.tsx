@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import SkillsCategories from "@/components/SkillsCategories";
 import BannerCTA from "@/components/BannerCTA";
 import ValueProp from "@/components/ValueProp";
 import Partners from "@/components/Partners";
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="min-h-screen font-sans bg-white">
       <Navbar />
       <Hero />
+      <SkillsCategories />
       <BannerCTA />
       <ValueProp />
       <Partners />
