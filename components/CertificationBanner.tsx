@@ -1,42 +1,66 @@
+import Link from "next/link";
+
+const certifications = [
+  {
+    name: "Management",
+    desc: "Leadership, Stratégie, Performance",
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    name: "IA & Digital",
+    desc: "IA, Données, Transformation digitale",
+    img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    name: "Dirigeant",
+    desc: "Gestion de projets, Direction générale",
+    img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=300&q=80",
+  },
+];
+
 export default function CertificationBanner() {
   return (
-    <section
-      className="relative py-24 text-center text-white"
-      style={{
-        background:
-          "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat",
-      }}
-    >
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
-          Obtenez des certifications pour chaque cours&nbsp;!
-        </h2>
-        <p className="text-gray-200 text-lg">
-          Avec MANAGERSITY by H&C, #1 de la formation en management en ligne&nbsp;!
-        </p>
-
-        {/* Certificate mockup */}
-        <div className="mt-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 max-w-sm mx-auto text-left">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-lg">
-              ★
-            </div>
-            <div>
-              <p className="text-xs text-gray-300 uppercase tracking-widest">Certifié</p>
-              <p className="text-sm font-bold">Ce certificat est décerné à</p>
-            </div>
+    <section className="max-w-6xl mx-auto px-4 py-14">
+      <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Left text */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 leading-snug mb-3">
+              Obtenez des certifications et faites avancer votre carrière
+            </h2>
+            <p className="text-sm text-gray-600 leading-relaxed mb-6">
+              Préparez-vous à passer des certifications grâce à des cours
+              complets, des exercices pratiques et des offres spéciales qui
+              proposent des bons d&apos;achat pour examen.
+            </p>
+            <Link
+              href="#cours"
+              className="text-sm font-semibold text-violet-700 hover:text-violet-900 transition-colors"
+            >
+              Découvrir les certifications et les bons d&apos;achat →
+            </Link>
           </div>
-          <p className="text-xl font-extrabold text-yellow-400 mb-1">Marie Reine Cakpo</p>
-          <p className="text-xs text-gray-300">
-            A terminé, réussi et validé en tout bonne utilisation du cours
-          </p>
-          <p className="text-xs text-yellow-300 font-semibold mt-1 uppercase tracking-wide">
-            Choix complexes & mécanismes
-          </p>
-          <div className="mt-3 flex items-center gap-2">
-            <span className="text-xs text-gray-400">MANAGERSITY</span>
-            <span className="text-xs text-gray-400">✦</span>
-            <span className="text-xs text-gray-400">H&C COURSES</span>
+
+          {/* Right - certification cards */}
+          <div className="flex gap-4 overflow-x-auto">
+            {certifications.map((cert, i) => (
+              <div
+                key={i}
+                className="min-w-[140px] flex-1 bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer"
+              >
+                <img
+                  src={cert.img}
+                  alt={cert.name}
+                  className="w-full h-24 object-cover"
+                />
+                <div className="p-3">
+                  <p className="text-sm font-bold text-gray-900">{cert.name}</p>
+                  <p className="text-[11px] text-gray-500 mt-0.5">
+                    {cert.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,91 +1,122 @@
-import Link from "next/link";
+import { Star } from "lucide-react";
 
 const courses = [
   {
-    title: "L'IA POUR LES MANAGERS COMMERCIAUX 5.0 : LE COURS COMPLET",
-    desc: "Comment les managers commerciaux innovants utilisent la DATA, l'IA et la Technologie pour avoir plusieurs coups…",
-    price: "$99",
-    img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=600&q=80",
-    type: "Cours",
+    title: "L'IA pour les Managers Commerciaux 5.0 : Le Cours Complet",
+    author: "H&C Group",
+    rating: 4.3,
+    reviews: 79,
+    price: "10,99 $US",
+    oldPrice: "59,99 $US",
+    img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=400&q=80",
+    badge: "Premium",
   },
   {
-    title: "IA POUR ASSISTANTS & PROFESSIONNELS : LE COURS COMPLET",
-    desc: "Boostez votre carrière avec l'IA. Automatisation des tâches répétitives, création de contenu optimisée, productivi…",
-    price: "$57",
-    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
-    type: "Cours",
+    title: "Intelligence Artificielle pour les Managers",
+    author: "H&C Group",
+    rating: 4.7,
+    reviews: 403,
+    price: "11,99 $US",
+    oldPrice: "64,99 $US",
+    img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80",
+    badge: "Meilleure vente",
   },
   {
-    title: "IA POUR MANAGER RH 5.0 : LE COURS COMPLET",
-    desc: "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
-    price: "$99",
-    img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
-    type: "Cours",
+    title: "L'Art de Catalyser et Piloter la Performance",
+    author: "H&C Group",
+    rating: 4.7,
+    reviews: 1873,
+    price: "13,99 $US",
+    oldPrice: "64,99 $US",
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
+    badge: "Premium",
   },
   {
-    title: "L'IA POUR LES DG ET LES DIRIGEANTS 5.0 : LE COURS COMPLET",
-    desc: "Comment les DG et dirigeants 5.0 utilisent la DATA, l'IA et la Technologie pour optimiser le cadrage visionnaire…",
-    price: "$179",
-    img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80",
-    type: "Cours",
-  },
-  {
-    title: "INTELLIGENCE ARTIFICIELLE POUR LES MANAGERS",
-    desc: "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
-    price: "$99",
-    img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80",
-    type: "Cours",
-  },
-  {
-    title: "L'ART DE CATALYSER ET PILOTER LA PERFORMANCE",
-    desc: "Ce module vous donne les outils et méthodes pour scénariser, catalyser et orchestrer la performance au Day-to-Day&nbsp;!",
-    price: "$59",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
-    type: "Cours",
+    title: "Formation Complète Management & Leadership",
+    author: "H&C Group",
+    rating: 4.5,
+    reviews: 28075,
+    price: "13,99 $US",
+    oldPrice: "74,99 $US",
+    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+    badge: "Meilleure vente",
   },
 ];
 
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <span className="flex items-center gap-0.5">
+      {[1, 2, 3, 4, 5].map((s) => (
+        <Star
+          key={s}
+          size={12}
+          className={
+            s <= Math.floor(rating)
+              ? "fill-yellow-500 text-yellow-500"
+              : "text-yellow-500"
+          }
+        />
+      ))}
+    </span>
+  );
+}
+
 export default function CoursesGrid() {
   return (
-    <section id="cours" className="max-w-6xl mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8">Tous les cours</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section id="cours" className="max-w-6xl mx-auto px-4 py-14">
+      <h2 className="text-2xl font-bold text-gray-900 mb-8">
+        D&apos;après vos recherches récentes
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {courses.map((course, i) => (
           <div
             key={i}
-            className="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
+            className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer"
           >
-            <div className="overflow-hidden h-44">
+            <div className="h-36 overflow-hidden">
               <img
                 src={course.img}
                 alt={course.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="p-4">
-              <span className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
-                Tous les cours
-              </span>
-              <h3 className="text-sm font-bold text-yellow-700 mt-1 mb-2 leading-snug hover:underline cursor-pointer">
+            <div className="p-3">
+              <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 line-clamp-2">
                 {course.title}
               </h3>
-              <div className="flex items-center gap-1 text-xs text-gray-500 mb-2">
-                <span>💬</span>
-                <span>{course.type}</span>
+              <p className="text-xs text-gray-500 mb-1">{course.author}</p>
+              <div className="flex items-center gap-1 mb-1">
+                <span className="text-sm font-bold text-yellow-700">
+                  {course.rating}
+                </span>
+                <StarRating rating={course.rating} />
+                <span className="text-xs text-gray-400">
+                  ({course.reviews.toLocaleString()} avis)
+                </span>
               </div>
-              <p className="text-xs text-gray-600 leading-relaxed mb-3">{course.desc}</p>
-              <p className="text-base font-bold text-gray-800">{course.price}</p>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-bold text-gray-900">
+                  {course.price}
+                </span>
+                <span className="text-xs text-gray-400 line-through">
+                  {course.oldPrice}
+                </span>
+              </div>
+              {course.badge && (
+                <span
+                  className={`inline-block mt-2 text-[10px] font-bold px-2 py-0.5 rounded-sm ${
+                    course.badge === "Premium"
+                      ? "bg-violet-100 text-violet-800"
+                      : "bg-yellow-100 text-yellow-800"
+                  }`}
+                >
+                  {course.badge}
+                </span>
+              )}
             </div>
           </div>
         ))}
-      </div>
-      <div className="mt-10 text-center">
-        <Link
-          href="#"
-          className="inline-block border border-gray-800 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 hover:text-white transition-colors"
-        >
-          Voir tous les cours
-        </Link>
       </div>
     </section>
   );

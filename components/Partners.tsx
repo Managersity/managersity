@@ -2,29 +2,29 @@ const partners = [
   "BGFI Bank",
   "Teyliom",
   "Ecobank",
-  "NSIA Assurances",
+  "NSIA",
   "Mansa Bank",
   "MTN",
   "Crédit du Sénégal",
-  "TSP",
   "Moov Africa",
 ];
 
 export default function Partners() {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-extrabold uppercase text-gray-800 mb-12 tracking-wide">
-          Ces entreprises qui participent à nos formations avec satisfaction
-        </h2>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+    <section className="border-y border-gray-200 py-8 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <p className="text-center text-sm text-gray-500 mb-6">
+          Plus de 17 000 entreprises et des millions de participants nous font
+          confiance dans le monde entier
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
           {partners.map((name, i) => (
-            <div
+            <span
               key={i}
-              className="px-5 py-3 border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:border-yellow-500 hover:text-yellow-700 transition-colors shadow-sm"
+              className="text-gray-400 font-bold text-sm md:text-base tracking-wide hover:text-gray-600 transition-colors"
             >
               {name}
-            </div>
+            </span>
           ))}
         </div>
       </div>
