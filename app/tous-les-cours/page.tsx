@@ -11,13 +11,13 @@ const COURSES_PER_PAGE = 9;
 
 const categoryFilters = [
   { label: "Tous les cours", slug: "all" },
+  { label: "INTELLIGENCE ARTIFICIELLE", slug: "intelligence-artificielle" },
   { label: "DEVELOPPEMENT PERSONNEL", slug: "developpement-personnel" },
   { label: "DIRIGEANT", slug: "dirigeant" },
   { label: "ENTREPRENEURIAT", slug: "entrepreneuriat" },
   { label: "MANAGEMENT COMMERCIAL 4.0", slug: "management-commercial-4-0" },
   { label: "MANAGEMENT D'EQUIPE", slug: "management-d-equipe" },
   { label: "MANAGEMENT DU CAPITAL HUMAIN", slug: "management-du-capital-humain" },
-  { label: "MASTERCOURSES", slug: "mastercourses" },
   { label: "TRANSFORMATION DIGITALE 4.0", slug: "transformation-digitale-4-0" },
   { label: "VENDEUR ELITE EXPERT 4.0", slug: "vendeur-elite-expert-4-0" },
 ];

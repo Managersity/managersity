@@ -8,7 +8,7 @@ const categories = [
     label: "Intelligence Artificielle",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=400&q=80",
     color: "border-rose-300",
-    slug: "transformation-digitale-4-0",
+    slug: "intelligence-artificielle",
   },
   {
     label: "Entrepreneuriat",

@@ -12,7 +12,7 @@ export type Course = {
 };
 
 export const allCourses: Course[] = [
-  // IA & Transformation digitale
+  // Intelligence Artificielle
   {
     title: "L'IA pour les Managers Commerciaux 5.0 : Le Cours Complet",
     desc: "Comment les managers commerciaux innovants utilisent la DATA, l'IA et la Technologie pour avoir plusieurs coups d'avance.",
@@ -23,7 +23,7 @@ export const allCourses: Course[] = [
     badge: "Bestseller",
     type: "Cours",
     href: "https://www.managersity.co/products/courses/ia-pour-les-sales-managers-le-cours-complet",
-    category: "transformation-digitale-4-0",
+    category: "intelligence-artificielle",
   },
   {
     title: "IA pour Assistants & Professionnels : Le Cours Complet",
@@ -35,7 +35,7 @@ export const allCourses: Course[] = [
     badge: "Bestseller",
     type: "Cours",
     href: "https://www.managersity.co/products/courses/L-IA-pour-les-professionnels",
-    category: "transformation-digitale-4-0",
+    category: "intelligence-artificielle",
   },
   {
     title: "IA pour Manager RH 5.0 : Le Cours Complet",
@@ -47,7 +47,7 @@ export const allCourses: Course[] = [
     badge: "Bestseller",
     type: "Cours",
     href: "https://www.managersity.co/products/courses/L-IA-pour-les-RH",
-    category: "transformation-digitale-4-0",
+    category: "intelligence-artificielle",
   },
   {
     title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
@@ -59,7 +59,7 @@ export const allCourses: Course[] = [
     badge: "Top noté",
     type: "Cours",
     href: "https://www.managersity.co/products/courses/L-IA-pour-DG",
-    category: "transformation-digitale-4-0",
+    category: "intelligence-artificielle",
   },
   {
     title: "Intelligence Artificielle pour les Managers",
@@ -71,6 +71,19 @@ export const allCourses: Course[] = [
     badge: "Bestseller",
     type: "Cours",
     href: "https://www.managersity.co/products/courses/intelligence-artificielle-pour-les-managers",
+    category: "intelligence-artificielle",
+  },
+
+  // Transformation Digitale 4.0
+  {
+    title: "Enjeux Business & Méthodologie de Transformation Digitale",
+    desc: "Partir des besoins de réalisation des objectifs stratégiques et d'optimisation de l'excellence opérationnelle et clarifier…",
+    price: "$47",
+    rating: 4.6,
+    reviews: 356,
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80",
+    type: "Cours",
+    href: "https://www.managersity.co/products/courses/enjeux-business-et-methodologie-de-transformation-digitale",
     category: "transformation-digitale-4-0",
   },
 
@@ -166,7 +179,7 @@ export const allCourses: Course[] = [
     reviews: 312,
     img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/reussir-avec-son-conseil-d-administration-et-son-groupe",
+    href: "https://www.managersity.co/products/courses/reussir-avec-son-conseil-dadministration-et-son-groupe",
     category: "dirigeant",
   },
   {
@@ -199,7 +212,7 @@ export const allCourses: Course[] = [
     reviews: 534,
     img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/pack-25-ebooks-pour-dirigeant-et-futur-dirigeant",
+    href: "https://www.managersity.co/courses/pack-25-ebooks-dirigeant",
     category: "dirigeant",
   },
   {
@@ -210,7 +223,7 @@ export const allCourses: Course[] = [
     reviews: 378,
     img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/modelisation-et-maitrise-financieres-pour-les-dirigeants",
+    href: "https://www.managersity.co/products/courses/modelisation-et-maitrise-financiere",
     category: "dirigeant",
   },
   {
@@ -221,7 +234,7 @@ export const allCourses: Course[] = [
     reviews: 256,
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/reussir-le-design-organisationnel",
+    href: "https://www.managersity.co/products/courses/copy-of-management-de-projet-et-realisation-des-objectifs-strategiques",
     category: "dirigeant",
   },
   {
@@ -232,7 +245,7 @@ export const allCourses: Course[] = [
     reviews: 445,
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/jeu-interieur-du-leadership-intelligence-emotionnelle",
+    href: "https://www.managersity.co/products/courses/intelligence-emotionnelle-et-mecanismes-decisionnels-pour-dirigeants",
     category: "dirigeant",
   },
 
@@ -276,40 +289,49 @@ export const allCourses: Course[] = [
 
   // Management d'Équipe
   {
-    title: "L'Art de Catalyser et Piloter la Performance",
-    desc: "Les outils et méthodes pour scénariser, catalyser et orchestrer la performance au Day-to-Day.",
-    price: "$59",
-    rating: 4.7,
-    reviews: 1873,
+    title: "Le Coaching Managérial 4.0",
+    desc: "Maitriser et utiliser la méthodologie pour coacher efficacement un collaborateur (ses collaborateurs) et tirer le meilleur parti…",
+    price: "$29.90",
+    rating: 4.6,
+    reviews: 487,
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
-    badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/lart-de-catalyser-et-piloter-la-performance",
+    href: "https://www.managersity.co/products/courses/le-coaching-managerial-4-0",
     category: "management-d-equipe",
   },
   {
-    title: "Management du Changement Organisationnel & Transformation Culturelle",
-    desc: "Comment les leaders performants élaborent un plan de transformation et de mobilisation des équipes.",
-    price: "$29",
-    rating: 4.4,
-    reviews: 298,
+    title: "Bâtir une Équipe Performante",
+    desc: "Approches, méthodes, état d'esprit et mécanismes inédits et éprouvés pour bâtir une équipe solide, complémentaire et…",
+    price: "$29.90",
+    rating: 4.7,
+    reviews: 523,
+    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=400&q=80",
+    type: "Cours",
+    href: "https://www.managersity.co/products/courses/batir-une-equipe-performante",
+    category: "management-d-equipe",
+  },
+  {
+    title: "Optimiser sa Posture Managériale",
+    desc: "Sortir de la naiveté, comprendre les règles d'excellence et l'élévation managériale et affirmer sa maturité structurelle et…",
+    price: "$27",
+    rating: 4.5,
+    reviews: 389,
     img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/management-du-changement-organisationnel",
+    href: "https://www.managersity.co/products/courses/optimiser-sa-posture-manageriale",
     category: "management-d-equipe",
   },
 
   // Management du Capital Humain
   {
-    title: "IA pour Manager RH 5.0 : Le Cours Complet",
-    desc: "Comprendre l'IA de A-Z avec une immersion dans les utilisations pratiques pour un manager RH.",
-    price: "$99",
+    title: "Management Stratégique du Capital Humain",
+    desc: "Comment s'assurer d'avoir des Hommes & Femmes de qualité, en quantité et bien formés et bien outillés, engagés, heureux…",
+    price: "$47",
     rating: 4.6,
-    reviews: 336,
-    img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=400&q=80",
-    badge: "Bestseller",
+    reviews: 412,
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-les-RH",
+    href: "https://www.managersity.co/products/courses/management-strategique-du-capital-humain",
     category: "management-du-capital-humain",
   },
 
@@ -386,27 +408,25 @@ export const allCourses: Course[] = [
 
   // Entrepreneuriat
   {
-    title: "Le Game de la Stratégie & Disruption Marché",
-    desc: "Affinement de la profondeur stratégique, multiplication de vos coups d'avance et disruption de vos marchés.",
-    price: "$97",
-    rating: 4.7,
-    reviews: 512,
+    title: "Structurer et Piloter une Vision d'Entreprise",
+    desc: "L'art de devenir un visionnaire ou comment faire une incursion dans le futur, projecter le développement d'une entreprise et…",
+    price: "$47",
+    rating: 4.6,
+    reviews: 356,
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80",
-    badge: "Premium",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/le-game-de-la-strategie-et-disruption-marche",
+    href: "https://www.managersity.co/products/courses/structurer-et-piloter-une-vision-d-entreprise",
     category: "entrepreneuriat",
   },
   {
-    title: "Design Organisationnel & Transformation d'Entreprise",
-    desc: "Process et méthodologie pour diagnostiquer une organisation et déployer son plan de transformation.",
-    price: "$97",
-    rating: 4.6,
-    reviews: 1142,
-    img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80",
-    badge: "Premium",
-    type: "Parcours",
-    href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
+    title: "État d'Esprit & Résilience Entrepreneuriale",
+    desc: "État d'esprit, approches inédites et postures adéquates pour porter plus sereinement les enjeux liés à l'aventure…",
+    price: "$27",
+    rating: 4.5,
+    reviews: 412,
+    img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=400&q=80",
+    type: "Cours",
+    href: "https://www.managersity.co/products/courses/etat-d-esprit-et-resilience-entrepreneuriale",
     category: "entrepreneuriat",
   },
 
@@ -436,55 +456,6 @@ export const allCourses: Course[] = [
     category: "vendeur-elite-expert-4-0",
   },
 
-  // MasterCourses
-  {
-    title: "Parcours Dirigeant Certifié (PDC)",
-    desc: "Acquérez les compétences clés pour briller en tant que dirigeant et réussir votre promotion.",
-    price: "$519",
-    rating: 4.8,
-    reviews: 2724,
-    img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80",
-    badge: "Bestseller",
-    type: "Parcours",
-    href: "https://www.managersity.co/bundles/parcours-dirigeant-certifie-pdc",
-    category: "mastercourses",
-  },
-  {
-    title: "Design Organisationnel & Transformation d'Entreprise",
-    desc: "Maîtrisez le process et la méthodologie pour diagnostiquer et transformer une organisation.",
-    price: "$97",
-    rating: 4.6,
-    reviews: 1142,
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
-    badge: "Premium",
-    type: "Parcours",
-    href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
-    category: "mastercourses",
-  },
-  {
-    title: "Maturité Managériale & Enjeux de Direction Générale",
-    desc: "Pour les membres de CODIR qui doivent démontrer de l'excellence Top Executive.",
-    price: "$97",
-    rating: 4.7,
-    reviews: 893,
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-    badge: "Bestseller",
-    type: "Cours",
-    href: "https://www.managersity.co/products/courses/maturite-manageriale-et-enjeux-de-direction-generale",
-    category: "mastercourses",
-  },
-  {
-    title: "Gestion des Parties Prenantes & Networking Diplomatique",
-    desc: "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes.",
-    price: "$97",
-    rating: 4.5,
-    reviews: 432,
-    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80",
-    badge: "Bestseller",
-    type: "Cours",
-    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes",
-    category: "mastercourses",
-  },
 ];
 
 export type CategoryMeta = {
@@ -496,10 +467,17 @@ export type CategoryMeta = {
 };
 
 export const categoryMeta: Record<string, CategoryMeta> = {
+  "intelligence-artificielle": {
+    label: "Intelligence Artificielle",
+    slug: "intelligence-artificielle",
+    description: "Maîtrisez l'IA et ses applications pour booster votre productivité et celle de votre organisation.",
+    icon: "🤖",
+    color: "from-indigo-600 to-violet-400",
+  },
   "transformation-digitale-4-0": {
     label: "Transformation Digitale 4.0",
     slug: "transformation-digitale-4-0",
-    description: "Maîtrisez l'IA et la digitalisation pour transformer votre organisation et votre carrière.",
+    description: "Maîtrisez la digitalisation pour transformer votre organisation et votre carrière.",
     icon: "⚡",
     color: "from-cyan-600 to-sky-400",
   },
@@ -552,13 +530,6 @@ export const categoryMeta: Record<string, CategoryMeta> = {
     icon: "🏆",
     color: "from-yellow-600 to-amber-400",
   },
-  mastercourses: {
-    label: "MasterCourses",
-    slug: "mastercourses",
-    description: "Les parcours d'excellence pour les dirigeants et hauts potentiels de l'Afrique francophone.",
-    icon: "👑",
-    color: "from-gray-700 to-gray-500",
-  },
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -580,13 +551,21 @@ export function getAllCourseSlugs(): string[] {
 
 /** Points d'apprentissage génériques par catégorie */
 export const learnPoints: Record<string, string[]> = {
-  "transformation-digitale-4-0": [
+  "intelligence-artificielle": [
     "Comprendre l'IA de A à Z et ses applications concrètes",
     "Automatiser les tâches répétitives pour gagner en productivité",
     "Utiliser la DATA pour prendre de meilleures décisions",
     "Intégrer les outils IA dans votre workflow quotidien",
     "Rester compétitif dans un environnement digitalisé",
     "Booster vos performances avec des outils No-Code & IA",
+  ],
+  "transformation-digitale-4-0": [
+    "Comprendre les enjeux business de la transformation digitale",
+    "Définir une méthodologie de transformation adaptée",
+    "Optimiser l'excellence opérationnelle par le digital",
+    "Piloter un projet de transformation digitale",
+    "Aligner la stratégie digitale avec les objectifs business",
+    "Maîtriser les outils et frameworks de la transformation",
   ],
   dirigeant: [
     "Développer votre vision stratégique et votre densité managériale",
@@ -643,13 +622,5 @@ export const learnPoints: Record<string, string[]> = {
     "Construire des relations durables avec vos clients",
     "Utiliser les outils digitaux pour booster vos ventes",
     "Dépasser vos quotas et exceller dans votre métier",
-  ],
-  mastercourses: [
-    "Acquérir une vision globale de l'excellence managériale",
-    "Maîtriser les fondamentaux du leadership de direction",
-    "Piloter la transformation stratégique de votre organisation",
-    "Gérer la complexité avec intelligence et méthode",
-    "Obtenir une certification reconnue sur le marché",
-    "Rejoindre l'élite des managers certifiés MANAGERSITY",
   ],
 };
