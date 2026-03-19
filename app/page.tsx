@@ -5,6 +5,7 @@ import BannerCTA from "@/components/BannerCTA";
 import ValueProp from "@/components/ValueProp";
 import Partners from "@/components/Partners";
 
+import ModulesBanner from "@/components/ModulesBanner";
 import CertificationBanner from "@/components/CertificationBanner";
 import MasterCourses from "@/components/MasterCourses";
 import CoursesGrid from "@/components/CoursesGrid";
@@ -23,7 +24,7 @@ export default function Home() {
       <BannerCTA />
       <ValueProp />
       <Partners />
-
+      <ModulesBanner />
       <CertificationBanner />
       <MasterCourses />
       <CoursesGrid />
