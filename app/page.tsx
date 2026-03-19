@@ -25,8 +25,8 @@ export default function Home() {
       <ValueProp />
       <Partners />
       <ModulesBanner />
-      <CertificationBanner />
       <MasterCourses />
+      <CertificationBanner />
       <CoursesGrid />
       <FormatBanner />
       <Categories />
