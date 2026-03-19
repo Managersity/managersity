@@ -4,7 +4,7 @@ import SkillsCategories from "@/components/SkillsCategories";
 import BannerCTA from "@/components/BannerCTA";
 import ValueProp from "@/components/ValueProp";
 import Partners from "@/components/Partners";
-import MissionBanner from "@/components/MissionBanner";
+
 import CertificationBanner from "@/components/CertificationBanner";
 import MasterCourses from "@/components/MasterCourses";
 import CoursesGrid from "@/components/CoursesGrid";
@@ -23,7 +23,7 @@ export default function Home() {
       <BannerCTA />
       <ValueProp />
       <Partners />
-      <MissionBanner />
+
       <CertificationBanner />
       <MasterCourses />
       <CoursesGrid />
