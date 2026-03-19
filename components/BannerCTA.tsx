@@ -43,7 +43,7 @@ export default function BannerCTA() {
 
             <div>
               <Link
-                href="#cours"
+                href="/tous-les-cours"
                 className="inline-block bg-white text-gray-900 font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-100 transition-colors"
               >
                 En savoir plus

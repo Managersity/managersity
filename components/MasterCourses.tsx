@@ -18,7 +18,7 @@ const courses = [
       "Maitrisez le process et la méthodologie pour prendre une organisation, la diagnostiquer, évaluer ses capacités stratégiques,…",
     price: "$97",
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
-    href: "https://www.managersity.co/bundles/design-organisationnel-et-transformation-d-entreprise",
+    href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
   },
   {
     title: "MATURITE MANAGERIALE & ENJEUX DE DIRECTION GENERALE",
@@ -36,7 +36,7 @@ const courses = [
       "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes…",
     price: "$97",
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80",
-    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes-et-networking",
+    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes",
   },
 ];
 

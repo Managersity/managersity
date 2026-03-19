@@ -10,6 +10,7 @@ const courses = [
       "Comment les managers commerciaux innovants utilisent la DATA, l'IA et la Technologie pour avoir plusieurs coups…",
     price: "$99",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/ia-pour-les-sales-managers-le-cours-complet",
   },
   {
     title: "IA POUR ASSISTANTS & PROFESSIONNELS : LE COURS COMPLET",
@@ -19,6 +20,7 @@ const courses = [
       "Boostez votre carrière avec l'IA. Automatisation des tâches répétitives, création de contenu optimisée, productivi…",
     price: "$57",
     img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/L-IA-pour-les-professionnels",
   },
   {
     title: "IA POUR MANAGER RH 5.0 : LE COURS COMPLET",
@@ -28,6 +30,7 @@ const courses = [
       "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
     price: "$99",
     img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/L-IA-pour-les-RH",
   },
   {
     title: "L'IA POUR LES DG ET LES DIRIGEANTS 5.0 : LE COURS COMPLET",
@@ -37,6 +40,7 @@ const courses = [
       "Comment les DG et dirigeants 5.0 utilisent la DATA, l'IA et la Technologie pour optimiser le cadrage visionnaire, la…",
     price: "$179",
     img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/L-IA-pour-DG",
   },
   {
     title: "INTELLIGENCE ARTIFICIELLE POUR LES MANAGERS",
@@ -46,6 +50,7 @@ const courses = [
       "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
     price: "$99",
     img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/intelligence-artificielle-pour-les-managers",
   },
   {
     title: "L'ART DE CATALYSER ET PILOTER LA PERFORMANCE",
@@ -55,6 +60,7 @@ const courses = [
       "Ce module vous donne les outils et méthodes pour scenariser, catalyser et orchestrer la performance au Day-to-Day !",
     price: "$59",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/lart-de-catalyser-et-piloter-la-performance",
   },
 ];
 
@@ -68,8 +74,11 @@ export default function ValueProp() {
       {/* Course cards - grid 3 columns */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((course, i) => (
-          <div
+          <a
             key={i}
+            href={course.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer border border-gray-100"
           >
             {/* Image */}
@@ -108,14 +117,14 @@ export default function ValueProp() {
                 {course.price}
               </p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 
       {/* Button */}
       <div className="mt-10">
         <Link
-          href="#cours"
+          href="/tous-les-cours"
           className="inline-block bg-gray-900 text-white text-sm font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
         >
           Voir tous les cours
