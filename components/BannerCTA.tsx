@@ -8,7 +8,7 @@ export default function BannerCTA() {
         className="rounded-2xl overflow-hidden text-white"
         style={{
           background:
-            "linear-gradient(135deg, #1a1060 0%, #2d1b69 40%, #5b21b6 100%)",
+            "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 40%, #111111 100%)",
         }}
       >
         <div className="grid md:grid-cols-2 gap-0">
@@ -24,20 +24,20 @@ export default function BannerCTA() {
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm mb-8">
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-violet-300" />
-                Apprenez à maîtriser l&apos;IA
+                <CheckCircle size={16} className="text-amber-400" />
+                Manager efficacement
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-violet-300" />
-                Préparez une certification
+                <CheckCircle size={16} className="text-amber-400" />
+                Gérer votre carrière
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-violet-300" />
-                Entraînez-vous avec du coaching
+                <CheckCircle size={16} className="text-amber-400" />
+                Développer vous personnellement
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-violet-300" />
-                Évoluez dans votre carrière
+                <CheckCircle size={16} className="text-amber-400" />
+                Maîtriser l&apos;IA
               </span>
             </div>
 
@@ -49,7 +49,7 @@ export default function BannerCTA() {
                 En savoir plus
               </Link>
               <p className="text-xs text-gray-400 mt-3">
-                À partir de $13,99/cours
+                À partir de 11 900 CFA/cours
               </p>
             </div>
           </div>
