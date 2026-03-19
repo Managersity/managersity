@@ -58,7 +58,7 @@ function CourseCard({ course }: { course: Course }) {
         </div>
 
         {/* Description */}
-        <p className="text-xs text-gray-600 leading-relaxed mb-4 line-clamp-3 flex-1">
+        <p className="text-sm md:text-xs text-gray-600 leading-relaxed mb-4 line-clamp-3 flex-1">
           {course.desc}
         </p>
 
