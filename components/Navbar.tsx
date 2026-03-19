@@ -80,14 +80,12 @@ export default function Navbar() {
             )}
           </div>
 
-          <a
-            href="https://shop.managersity.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/boutique"
             className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
           >
-            Mobile Money
-          </a>
+            Boutique
+          </Link>
           <Link
             href="/ressources"
             className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
@@ -135,7 +133,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <a href="https://shop.managersity.com/" target="_blank" rel="noopener noreferrer">Payer par Mobile Money</a>
+            <Link href="/boutique" onClick={() => setOpen(false)}>Boutique</Link>
             <Link href="/ressources" onClick={() => setOpen(false)}>Ressources gratuites</Link>
             <div className="flex gap-2 mt-1">
               <a
