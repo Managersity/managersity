@@ -9,7 +9,7 @@ const courses = [
     description:
       "Comment les managers commerciaux innovants utilisent la DATA, l'IA et la Technologie pour avoir plusieurs coups…",
     price: "$99",
-    img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/ia-managers-commerciaux.png",
     href: "https://www.managersity.co/products/courses/ia-pour-les-sales-managers-le-cours-complet",
   },
   {
@@ -19,7 +19,7 @@ const courses = [
     description:
       "Boostez votre carrière avec l'IA. Automatisation des tâches répétitives, création de contenu optimisée, productivi…",
     price: "$57",
-    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/ia-assistants-professionnels.png",
     href: "https://www.managersity.co/products/courses/L-IA-pour-les-professionnels",
   },
   {
@@ -29,7 +29,7 @@ const courses = [
     description:
       "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
     price: "$99",
-    img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/ia-manager-rh.png",
     href: "https://www.managersity.co/products/courses/L-IA-pour-les-RH",
   },
   {
@@ -39,7 +39,7 @@ const courses = [
     description:
       "Comment les DG et dirigeants 5.0 utilisent la DATA, l'IA et la Technologie pour optimiser le cadrage visionnaire, la…",
     price: "$179",
-    img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/ia-dg-dirigeants.png",
     href: "https://www.managersity.co/products/courses/L-IA-pour-DG",
   },
   {
@@ -49,7 +49,7 @@ const courses = [
     description:
       "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
     price: "$99",
-    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/ia-pour-managers.png",
     href: "https://www.managersity.co/products/courses/intelligence-artificielle-pour-les-managers",
   },
   {
@@ -59,7 +59,7 @@ const courses = [
     description:
       "Ce module vous donne les outils et méthodes pour scenariser, catalyser et orchestrer la performance au Day-to-Day !",
     price: "$59",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/coaching-managerial.jpg",
     href: "https://www.managersity.co/products/courses/lart-de-catalyser-et-piloter-la-performance",
   },
 ];

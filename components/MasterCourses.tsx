@@ -6,7 +6,7 @@ const featuredCourse = {
   description:
     "Acquérez les compétences clés pour briller en tant que dirigeant et réussir votre promotion. Empruntez un parcours diligent alliant fluidité et simplicité, avec un style direct et précis.",
   price: "$519",
-  img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80",
+  img: "/cours/parcours-dirigeant-certifie.png",
   slug: "parcours-dirigeant-certifie-pdc",
 };
 
@@ -17,7 +17,7 @@ const courses = [
     description:
       "Maitrisez le process et la méthodologie pour prendre une organisation, la diagnostiquer, évaluer ses capacités stratégiques,…",
     price: "$97",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/design-organisationnel.jpeg",
     href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
   },
   {
@@ -26,7 +26,7 @@ const courses = [
     description:
       "Pour les membres de CODIR qui doivent démontrer de l'excellence Top Executive, ceux qui aspirent à la fonction de DG et ce…",
     price: "$97",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/maturite-manageriale.png",
     href: "https://www.managersity.co/products/courses/maturite-manageriale-et-enjeux-de-direction-generale",
   },
   {
@@ -35,7 +35,7 @@ const courses = [
     description:
       "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes…",
     price: "$97",
-    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80",
+    img: "/cours/gestion-parties-prenantes.png",
     href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes",
   },
 ];
