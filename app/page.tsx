@@ -6,8 +6,9 @@ import ValueProp from "@/components/ValueProp";
 import Partners from "@/components/Partners";
 
 import ModulesBanner from "@/components/ModulesBanner";
-import CertificationBanner from "@/components/CertificationBanner";
+
 import MasterCourses from "@/components/MasterCourses";
+import MissionSection from "@/components/MissionSection";
 import CoursesGrid from "@/components/CoursesGrid";
 import FormatBanner from "@/components/FormatBanner";
 import Categories from "@/components/Categories";
@@ -26,7 +27,7 @@ export default function Home() {
       <Partners />
       <ModulesBanner />
       <MasterCourses />
-      <CertificationBanner />
+      <MissionSection />
       <CoursesGrid />
       <FormatBanner />
       <Categories />

@@ -5,29 +5,44 @@ import Link from "next/link";
 
 const categories = [
   {
-    label: "Management & Leadership",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
-    color: "border-green-400",
-  },
-  {
     label: "Intelligence Artificielle",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=400&q=80",
     color: "border-rose-300",
   },
   {
-    label: "Entrepreneuriat & Stratégie",
+    label: "Entrepreneuriat",
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80",
     color: "border-blue-300",
   },
   {
-    label: "Soft Skills",
-    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=400&q=80",
+    label: "Développement Personnel",
+    img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=400&q=80",
+    color: "border-violet-400",
+  },
+  {
+    label: "Management Commercial",
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
+    color: "border-green-400",
+  },
+  {
+    label: "Transformation Digitale",
+    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80",
+    color: "border-cyan-400",
+  },
+  {
+    label: "Dirigeant",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
     color: "border-amber-400",
   },
   {
-    label: "Développement Professionnel",
-    img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=400&q=80",
-    color: "border-violet-400",
+    label: "Management du Capital Humain",
+    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=400&q=80",
+    color: "border-orange-400",
+  },
+  {
+    label: "Vendeur d'Elite",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80",
+    color: "border-pink-400",
   },
 ];
 
