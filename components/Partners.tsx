@@ -1,3 +1,5 @@
+"use client";
+
 const partners = [
   { name: "BGFI Bank",        logo: "https://logo.clearbit.com/bgfi-bank.com" },
   { name: "Teyliom Group",    logo: "https://logo.clearbit.com/teyliom.com" },
