@@ -1,22 +1,22 @@
 "use client";
 
 const partners = [
-  { name: "BGFI Bank",        logo: "https://logo.clearbit.com/bgfi-bank.com" },
-  { name: "Teyliom Group",    logo: "https://logo.clearbit.com/teyliom.com" },
-  { name: "Ecobank",          logo: "https://logo.clearbit.com/ecobank.com" },
-  { name: "NSIA Banque",      logo: "https://logo.clearbit.com/nsia-ci.com" },
-  { name: "MTN",              logo: "https://logo.clearbit.com/mtn.com" },
-  { name: "Crédit du Sénégal",logo: "https://logo.clearbit.com/creditdusenegal.sn" },
-  { name: "Moov Africa",      logo: "https://logo.clearbit.com/moov.africa" },
-  { name: "Orange",           logo: "https://logo.clearbit.com/orange.com" },
-  { name: "Wave",             logo: "https://logo.clearbit.com/wave.com" },
-  { name: "UBA",              logo: "https://logo.clearbit.com/ubagroup.com" },
-  { name: "Société Générale", logo: "https://logo.clearbit.com/societegenerale.fr" },
-  { name: "Attijariwafa Bank",logo: "https://logo.clearbit.com/attijariwafabank.com" },
-  { name: "Coris Bank",       logo: "https://logo.clearbit.com/corisbank.com" },
-  { name: "BNP Paribas",      logo: "https://logo.clearbit.com/bnpparibas.com" },
-  { name: "Mansa Bank",       logo: "https://logo.clearbit.com/mansa.bank" },
-  { name: "Access Bank",      logo: "https://logo.clearbit.com/accessbankplc.com" },
+  { name: "BGFI Bank",         logo: "https://logo.clearbit.com/bgfi-bank.com" },
+  { name: "Teyliom Group",     logo: "https://logo.clearbit.com/teyliom.com" },
+  { name: "Ecobank",           logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/Ecobank_Logo.svg" },
+  { name: "NSIA Banque",       logo: "https://logo.clearbit.com/nsia-ci.com" },
+  { name: "MTN",               logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/MTN_Logo.svg" },
+  { name: "Crédit du Sénégal", logo: "https://logo.clearbit.com/creditdusenegal.sn" },
+  { name: "Moov Africa",       logo: "https://logo.clearbit.com/moov.africa" },
+  { name: "Orange",            logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Orange_logo.svg" },
+  { name: "Wave",              logo: "https://logo.clearbit.com/wave.com" },
+  { name: "UBA",               logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/United_Bank_for_Africa_logo.svg/250px-United_Bank_for_Africa_logo.svg.png" },
+  { name: "Société Générale",  logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg" },
+  { name: "Attijariwafa Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/1/1c/LogoNew.png" },
+  { name: "Coris Bank",        logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/Logo_Coris_Bank.svg" },
+  { name: "BNP Paribas",       logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/BNP_Paribas.svg" },
+  { name: "Mansa Bank",        logo: "https://logo.clearbit.com/mansa.bank" },
+  { name: "Access Bank",       logo: "https://upload.wikimedia.org/wikipedia/commons/1/14/Access_Bank_Logo.png" },
 ];
 
 export default function Partners() {
