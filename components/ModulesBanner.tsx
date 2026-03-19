@@ -25,7 +25,7 @@ export default function ModulesBanner() {
           Sélectionnez, suivez et excellez !
         </p>
         <Link
-          href="#cours"
+          href="/tous-les-cours"
           className="inline-block bg-gray-800/80 text-white text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full hover:bg-gray-700 transition-colors"
         >
           CHOISISSEZ UN COURS ET DEMARREZ

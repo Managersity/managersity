@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { allCourses, categoryMeta, type Course } from "@/lib/courses-data";
@@ -151,9 +152,18 @@ function Pagination({
 }
 
 export default function TousLesCoursPage() {
+  const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat && categoryFilters.some((f) => f.slug === cat)) {
+      setActiveCategory(cat);
+      setCurrentPage(1);
+    }
+  }, [searchParams]);
 
   const filteredCourses = useMemo(() => {
     let courses = allCourses;
@@ -170,6 +180,14 @@ export default function TousLesCoursPage() {
           c.desc.toLowerCase().includes(q)
       );
     }
+
+    // Dédupliquer par href (certains cours apparaissent dans plusieurs catégories)
+    const seen = new Set<string>();
+    courses = courses.filter((c) => {
+      if (seen.has(c.href)) return false;
+      seen.add(c.href);
+      return true;
+    });
 
     return courses;
   }, [activeCategory, search]);
@@ -203,7 +221,7 @@ export default function TousLesCoursPage() {
           {/* Header: Title + Search */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
             <h1 className="text-4xl md:text-5xl font-light text-gray-900" style={{ fontFamily: "Georgia, serif" }}>
-              Produits
+              Nos cours et parcours
             </h1>
 
             <div className="relative w-full md:w-80">

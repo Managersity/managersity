@@ -8,41 +8,49 @@ const categories = [
     label: "Intelligence Artificielle",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=400&q=80",
     color: "border-rose-300",
+    slug: "transformation-digitale-4-0",
   },
   {
     label: "Entrepreneuriat",
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80",
     color: "border-blue-300",
+    slug: "entrepreneuriat",
   },
   {
     label: "Développement Personnel",
     img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=400&q=80",
     color: "border-violet-400",
+    slug: "developpement-personnel",
   },
   {
     label: "Management Commercial",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
     color: "border-green-400",
+    slug: "management-commercial-4-0",
   },
   {
     label: "Transformation Digitale",
     img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80",
     color: "border-cyan-400",
+    slug: "transformation-digitale-4-0",
   },
   {
     label: "Dirigeant",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
     color: "border-amber-400",
+    slug: "dirigeant",
   },
   {
     label: "Management du Capital Humain",
     img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=400&q=80",
     color: "border-orange-400",
+    slug: "management-du-capital-humain",
   },
   {
     label: "Vendeur d'Elite",
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80",
     color: "border-pink-400",
+    slug: "vendeur-elite-expert-4-0",
   },
 ];
 
@@ -82,7 +90,7 @@ export default function SkillsCategories() {
             {visible.map((cat, i) => (
               <Link
                 key={start + i}
-                href="#cours"
+                href={`/tous-les-cours?category=${cat.slug}`}
                 className={`group rounded-2xl overflow-hidden border-2 ${cat.color} bg-white hover:shadow-lg transition-shadow`}
               >
                 <div className="h-44 overflow-hidden">
