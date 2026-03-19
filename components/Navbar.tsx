@@ -1,59 +1,149 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Menu, X, ChevronDown, BookOpen } from "lucide-react";
+
+const categories = [
+  { label: "Dirigeant", slug: "dirigeant" },
+  { label: "Management Commercial 4.0", slug: "management-commercial-4-0" },
+  { label: "Management d'Équipe", slug: "management-d-equipe" },
+  { label: "Management du Capital Humain", slug: "management-du-capital-humain" },
+  { label: "Transformation Digitale 4.0", slug: "transformation-digitale-4-0" },
+  { label: "Développement Personnel", slug: "developpement-personnel" },
+  { label: "Entrepreneuriat", slug: "entrepreneuriat" },
+  { label: "Vendeur Elite Expert 4.0", slug: "vendeur-elite-expert-4-0" },
+  { label: "MasterCourses", slug: "mastercourses" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-gray-800 tracking-tight">
-            <span className="text-yellow-600">MANAGER</span>
-            <span className="text-green-700">SITY</span>
-          </span>
-          <span className="text-[10px] text-gray-500 hidden sm:block">
-            #1 de la formation en ligne en management
-          </span>
+        <Link href="/" className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-col leading-none">
+            <span className="text-xl font-black tracking-tight">
+              <span className="text-amber-500">MANAGER</span>
+              <span className="text-green-700">SITY</span>
+            </span>
+            <span className="text-[9px] text-gray-400 font-medium tracking-wide uppercase hidden sm:block">
+              by H&amp;C — #1 formation management
+            </span>
+          </div>
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-6 text-sm text-gray-700 font-medium">
-          <Link href="#cours" className="hover:text-yellow-600 transition-colors">
-            Tous les cours
+        <div className="hidden md:flex items-center gap-1 text-sm text-gray-700 font-medium flex-1 justify-center">
+          {/* Dropdown: all courses */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              className="flex items-center gap-1 px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              <BookOpen size={15} className="text-amber-500" />
+              Tous les cours
+              <ChevronDown size={14} className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            {dropdownOpen && (
+              <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-xl w-72 py-2 z-50">
+                <div className="px-4 py-2 mb-1">
+                  <Link
+                    href="/collections"
+                    className="text-sm font-bold text-amber-600 hover:text-amber-700"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    Voir tout le catalogue →
+                  </Link>
+                </div>
+                <div className="border-t border-gray-100 mb-1" />
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.slug}
+                    href={`/collections/${cat.slug}`}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    {cat.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link href="#mobile-money" className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap">
+            Mobile Money
           </Link>
-          <Link href="#mobile-money" className="hover:text-yellow-600 transition-colors">
-            Payer par mobile money
-          </Link>
-          <Link href="#ressources" className="hover:text-yellow-600 transition-colors">
+          <a
+            href="https://ressources.managersity.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
+          >
             Ressources gratuites
-          </Link>
-          <Link
-            href="#connexion"
-            className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition-colors"
+          </a>
+        </div>
+
+        {/* CTA */}
+        <div className="hidden md:flex items-center gap-3 shrink-0">
+          <a
+            href="https://www.managersity.co/users/sign_in"
+            className="text-sm text-gray-700 font-medium hover:text-amber-600 transition-colors"
           >
             Se connecter
+          </a>
+          <Link
+            href="/collections"
+            className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors shadow-sm"
+          >
+            Commencer →
           </Link>
         </div>
 
         {/* Mobile burger */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button className="md:hidden p-1" onClick={() => setOpen(!open)}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-t px-4 pb-4 flex flex-col gap-3 text-sm text-gray-700 font-medium">
-          <Link href="#cours" onClick={() => setOpen(false)}>Tous les cours</Link>
-          <Link href="#mobile-money" onClick={() => setOpen(false)}>Payer par mobile money</Link>
-          <Link href="#ressources" onClick={() => setOpen(false)}>Ressources gratuites</Link>
-          <Link href="#connexion" onClick={() => setOpen(false)} className="bg-gray-900 text-white px-4 py-2 rounded-full w-fit">
-            Se connecter
-          </Link>
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-5 flex flex-col gap-0 text-sm text-gray-700">
+          <p className="text-xs text-gray-400 uppercase font-semibold mt-4 mb-2 tracking-wide">Catégories</p>
+          {categories.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/collections/${cat.slug}`}
+              onClick={() => setOpen(false)}
+              className="py-2 border-b border-gray-50 hover:text-amber-600 transition-colors"
+            >
+              {cat.label}
+            </Link>
+          ))}
+          <div className="flex flex-col gap-3 mt-4">
+            <Link href="#mobile-money" onClick={() => setOpen(false)}>Payer par Mobile Money</Link>
+            <a href="https://ressources.managersity.co/" target="_blank" rel="noopener noreferrer">Ressources gratuites</a>
+            <Link
+              href="/collections"
+              onClick={() => setOpen(false)}
+              className="bg-amber-500 text-white px-4 py-2.5 rounded-lg font-semibold text-center"
+            >
+              Commencer →
+            </Link>
+          </div>
         </div>
       )}
     </nav>

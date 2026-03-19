@@ -1,4 +1,5 @@
-import { Star } from "lucide-react";
+import Link from "next/link";
+import { Star, ArrowRight } from "lucide-react";
 
 const courses = [
   {
@@ -63,60 +64,76 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function CoursesGrid() {
   return (
-    <section id="cours" className="max-w-6xl mx-auto px-4 py-14">
-      <h2 className="text-2xl font-bold text-gray-900 mb-8">
-        D&apos;après vos recherches récentes
-      </h2>
+    <section id="cours" className="max-w-7xl mx-auto px-4 py-14">
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">
+          Tous les cours
+        </h2>
+        <Link
+          href="/collections"
+          className="inline-flex items-center gap-1.5 text-sm text-amber-600 font-semibold hover:text-amber-700 transition-colors"
+        >
+          Voir tout le catalogue <ArrowRight size={14} />
+        </Link>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {courses.map((course, i) => (
           <div
             key={i}
-            className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer"
+            className="border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all group cursor-pointer bg-white"
           >
-            <div className="h-36 overflow-hidden">
+            <div className="relative h-44 overflow-hidden">
               <img
                 src={course.img}
                 alt={course.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
+              {course.badge && (
+                <span className={`absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full ${
+                  course.badge === "Premium"
+                    ? "bg-violet-600 text-white"
+                    : "bg-green-500 text-white"
+                }`}>
+                  {course.badge}
+                </span>
+              )}
             </div>
-            <div className="p-3">
-              <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 line-clamp-2">
+            <div className="p-4">
+              <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 line-clamp-2 group-hover:text-amber-600 transition-colors">
                 {course.title}
               </h3>
-              <p className="text-xs text-gray-500 mb-1">{course.author}</p>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-sm font-bold text-yellow-700">
+              <p className="text-xs text-gray-400 mb-2">{course.author}</p>
+              <div className="flex items-center gap-1 mb-2">
+                <span className="text-xs font-bold text-amber-500">
                   {course.rating}
                 </span>
                 <StarRating rating={course.rating} />
                 <span className="text-xs text-gray-400">
-                  ({course.reviews.toLocaleString()} avis)
+                  ({course.reviews.toLocaleString()})
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-sm font-bold text-gray-900">
+                <span className="text-sm font-black text-gray-900">
                   {course.price}
                 </span>
                 <span className="text-xs text-gray-400 line-through">
                   {course.oldPrice}
                 </span>
               </div>
-              {course.badge && (
-                <span
-                  className={`inline-block mt-2 text-[10px] font-bold px-2 py-0.5 rounded-sm ${
-                    course.badge === "Premium"
-                      ? "bg-violet-100 text-violet-800"
-                      : "bg-yellow-100 text-yellow-800"
-                  }`}
-                >
-                  {course.badge}
-                </span>
-              )}
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8 text-center">
+        <Link
+          href="/collections"
+          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-md"
+        >
+          Voir tous les cours <ArrowRight size={15} />
+        </Link>
       </div>
     </section>
   );

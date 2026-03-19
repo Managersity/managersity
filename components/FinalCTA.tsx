@@ -2,28 +2,39 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section
-      className="relative py-28 text-center text-white"
-      style={{
-        background:
-          "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat",
-      }}
-    >
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-wide mb-6">
-          Démystifiez la complexité managériale
+    <section className="relative overflow-hidden bg-gray-950 py-24">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      {/* Gold gradient strip at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/60 to-transparent" />
+
+      <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <span className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          Passez à l&apos;action
+        </span>
+        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white leading-tight mb-6">
+          Démystifiez la{" "}
+          <span className="text-amber-400">complexité managériale</span>
         </h2>
-        <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-8">
-          Nous avons l'obsession constante de simplifier votre management au
-          quotidien&nbsp;! Les défis de complexité et de volatilité nécessaire une
-          nouvelle emprise&nbsp;! Nous simplifiez les démarches, outils et méthodes
+        <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          Nous avons l&apos;obsession constante de simplifier votre management au
+          quotidien&nbsp;! Les défis de complexité et de volatilité nécessitent
+          une nouvelle emprise. Nous simplifions les démarches, outils et méthodes
           pour vous&nbsp;!
         </p>
         <Link
-          href="#cours"
-          className="inline-block border border-white text-white uppercase text-sm font-semibold tracking-wider px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition-colors"
+          href="/collections"
+          className="inline-block bg-amber-500 hover:bg-amber-400 text-white uppercase text-sm font-black tracking-wider px-10 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/30 hover:-translate-y-0.5"
         >
-          Démarrez votre parcours d'excellence managériale optimisée
+          Démarrez votre parcours d&apos;excellence managériale optimisée
         </Link>
       </div>
     </section>

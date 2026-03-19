@@ -8,7 +8,10 @@ import MissionBanner from "@/components/MissionBanner";
 import CertificationBanner from "@/components/CertificationBanner";
 import MasterCourses from "@/components/MasterCourses";
 import CoursesGrid from "@/components/CoursesGrid";
+import FormatBanner from "@/components/FormatBanner";
+import Categories from "@/components/Categories";
 import MobileMoney from "@/components/MobileMoney";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,7 +27,10 @@ export default function Home() {
       <CertificationBanner />
       <MasterCourses />
       <CoursesGrid />
+      <FormatBanner />
+      <Categories />
       <MobileMoney />
+      <FinalCTA />
       <Footer />
     </main>
   );

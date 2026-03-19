@@ -1,27 +1,38 @@
 const partners = [
   "BGFI Bank",
-  "Teyliom",
+  "Teyliom Group",
   "Ecobank",
-  "NSIA",
+  "NSIA Banque",
   "Mansa Bank",
   "MTN",
   "Crédit du Sénégal",
   "Moov Africa",
+  "Orange Money",
+  "Wave",
+  "UBA",
+  "Société Générale",
+  "BNP Paribas",
+  "Attijariwafa Bank",
+  "Coris Bank",
+  "Diamond Bank",
 ];
 
 export default function Partners() {
   return (
-    <section className="border-y border-gray-200 py-8 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <p className="text-center text-sm text-gray-500 mb-6">
-          Plus de 17 000 entreprises et des millions de participants nous font
-          confiance dans le monde entier
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          {partners.map((name, i) => (
+    <section className="border-y border-gray-100 py-10 bg-white overflow-hidden">
+      <p className="text-center text-xs text-gray-400 uppercase tracking-widest font-semibold mb-6">
+        Ces entreprises participent à nos formations avec satisfaction
+      </p>
+      <div className="relative">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10" />
+        {/* Marquee */}
+        <div className="flex gap-12 animate-marquee whitespace-nowrap">
+          {[...partners, ...partners].map((name, i) => (
             <span
               key={i}
-              className="text-gray-400 font-bold text-sm md:text-base tracking-wide hover:text-gray-600 transition-colors"
+              className="text-gray-300 font-black text-base md:text-lg tracking-widest uppercase select-none"
             >
               {name}
             </span>
