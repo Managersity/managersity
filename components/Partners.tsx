@@ -1,42 +1,53 @@
 const partners = [
-  { name: "BGFI Bank", color: "text-blue-700" },
-  { name: "Teyliom Group", color: "text-green-700" },
-  { name: "Ecobank", color: "text-teal-600" },
-  { name: "NSIA Banque", color: "text-orange-600" },
-  { name: "MTN", color: "text-yellow-600" },
-  { name: "Crédit du Sénégal", color: "text-red-700" },
-  { name: "Moov Africa", color: "text-orange-500" },
-  { name: "Orange Money", color: "text-orange-500" },
-  { name: "Wave", color: "text-blue-500" },
-  { name: "UBA", color: "text-red-600" },
-  { name: "Société Générale", color: "text-red-700" },
-  { name: "Attijariwafa Bank", color: "text-amber-700" },
-  { name: "Coris Bank", color: "text-green-600" },
-  { name: "Diamond Bank", color: "text-blue-600" },
-  { name: "BNP Paribas", color: "text-green-700" },
-  { name: "Mansa Bank", color: "text-violet-600" },
+  { name: "BGFI Bank",        logo: "https://logo.clearbit.com/bgfi-bank.com" },
+  { name: "Teyliom Group",    logo: "https://logo.clearbit.com/teyliom.com" },
+  { name: "Ecobank",          logo: "https://logo.clearbit.com/ecobank.com" },
+  { name: "NSIA Banque",      logo: "https://logo.clearbit.com/nsia-ci.com" },
+  { name: "MTN",              logo: "https://logo.clearbit.com/mtn.com" },
+  { name: "Crédit du Sénégal",logo: "https://logo.clearbit.com/creditdusenegal.sn" },
+  { name: "Moov Africa",      logo: "https://logo.clearbit.com/moov.africa" },
+  { name: "Orange",           logo: "https://logo.clearbit.com/orange.com" },
+  { name: "Wave",             logo: "https://logo.clearbit.com/wave.com" },
+  { name: "UBA",              logo: "https://logo.clearbit.com/ubagroup.com" },
+  { name: "Société Générale", logo: "https://logo.clearbit.com/societegenerale.fr" },
+  { name: "Attijariwafa Bank",logo: "https://logo.clearbit.com/attijariwafabank.com" },
+  { name: "Coris Bank",       logo: "https://logo.clearbit.com/corisbank.com" },
+  { name: "BNP Paribas",      logo: "https://logo.clearbit.com/bnpparibas.com" },
+  { name: "Mansa Bank",       logo: "https://logo.clearbit.com/mansa.bank" },
+  { name: "Access Bank",      logo: "https://logo.clearbit.com/accessbankplc.com" },
 ];
 
 export default function Partners() {
   return (
-    <section className="border-y border-gray-100 py-12 bg-white overflow-hidden">
-      <p className="text-center text-xs text-gray-400 uppercase tracking-widest font-semibold mb-8">
+    <section className="border-y border-gray-100 py-14 bg-white overflow-hidden">
+      <p className="text-center text-xs text-gray-400 uppercase tracking-widest font-semibold mb-10">
         Ces entreprises participent à nos formations avec satisfaction
       </p>
       <div className="relative">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-white to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
         {/* Marquee */}
-        <div className="flex gap-10 animate-marquee whitespace-nowrap items-center">
+        <div className="flex gap-14 animate-marquee whitespace-nowrap items-center">
           {[...partners, ...partners].map((p, i) => (
             <div
               key={i}
-              className="flex items-center gap-2 shrink-0 select-none"
+              className="flex items-center justify-center shrink-0 select-none group"
+              title={p.name}
             >
-              <div className="w-2 h-2 rounded-full bg-current opacity-60" style={{ color: "inherit" }} />
+              <img
+                src={p.logo}
+                alt={p.name}
+                className="h-8 w-auto max-w-30 object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  target.style.display = "none";
+                  const fallback = target.nextElementSibling as HTMLElement | null;
+                  if (fallback) fallback.style.display = "block";
+                }}
+              />
               <span
-                className={`${p.color} font-black text-sm md:text-base tracking-tight uppercase opacity-60 hover:opacity-100 transition-opacity`}
+                className="hidden text-gray-500 font-bold text-sm tracking-tight uppercase"
               >
                 {p.name}
               </span>

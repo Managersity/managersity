@@ -230,7 +230,7 @@ export default async function CategoryPage({
                   Payez par Orange Money, Wave, MTN MoMo et plus encore.
                 </p>
                 <a
-                  href="https://shop.monpotentielcertifie.com/"
+                  href="https://shop.managersity.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-green-500 hover:bg-green-400 text-white text-xs font-bold py-2.5 rounded-lg transition-colors"

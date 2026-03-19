@@ -79,7 +79,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li><Link href="/collections" className="hover:text-amber-400 transition-colors">Tous les cours</Link></li>
               <li><a href="https://ressources.managersity.co/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Ressources gratuites</a></li>
-              <li><a href="https://shop.monpotentielcertifie.com/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Mobile Money</a></li>
+              <li><a href="https://shop.managersity.com/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Mobile Money</a></li>
               <li><a href="https://www.managersity.co/users/sign_in" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Se connecter</a></li>
             </ul>
           </div>

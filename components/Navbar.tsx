@@ -81,7 +81,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://shop.monpotentielcertifie.com/"
+            href="https://shop.managersity.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
@@ -98,17 +98,19 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
-          <Link
-            href="/connexion"
+          <a
+            href="https://www.managersity.co/users/sign_in"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-gray-700 font-medium hover:text-amber-600 transition-colors"
           >
             Se connecter
-          </Link>
+          </a>
           <Link
-            href="/collections"
+            href="/inscription"
             className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors shadow-sm"
           >
-            Commencer →
+            S&apos;inscrire
           </Link>
         </div>
 
@@ -133,15 +135,25 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <a href="https://shop.monpotentielcertifie.com/" target="_blank" rel="noopener noreferrer">Payer par Mobile Money</a>
+            <a href="https://shop.managersity.com/" target="_blank" rel="noopener noreferrer">Payer par Mobile Money</a>
             <Link href="/ressources" onClick={() => setOpen(false)}>Ressources gratuites</Link>
-            <Link
-              href="/collections"
-              onClick={() => setOpen(false)}
-              className="bg-amber-500 text-white px-4 py-2.5 rounded-lg font-semibold text-center"
-            >
-              Commencer →
-            </Link>
+            <div className="flex gap-2 mt-1">
+              <a
+                href="https://www.managersity.co/users/sign_in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 border border-gray-200 text-gray-700 px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
+              >
+                Se connecter
+              </a>
+              <Link
+                href="/inscription"
+                onClick={() => setOpen(false)}
+                className="flex-1 bg-amber-500 text-white px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
+              >
+                S&apos;inscrire
+              </Link>
+            </div>
           </div>
         </div>
       )}

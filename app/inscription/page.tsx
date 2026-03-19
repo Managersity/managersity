@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { IconArrowRight, IconLock, IconMail, IconCheck } from "@/components/Icons";
+import { IconArrowRight, IconLock, IconMail, IconCheck, IconUsers } from "@/components/Icons";
 
 export const metadata = {
-  title: "Connexion — Managersity",
-  description: "Connectez-vous à votre espace Managersity pour accéder à vos formations.",
+  title: "Inscription — Managersity",
+  description: "Créez votre compte Managersity et accédez à 100+ formations en management.",
 };
 
-export default function ConnexionPage() {
+export default function InscriptionPage() {
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col">
       {/* Header minimal */}
@@ -29,29 +29,30 @@ export default function ConnexionPage() {
 
       {/* Main */}
       <main className="flex-1 flex items-center justify-center px-4 py-16">
-        <div className="w-full max-w-4xl grid md:grid-cols-2 gap-8 items-center">
+        <div className="w-full max-w-4xl grid md:grid-cols-2 gap-8 items-start">
           {/* Left — brand */}
-          <div className="hidden md:block">
+          <div className="hidden md:block pt-4">
             <div className="mb-8">
               <span className="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
-                Espace apprenant
+                Rejoignez 10 000+ apprenants
               </span>
               <h1 className="text-3xl font-black text-white leading-tight mb-4">
-                Reprenez là où<br />
-                vous en étiez.
+                Commencez votre<br />
+                montée en compétences.
               </h1>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Accédez à vos formations, suivez votre progression et obtenez vos certificats.
+                Accédez aux mêmes formations que celles dispensées aux meilleures organisations d&apos;Afrique.
               </p>
             </div>
 
-            {/* Benefits */}
-            <ul className="space-y-3">
+            {/* What you get */}
+            <ul className="space-y-3 mb-8">
               {[
-                "100+ cours en management & leadership",
-                "Certificats reconnus par les entreprises",
-                "Accès à vie à vos formations achetées",
-                "Communauté de 10 000+ apprenants",
+                "100+ cours en management, leadership & vente",
+                "Certificats reconnus par les entreprises africaines",
+                "Accès à vie dès votre premier achat",
+                "Formats vidéo, audio et PDF inclus",
+                "Paiement Mobile Money disponible",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-400">
                   <span className="shrink-0 w-5 h-5 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mt-0.5">
@@ -62,37 +63,67 @@ export default function ConnexionPage() {
               ))}
             </ul>
 
-            {/* Decorative */}
-            <div className="mt-10 p-5 bg-white/3 border border-white/5 rounded-2xl">
-              <p className="text-xs text-gray-500 italic leading-relaxed">
-                &ldquo;Managersity a transformé ma façon de manager. Les cours sont concrets, directement applicables.&rdquo;
-              </p>
-              <div className="flex items-center gap-3 mt-4">
-                <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 text-xs font-bold">
-                  KD
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { value: "10K+", label: "Apprenants" },
+                { value: "100+", label: "Formations" },
+                { value: "9", label: "Catégories" },
+              ].map((s) => (
+                <div key={s.label} className="bg-white/3 border border-white/5 rounded-xl p-4 text-center">
+                  <p className="text-xl font-black text-amber-400">{s.value}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{s.label}</p>
                 </div>
-                <div>
-                  <p className="text-white text-xs font-semibold">Kouassi D.</p>
-                  <p className="text-gray-500 text-[10px]">Directeur Commercial, Abidjan</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Right — sign in card */}
+          {/* Right — sign up card */}
           <div>
             <div className="bg-gray-900 border border-white/10 rounded-2xl p-8 shadow-2xl shadow-black/50">
-              <h2 className="text-xl font-bold text-white mb-1">Se connecter</h2>
-              <p className="text-gray-500 text-sm mb-8">
-                Accédez à votre espace de formation
-              </p>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                  <IconUsers className="w-5 h-5 text-amber-400" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-white leading-tight">Créer un compte</h2>
+                  <p className="text-gray-500 text-xs">Gratuit — sans carte bancaire</p>
+                </div>
+              </div>
 
-              {/* Form fields — visually present, submit goes to real platform */}
+              {/* Form — submit redirects to real platform */}
               <form
-                action="https://www.managersity.co/users/sign_in"
+                action="https://www.managersity.co/users/sign_up"
                 method="GET"
                 className="space-y-4"
               >
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                      Prénom
+                    </label>
+                    <input
+                      type="text"
+                      name="user[first_name]"
+                      placeholder="Jean"
+                      autoComplete="given-name"
+                      className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                      Nom
+                    </label>
+                    <input
+                      type="text"
+                      name="user[last_name]"
+                      placeholder="Dupont"
+                      autoComplete="family-name"
+                      className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                     Adresse e-mail
@@ -112,19 +143,9 @@ export default function ConnexionPage() {
                 </div>
 
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                      Mot de passe
-                    </label>
-                    <a
-                      href="https://www.managersity.co/users/password/new"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-amber-400 hover:text-amber-300 transition-colors"
-                    >
-                      Oublié ?
-                    </a>
-                  </div>
+                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                    Mot de passe
+                  </label>
                   <div className="relative">
                     <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500">
                       <IconLock className="w-4 h-4" />
@@ -133,20 +154,19 @@ export default function ConnexionPage() {
                       type="password"
                       name="user[password]"
                       placeholder="••••••••"
-                      autoComplete="current-password"
+                      autoComplete="new-password"
                       className="w-full bg-gray-800 border border-gray-700 rounded-xl pl-10 pr-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
                     />
                   </div>
+                  <p className="text-[10px] text-gray-600 mt-1.5">8 caractères minimum</p>
                 </div>
 
-                {/* Note: actual authentication handled by Managersity platform */}
+                {/* Actual button redirects to real platform */}
                 <a
-                  href="https://www.managersity.co/users/sign_in"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://www.managersity.co/users/sign_up"
                   className="flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-400 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/20 text-sm mt-2"
                 >
-                  Se connecter
+                  Créer mon compte
                   <IconArrowRight className="w-4 h-4" />
                 </a>
               </form>
@@ -161,12 +181,12 @@ export default function ConnexionPage() {
               </div>
 
               <p className="text-center text-sm text-gray-500">
-                Pas encore de compte ?{" "}
+                Déjà un compte ?{" "}
                 <Link
-                  href="/inscription"
+                  href="/connexion"
                   className="text-amber-400 hover:text-amber-300 font-semibold transition-colors"
                 >
-                  S&apos;inscrire
+                  Se connecter
                 </Link>
               </p>
 
@@ -175,16 +195,15 @@ export default function ConnexionPage() {
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
                 </span>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Connexion sécurisée. Vos informations sont traitées directement par la plateforme Managersity.
+                  Inscription sécurisée. Vos données sont traitées directement par la plateforme Managersity.
                 </p>
               </div>
             </div>
 
-            {/* Browse CTA */}
             <p className="text-center text-sm text-gray-600 mt-6">
-              Vous explorez ?{" "}
+              Préférez explorer d&apos;abord ?{" "}
               <Link href="/collections" className="text-amber-400 hover:text-amber-300 transition-colors">
-                Voir le catalogue de formations
+                Voir le catalogue gratuitement
               </Link>
             </p>
           </div>
@@ -193,11 +212,11 @@ export default function ConnexionPage() {
 
       {/* Footer min */}
       <footer className="border-t border-white/5 px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-xs text-gray-700">© 2025 MANAGERSITY by H&C</p>
+        <p className="text-xs text-gray-700">© 2025 MANAGERSITY by H&amp;C</p>
         <div className="flex items-center gap-4 text-xs text-gray-700">
-          <a href="https://www.monpotentielcertifie.co/pages/politique-de-confidentialite" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Confidentialité</a>
-          <a href="https://www.monpotentielcertifie.co/pages/termes-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Conditions</a>
-          <a href="https://www.monpotentielcertifie.co/pages/contact" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Contact</a>
+          <a href="https://www.managersity.co/pages/politique-de-confidentialite" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Confidentialité</a>
+          <a href="https://www.managersity.co/pages/termes-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Conditions</a>
+          <a href="https://www.managersity.co/pages/contact" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Contact</a>
         </div>
       </footer>
     </div>

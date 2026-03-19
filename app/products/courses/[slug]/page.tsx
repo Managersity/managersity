@@ -196,7 +196,7 @@ export default async function CourseProductPage({
                     S&apos;inscrire maintenant
                   </a>
                   <a
-                    href="https://shop.monpotentielcertifie.com/"
+                    href="https://shop.managersity.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-500 text-white font-semibold text-xs py-3 rounded-xl transition-all"

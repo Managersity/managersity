@@ -57,7 +57,7 @@ export default function MobileMoney() {
               Simple, rapide et sécurisé&nbsp;!
             </p>
             <a
-              href="https://shop.monpotentielcertifie.com/"
+              href="https://shop.managersity.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-xl transition-all text-sm shadow-lg shadow-green-500/30"
