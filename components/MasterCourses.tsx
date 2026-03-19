@@ -18,6 +18,7 @@ const courses = [
       "Maitrisez le process et la méthodologie pour prendre une organisation, la diagnostiquer, évaluer ses capacités stratégiques,…",
     price: "$97",
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/bundles/design-organisationnel-et-transformation-d-entreprise",
   },
   {
     title: "MATURITE MANAGERIALE & ENJEUX DE DIRECTION GENERALE",
@@ -26,6 +27,7 @@ const courses = [
       "Pour les membres de CODIR qui doivent démontrer de l'excellence Top Executive, ceux qui aspirent à la fonction de DG et ce…",
     price: "$97",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/maturite-manageriale-et-enjeux-de-direction-generale",
   },
   {
     title: "GESTION DES PARTIES PRENANTES & NETWORKING...",
@@ -34,6 +36,7 @@ const courses = [
       "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes…",
     price: "$97",
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes-et-networking",
   },
 ];
 
@@ -77,12 +80,14 @@ export default function MasterCourses() {
             </p>
           </div>
           <div className="flex justify-end mt-4">
-            <Link
-              href={`/products/courses/${featuredCourse.slug}`}
+            <a
+              href="https://www.managersity.co/bundles/parcours-dirigeant-certifie-pdc"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-gray-900 text-white text-sm font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
             >
               Achat
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -90,8 +95,11 @@ export default function MasterCourses() {
       {/* 3 course cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((course, i) => (
-          <div
+          <a
             key={i}
+            href={course.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer border border-gray-100"
           >
             <div className="h-48 overflow-hidden">
@@ -127,7 +135,7 @@ export default function MasterCourses() {
                 {course.price}
               </p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

@@ -83,9 +83,11 @@ export default function CoursesGrid() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {courses.map((course, i) => (
-          <Link
+          <a
             key={i}
-            href={`/products/courses/${course.slug}`}
+            href={`https://www.managersity.co/products/courses/${course.slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all group bg-white"
           >
             <div className="relative h-44 overflow-hidden">
@@ -128,7 +130,7 @@ export default function CoursesGrid() {
                 </span>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 
