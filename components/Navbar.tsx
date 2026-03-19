@@ -100,16 +100,10 @@ export default function Navbar() {
             href="https://www.managersity.co/users/sign_in"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-700 font-medium hover:text-amber-600 transition-colors"
+            className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors shadow-sm"
           >
             Se connecter
           </a>
-          <Link
-            href="/inscription"
-            className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors shadow-sm"
-          >
-            S&apos;inscrire
-          </Link>
         </div>
 
         {/* Mobile burger */}
@@ -140,17 +134,10 @@ export default function Navbar() {
                 href="https://www.managersity.co/users/sign_in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 border border-gray-200 text-gray-700 px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
+                className="flex-1 bg-amber-500 text-white px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
               >
                 Se connecter
               </a>
-              <Link
-                href="/inscription"
-                onClick={() => setOpen(false)}
-                className="flex-1 bg-amber-500 text-white px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
-              >
-                S&apos;inscrire
-              </Link>
             </div>
           </div>
         </div>
