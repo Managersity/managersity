@@ -8,7 +8,7 @@ const partners = [
   { name: "Mansa Bank", logo: "/logos/mansa.png" },
   { name: "MTN", logo: "/logos/mtn.png" },
   { name: "Crédit du Sénégal", logo: "/logos/credit-senegal.png" },
-  { name: "Terminal de San Pédro", logo: "/logos/tsp.png" },
+  { name: "Terminal de San Pédro", logo: "/logos/tsp.jpg" },
   { name: "Moov Africa", logo: "/logos/moov.png" },
 ];
 
