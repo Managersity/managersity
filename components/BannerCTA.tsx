@@ -57,7 +57,7 @@ export default function BannerCTA() {
           {/* Right - Image */}
           <div className="hidden md:block">
             <img
-              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+              src="/img-CTA.jpg"
               alt="Formation professionnelle"
               className="w-full h-full object-cover"
             />
