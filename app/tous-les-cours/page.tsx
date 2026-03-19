@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -152,6 +152,14 @@ function Pagination({
 }
 
 export default function TousLesCoursPage() {
+  return (
+    <Suspense>
+      <TousLesCoursContent />
+    </Suspense>
+  );
+}
+
+function TousLesCoursContent() {
   const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
