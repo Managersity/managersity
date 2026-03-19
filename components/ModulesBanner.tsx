@@ -12,11 +12,11 @@ export default function ModulesBanner() {
         }}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/65" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 py-20 max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6 italic" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
           LES MEILLEURS MODULES DE MANAGEMENT MIS A VOTRE DISPOSITION
         </h2>
         <p className="text-white/90 text-base md:text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
