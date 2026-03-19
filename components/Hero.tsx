@@ -41,7 +41,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <Link
-              href="/collections"
+              href="/tous-les-cours"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-0.5"
             >
               Démarrer un cours

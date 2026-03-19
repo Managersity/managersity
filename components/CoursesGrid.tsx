@@ -74,7 +74,7 @@ export default function CoursesGrid() {
           Tous les cours
         </h2>
         <Link
-          href="/collections"
+          href="/tous-les-cours"
           className="inline-flex items-center gap-1.5 text-sm text-amber-600 font-semibold hover:text-amber-700 transition-colors"
         >
           Voir tout le catalogue <ArrowRight size={14} />
@@ -134,7 +134,7 @@ export default function CoursesGrid() {
 
       <div className="mt-8 text-center">
         <Link
-          href="/collections"
+          href="/tous-les-cours"
           className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-md"
         >
           Voir tous les cours <ArrowRight size={15} />

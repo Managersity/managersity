@@ -106,7 +106,7 @@ export default function CertificationBanner() {
 
       <div className="text-center">
         <Link
-          href="/collections"
+          href="/tous-les-cours"
           className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg"
         >
           Parcours & Catégories de certifications <ArrowRight size={15} />

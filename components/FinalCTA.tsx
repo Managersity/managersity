@@ -31,7 +31,7 @@ export default function FinalCTA() {
           pour vous&nbsp;!
         </p>
         <Link
-          href="/collections"
+          href="/tous-les-cours"
           className="inline-block bg-amber-500 hover:bg-amber-400 text-white uppercase text-sm font-black tracking-wider px-10 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/30 hover:-translate-y-0.5"
         >
           Démarrez votre parcours d&apos;excellence managériale optimisée
