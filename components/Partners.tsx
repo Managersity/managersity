@@ -1,22 +1,15 @@
 "use client";
 
 const partners = [
-  { name: "BGFI Bank",         logo: "https://play-lh.googleusercontent.com/bGTBVAZjP_HcZtiDVRylY7hGPp5l9wpLt2GZydVSzOIh4ZVdUtNpxRsZdvnSdn6VqJGF=w3840-h2160-rw" },
-  { name: "Teyliom Group",     logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Logo_Teyliom-Group.png" },
-  { name: "Ecobank",           logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/Ecobank_Logo.svg" },
-  { name: "NSIA Banque",       logo: "https://logo.clearbit.com/nsia-ci.com" },
-  { name: "MTN",               logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/MTN_Logo.svg" },
-  { name: "Crédit du Sénégal", logo: "https://apitasolution.com/wp-content/uploads/2025/09/logo.png" },
-  { name: "Moov Africa",       logo: "https://logo.clearbit.com/moov.africa" },
-  { name: "Orange",            logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Orange_logo.svg" },
-  { name: "Wave",              logo: "https://www.financialafrik.com/wp-content/uploads/2022/07/63915358-45975666.jpg" },
-  { name: "UBA",               logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/United_Bank_for_Africa_logo.svg/250px-United_Bank_for_Africa_logo.svg.png" },
-  { name: "Société Générale",  logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg" },
-  { name: "Attijariwafa Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/1/1c/LogoNew.png" },
-  { name: "Coris Bank",        logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/Logo_Coris_Bank.svg" },
-  { name: "BNP Paribas",       logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/BNP_Paribas.svg" },
-  { name: "Mansa Bank",        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxV7FW-rSkCrNLObKghC_iaSDn3oL1UcYvPA&s" },
-  { name: "Access Bank",       logo: "https://upload.wikimedia.org/wikipedia/commons/1/14/Access_Bank_Logo.png" },
+  { name: "BGFI Bank", logo: "/logos/bgfi.png" },
+  { name: "Teyliom Group", logo: "/logos/teyliom.png" },
+  { name: "Ecobank", logo: "/logos/ecobank.png" },
+  { name: "NSIA Assurances", logo: "/logos/nsia.png" },
+  { name: "Mansa Bank", logo: "/logos/mansa.png" },
+  { name: "MTN", logo: "/logos/mtn.png" },
+  { name: "Crédit du Sénégal", logo: "/logos/credit-senegal.png" },
+  { name: "Terminal de San Pédro", logo: "/logos/tsp.png" },
+  { name: "Moov Africa", logo: "/logos/moov.png" },
 ];
 
 export default function Partners() {
@@ -40,7 +33,7 @@ export default function Partners() {
               <img
                 src={p.logo}
                 alt={p.name}
-                className="h-8 w-auto max-w-30 object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                className="h-12 md:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300"
                 onError={(e) => {
                   const target = e.currentTarget;
                   target.style.display = "none";
