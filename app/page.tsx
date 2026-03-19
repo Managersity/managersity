@@ -9,9 +9,7 @@ import ModulesBanner from "@/components/ModulesBanner";
 
 import MasterCourses from "@/components/MasterCourses";
 import MissionSection from "@/components/MissionSection";
-import CoursesGrid from "@/components/CoursesGrid";
-import FormatBanner from "@/components/FormatBanner";
-import Categories from "@/components/Categories";
+
 import MobileMoney from "@/components/MobileMoney";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -28,9 +26,7 @@ export default function Home() {
       <ModulesBanner />
       <MasterCourses />
       <MissionSection />
-      <CoursesGrid />
-      <FormatBanner />
-      <Categories />
+
       <MobileMoney />
       <FinalCTA />
       <Footer />
