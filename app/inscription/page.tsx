@@ -8,19 +8,19 @@ export const metadata = {
 
 export default function InscriptionPage() {
   return (
-    <div className="min-h-screen bg-gray-950 flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header minimal */}
-      <header className="bg-gray-950 border-b border-white/5 px-6 py-4 flex items-center justify-between">
+      <header className="bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
         <Link href="/">
           <img
             src="https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/1007726%2Fcustom_site_themes%2Fid%2F62ySJMVrR8uOQNiMoDwg_MANAGER%20SITY%20LOGO%20COLOR%20BY%20H_C_5000px.png"
             alt="Managersity"
-            className="h-9 w-auto object-contain brightness-0 invert"
+            className="h-9 w-auto object-contain"
           />
         </Link>
         <Link
           href="/collections"
-          className="text-sm text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-1.5"
+          className="text-sm text-gray-500 hover:text-amber-600 transition-colors flex items-center gap-1.5"
         >
           Explorer les cours
           <IconArrowRight className="w-4 h-4" />
@@ -33,14 +33,14 @@ export default function InscriptionPage() {
           {/* Left — brand */}
           <div className="hidden md:block pt-4">
             <div className="mb-8">
-              <span className="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+              <span className="inline-block bg-amber-100 border border-amber-200 text-amber-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
                 Rejoignez 10 000+ apprenants
               </span>
-              <h1 className="text-3xl font-black text-white leading-tight mb-4">
+              <h1 className="text-3xl font-black text-gray-900 leading-tight mb-4">
                 Commencez votre<br />
                 montée en compétences.
               </h1>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Accédez aux mêmes formations que celles dispensées aux meilleures organisations d&apos;Afrique.
               </p>
             </div>
@@ -54,9 +54,9 @@ export default function InscriptionPage() {
                 "Formats vidéo, audio et PDF inclus",
                 "Paiement Mobile Money disponible",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-gray-400">
-                  <span className="shrink-0 w-5 h-5 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mt-0.5">
-                    <IconCheck className="w-3 h-3 text-amber-400" />
+                <li key={item} className="flex items-start gap-3 text-sm text-gray-600">
+                  <span className="shrink-0 w-5 h-5 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center mt-0.5">
+                    <IconCheck className="w-3 h-3 text-amber-600" />
                   </span>
                   {item}
                 </li>
@@ -70,8 +70,8 @@ export default function InscriptionPage() {
                 { value: "100+", label: "Formations" },
                 { value: "9", label: "Catégories" },
               ].map((s) => (
-                <div key={s.label} className="bg-white/3 border border-white/5 rounded-xl p-4 text-center">
-                  <p className="text-xl font-black text-amber-400">{s.value}</p>
+                <div key={s.label} className="bg-gray-50 border border-gray-100 rounded-xl p-4 text-center">
+                  <p className="text-xl font-black text-amber-600">{s.value}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{s.label}</p>
                 </div>
               ))}
@@ -80,13 +80,13 @@ export default function InscriptionPage() {
 
           {/* Right — sign up card */}
           <div>
-            <div className="bg-gray-900 border border-white/10 rounded-2xl p-8 shadow-2xl shadow-black/50">
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-md">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
-                  <IconUsers className="w-5 h-5 text-amber-400" />
+                <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center">
+                  <IconUsers className="w-5 h-5 text-amber-600" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold text-white leading-tight">Créer un compte</h2>
+                  <h2 className="text-lg font-bold text-gray-900 leading-tight">Créer un compte</h2>
                   <p className="text-gray-500 text-xs">Gratuit — sans carte bancaire</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function InscriptionPage() {
               >
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                       Prénom
                     </label>
                     <input
@@ -107,11 +107,11 @@ export default function InscriptionPage() {
                       name="user[first_name]"
                       placeholder="Jean"
                       autoComplete="given-name"
-                      className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500/30 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                       Nom
                     </label>
                     <input
@@ -119,17 +119,17 @@ export default function InscriptionPage() {
                       name="user[last_name]"
                       placeholder="Dupont"
                       autoComplete="family-name"
-                      className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500/30 transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                     Adresse e-mail
                   </label>
                   <div className="relative">
-                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500">
+                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
                       <IconMail className="w-4 h-4" />
                     </span>
                     <input
@@ -137,17 +137,17 @@ export default function InscriptionPage() {
                       name="user[email]"
                       placeholder="vous@example.com"
                       autoComplete="email"
-                      className="w-full bg-gray-800 border border-gray-700 rounded-xl pl-10 pr-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500/30 transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                     Mot de passe
                   </label>
                   <div className="relative">
-                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500">
+                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
                       <IconLock className="w-4 h-4" />
                     </span>
                     <input
@@ -155,7 +155,7 @@ export default function InscriptionPage() {
                       name="user[password]"
                       placeholder="••••••••"
                       autoComplete="new-password"
-                      className="w-full bg-gray-800 border border-gray-700 rounded-xl pl-10 pr-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500/30 transition-all"
                     />
                   </div>
                   <p className="text-[10px] text-gray-600 mt-1.5">8 caractères minimum</p>
@@ -173,10 +173,10 @@ export default function InscriptionPage() {
 
               <div className="relative my-6">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-white/5" />
+                  <div className="w-full border-t border-gray-100" />
                 </div>
                 <div className="relative flex justify-center">
-                  <span className="bg-gray-900 px-3 text-xs text-gray-600">ou</span>
+                  <span className="bg-white px-3 text-xs text-gray-400">ou</span>
                 </div>
               </div>
 
@@ -184,17 +184,17 @@ export default function InscriptionPage() {
                 Déjà un compte ?{" "}
                 <Link
                   href="/connexion"
-                  className="text-amber-400 hover:text-amber-300 font-semibold transition-colors"
+                  className="text-amber-600 hover:text-amber-500 font-semibold transition-colors"
                 >
                   Se connecter
                 </Link>
               </p>
 
-              <div className="mt-6 p-3 bg-gray-800/50 rounded-xl flex items-start gap-2.5">
-                <span className="shrink-0 w-4 h-4 rounded-full bg-green-500/20 flex items-center justify-center mt-0.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+              <div className="mt-6 p-3 bg-gray-50 border border-gray-100 rounded-xl flex items-start gap-2.5">
+                <span className="shrink-0 w-4 h-4 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                 </span>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-xs text-gray-400 leading-relaxed">
                   Inscription sécurisée. Vos données sont traitées directement par la plateforme Managersity.
                 </p>
               </div>
@@ -211,9 +211,9 @@ export default function InscriptionPage() {
       </main>
 
       {/* Footer min */}
-      <footer className="border-t border-white/5 px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-xs text-gray-700">© 2025 MANAGERSITY by H&amp;C</p>
-        <div className="flex items-center gap-4 text-xs text-gray-700">
+      <footer className="border-t border-gray-100 px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p className="text-xs text-gray-400">© 2025 MANAGERSITY by H&amp;C</p>
+        <div className="flex items-center gap-4 text-xs text-gray-400">
           <a href="https://www.managersity.co/pages/politique-de-confidentialite" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Confidentialité</a>
           <a href="https://www.managersity.co/pages/termes-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Conditions</a>
           <a href="https://www.managersity.co/pages/contact" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">Contact</a>
