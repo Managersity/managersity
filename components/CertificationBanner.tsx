@@ -90,9 +90,6 @@ export default function CertificationBanner() {
             style={{ background: `linear-gradient(135deg, var(--tw-gradient-stops))` }}
           >
             <div className={`absolute inset-0 bg-linear-to-br ${cat.color} opacity-90 group-hover:opacity-100 transition-opacity`} />
-            <div className="relative z-10">
-              <span className="text-3xl">{cat.icon}</span>
-            </div>
             <div className="relative z-10 mt-4">
               <p className="text-xs font-black text-white uppercase tracking-wider leading-tight">
                 {cat.name}

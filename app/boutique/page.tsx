@@ -385,13 +385,13 @@ const CATEGORIES = [
 ];
 
 const CAT_STYLES: Record<string, { bar: string; badge: string; text: string }> = {
-  "Packs Phares":             { bar: "bg-amber-500",  badge: "bg-amber-500/20 text-amber-400",  text: "text-amber-400" },
-  "Intelligence Artificielle":{ bar: "bg-violet-600", badge: "bg-violet-600/20 text-violet-400",text: "text-violet-400" },
-  "Management d'Équipe":      { bar: "bg-blue-600",   badge: "bg-blue-600/20 text-blue-400",    text: "text-blue-400" },
-  "Parcours Dirigeant":       { bar: "bg-red-600",    badge: "bg-red-600/20 text-red-400",      text: "text-red-400" },
-  "Modules Certifiants":      { bar: "bg-emerald-600",badge: "bg-emerald-600/20 text-emerald-400",text: "text-emerald-400" },
-  "Développement Personnel":  { bar: "bg-pink-600",   badge: "bg-pink-600/20 text-pink-400",    text: "text-pink-400" },
-  "Transformation Digitale":  { bar: "bg-cyan-600",   badge: "bg-cyan-600/20 text-cyan-400",    text: "text-cyan-400" },
+  "Packs Phares":             { bar: "bg-amber-500",   badge: "bg-amber-100 text-amber-700",    text: "text-amber-600" },
+  "Intelligence Artificielle":{ bar: "bg-violet-600",  badge: "bg-violet-100 text-violet-700",  text: "text-violet-600" },
+  "Management d'Équipe":      { bar: "bg-blue-600",    badge: "bg-blue-100 text-blue-700",      text: "text-blue-600" },
+  "Parcours Dirigeant":       { bar: "bg-red-600",     badge: "bg-red-100 text-red-700",        text: "text-red-600" },
+  "Modules Certifiants":      { bar: "bg-emerald-600", badge: "bg-emerald-100 text-emerald-700",text: "text-emerald-600" },
+  "Développement Personnel":  { bar: "bg-pink-600",    badge: "bg-pink-100 text-pink-700",      text: "text-pink-600" },
+  "Transformation Digitale":  { bar: "bg-cyan-600",    badge: "bg-cyan-100 text-cyan-700",      text: "text-cyan-600" },
 };
 
 export default function BoutiquePage() {
@@ -405,18 +405,18 @@ export default function BoutiquePage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-950">
+      <main className="min-h-screen bg-gray-50">
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
-        <div className="bg-gray-950 border-b border-gray-800 pt-12 pb-10">
+        <div className="bg-white border-b border-gray-100 pt-12 pb-10">
           <div className="max-w-7xl mx-auto px-4">
-            <p className="text-amber-400 text-[11px] font-black uppercase tracking-widest mb-2">
+            <p className="text-amber-500 text-[11px] font-black uppercase tracking-widest mb-2">
               Boutique officielle
             </p>
-            <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-none mb-4">
+            <h1 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tight leading-none mb-4">
               Toutes les<br />formations
             </h1>
-            <p className="text-gray-400 text-sm max-w-lg">
+            <p className="text-gray-500 text-sm max-w-lg">
               {PRODUCTS.length} produits disponibles — modules certifiants, parcours complets, packs IA et outils de management.
             </p>
           </div>
@@ -428,7 +428,7 @@ export default function BoutiquePage() {
             href={featured.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col md:flex-row overflow-hidden rounded-2xl border border-amber-500/30 bg-linear-to-r from-amber-950/50 via-gray-900 to-gray-900 hover:border-amber-400/60 transition-all duration-300"
+            className="group flex flex-col md:flex-row overflow-hidden rounded-2xl border border-amber-200 bg-white hover:border-amber-400 hover:shadow-lg transition-all duration-300"
           >
             {/* Text side */}
             <div className="flex-1 p-8 md:p-10 flex flex-col justify-center">
@@ -440,17 +440,17 @@ export default function BoutiquePage() {
                   -{discount(featured.price, featured.originalPrice!)}%
                 </span>
               </div>
-              <h2 className="text-white text-2xl md:text-3xl font-black leading-tight mb-3 group-hover:text-amber-400 transition-colors">
+              <h2 className="text-gray-900 text-2xl md:text-3xl font-black leading-tight mb-3 group-hover:text-amber-600 transition-colors">
                 {featured.title}
               </h2>
-              <p className="text-gray-400 text-sm mb-6 max-w-lg">
+              <p className="text-gray-500 text-sm mb-6 max-w-lg">
                 Accès illimité pendant 12 mois à l&apos;intégralité de la bibliothèque Managersity. Tous les parcours, tous les modules, toutes les certifications. Zéro restriction.
               </p>
               <div className="flex items-baseline gap-3 mb-7">
-                <span className="text-amber-400 text-3xl font-black">
+                <span className="text-amber-600 text-3xl font-black">
                   {fmt(featured.price)} <span className="text-base text-amber-500">FCFA</span>
                 </span>
-                <span className="text-gray-600 line-through text-sm">
+                <span className="text-gray-400 line-through text-sm">
                   {fmt(featured.originalPrice!)} FCFA
                 </span>
               </div>
@@ -461,11 +461,11 @@ export default function BoutiquePage() {
             </div>
 
             {/* Visual side */}
-            <div className="hidden md:flex items-center justify-center w-72 lg:w-80 bg-linear-to-br from-amber-500/10 to-transparent shrink-0">
+            <div className="hidden md:flex items-center justify-center w-72 lg:w-80 bg-amber-50 shrink-0">
               <div className="text-center px-8">
-                <div className="text-8xl font-black text-amber-500/20 leading-none select-none">∞</div>
-                <p className="text-amber-400 text-xs font-black uppercase tracking-widest mt-3">Accès total</p>
-                <p className="text-gray-600 text-xs mt-1">12 mois · Tous les modules</p>
+                <div className="text-8xl font-black text-amber-300 leading-none select-none">∞</div>
+                <p className="text-amber-600 text-xs font-black uppercase tracking-widest mt-3">Accès total</p>
+                <p className="text-gray-400 text-xs mt-1">12 mois · Tous les modules</p>
               </div>
             </div>
           </a>
@@ -485,7 +485,7 @@ export default function BoutiquePage() {
                   className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all ${
                     active === cat
                       ? "bg-amber-500 text-black"
-                      : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
+                      : "bg-white border border-gray-200 text-gray-500 hover:border-amber-300 hover:text-amber-600"
                   }`}
                 >
                   {cat} <span className="opacity-60">({count})</span>
@@ -499,14 +499,14 @@ export default function BoutiquePage() {
         <div className="max-w-7xl mx-auto px-4 py-8 pb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {grid.map((p, i) => {
-              const style = CAT_STYLES[p.category] ?? { bar: "bg-gray-700", badge: "bg-gray-700/20 text-gray-400", text: "text-gray-400" };
+              const style = CAT_STYLES[p.category] ?? { bar: "bg-gray-400", badge: "bg-gray-100 text-gray-600", text: "text-gray-600" };
               return (
                 <a
                   key={i}
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col bg-gray-900 border border-gray-800 hover:border-gray-600 rounded-2xl overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50"
+                  className="group flex flex-col bg-white border border-gray-100 hover:border-amber-300 rounded-2xl overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
                 >
                   {/* Color top bar */}
                   <div className={`h-1 w-full ${style.bar}`} />
@@ -518,14 +518,14 @@ export default function BoutiquePage() {
                         {p.category}
                       </span>
                       {p.originalPrice && (
-                        <span className="inline-block bg-red-500/20 text-red-400 text-[9px] font-black px-1.5 py-0.5 rounded">
+                        <span className="inline-block bg-red-100 text-red-600 text-[9px] font-black px-1.5 py-0.5 rounded">
                           -{discount(p.price, p.originalPrice)}%
                         </span>
                       )}
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-white text-sm font-bold leading-snug group-hover:text-amber-400 transition-colors line-clamp-3 flex-1">
+                    <h3 className="text-gray-800 text-sm font-bold leading-snug group-hover:text-amber-600 transition-colors line-clamp-3 flex-1">
                       {p.title}
                     </h3>
 
@@ -533,15 +533,15 @@ export default function BoutiquePage() {
                     <div className="mt-auto pt-1">
                       <div className="flex items-baseline gap-2 mb-3">
                         <span className={`font-black text-base ${style.text}`}>
-                          {fmt(p.price)} <span className="text-xs text-gray-500 font-bold">FCFA</span>
+                          {fmt(p.price)} <span className="text-xs text-gray-400 font-bold">FCFA</span>
                         </span>
                         {p.originalPrice && (
-                          <span className="text-gray-600 line-through text-xs">
+                          <span className="text-gray-400 line-through text-xs">
                             {fmt(p.originalPrice)}
                           </span>
                         )}
                       </div>
-                      <span className="block text-center bg-gray-800 group-hover:bg-amber-500 group-hover:text-black text-gray-300 text-xs font-bold uppercase tracking-widest py-2.5 rounded-lg transition-all">
+                      <span className="block text-center bg-gray-100 group-hover:bg-amber-500 group-hover:text-white text-gray-600 text-xs font-bold uppercase tracking-widest py-2.5 rounded-lg transition-all">
                         Acheter →
                       </span>
                     </div>
@@ -553,36 +553,36 @@ export default function BoutiquePage() {
         </div>
 
         {/* ── FOOTER CTA ───────────────────────────────────────────────────── */}
-        <div className="bg-gray-900 border-t border-gray-800 py-12">
+        <div className="bg-white border-t border-gray-100 py-12">
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <p className="text-white font-bold text-sm mb-1">Paiements 100% sécurisés</p>
-            <p className="text-gray-500 text-xs mb-5">
+            <p className="text-gray-900 font-bold text-sm mb-1">Paiements 100% sécurisés</p>
+            <p className="text-gray-400 text-xs mb-5">
               Visa · MasterCard · Mobile Money (Wave, Orange Money, MTN, Moov) · Virement
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] text-gray-600 uppercase tracking-widest">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] text-gray-400 uppercase tracking-widest">
               <a
                 href="http://shop.managersity.com/termes-conditions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
+                className="hover:text-gray-600 transition-colors"
               >
                 Termes & Conditions
               </a>
-              <span className="text-gray-800">·</span>
+              <span className="text-gray-300">·</span>
               <a
                 href="http://shop.managersity.com/politique-de-confidentialite/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
+                className="hover:text-gray-600 transition-colors"
               >
                 Confidentialité
               </a>
-              <span className="text-gray-800">·</span>
+              <span className="text-gray-300">·</span>
               <a
                 href="http://shop.managersity.com/remboursements/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
+                className="hover:text-gray-600 transition-colors"
               >
                 Remboursements
               </a>

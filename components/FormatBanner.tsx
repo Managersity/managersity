@@ -25,13 +25,13 @@ export default function FormatBanner() {
             </p>
             <div className="flex flex-wrap gap-3">
               <span className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm text-gray-300">
-                ✅ Accès à vie
+                Accès à vie
               </span>
               <span className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm text-gray-300">
-                ✅ Certification incluse
+                Certification incluse
               </span>
               <span className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm text-gray-300">
-                ✅ Support dédié
+                Support dédié
               </span>
             </div>
           </div>
@@ -43,7 +43,6 @@ export default function FormatBanner() {
                 key={i}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 hover:border-amber-500/30 transition-all"
               >
-                <span className="text-4xl mb-3">{d.icon}</span>
                 <p className="text-white font-bold text-sm">{d.label}</p>
                 <p className="text-gray-500 text-xs mt-1">{d.desc}</p>
               </div>

@@ -58,7 +58,6 @@ export default function MissionBanner() {
             </div>
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">{t.avatar}</span>
                 <div>
                   {t.name ? (
                     <>

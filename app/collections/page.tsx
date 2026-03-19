@@ -67,9 +67,6 @@ export default function CollectionsPage() {
                   className="group relative overflow-hidden rounded-2xl p-5 min-h-30 flex flex-col justify-between hover:-translate-y-1 transition-all hover:shadow-lg"
                 >
                   <div className={`absolute inset-0 bg-linear-to-br ${cat.color} opacity-90 group-hover:opacity-100 transition-opacity`} />
-                  <div className="relative z-10">
-                    <span className="text-3xl">{cat.icon}</span>
-                  </div>
                   <div className="relative z-10 mt-3">
                     <p className="text-xs font-black text-white uppercase tracking-wide leading-tight">{cat.label}</p>
                     <p className="text-[10px] text-white/60 mt-0.5">{count} cours</p>
@@ -83,9 +80,6 @@ export default function CollectionsPage() {
               href="#tous-les-cours"
               className="group relative overflow-hidden rounded-2xl p-5 min-h-30 flex flex-col justify-between hover:-translate-y-1 transition-all hover:shadow-lg bg-amber-500"
             >
-              <div className="relative z-10">
-                <span className="text-3xl">📚</span>
-              </div>
               <div className="relative z-10 mt-3">
                 <p className="text-xs font-black text-white uppercase tracking-wide leading-tight">Tous les cours</p>
                 <p className="text-[10px] text-white/70 mt-0.5">{allCourses.length} cours</p>
@@ -173,7 +167,7 @@ export default function CollectionsPage() {
                     href={`/collections/${cat.slug}`}
                     className="inline-flex items-center gap-1.5 bg-white/10 border border-white/10 hover:bg-amber-500 hover:border-amber-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-all"
                   >
-                    {cat.icon} {cat.label}
+                    {cat.label}
                   </Link>
                 ))}
               </div>

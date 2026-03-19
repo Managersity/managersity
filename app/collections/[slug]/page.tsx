@@ -62,7 +62,6 @@ export default async function CategoryPage({
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-4xl">{meta.icon}</span>
                   <span className={`text-xs font-bold uppercase tracking-widest bg-linear-to-r ${meta.color} bg-clip-text text-transparent`}>
                     Catégorie
                   </span>
@@ -205,7 +204,6 @@ export default async function CategoryPage({
                       href={`/collections/${cat.slug}`}
                       className="flex items-center gap-3 p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all group"
                     >
-                      <span className="text-xl">{cat.icon}</span>
                       <span className="text-xs font-semibold text-gray-700 group-hover:text-amber-600 transition-colors">
                         {cat.label}
                       </span>
@@ -275,7 +273,7 @@ export default async function CategoryPage({
                   href={`/collections/${cat.slug}`}
                   className="text-xs text-gray-400 hover:text-amber-500 transition-colors px-3 py-1.5 rounded-lg hover:bg-amber-50"
                 >
-                  {cat.icon} {cat.label}
+                  {cat.label}
                 </Link>
               ))}
             </div>
