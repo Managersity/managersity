@@ -15,10 +15,10 @@ export default function Hero() {
         }}
       />
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/85 to-gray-950/40" />
+      <div className="absolute inset-0 bg-gray-950/75" />
       <div className="absolute inset-0 bg-linear-to-t from-gray-950/80 via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-32 flex flex-col items-center text-center">
         <div className="max-w-2xl">
           {/* Badge */}
           <span className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
@@ -32,14 +32,14 @@ export default function Hero() {
             managériales&nbsp;!
           </h1>
 
-          <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
+          <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-w-xl mx-auto">
             Avec <strong className="text-white">MANAGERSITY by H&amp;C</strong>, choisissez parmi plus de{" "}
             <span className="text-amber-400 font-semibold">100 modules</span> de formation en management et
             développement professionnel. Sélectionnez, suivez et passez vos compétences à la dimension supérieure&nbsp;!
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4 mb-10">
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
             <Link
               href="/collections"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-0.5"
@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             <div className="flex items-center gap-2">
               <BookOpen size={18} className="text-amber-400" />
               <div>
