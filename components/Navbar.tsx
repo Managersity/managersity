@@ -58,7 +58,7 @@ export default function Navbar() {
               <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-xl w-72 py-2 z-50">
                 <div className="px-4 py-2 mb-1">
                   <Link
-                    href="/collections"
+                    href="/tous-les-cours"
                     className="text-sm font-bold text-amber-600 hover:text-amber-700"
                     onClick={() => setDropdownOpen(false)}
                   >
