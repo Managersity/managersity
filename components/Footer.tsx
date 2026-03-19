@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IconFacebook, IconLinkedIn, IconInstagram, IconTikTok } from "./Icons";
 
 export default function Footer() {
   return (
@@ -8,10 +9,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-black">
-                <span className="text-amber-500">MANAGER</span>
-                <span className="text-green-500">SITY</span>
-              </span>
+              <img
+                src="https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/1007726%2Fcustom_site_themes%2Fid%2F62ySJMVrR8uOQNiMoDwg_MANAGER%20SITY%20LOGO%20COLOR%20BY%20H_C_5000px.png"
+                alt="Managersity"
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-xs text-gray-500 leading-relaxed max-w-xs mb-4">
               MANAGERSITY by H&amp;C est la version digitalisée des cours et parcours offerts
@@ -23,37 +25,37 @@ export default function Footer() {
                 href="https://www.facebook.com/share/1Agr9QWUN3/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sm hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all text-gray-400"
                 aria-label="Facebook"
               >
-                f
+                <IconFacebook className="w-4 h-4" />
               </a>
               <a
                 href="https://www.linkedin.com/company/managersity1/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xs font-bold hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all text-gray-400"
                 aria-label="LinkedIn"
               >
-                in
+                <IconLinkedIn className="w-4 h-4" />
               </a>
               <a
                 href="https://www.instagram.com/managersity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sm hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-all text-gray-400"
                 aria-label="Instagram"
               >
-                IG
+                <IconInstagram className="w-4 h-4" />
               </a>
               <a
                 href="https://www.tiktok.com/@managersity.by.h"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xs font-bold hover:bg-gray-700 hover:border-gray-600 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gray-700 hover:border-gray-600 hover:text-white transition-all text-gray-400"
                 aria-label="TikTok"
               >
-                TT
+                <IconTikTok className="w-4 h-4" />
               </a>
             </div>
           </div>

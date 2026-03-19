@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown, BookOpen } from "lucide-react";
+import { IconMenu, IconX, IconChevronDown, IconBook } from "./Icons";
 
 const categories = [
   { label: "Dirigeant", slug: "dirigeant" },
@@ -34,16 +34,12 @@ export default function Navbar() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="flex flex-col leading-none">
-            <span className="text-xl font-black tracking-tight">
-              <span className="text-amber-500">MANAGER</span>
-              <span className="text-green-700">SITY</span>
-            </span>
-            <span className="text-[9px] text-gray-400 font-medium tracking-wide uppercase hidden sm:block">
-              by H&amp;C — #1 formation management
-            </span>
-          </div>
+        <Link href="/" className="flex items-center shrink-0">
+          <img
+            src="https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/1007726%2Fcustom_site_themes%2Fid%2F62ySJMVrR8uOQNiMoDwg_MANAGER%20SITY%20LOGO%20COLOR%20BY%20H_C_5000px.png"
+            alt="Managersity"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop links */}
@@ -54,9 +50,9 @@ export default function Navbar() {
               className="flex items-center gap-1 px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              <BookOpen size={15} className="text-amber-500" />
+              <IconBook className="w-4 h-4 text-amber-500" />
               Tous les cours
-              <ChevronDown size={14} className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+              <IconChevronDown className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {dropdownOpen && (
               <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-xl w-72 py-2 z-50">
@@ -102,12 +98,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
-          <a
-            href="https://www.managersity.co/users/sign_in"
+          <Link
+            href="/connexion"
             className="text-sm text-gray-700 font-medium hover:text-amber-600 transition-colors"
           >
             Se connecter
-          </a>
+          </Link>
           <Link
             href="/collections"
             className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors shadow-sm"
@@ -118,7 +114,7 @@ export default function Navbar() {
 
         {/* Mobile burger */}
         <button className="md:hidden p-1" onClick={() => setOpen(!open)}>
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <IconX className="w-5 h-5" /> : <IconMenu className="w-5 h-5" />}
         </button>
       </div>
 
