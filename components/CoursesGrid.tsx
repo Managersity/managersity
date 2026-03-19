@@ -7,40 +7,44 @@ const courses = [
     author: "H&C Group",
     rating: 4.3,
     reviews: 79,
-    price: "10,99 $US",
-    oldPrice: "59,99 $US",
+    price: "$99",
+    oldPrice: "$297",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=400&q=80",
     badge: "Premium",
+    slug: "ia-pour-les-sales-managers-le-cours-complet",
   },
   {
     title: "Intelligence Artificielle pour les Managers",
     author: "H&C Group",
     rating: 4.7,
     reviews: 403,
-    price: "11,99 $US",
-    oldPrice: "64,99 $US",
+    price: "$99",
+    oldPrice: "$297",
     img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80",
     badge: "Meilleure vente",
+    slug: "intelligence-artificielle-pour-les-managers",
   },
   {
     title: "L'Art de Catalyser et Piloter la Performance",
     author: "H&C Group",
     rating: 4.7,
     reviews: 1873,
-    price: "13,99 $US",
-    oldPrice: "64,99 $US",
+    price: "$59",
+    oldPrice: "$177",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
     badge: "Premium",
+    slug: "lart-de-catalyser-et-piloter-la-performance",
   },
   {
-    title: "Formation Complète Management & Leadership",
+    title: "Maturité Managériale & Enjeux de Direction Générale",
     author: "H&C Group",
     rating: 4.5,
-    reviews: 28075,
-    price: "13,99 $US",
-    oldPrice: "74,99 $US",
+    reviews: 893,
+    price: "$97",
+    oldPrice: "$291",
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
     badge: "Meilleure vente",
+    slug: "maturite-manageriale-et-enjeux-de-direction-generale",
   },
 ];
 
@@ -79,9 +83,10 @@ export default function CoursesGrid() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {courses.map((course, i) => (
-          <div
+          <Link
             key={i}
-            className="border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all group cursor-pointer bg-white"
+            href={`/products/courses/${course.slug}`}
+            className="border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all group bg-white"
           >
             <div className="relative h-44 overflow-hidden">
               <img
@@ -123,7 +128,7 @@ export default function CoursesGrid() {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

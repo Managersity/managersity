@@ -84,17 +84,20 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="#mobile-money" className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap">
-            Mobile Money
-          </Link>
           <a
-            href="https://ressources.managersity.co/"
+            href="https://shop.monpotentielcertifie.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
           >
-            Ressources gratuites
+            Mobile Money
           </a>
+          <Link
+            href="/ressources"
+            className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
+          >
+            Ressources gratuites
+          </Link>
         </div>
 
         {/* CTA */}
@@ -134,8 +137,8 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <Link href="#mobile-money" onClick={() => setOpen(false)}>Payer par Mobile Money</Link>
-            <a href="https://ressources.managersity.co/" target="_blank" rel="noopener noreferrer">Ressources gratuites</a>
+            <a href="https://shop.monpotentielcertifie.com/" target="_blank" rel="noopener noreferrer">Payer par Mobile Money</a>
+            <Link href="/ressources" onClick={() => setOpen(false)}>Ressources gratuites</Link>
             <Link
               href="/collections"
               onClick={() => setOpen(false)}

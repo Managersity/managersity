@@ -483,3 +483,96 @@ export const categoryMeta: Record<string, CategoryMeta> = {
     color: "from-gray-700 to-gray-500",
   },
 };
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+/** Extrait le slug depuis l'URL href d'un cours */
+export function getCourseSlug(course: Course): string {
+  return course.href.split("/").pop() || "";
+}
+
+/** Trouve un cours par son slug */
+export function getCourseBySlug(slug: string): Course | null {
+  return allCourses.find((c) => c.href.split("/").pop() === slug) || null;
+}
+
+/** Retourne tous les slugs (pour generateStaticParams) */
+export function getAllCourseSlugs(): string[] {
+  return [...new Set(allCourses.map((c) => c.href.split("/").pop() || "").filter(Boolean))];
+}
+
+/** Points d'apprentissage génériques par catégorie */
+export const learnPoints: Record<string, string[]> = {
+  "transformation-digitale-4-0": [
+    "Comprendre l'IA de A à Z et ses applications concrètes",
+    "Automatiser les tâches répétitives pour gagner en productivité",
+    "Utiliser la DATA pour prendre de meilleures décisions",
+    "Intégrer les outils IA dans votre workflow quotidien",
+    "Rester compétitif dans un environnement digitalisé",
+    "Booster vos performances avec des outils No-Code & IA",
+  ],
+  dirigeant: [
+    "Développer votre vision stratégique et votre densité managériale",
+    "Prendre des décisions complexes avec méthode et assurance",
+    "Gérer vos parties prenantes avec intelligence diplomatique",
+    "Structurer et transformer votre organisation durablement",
+    "Développer votre leadership situationnel",
+    "Rayonner en tant que dirigeant 5.0 en Afrique",
+  ],
+  "management-commercial-4-0": [
+    "Piloter votre équipe commerciale avec efficacité",
+    "Utiliser les bons outils et matrices de performance commerciale",
+    "Définir et atteindre vos objectifs de vente",
+    "Motiver et coacher vos commerciaux au quotidien",
+    "Analyser et optimiser vos performances business",
+    "Maîtriser le management commercial 4.0",
+  ],
+  "management-d-equipe": [
+    "Développer un leadership inspirant et situationnel",
+    "Motiver et fédérer vos équipes autour d'un objectif commun",
+    "Gérer les conflits avec méthode et sérénité",
+    "Piloter la performance quotidienne de vos collaborateurs",
+    "Conduire le changement organisationnel avec succès",
+    "Créer une culture de l'excellence et de la responsabilisation",
+  ],
+  "management-du-capital-humain": [
+    "Attirer, recruter et fidéliser les meilleurs talents",
+    "Concevoir et déployer une stratégie RH performante",
+    "Maîtriser l'IA appliquée aux ressources humaines",
+    "Développer les compétences de vos collaborateurs",
+    "Construire une culture d'entreprise forte et engageante",
+    "Optimiser la gestion des carrières et la mobilité interne",
+  ],
+  "developpement-personnel": [
+    "Renforcer votre résilience et piloter votre bien-être",
+    "Maîtriser la gestion du stress et des pressions",
+    "Développer votre intelligence émotionnelle",
+    "Optimiser votre gestion du temps et de votre énergie",
+    "Vous fixer des objectifs ambitieux et les atteindre",
+    "Libérer votre plein potentiel personnel et professionnel",
+  ],
+  entrepreneuriat: [
+    "Concevoir et valider votre modèle d'affaires",
+    "Structurer et faire croître votre entreprise",
+    "Maîtriser l'art de la stratégie et de la disruption marché",
+    "Lever des fonds et gérer votre trésorerie",
+    "Construire et piloter une organisation performante",
+    "Développer un réseau solide et des partenariats stratégiques",
+  ],
+  "vendeur-elite-expert-4-0": [
+    "Intégrer la nouvelle psychologie de la vente",
+    "Maîtriser les techniques de prospection et de closing",
+    "Gérer les objections avec confiance et efficacité",
+    "Construire des relations durables avec vos clients",
+    "Utiliser les outils digitaux pour booster vos ventes",
+    "Dépasser vos quotas et exceller dans votre métier",
+  ],
+  mastercourses: [
+    "Acquérir une vision globale de l'excellence managériale",
+    "Maîtriser les fondamentaux du leadership de direction",
+    "Piloter la transformation stratégique de votre organisation",
+    "Gérer la complexité avec intelligence et méthode",
+    "Obtenir une certification reconnue sur le marché",
+    "Rejoindre l'élite des managers certifiés MANAGERSITY",
+  ],
+};

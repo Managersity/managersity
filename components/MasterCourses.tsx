@@ -12,7 +12,7 @@ const masterCourses = [
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80",
     badge: "Bestseller",
     type: "Parcours",
-    href: "https://www.managersity.co/bundles/parcours-dirigeant-certifie-pdc",
+    slug: "parcours-dirigeant-certifie-pdc",
   },
   {
     title: "Design Organisationnel & Transformation d'Entreprise",
@@ -24,7 +24,7 @@ const masterCourses = [
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
     badge: "Premium",
     type: "Parcours",
-    href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
+    slug: "design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
   },
   {
     title: "Maturité Managériale & Enjeux de Direction Générale",
@@ -36,7 +36,7 @@ const masterCourses = [
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
     badge: "Top noté",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/maturite-manageriale-et-enjeux-de-direction-generale",
+    slug: "maturite-manageriale-et-enjeux-de-direction-generale",
   },
   {
     title: "Gestion des Parties Prenantes & Networking Diplomatique",
@@ -48,7 +48,7 @@ const masterCourses = [
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes",
+    slug: "gestion-des-parties-prenantes",
   },
 ];
 
@@ -96,11 +96,9 @@ export default function MasterCourses() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {masterCourses.map((course, i) => (
-            <a
+            <Link
               key={i}
-              href={course.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/products/courses/${course.slug}`}
               className="group bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10"
             >
               <div className="relative h-40 overflow-hidden">
@@ -142,7 +140,7 @@ export default function MasterCourses() {
                   <ArrowRight size={14} className="text-gray-600 group-hover:text-amber-400 transition-colors" />
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
