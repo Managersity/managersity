@@ -555,6 +555,46 @@ export const COURSES: CourseDetail[] = [
     tagline: "Maîtrisez les leviers de la stratégie et de la disruption pour positionner votre entreprise en avance et créer un avantage concurrentiel durable.",
   },
   {
+    slug: "lart-de-catalyser-et-piloter-la-performance",
+    title: "L'Art de Catalyser et Piloter la Performance",
+    category: "Modules Certifiants",
+    price: 34900,
+    originalPrice: 59000,
+    shopUrl: "https://www.managersity.co/products/courses/lart-de-catalyser-et-piloter-la-performance",
+    enrollUrl: "https://www.managersity.co/enroll/3459601",
+    tagline: "Ce module vous donne les outils et méthodes pour scénariser, catalyser et orchestrer la performance au day-to-day.",
+    totalChapters: 3,
+    totalLessons: 21,
+    learns: [
+      "Créer les conditions et le dispositif de pilotage de la performance",
+      "Animer le dispositif de pilotage pour catalyser la performance au quotidien",
+      "Développer la conscience de la performance globale",
+      "Optimiser le cadre d'accélération de la performance managériale",
+      "Travailler sur les 2 leviers de l'excellence managériale à l'ère de l'IA",
+      "Réaliser une grande ambition managériale avec la méthode et l'engagement requis",
+    ],
+    chapters: [
+      "Introduction : De l'ambition managériale à l'optimisation du cadre d'accélération de la performance",
+      "Partie #1 : Créer les conditions et le dispositif de pilotage de la performance",
+      "Partie #2 : Animer le dispositif de pilotage afin de catalyser la performance",
+    ],
+    benefits: [
+      {
+        title: "Devenir un leader attractif",
+        desc: "Réussir à donner envie aux gens de venir vers vous, de vous écouter, vous suivre et s'engager pour les objectifs communs, tout en se laissant guider par vous !",
+      },
+      {
+        title: "Optimiser sa capacité d'influence",
+        desc: "Faites le parcours nécessaire à l'optimisation de votre capacité à devenir pour chacun de vos interlocuteurs critiques, celui ou celle qu'ils veulent suivre.",
+      },
+      {
+        title: "Asseoir votre autorité morale",
+        desc: "Dopez votre capacité à motiver, à vous élever et à élever les autres, à devenir la référence afin que les gens se tournent vers vous et vous suivent.",
+      },
+    ],
+  },
+
+  {
     slug: "le-coaching-managerial-4-0",
     title: "Le Coaching Managérial 4.0",
     category: "Modules Certifiants",

@@ -11,7 +11,7 @@ const courses = [
     oldPrice: "$297",
     img: "/cours/ia-managers-commerciaux.png",
     badge: "Premium",
-    slug: "ia-pour-les-sales-managers-le-cours-complet",
+    href: "/cours/ia-pour-sales-managers-5-0-le-cours-complet",
   },
   {
     title: "Intelligence Artificielle pour les Managers",
@@ -22,7 +22,7 @@ const courses = [
     oldPrice: "$297",
     img: "/cours/ia-pour-managers.png",
     badge: "Meilleure vente",
-    slug: "intelligence-artificielle-pour-les-managers",
+    href: "/cours/ia-pour-les-managers",
   },
   {
     title: "L'Art de Catalyser et Piloter la Performance",
@@ -33,7 +33,7 @@ const courses = [
     oldPrice: "$177",
     img: "/cours/coaching-managerial.jpg",
     badge: "Premium",
-    slug: "lart-de-catalyser-et-piloter-la-performance",
+    href: "/cours/lart-de-catalyser-et-piloter-la-performance",
   },
   {
     title: "Maturité Managériale & Enjeux de Direction Générale",
@@ -44,7 +44,7 @@ const courses = [
     oldPrice: "$291",
     img: "/cours/maturite-manageriale.png",
     badge: "Meilleure vente",
-    slug: "maturite-manageriale-et-enjeux-de-direction-generale",
+    href: "/cours/maturite-manageriale-enjeux-de-direction-generale",
   },
 ];
 
@@ -85,9 +85,7 @@ export default function CoursesGrid() {
         {courses.map((course, i) => (
           <a
             key={i}
-            href={`https://www.managersity.co/products/courses/${course.slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={course.href}
             className="border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all group bg-white"
           >
             <div className="relative h-44 overflow-hidden">

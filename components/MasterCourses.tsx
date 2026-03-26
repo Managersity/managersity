@@ -18,7 +18,7 @@ const courses = [
       "Maitrisez le process et la méthodologie pour prendre une organisation, la diagnostiquer, évaluer ses capacités stratégiques,…",
     price: "$97",
     img: "/cours/design-organisationnel.jpeg",
-    href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
+    href: "/cours/design-organisationnel-transformation-dentreprise",
   },
   {
     title: "MATURITE MANAGERIALE & ENJEUX DE DIRECTION GENERALE",
@@ -27,7 +27,7 @@ const courses = [
       "Pour les membres de CODIR qui doivent démontrer de l'excellence Top Executive, ceux qui aspirent à la fonction de DG et ce…",
     price: "$97",
     img: "/cours/maturite-manageriale.png",
-    href: "https://www.managersity.co/products/courses/maturite-manageriale-et-enjeux-de-direction-generale",
+    href: "/cours/maturite-manageriale-enjeux-de-direction-generale",
   },
   {
     title: "GESTION DES PARTIES PRENANTES & NETWORKING...",
@@ -36,7 +36,7 @@ const courses = [
       "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes…",
     price: "$97",
     img: "/cours/gestion-parties-prenantes.png",
-    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes",
+    href: "/cours/gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants",
   },
 ];
 
@@ -98,6 +98,7 @@ export default function MasterCourses() {
           <a
             key={i}
             href={course.href}
+            rel="noopener noreferrer"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer border border-gray-100"

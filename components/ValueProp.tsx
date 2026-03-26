@@ -10,7 +10,7 @@ const courses = [
       "Comment les managers commerciaux innovants utilisent la DATA, l'IA et la Technologie pour avoir plusieurs coups…",
     price: "$99",
     img: "/cours/ia-managers-commerciaux.png",
-    href: "https://www.managersity.co/products/courses/ia-pour-les-sales-managers-le-cours-complet",
+    href: "/cours/ia-pour-sales-managers-5-0-le-cours-complet",
   },
   {
     title: "IA POUR ASSISTANTS & PROFESSIONNELS : LE COURS COMPLET",
@@ -20,7 +20,7 @@ const courses = [
       "Boostez votre carrière avec l'IA. Automatisation des tâches répétitives, création de contenu optimisée, productivi…",
     price: "$57",
     img: "/cours/ia-assistants-professionnels.png",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-les-professionnels",
+    href: "/cours/ia-pour-les-professionnels",
   },
   {
     title: "IA POUR MANAGER RH 5.0 : LE COURS COMPLET",
@@ -30,7 +30,7 @@ const courses = [
       "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
     price: "$99",
     img: "/cours/ia-manager-rh.png",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-les-RH",
+    href: "/cours/ia-pour-les-rh",
   },
   {
     title: "L'IA POUR LES DG ET LES DIRIGEANTS 5.0 : LE COURS COMPLET",
@@ -40,7 +40,7 @@ const courses = [
       "Comment les DG et dirigeants 5.0 utilisent la DATA, l'IA et la Technologie pour optimiser le cadrage visionnaire, la…",
     price: "$179",
     img: "/cours/ia-dg-dirigeants.png",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-DG",
+    href: "/cours/lia-pour-les-dirigeants-5-0-le-cours-complet",
   },
   {
     title: "INTELLIGENCE ARTIFICIELLE POUR LES MANAGERS",
@@ -50,7 +50,7 @@ const courses = [
       "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
     price: "$99",
     img: "/cours/ia-pour-managers.png",
-    href: "https://www.managersity.co/products/courses/intelligence-artificielle-pour-les-managers",
+    href: "/cours/ia-pour-les-managers",
   },
   {
     title: "L'ART DE CATALYSER ET PILOTER LA PERFORMANCE",
@@ -60,7 +60,7 @@ const courses = [
       "Ce module vous donne les outils et méthodes pour scenariser, catalyser et orchestrer la performance au Day-to-Day !",
     price: "$59",
     img: "/cours/coaching-managerial.jpg",
-    href: "https://www.managersity.co/products/courses/lart-de-catalyser-et-piloter-la-performance",
+    href: "/cours/lart-de-catalyser-et-piloter-la-performance",
   },
 ];
 
@@ -77,8 +77,6 @@ export default function ValueProp() {
           <a
             key={i}
             href={course.href}
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer border border-gray-100"
           >
             {/* Image */}
