@@ -22,7 +22,7 @@ export const allCourses: Course[] = [
     img: "/cours/ia-managers-commerciaux.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/ia-pour-les-sales-managers-le-cours-complet",
+    href: "/cours/ia-pour-sales-managers-5-0-le-cours-complet",
     category: "intelligence-artificielle",
   },
   {
@@ -34,7 +34,7 @@ export const allCourses: Course[] = [
     img: "/cours/ia-assistants-professionnels.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-les-professionnels",
+    href: "/cours/ia-pour-les-professionnels",
     category: "intelligence-artificielle",
   },
   {
@@ -46,7 +46,7 @@ export const allCourses: Course[] = [
     img: "/cours/ia-manager-rh.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-les-RH",
+    href: "/cours/ia-pour-les-rh",
     category: "intelligence-artificielle",
   },
   {
@@ -58,7 +58,7 @@ export const allCourses: Course[] = [
     img: "/cours/ia-dg-dirigeants.png",
     badge: "Top noté",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/L-IA-pour-DG",
+    href: "/cours/lia-pour-les-dirigeants-5-0-le-cours-complet",
     category: "intelligence-artificielle",
   },
   {
@@ -70,7 +70,7 @@ export const allCourses: Course[] = [
     img: "/cours/ia-pour-managers.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/intelligence-artificielle-pour-les-managers",
+    href: "/cours/ia-pour-les-managers",
     category: "intelligence-artificielle",
   },
 
@@ -83,7 +83,7 @@ export const allCourses: Course[] = [
     reviews: 356,
     img: "/cours/enjeux-business-transformation.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/enjeux-business-et-methodologie-de-transformation-digitale",
+    href: "/cours/enjeux-business-methodologie-de-transformation-digitale",
     category: "transformation-digitale-4-0",
   },
 
@@ -97,7 +97,7 @@ export const allCourses: Course[] = [
     img: "/cours/parcours-dirigeant-certifie.png",
     badge: "Bestseller",
     type: "Parcours",
-    href: "https://www.managersity.co/bundles/parcours-dirigeant-certifie-pdc",
+    href: "/cours/parcours-dirigeant",
     category: "dirigeant",
   },
   {
@@ -109,7 +109,7 @@ export const allCourses: Course[] = [
     img: "/cours/game-strategie-disruption.jpg",
     badge: "Premium",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/le-game-de-la-strategie-et-disruption-marche",
+    href: "/cours/le-game-de-la-strategie-disruption-marche",
     category: "dirigeant",
   },
   {
@@ -120,7 +120,7 @@ export const allCourses: Course[] = [
     reviews: 278,
     img: "/cours/choix-complexes-decisionnels.jpeg",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/choix-complexes-et-mecanismes-decisionnels",
+    href: "/cours/choix-complexes-mecanismes-decisionnels",
     category: "dirigeant",
   },
   {
@@ -132,7 +132,7 @@ export const allCourses: Course[] = [
     img: "/cours/leadership-situationnel.png",
     badge: "Top noté",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/leadership-situationnel-et-intelligence-emotionnelle-pour-les-dirigeants",
+    href: "/cours/leadership-situationnel-intelligence-emotionnelle",
     category: "dirigeant",
   },
   {
@@ -144,7 +144,7 @@ export const allCourses: Course[] = [
     img: "/cours/maturite-manageriale.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/maturite-manageriale-et-enjeux-de-direction-generale",
+    href: "/cours/maturite-manageriale-enjeux-de-direction-generale",
     category: "dirigeant",
   },
   {
@@ -156,7 +156,7 @@ export const allCourses: Course[] = [
     img: "/cours/gestion-parties-prenantes.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/gestion-des-parties-prenantes",
+    href: "/cours/gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants",
     category: "dirigeant",
   },
   {
@@ -168,7 +168,7 @@ export const allCourses: Course[] = [
     img: "/cours/design-organisationnel.jpeg",
     badge: "Premium",
     type: "Parcours",
-    href: "https://www.managersity.co/bundles/design-organisationnel-optimise-transformation-culturelle-et-pilotage-efficace-du-changement-organi",
+    href: "/cours/design-organisationnel-transformation-dentreprise",
     category: "dirigeant",
   },
   {
@@ -179,7 +179,7 @@ export const allCourses: Course[] = [
     reviews: 312,
     img: "/cours/reussir-conseil-administration.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/reussir-avec-son-conseil-dadministration-et-son-groupe",
+    href: "/cours/reussir-avec-son-conseil-dadministration-et-son-groupe",
     category: "dirigeant",
   },
   {
@@ -190,7 +190,7 @@ export const allCourses: Course[] = [
     reviews: 287,
     img: "/cours/structurer-optimiser-processus.jpeg",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/lart-de-structurer-et-optimiser-un-processus",
+    href: "/cours/lart-de-structurer-et-optimiser-un-processus",
     category: "dirigeant",
   },
   {
@@ -201,7 +201,7 @@ export const allCourses: Course[] = [
     reviews: 298,
     img: "/cours/management-changement.jpeg",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/management-du-changement-organisationnel",
+    href: "/cours/management-du-changement-organisationnel",
     category: "dirigeant",
   },
   {
@@ -212,7 +212,7 @@ export const allCourses: Course[] = [
     reviews: 534,
     img: "/cours/pack-25-ebooks.png",
     type: "Cours",
-    href: "https://www.managersity.co/courses/pack-25-ebooks-dirigeant",
+    href: "/cours/pack-25-ebooks-pour-dirigeant",
     category: "dirigeant",
   },
   {
@@ -223,7 +223,7 @@ export const allCourses: Course[] = [
     reviews: 378,
     img: "/cours/modelisation-financiere.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/modelisation-et-maitrise-financiere",
+    href: "/cours/modelisation-maitrise-financieres-pour-les-dirigeants",
     category: "dirigeant",
   },
   {
@@ -234,7 +234,7 @@ export const allCourses: Course[] = [
     reviews: 256,
     img: "/cours/reussir-design-organisationnel.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/copy-of-management-de-projet-et-realisation-des-objectifs-strategiques",
+    href: "/cours/management-de-projet-et-realisation-des-objectifs-strategiques",
     category: "dirigeant",
   },
   {
@@ -245,7 +245,7 @@ export const allCourses: Course[] = [
     reviews: 445,
     img: "/cours/jeu-interieur-leadership.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/intelligence-emotionnelle-et-mecanismes-decisionnels-pour-dirigeants",
+    href: "/cours/intelligence-emotionnelle-mecanismes-decisionnels-pour-les-dirigeants",
     category: "dirigeant",
   },
 
@@ -259,7 +259,7 @@ export const allCourses: Course[] = [
     img: "/cours/dispositif-pilotage-commercial.jpg",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/dispositif-et-outils-de-pilotage-commercial",
+    href: "/cours/dispositif-outils-de-pilotage-commercial",
     category: "management-commercial-4-0",
   },
   {
@@ -271,7 +271,7 @@ export const allCourses: Course[] = [
     img: "/cours/reussir-management-commercial.jpg",
     badge: "Top noté",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/reussir-son-management-commercial",
+    href: "/cours/reussir-son-management-commercial",
     category: "management-commercial-4-0",
   },
   {
@@ -283,7 +283,7 @@ export const allCourses: Course[] = [
     img: "/cours/art-casser-baraque-commerciaux.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/lart-de-casser-la-baraque-pour-les-commerciaux",
+    href: "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
     category: "management-commercial-4-0",
   },
 
@@ -296,7 +296,7 @@ export const allCourses: Course[] = [
     reviews: 487,
     img: "/cours/coaching-managerial.jpg",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/le-coaching-managerial-4-0",
+    href: "/cours/le-coaching-managerial-4-0",
     category: "management-d-equipe",
   },
   {
@@ -307,7 +307,7 @@ export const allCourses: Course[] = [
     reviews: 523,
     img: "/cours/batir-equipe-performante",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/batir-une-equipe-performante",
+    href: "/cours/batir-une-equipe-performante",
     category: "management-d-equipe",
   },
   {
@@ -318,7 +318,7 @@ export const allCourses: Course[] = [
     reviews: 389,
     img: "/cours/optimiser-posture-manageriale.jpg",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/optimiser-sa-posture-manageriale",
+    href: "/cours/optimiser-sa-posture-manageriale",
     category: "management-d-equipe",
   },
 
@@ -331,7 +331,7 @@ export const allCourses: Course[] = [
     reviews: 412,
     img: "/cours/management-strategique-capital-humain.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/management-strategique-du-capital-humain",
+    href: "/cours/management-strategique-du-capital-humain",
     category: "management-du-capital-humain",
   },
 
@@ -344,7 +344,7 @@ export const allCourses: Course[] = [
     reviews: 523,
     img: "/cours/piloter-resilience.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/piloter-sa-resilience-et-son-ben-etre-personnel",
+    href: "/cours/piloter-sa-resilience-et-son-bien-etre-personnel",
     category: "developpement-personnel",
   },
   {
@@ -356,7 +356,7 @@ export const allCourses: Course[] = [
     img: "/cours/gestion-stress.jpg",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/gestion-du-stress-et-des-pressions",
+    href: "/cours/gestion-du-stress-et-des-pressions",
     category: "developpement-personnel",
   },
   {
@@ -368,7 +368,7 @@ export const allCourses: Course[] = [
     img: "/cours/developper-potentiel.png",
     badge: "Top noté",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves",
+    href: "/cours/developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves",
     category: "developpement-personnel",
   },
   {
@@ -379,7 +379,7 @@ export const allCourses: Course[] = [
     reviews: 654,
     img: "/cours/intelligence-emotionnelle.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/intelligence-emotionnelle-et-gestion-des-relations-avec-les-autres",
+    href: "/cours/intelligence-emotionnelle-gestion-des-relations-avec-les-autres",
     category: "developpement-personnel",
   },
   {
@@ -391,7 +391,7 @@ export const allCourses: Course[] = [
     img: "/cours/gestion-temps-discipline.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/methodes-de-gestion-du-temps",
+    href: "/cours/methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros",
     category: "developpement-personnel",
   },
   {
@@ -402,7 +402,7 @@ export const allCourses: Course[] = [
     reviews: 478,
     img: "/cours/art-fixer-objectifs.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/lart-de-se-fixer-des-objectifs-et-les-atteindre",
+    href: "/cours/lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre",
     category: "developpement-personnel",
   },
 
@@ -415,7 +415,7 @@ export const allCourses: Course[] = [
     reviews: 356,
     img: "/cours/structurer-piloter-vision.jpg",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/structurer-et-piloter-une-vision-d-entreprise",
+    href: "/cours/structurer-et-piloter-une-vision-dentreprise",
     category: "entrepreneuriat",
   },
   {
@@ -426,7 +426,7 @@ export const allCourses: Course[] = [
     reviews: 412,
     img: "/cours/etat-esprit-resilience.png",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/etat-d-esprit-et-resilience-entrepreneuriale",
+    href: "/cours/etat-desprit-resilience-entrepreneuriale",
     category: "entrepreneuriat",
   },
 
@@ -440,7 +440,7 @@ export const allCourses: Course[] = [
     img: "/cours/art-casser-baraque-commerciaux.png",
     badge: "Bestseller",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/lart-de-casser-la-baraque-pour-les-commerciaux",
+    href: "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
     category: "vendeur-elite-expert-4-0",
   },
   {
@@ -452,7 +452,7 @@ export const allCourses: Course[] = [
     img: "/cours/dispositif-pilotage-commercial.jpg",
     badge: "Top noté",
     type: "Cours",
-    href: "https://www.managersity.co/products/courses/dispositif-et-outils-de-pilotage-commercial",
+    href: "/cours/dispositif-outils-de-pilotage-commercial",
     category: "vendeur-elite-expert-4-0",
   },
 
