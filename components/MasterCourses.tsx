@@ -98,9 +98,6 @@ export default function MasterCourses() {
           <a
             key={i}
             href={course.href}
-            rel="noopener noreferrer"
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer border border-gray-100"
           >
             <div className="h-48 overflow-hidden">
