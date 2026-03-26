@@ -424,7 +424,38 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/intelligence-emotionnelle-mecanismes-decisionnels-pour-les-dirigeants/",
-    tagline: "Développez votre intelligence émotionnelle et maîtrisez vos mécanismes décisionnels pour diriger avec impact dans tous les contextes.",
+    enrollUrl: "https://www.managersity.co/enroll/3239697",
+    tagline: "Pour les dirigeants sous tension : méthodes inédites de leadership intérieur, d'intelligence émotionnelle et de processing pour penser, agir et décider correctement sous pression.",
+    totalChapters: 4,
+    totalLessons: 48,
+    learns: [
+      "Adopter une attitude supérieure face aux situations complexes",
+      "Tenir face aux tensions constantes et rester focus résultats",
+      "Opérer des choix critiques avec lucidité sous pression",
+      "Maîtriser les mécanismes décisionnels des grands leaders",
+      "Développer le jeu intérieur du leadership pour rester maître de la situation",
+      "Gérer les émotions et éviter qu'elles ne parasitent vos décisions",
+    ],
+    chapters: [
+      "Intro : Le vrai test de leadership",
+      "Partie #1 : Reprendre le contrôle du jeu",
+      "Partie #2 : L'art du processing pour gérer les situations sans émotion",
+      "Partie #3 : Choix complexes & mécanismes décisionnels",
+    ],
+    benefits: [
+      {
+        title: "Rester maître de la situation",
+        desc: "Même quand tout le monde perd la tête, développez la capacité à rester serein, à opérer les bonnes analyses et à orienter constamment vos équipes vers les résultats.",
+      },
+      {
+        title: "Méthodes inédites d'intelligence émotionnelle",
+        desc: "Accédez à des méthodes d'IE comme vous n'en avez jamais vues — celles que les grands leaders utilisent pour traverser les défis et en sortir plus forts.",
+      },
+      {
+        title: "Décider et agir sereinement",
+        desc: "Structurez votre processus décisionnel pour prendre les bons arbitrages et assumer pleinement les résultats, même dans les contextes les plus incertains.",
+      },
+    ],
   },
   {
     slug: "management-de-projet-et-realisation-des-objectifs-strategiques",
@@ -472,7 +503,38 @@ export const COURSES: CourseDetail[] = [
     price: 29000,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/management-strategique-du-capital-humain/",
+    enrollUrl: "https://www.managersity.co/enroll/3248576",
     tagline: "Faites du capital humain un levier de performance stratégique : acquisition de talents, engagement, montée en compétences et rétention.",
+    totalChapters: 4,
+    totalLessons: 32,
+    learns: [
+      "Faire du capital humain un avantage compétitif durable",
+      "Attirer, sélectionner et intégrer les meilleurs talents",
+      "Structurer des plans de développement des compétences",
+      "Piloter l'engagement et la rétention des collaborateurs",
+      "Aligner la stratégie RH avec la vision d'entreprise",
+      "Mesurer et optimiser la performance du capital humain",
+    ],
+    chapters: [
+      "Introduction : Le capital humain, premier actif stratégique",
+      "Partie #1 : Acquisition de talents et ingénierie de l'onboarding",
+      "Partie #2 : Développement des compétences et montée en puissance",
+      "Partie #3 : Engagement, fidélisation et pilotage de la performance",
+    ],
+    benefits: [
+      {
+        title: "Faire du capital humain un levier stratégique",
+        desc: "Apprenez à transformer vos équipes en véritable avantage compétitif en alignant les talents sur les priorités de l'entreprise.",
+      },
+      {
+        title: "Attirer et retenir les meilleurs profils",
+        desc: "Disposez d'un système structuré d'acquisition, d'intégration et de fidélisation des talents qui propulse la performance collective.",
+      },
+      {
+        title: "Piloter la montée en compétences",
+        desc: "Construisez des plans de développement RH concrets qui accélèrent la progression de chaque talent vers l'excellence.",
+      },
+    ],
   },
   {
     slug: "modelisation-maitrise-financieres-pour-les-dirigeants",
@@ -481,7 +543,36 @@ export const COURSES: CourseDetail[] = [
     price: 29000,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/modelisation-maitrise-financieres-pour-les-dirigeants/",
-    tagline: "Maîtrisez les fondamentaux financiers pour prendre des décisions éclairées, piloter la performance et dialoguer avec les investisseurs.",
+    enrollUrl: "https://www.managersity.co/enroll/3248576",
+    tagline: "Comment les chiffres sont faits, comment partir des objectifs stratégiques et des ambitions financières à la modélisation structurelle pour assurer la réalisation des performances attendues.",
+    totalChapters: 2,
+    totalLessons: 25,
+    learns: [
+      "Optimiser la maîtrise financière de votre organisation",
+      "Scénariser la performance financière et créer les conditions factorielles de succès",
+      "Apprendre à optimiser le P&L et partir de l'exploitation non satisfaisante aux chiffres attendus",
+      "Comprendre les 6 insensibilités dangereuses des financiers et non-financiers",
+      "Évaluer et optimiser la capacité financière d'une entreprise",
+      "Contribuer à l'orchestration de la performance financière en tant que membre du CODIR",
+    ],
+    chapters: [
+      "Intro : Seul le profit compte ?",
+      "Partie #1 : L'art de faire les chiffres pour les dirigeants",
+    ],
+    benefits: [
+      {
+        title: "Démystifier la performance financière",
+        desc: "Que vous soyez financier ou non, découvrez comment l'argent se fait et comment créer de la valeur dans une entreprise, étape par étape.",
+      },
+      {
+        title: "Piloter et produire les chiffres",
+        desc: "Vous n'attendrez plus le miracle des financiers. Vous aurez contribué à l'orchestration de la performance financière grâce à des méthodes éprouvées.",
+      },
+      {
+        title: "De l'aisance méthodologique",
+        desc: "Beaucoup pataugent quand il faut faire de la performance financière. Vous ferez désormais la différence grâce aux modèles et méthodes structurelles de ce module.",
+      },
+    ],
   },
   {
     slug: "gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants",
@@ -531,7 +622,37 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/lart-de-casser-la-baraque-pour-les-commerciaux/",
-    tagline: "Les techniques et méthodes des commerciaux d'élite pour dépasser tous leurs objectifs de vente et créer une dynamique de performance durable.",
+    enrollUrl: "https://www.managersity.co/enroll/3253473",
+    tagline: "Mindset, optimisation mentale et approche innovante pour intégrer la nouvelle psychologie de la vente et atteindre — et dépasser — vos objectifs commerciaux au quotidien.",
+    totalChapters: 3,
+    totalLessons: 18,
+    learns: [
+      "Doser son mindset pour devenir agressif, déterminé et avide de performance",
+      "Structurer son approche marché avec organisation et discipline",
+      "S'approprier la psychologie de la vente qui fait la différence",
+      "Exercer les 5 droits du commercial que très peu exercent",
+      "Développer la mentalité de gagnant et l'excellence vendeur 4.0",
+      "Rester connecté à ses objectifs et attirer l'abondance commerciale",
+    ],
+    chapters: [
+      "Intro : Êtes-vous vraiment un vendeur d'élite ?",
+      "Partie #1 : Vendeur, maintenant cassez la baraque",
+      "Partie #2 : Mentalité de gagnant et excellence vendeur 4.0 quotidienne",
+    ],
+    benefits: [
+      {
+        title: "Fluidifier l'obligation de faire les chiffres",
+        desc: "Développez la simplicité et l'engagement mental requis pour capter et faire vos objectifs au quotidien tout en restant ZEN, DENSE & FOCUS.",
+      },
+      {
+        title: "Massacrez la procrastination commerciale",
+        desc: "Ne soyez plus un vendeur timide. Optimisez votre densité intérieure et la détermination opérationnelle pour faire vos quotas de vente à coup sûr.",
+      },
+      {
+        title: "Attirer les opportunités et conclure plus facilement",
+        desc: "Grâce à un FOCUS MENTAL et une densité dans l'engagement, vous aurez l'alignement nécessaire pour attirer les opportunités et conclure plus de deals.",
+      },
+    ],
   },
   {
     slug: "developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves",
@@ -540,7 +661,39 @@ export const COURSES: CourseDetail[] = [
     price: 11990,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves/",
-    tagline: "Libérez votre potentiel, clarifiez votre vision et alignez votre vie professionnelle sur vos ambitions profondes et vos objectifs de carrière.",
+    enrollUrl: "https://www.managersity.co/enroll/3253630",
+    tagline: "Prendre en main sa vie et sa carrière, prendre conscience de son potentiel et élaborer un plan de développement personnel pour réaliser la meilleure version de soi-même.",
+    totalChapters: 5,
+    totalLessons: 45,
+    learns: [
+      "Reprendre le contrôle de sa vie et de sa carrière",
+      "S'approprier son potentiel et quitter la ligue des gens qui doutent d'eux-mêmes",
+      "Piloter votre développement avec un plan structuré",
+      "Refuser de se vendre moins cher et développer son engagement total",
+      "Élaborer et réaliser son plan de développement personnel",
+      "Transformer ses ambitions en réalité grâce à des méthodes éprouvées",
+    ],
+    chapters: [
+      "Intro : Quel type de vie voulez-vous mener ?",
+      "Partie #1 : L'art de prendre en charge le développement de son potentiel",
+      "Partie #2 : L'art de développer son potentiel & devenir vraiment unique",
+      "Partie #3 : L'art de densifier son engagement total pour le succès",
+      "Partie #4 : Élaborer et réaliser son plan de développement personnel",
+    ],
+    benefits: [
+      {
+        title: "Reprendre le pouvoir sur sa vie",
+        desc: "Décidez maintenant de ne plus faire dépendre des autres le magnifique potentiel que vous avez. Reprenez le pouvoir et prenez-vous en charge.",
+      },
+      {
+        title: "Élaborer un plan de développement concret",
+        desc: "Étudiez comment vous pensez, agissez et prenez-en le contrôle afin d'orienter vos actions vers ce qui vous permettra de devenir la meilleure version de vous-même.",
+      },
+      {
+        title: "Transformer vos ambitions en réalité",
+        desc: "Quel que soit le domaine de votre vie, ce module vous donne l'état d'esprit, la méthodologie et les outils pour transformer vos ambitions en réalité.",
+      },
+    ],
   },
 
   // ── MODULES CERTIFIANTS ───────────────────────────────────────────────────
@@ -552,7 +705,37 @@ export const COURSES: CourseDetail[] = [
     price: 57000,
     originalPrice: 97000,
     shopUrl: "https://shop.managersity.com/produit/le-game-de-la-strategie-disruption-marche/",
-    tagline: "Maîtrisez les leviers de la stratégie et de la disruption pour positionner votre entreprise en avance et créer un avantage concurrentiel durable.",
+    enrollUrl: "https://www.managersity.co/enroll/3386353",
+    tagline: "Tout ce que vous avez besoin de savoir pour affiner votre profondeur stratégique, multiplier vos coups d'avance et disrupter vos marchés !",
+    totalChapters: 3,
+    totalLessons: 30,
+    learns: [
+      "Prendre le contrôle du game de la stratégie et sortir de la naïveté",
+      "Structurer votre excellence stratégique et atteindre la perspicacité structurelle",
+      "Multiplier vos coups d'avance et renforcer votre excellence tactique",
+      "Identifier les signes de passivité et d'inaptitude stratégiques",
+      "Formuler une stratégie pertinente et la déployer avec agilité",
+      "Disrupter vos marchés et obtenir l'aisance nécessaire pour gagner",
+    ],
+    chapters: [
+      "Introduction : À la source de la stratégie",
+      "Partie #1 : Jouer abondamment le jeu de la stratégie et le gagner",
+      "Partie #2 : Formulation stratégique et pertinence structurelle pour gagner",
+    ],
+    benefits: [
+      {
+        title: "Devenez un fin stratège",
+        desc: "Chaque situation est un champ stratégique. Sortez des baisses de garde qui font tomber les autres dans la myopie stratégique et agissez avec sérénité.",
+      },
+      {
+        title: "Agilisez comme un maître de jeu d'échec",
+        desc: "Maîtrisez le jeu, scénarisez vos avances, multipliez vos options, modélisez vos mouvements et surprenez vos adversaires à chaque fois.",
+      },
+      {
+        title: "Renforcez votre focus stratégique",
+        desc: "Menez avec préparation et agilité le jeu de la stratégie. Sachez sur quoi parier, quels seront vos recours et les next steps pour continuer de gagner.",
+      },
+    ],
   },
   {
     slug: "lart-de-catalyser-et-piloter-la-performance",
@@ -679,7 +862,37 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/reussir-avec-son-conseil-dadministration-et-son-groupe/",
-    tagline: "Maîtrisez les dynamiques du conseil d'administration, renforcez votre gouvernance et créez une relation constructive avec vos actionnaires.",
+    enrollUrl: "https://www.managersity.co/enroll/3380143",
+    tagline: "Nouvel état d'esprit, conscience politique et méthodes optimisées pour comprendre la dynamique d'un conseil d'administration et en prendre le contrôle avec ZEN, PROACTIVITÉ et MÉTHODE.",
+    totalChapters: 3,
+    totalLessons: 17,
+    learns: [
+      "Comprendre la dynamique politique du conseil d'administration",
+      "Structurer la prise en charge des attentes et intérêts des administrateurs",
+      "Retrouver la sérénité lors de vos sessions de CA",
+      "Identifier qui détient le rapport de force et répondre efficacement aux attentes",
+      "Utiliser des méthodes de networking et de lobbying pour animer vos relations",
+      "Maîtriser les 8 pressions inutiles que les dirigeants se mettent dans leurs rapports avec le CA",
+    ],
+    chapters: [
+      "Introduction : Quand le conseil vous fait trembler pour rien",
+      "Partie #1 : Réussir avec le Conseil d'Administration et les acteurs clés au groupe",
+      "Partie #2 : Maîtriser et gérer efficacement le jeu politique au sein du Conseil d'Administration",
+    ],
+    benefits: [
+      {
+        title: "Comprenez l'écosystème d'un conseil",
+        desc: "Comprenez les attentes, élaborez des stratégies adaptées et maîtrisez la dynamique en jeu pour montrer que vous êtes l'homme ou la femme de la situation.",
+      },
+      {
+        title: "Rassurez par votre prestance",
+        desc: "Soyez celui ou celle que les gens sont heureux d'aider et de faire réussir parce qu'il sait comment servir les intérêts des gens et manager les relations de façon profitable.",
+      },
+      {
+        title: "De la finesse méthodologique",
+        desc: "Pour réussir dans le monde des affaires, il faut de la finesse et de la stratégie. Ce module inédit vous apporte exactement cela.",
+      },
+    ],
   },
   {
     slug: "leadership-situationnel-intelligence-emotionnelle",
@@ -688,7 +901,37 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/leadership-situationnel-intelligence-emotionnelle/",
-    tagline: "Adaptez votre style de leadership selon les situations et développez votre intelligence émotionnelle pour un management plus humain et efficace.",
+    enrollUrl: "https://www.managersity.co/enroll/3382352",
+    tagline: "Comment les grands leaders savent aborder et analyser les situations complexes avec hauteur, intelligence émotionnelle et capacité de processing pour RESTER L'HOMME OU LA FEMME de la situation.",
+    totalChapters: 3,
+    totalLessons: 40,
+    learns: [
+      "Adopter une attitude supérieure face aux situations difficiles",
+      "Tenir face aux tensions constantes et rester focus sur l'essentiel",
+      "Arriver à traiter efficacement et opérer les bons choix",
+      "Autodire vos choix et assumer pleinement les résultats",
+      "Développer l'art de décider et agir sereinement pour créer de la performance",
+      "Maîtriser des méthodes inédites d'intelligence émotionnelle",
+    ],
+    chapters: [
+      "Intro : Le vrai test de leadership",
+      "Partie #1 : Reprendre le contrôle du jeu",
+      "Partie #2 : L'art du processing pour gérer les situations sans émotion",
+    ],
+    benefits: [
+      {
+        title: "Arrêtez de râler et de paniquer",
+        desc: "Tout n'a pas besoin de réaction. Maîtrisez les méthodes pour rester FOCUS RÉSULTATS et faire les bons choix qui conduiront vos équipes à la performance.",
+      },
+      {
+        title: "Restez maître de la situation",
+        desc: "Quand vos équipes pensent que tout est foutu, démontrez par votre sérénité qu'ils peuvent constamment compter sur vous. Les gens vous regardent !",
+      },
+      {
+        title: "Des méthodes d'IE comme vous n'en avez jamais vues",
+        desc: "Un leader ne doit pas se montrer fragile. Il doit être le guide vers qui les gens peuvent regarder quand ils perdent le contrôle. Devenez ce type de leader.",
+      },
+    ],
   },
   {
     slug: "choix-complexes-mecanismes-decisionnels",
@@ -697,7 +940,37 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/choix-complexes-mecanismes-decisionnels/",
-    tagline: "Prenez les bonnes décisions dans l'incertitude grâce aux mécanismes décisionnels des meilleurs leaders. Structurez vos choix complexes.",
+    enrollUrl: "https://www.managersity.co/enroll/3382354",
+    tagline: "Modèles et mécanismes décisionnels pour savoir lire entre les lignes, identifier les signaux critiques, se poser les bonnes questions et utiliser les bons critères pour prendre des décisions complexes.",
+    totalChapters: 3,
+    totalLessons: 19,
+    learns: [
+      "Optimiser votre décisivité face aux choix rapides et complexes",
+      "Définir des modèles décisionnels et se poser les bonnes questions",
+      "Rester connecté à vos objectifs sous pression",
+      "Sortir de la fragilité face aux choix complexes",
+      "Formuler et structurer votre approche décisionnelle",
+      "Tirer des leçons de vos choix pour affuter votre capacité décisionnelle",
+    ],
+    chapters: [
+      "Introduction : Quand vous n'avez pas d'autres choix que de décider",
+      "Partie #1 : Comment sortir de la fragilité face aux choix complexes",
+      "Partie #2 : L'art d'optimiser ses mécanismes décisionnels et faciliter ses choix",
+    ],
+    benefits: [
+      {
+        title: "Décidez avec focus et sérénité",
+        desc: "Soyez le leader qui sait rester maître de la situation. Opérez les bonnes analyses et assurez la constance de l'orientation résultats pour votre équipe.",
+      },
+      {
+        title: "Optimisez vos mécanismes décisionnels",
+        desc: "Apprenez à identifier, dans chaque situation, la seule question qui compte vraiment. Délestez-vous de la pression liée au flot d'informations et faites le choix le plus judicieux.",
+      },
+      {
+        title: "Renforcer votre agilité décisionnelle",
+        desc: "Tout n'a pas besoin de réaction. Maîtrisez les méthodes pour rester FOCUS RÉSULTATS et lâchez prise pour opérer les choix qui permettront à votre équipe d'avancer.",
+      },
+    ],
   },
   {
     slug: "leadership-pouvoir-de-linfluence",
@@ -706,7 +979,37 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/leadership-pouvoir-de-linfluence/",
+    enrollUrl: "https://www.managersity.co/enroll/3382352",
     tagline: "Développez un leadership authentique et maîtrisez l'art d'influencer sans autorité formelle pour mobiliser vos équipes et partenaires.",
+    totalChapters: 3,
+    totalLessons: 24,
+    learns: [
+      "Comprendre les mécanismes du pouvoir et de l'influence",
+      "Développer un leadership authentique et inspirant",
+      "Influencer sans autorité formelle ni contrainte",
+      "Mobiliser et fédérer des équipes autour d'une vision",
+      "Construire sa crédibilité et son capital relationnel",
+      "Adopter les postures du leader d'influence à fort impact",
+    ],
+    chapters: [
+      "Introduction : Leadership et influence — les fondements du pouvoir réel",
+      "Partie #1 : Développer son leadership authentique et son capital d'influence",
+      "Partie #2 : Techniques d'influence et mobilisation des acteurs clés",
+    ],
+    benefits: [
+      {
+        title: "Un leadership qui inspire et mobilise",
+        desc: "Devenez un leader dont l'influence naturelle pousse les équipes à se dépasser et à s'engager pleinement dans les objectifs communs.",
+      },
+      {
+        title: "Influencer sans autorité formelle",
+        desc: "Maîtrisez les leviers de l'influence pour obtenir adhésion et coopération des équipes, pairs et partenaires sans avoir recours au pouvoir hiérarchique.",
+      },
+      {
+        title: "Construire son capital relationnel",
+        desc: "Développez la crédibilité, la confiance et les relations stratégiques qui font de vous un acteur incontournable dans votre organisation.",
+      },
+    ],
   },
   {
     slug: "structurer-et-piloter-une-vision-dentreprise",
@@ -715,7 +1018,37 @@ export const COURSES: CourseDetail[] = [
     price: 27900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/structurer-et-piloter-une-vision-dentreprise/",
+    enrollUrl: "https://www.managersity.co/enroll/3386353",
     tagline: "Définissez une vision ambitieuse, structurez-la en stratégie opérationnelle et mobilisez vos équipes autour d'un cap commun clair.",
+    totalChapters: 3,
+    totalLessons: 22,
+    learns: [
+      "Définir et formuler une vision d'entreprise claire et ambitieuse",
+      "Traduire la vision en orientations stratégiques actionnables",
+      "Créer l'alignement organisationnel autour d'un cap commun",
+      "Piloter l'exécution de la vision et adapter la trajectoire",
+      "Communiquer la vision pour embarquer les équipes",
+      "Mesurer les indicateurs de cap et de progression stratégique",
+    ],
+    chapters: [
+      "Introduction : Pourquoi la vision est l'ADN du leadership stratégique",
+      "Partie #1 : Structurer et formuler une vision d'entreprise puissante",
+      "Partie #2 : Déployer, piloter et faire vivre la vision au quotidien",
+    ],
+    benefits: [
+      {
+        title: "Une vision qui donne le cap",
+        desc: "Construisez une vision d'entreprise claire, inspirante et différenciante qui oriente toutes les décisions stratégiques et opérationnelles.",
+      },
+      {
+        title: "L'alignement de toute l'organisation",
+        desc: "Apprenez à décliner la vision en objectifs concrets et à créer l'alignement de toutes vos équipes autour d'une direction commune.",
+      },
+      {
+        title: "Piloter l'exécution stratégique",
+        desc: "Disposez d'outils et de méthodes pour monitorer l'avancement, détecter les écarts et ajuster le tir pour rester sur la trajectoire de la vision.",
+      },
+    ],
   },
   {
     slug: "lart-de-structurer-et-optimiser-un-processus",
@@ -724,7 +1057,37 @@ export const COURSES: CourseDetail[] = [
     price: 21900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/lart-de-structurer-et-optimiser-un-processus/",
+    enrollUrl: "https://www.managersity.co/enroll/3375598",
     tagline: "Cartographiez, simplifiez et optimisez vos processus pour gagner en efficacité opérationnelle et éliminer les sources de perte de performance.",
+    totalChapters: 3,
+    totalLessons: 20,
+    learns: [
+      "Cartographier et documenter les processus existants",
+      "Identifier les goulots d'étranglement et sources de perte",
+      "Simplifier et rationaliser les flux de travail",
+      "Concevoir des processus optimisés et robustes",
+      "Mettre en place des indicateurs de performance de processus",
+      "Piloter l'amélioration continue des processus",
+    ],
+    chapters: [
+      "Introduction : Pourquoi l'optimisation des processus est un impératif de performance",
+      "Partie #1 : Cartographie, analyse et diagnostic des processus actuels",
+      "Partie #2 : Conception, optimisation et pilotage des nouveaux processus",
+    ],
+    benefits: [
+      {
+        title: "Des processus au service de la performance",
+        desc: "Transformez des processus chaotiques en machines de performance en éliminant les frictions, doublons et pertes de temps qui plombent votre efficacité.",
+      },
+      {
+        title: "Une cartographie claire de l'organisation",
+        desc: "Disposez d'une vision structurée de tous vos processus clés pour piloter l'organisation avec précision et prendre de meilleures décisions.",
+      },
+      {
+        title: "Une culture d'amélioration continue",
+        desc: "Installez une démarche d'amélioration continue qui pérennise les gains de performance et maintient l'organisation en état d'excellence opérationnelle.",
+      },
+    ],
   },
   {
     slug: "dispositif-outils-de-pilotage-commercial",
@@ -733,7 +1096,37 @@ export const COURSES: CourseDetail[] = [
     price: 21900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/dispositif-outils-de-pilotage-commercial/",
-    tagline: "Mettez en place les tableaux de bord et outils de suivi pour piloter votre performance commerciale avec précision et en temps réel.",
+    enrollUrl: "https://www.managersity.co/enroll/3375598",
+    tagline: "Plus de 50 outils, matrices, plans, feuilles de route et cadres pratiques pour modéliser, planifier, piloter et orchestrer plus aisément la performance commerciale.",
+    totalChapters: 3,
+    totalLessons: 20,
+    learns: [
+      "Structurer le cadre stratégique avec les meilleures matrices et cartes stratégiques",
+      "Disposer d'une feuille de route — plan de développement sur 3 ans, plan trimestriel, feuille de route annuelle",
+      "Piloter aisément avec des outils sur mesure d'animation commerciale",
+      "Cartographier, planifier et orchestrer des dispositifs de performance commerciale",
+      "Télécharger et adapter des templates à votre situation spécifique",
+      "Maîtriser les outils modernes de scénarisation et de pilotage de la performance",
+    ],
+    chapters: [
+      "Intro : L'art d'assurer l'orchestration et l'optimisation de la performance commerciale",
+      "Partie #1 : Les outils de structuration et de planification de la performance commerciale",
+      "Partie #2 : Les outils d'orchestration et de pilotage de la performance commerciale",
+    ],
+    benefits: [
+      {
+        title: "Finis les casses-têtes !",
+        desc: "Découvrez plus de 50 outils pour cartographier, planifier et orchestrer des dispositifs de performance commerciale. Tout est mis à votre disposition.",
+      },
+      {
+        title: "Des modèles d'outils expliqués en vidéo",
+        desc: "Suivez pas à pas comment s'approprier chaque outil avec des travaux pratiques en vidéos. Téléchargez les templates et adaptez-les à votre situation.",
+      },
+      {
+        title: "Émerveillez votre audience commerciale",
+        desc: "Prenez le contrôle de votre pilotage commercial. Sachez minutieusement ce que vous devez faire chaque semaine pour atteindre vos objectifs.",
+      },
+    ],
   },
   {
     slug: "reussir-le-job-de-manager-commercial",
@@ -742,7 +1135,37 @@ export const COURSES: CourseDetail[] = [
     price: 21900,
     originalPrice: 34900,
     shopUrl: "https://shop.managersity.com/produit/reussir-le-job-de-manager-commercial/",
-    tagline: "Maîtrisez les fondamentaux du poste de manager commercial : animation d'équipe, pilotage du pipeline, coaching et atteinte des résultats.",
+    enrollUrl: "https://www.managersity.co/enroll/3375573",
+    tagline: "Développez un véritable état d'esprit marketing et adoptez les rôles, engagements et réflexes d'un manager commercial audacieux pour occuper le terrain et atteindre vos objectifs.",
+    totalChapters: 3,
+    totalLessons: 26,
+    learns: [
+      "Optimiser sa stratégie commerciale selon les priorités et enjeux sectoriels",
+      "Réussir le maillage commercial — couverture marché, déploiement et animation des réseaux",
+      "Orchestrer la performance et devenir un maître d'orchestre du monitoring commercial",
+      "Jouer les 4 rôles clés du manager commercial au quotidien",
+      "Mettre en mouvement vos équipes et réseaux commerciaux",
+      "Maîtriser plus de 23 outils de scénarisation et de pilotage de la performance commerciale",
+    ],
+    chapters: [
+      "Introduction : État d'esprit, réflexes et focus pour s'approprier son job de manager commercial",
+      "Partie 1 : L'art de dynamiser son emprise managériale pour réussir son job de manager commercial",
+      "Partie #2 : Stratégie guerrière et méthodes d'optimisation stratégiques pour faire les chiffres",
+    ],
+    benefits: [
+      {
+        title: "Huiler votre management commercial",
+        desc: "Découvrez les nouveaux rôles critiques et la dimension stratégique, structurelle et opérationnelle requise pour mettre vos équipes en mouvement et atteindre vos objectifs.",
+      },
+      {
+        title: "Créer les conditions de la performance commerciale",
+        desc: "Découvrez les conditions et facteurs clés à activer ainsi que les mécanismes à déployer pour que vos commerciaux aient la fluidité nécessaire pour faire vos chiffres.",
+      },
+      {
+        title: "Devenez un management commercial 4.0",
+        desc: "Occupez le terrain, protégez votre part de marché et continuez à atteindre et dépasser vos objectifs commerciaux avec un état d'esprit et des outils modernes.",
+      },
+    ],
   },
   {
     slug: "batir-une-equipe-performante",
@@ -830,7 +1253,37 @@ export const COURSES: CourseDetail[] = [
     price: 19900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros/",
-    tagline: "Maîtrisez votre temps, organisez vos priorités et développez une discipline personnelle de haut niveau pour performer durablement.",
+    enrollUrl: "https://www.managersity.co/enroll/3230856",
+    tagline: "Des méthodes inédites de gestion du temps qui vous marcheront à coup sûr. Plus de 29 approches pour massacrer la procrastination et maîtriser votre organisation au quotidien.",
+    totalChapters: 3,
+    totalLessons: 51,
+    learns: [
+      "Optimiser son organisation et reprendre le contrôle de votre temps et de vos journées",
+      "Améliorer le focus quotidien et se concentrer sur ses tâches clés",
+      "Exceller et performer au quotidien en livrant vos quotas avec exemplarité",
+      "Connecter ses journées à ses aspirations profondes",
+      "Maîtriser les 10 ingrédients d'une journée fructueuse",
+      "Anticiper sur les pressions et les gérer avec fluidité",
+    ],
+    chapters: [
+      "Introduction : L'art de consacrer rigoureusement ses journées aux choses qui valent la peine",
+      "Partie #1 : Conscience et méthodes de gestion optimisée du temps au quotidien",
+      "Partie #2 : Gestion du stress — méthodes et organisation pour anticiper sur les pressions",
+    ],
+    benefits: [
+      {
+        title: "Atteignez la discipline personnelle",
+        desc: "Avec ce module, vous n'allez plus être victime de la procrastination. 29 méthodes inédites vous permettront de faire ce que vous devez faire quand vous devez le faire.",
+      },
+      {
+        title: "Massacrez la procrastination",
+        desc: "Privez la procrastination de son emprise sur vous. Dopez votre énergie et votre agilité pour engager les actions que vous devez engager quand vous devez les engager.",
+      },
+      {
+        title: "Maîtrisez votre organisation",
+        desc: "Prenez le contrôle de votre vie et de votre carrière. Sachez minutieusement ce que vous devez faire chaque heure de vos journées pour atteindre vos objectifs.",
+      },
+    ],
   },
   {
     slug: "optimiser-sa-posture-manageriale",
@@ -878,7 +1331,37 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/gestion-du-stress-et-des-pressions/",
-    tagline: "Développez des stratégies concrètes pour gérer le stress professionnel, neutraliser les pressions et maintenir votre performance sous pression.",
+    enrollUrl: "https://www.managersity.co/enroll/3380144",
+    tagline: "Méthodes inédites d'organisation et de gestion intelligente pour prévenir et gérer efficacement les moments de stress et rester en mesure de délivrer ses résultats en toute sérénité.",
+    totalChapters: 3,
+    totalLessons: 25,
+    learns: [
+      "Identifier vos sources de stress et prendre le contrôle de l'anticipation",
+      "Décortiquer les mécanismes de déclenchement du stress",
+      "Faciliter votre sérénité grâce à des méthodes inédites éprouvées avec des clients",
+      "Anticiper sur les causes de stress pour en éliminer la majorité",
+      "Garder la sérénité face aux pressions réelles qui font perdre la tête aux autres",
+      "S'auto-coacher en situation de tension pour reprendre le contrôle",
+    ],
+    chapters: [
+      "Introduction : Comment le stress est créé (inutilement)",
+      "Partie #1 : Détecter les causes nuisibles de pression et les prévenir",
+      "Partie #2 : Méthodes imparables pour éliminer ou gérer le stress au quotidien",
+    ],
+    benefits: [
+      {
+        title: "Anticiper sur les causes",
+        desc: "La plupart de vos situations de stress peuvent être évitées si vous savez adopter l'état d'esprit et l'organisation nécessaires. Découvrez comment y arriver.",
+      },
+      {
+        title: "Vous avez bien le contrôle",
+        desc: "C'est vous qui laissez la négligence et le manque d'organisation rendre urgentes des situations qui auraient pu être anticipées. Reprenez le contrôle maintenant.",
+      },
+      {
+        title: "Activez vos mécanismes de gestion sereine",
+        desc: "Quand surviennent les pressions, gardez la sérénité et continuez de penser, décider et agir avec ordonnancement malgré les pressions réelles.",
+      },
+    ],
   },
   {
     slug: "piloter-sa-resilience-et-son-bien-etre-personnel",
@@ -887,7 +1370,38 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/piloter-sa-resilience-et-son-bien-etre-personnel/",
-    tagline: "Construisez une résilience durable et pilotez votre bien-être pour performer sur le long terme tout en préservant votre équilibre personnel.",
+    enrollUrl: "https://www.managersity.co/enroll/3422024",
+    tagline: "État d'esprit, approches et mécanismes inédits pour trouver son épanouissement, piloter son bien-être au quotidien et rester fort et résilient dans un monde en tension.",
+    totalChapters: 4,
+    totalLessons: 68,
+    learns: [
+      "S'élever à la dimension des nouveaux enjeux professionnels du 21è siècle",
+      "Orchestrer et manager son épanouissement et son bonheur quotidien",
+      "Optimiser sa résilience personnelle et piloter son bien-être",
+      "Transformer les obstacles en opportunités de croissance personnelle",
+      "Mettre en place une feuille de route de gestion durable de son bien-être",
+      "Maîtriser les mécanismes physiologiques du bien-être quotidien",
+    ],
+    chapters: [
+      "Intro : En attendant que tout soit parfait — comment protéger son bien-être dans un monde en tension",
+      "Partie #1 : Piloter son bien-être face aux nouvelles exigences professionnelles du 21è siècle",
+      "Partie #2 : L'atelier du bien-être et du bonheur au quotidien pour les professionnels",
+      "Partie #3 : De la fragilité au management de la résilience pour protéger son bien-être",
+    ],
+    benefits: [
+      {
+        title: "Manager votre bonheur au quotidien",
+        desc: "Vous n'allez plus attendre pour être heureux. Ce cours propose un atelier spécial de management du bonheur avec des méthodes et outils pratiques pour calibrer votre bien-être.",
+      },
+      {
+        title: "Reprenez le contrôle de votre épanouissement",
+        desc: "Notre monde est en tension permanente. Mais tout dépend de votre posture, de votre état d'esprit et des mécanismes que vous déployez pour piloter votre bien-être.",
+      },
+      {
+        title: "Optimiser les mécanismes de votre résilience",
+        desc: "La plupart des gens attendent le bonheur. Ce module vous aide à piloter et calibrer votre résilience personnelle pour mieux faire face aux enjeux et rester heureux au quotidien.",
+      },
+    ],
   },
 
   // ── DÉVELOPPEMENT PERSONNEL ───────────────────────────────────────────────
@@ -899,7 +1413,38 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/intelligence-emotionnelle-gestion-des-relations-avec-les-autres/",
-    tagline: "Développez votre quotient émotionnel et améliorez la qualité de toutes vos relations professionnelles pour plus d'impact et d'harmonie.",
+    enrollUrl: "https://www.managersity.co/enroll/3234380",
+    tagline: "Sortir de la fragilité émotionnelle, travailler son self-management, devenir confiant et autodéterminé, maîtriser ses émotions et retrouver la sérénité au quotidien.",
+    totalChapters: 4,
+    totalLessons: 48,
+    learns: [
+      "Savoir s'auto-manager et être maître de soi",
+      "Sortir de la fragilité et augmenter sa confiance en soi",
+      "Maîtriser ses émotions et le mécanisme de leur déclenchement",
+      "Prendre en main sa vie et sa carrière et devenir le pilote de son destin",
+      "Développer son intelligence émotionnelle au service du leadership",
+      "Améliorer la qualité de toutes ses relations professionnelles et personnelles",
+    ],
+    chapters: [
+      "Introduction : Arrivez-vous à vous manager ?",
+      "Partie #1 : L'art de prendre en main sa vie et sa carrière",
+      "Partie #2 : L'art de sortir de la fragilité émotionnelle & doper son intelligence émotionnelle",
+      "Partie #3 : Leadership, communication efficace et gestion des malentendus",
+    ],
+    benefits: [
+      {
+        title: "Forgez votre caractère et votre self-management",
+        desc: "Créez les conditions pour vous autodéterminer et développer votre capacité à gérer votre caractère et vos émotions, même sous pression.",
+      },
+      {
+        title: "Soyez méthodique dans la gestion de vos émotions",
+        desc: "Découvrez des méthodes inédites pour savoir désormais vous parler, vous auto-coacher et orienter vos réactions vers les attitudes qui vous soient profitables.",
+      },
+      {
+        title: "Faites briller votre IE",
+        desc: "Ne laissez plus les provocations, les attaques personnelles et les absurdités vous perturber. Prenez le contrôle de vos émotions et devenez imperturbable.",
+      },
+    ],
   },
   {
     slug: "lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre",
@@ -908,7 +1453,37 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre/",
-    tagline: "La méthode éprouvée pour vous fixer des objectifs ambitieux, les planifier avec précision et les atteindre systématiquement.",
+    enrollUrl: "https://www.managersity.co/enroll/3230452",
+    tagline: "Une méthodologie de management de vie et de carrière empruntée aux meilleurs dirigeants et athlètes pour transformer votre vie et votre carrière en chefs d'œuvre.",
+    totalChapters: 3,
+    totalLessons: 32,
+    learns: [
+      "Clarifier vos objectifs avec état d'esprit et méthodologie pour matérialiser vos rêves",
+      "Structurer la planification sur 1, 5 et 25 ans avec la méthodologie requise",
+      "Adopter l'organisation et la discipline requises pour atteindre vos objectifs",
+      "Développer la clarté visionnaire pour votre vie et votre carrière",
+      "S'aligner sur ses ambitions et les réaliser avec des méthodes de casseur de baraque",
+      "Avoir une cartographie claire de pilotage dans chaque domaine important de votre vie",
+    ],
+    chapters: [
+      "Introduction : L'audace de rêver et de se remettre en cause",
+      "Partie #1 : L'art de s'aligner sur ses ambitions et les réaliser",
+      "Partie #2 : Méthodes de casseur de baraque pour atteindre et dépasser ses objectifs",
+    ],
+    benefits: [
+      {
+        title: "Structurer la réalisation de vos objectifs",
+        desc: "Découvrez l'état d'esprit et les méthodes utilisées par les plus grands succès pour se fixer des objectifs, les dépasser et réaliser des performances records.",
+      },
+      {
+        title: "Ayez une cartographie claire de pilotage",
+        desc: "Vous aurez désormais une carte pour ne plus naviguer à vue. Vous pourrez mieux utiliser vos ressources en sachant précisément à quoi les consacrer.",
+      },
+      {
+        title: "Réussir, c'est atteindre ses objectifs",
+        desc: "Quel que soit le domaine de votre vie où vous visez la réussite, ce module réunit l'état d'esprit, la méthodologie et les outils pour transformer vos ambitions en réalité.",
+      },
+    ],
   },
   {
     slug: "etat-desprit-resilience-entrepreneuriale",
@@ -917,7 +1492,37 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/etat-desprit-resilience-entrepreneuriale/",
-    tagline: "Développez le mindset et la résilience d'un entrepreneur qui surmonte les obstacles, persévère et transforme les défis en opportunités.",
+    enrollUrl: "https://www.managersity.co/enroll/3253630",
+    tagline: "Développez le mindset et la résilience d'un entrepreneur qui surmonte les obstacles, persévère et transforme les défis en opportunités de croissance.",
+    totalChapters: 3,
+    totalLessons: 20,
+    learns: [
+      "Développer l'état d'esprit de l'entrepreneur qui ne lâche pas",
+      "Renforcer sa résilience face aux obstacles et aux échecs",
+      "Transformer les défis en opportunités de croissance personnelle",
+      "Prendre en main sa vie et son destin entrepreneurial",
+      "Cultiver la persévérance et la densité intérieure requises pour réussir",
+      "Piloter son orientation vers la performance et les résultats",
+    ],
+    chapters: [
+      "Introduction : L'état d'esprit de l'entrepreneur résilient",
+      "Partie #1 : Développer la résilience entrepreneuriale et sortir de la fragilité",
+      "Partie #2 : Méthodes de casseur de baraque pour maintenir le cap vers ses objectifs",
+    ],
+    benefits: [
+      {
+        title: "Le mindset de l'entrepreneur qui réussit",
+        desc: "Adoptez le même état d'esprit que les entrepreneurs qui transforment les obstacles en tremplins pour leur succès.",
+      },
+      {
+        title: "Renforcer sa résilience personnelle",
+        desc: "Développez la capacité à rebondir après chaque échec, à tirer les leçons et à avancer encore plus fort vers vos objectifs.",
+      },
+      {
+        title: "Transformer les défis en opportunités",
+        desc: "Apprenez à percevoir les problèmes non comme des obstacles mais comme des catalyseurs de croissance et de performance.",
+      },
+    ],
   },
 
   // ── TRANSFORMATION DIGITALE ───────────────────────────────────────────────
@@ -929,6 +1534,37 @@ export const COURSES: CourseDetail[] = [
     price: 29900,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/enjeux-business-methodologie-de-transformation-digitale/",
-    tagline: "Maîtrisez les enjeux et la méthodologie pour piloter la transformation digitale de votre organisation avec méthode et impact durable.",
+    enrollUrl: "https://www.managersity.co/enroll/3234082",
+    tagline: "Embrassez l'aventure de la transformation digitale avec clarté, méthodes et aisance grâce à une méthodologie pour définir votre vision digitale et structurer votre déploiement.",
+    totalChapters: 4,
+    totalLessons: 33,
+    learns: [
+      "Comprendre l'univers digital et la transformation organisationnelle",
+      "Modéliser l'intégration digitale et trouver votre schéma d'optimisation",
+      "Structurer la maturation digitale et définir votre vision digitale",
+      "Comment la technologie transforme les business models",
+      "Éviter de tomber dans la paresse digitale et la passivité",
+      "Élaborer une feuille de route de transformation digitale avec des outils pratiques",
+    ],
+    chapters: [
+      "Intro : À quoi s'attendre lorsqu'on veut digitaliser ?",
+      "Partie #1 : Dans l'univers technologique et digital — mindset & optimisation",
+      "Partie #3 : Réduction du gap technologique et montée en régime digital",
+      "Partie #4 : Étude de cas pratique — vision digitale et plan de transformation digitale",
+    ],
+    benefits: [
+      {
+        title: "Passez de spectateur à acteur",
+        desc: "Entrez dans l'univers du digital et apprenez à en faire un levier pour vos enjeux de transformation. Utilisez le digital pour faire monter votre organisation en puissance.",
+      },
+      {
+        title: "Obtenez votre certification en Transformation Digitale",
+        desc: "Ayez votre mot à dire et challengez les propositions des experts. Contribuez efficacement à la montée en maturité digitale de votre organisation.",
+      },
+      {
+        title: "Des outils pratiques à télécharger et utiliser",
+        desc: "Vision digitale, évaluation de la maturité, feuille de route de transformation, culture digitale, data management — tout disponible avec des outils téléchargeables immédiatement.",
+      },
+    ],
   },
 ];
