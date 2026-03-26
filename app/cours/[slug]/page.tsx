@@ -334,15 +334,15 @@ export default async function CoursPage({
           </section>
         )}
 
-        {/* FAQ — white */}
-        <section className="bg-white py-16">
+        {/* FAQ — dark */}
+        <section className="bg-gray-900 py-16">
           <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-2xl font-black text-gray-900 mb-8">Questions fréquentes</h2>
+            <h2 className="text-2xl font-black text-white mb-8">Questions fréquentes</h2>
             <div className="space-y-3">
               {FAQ.map((item, i) => (
-                <div key={i} className={`border-l-4 ${colors.bar} bg-gray-50 border border-gray-100 rounded-r-xl p-5`}>
-                  <p className="font-bold text-gray-900 text-sm mb-2">{item.q}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+                <div key={i} className="bg-gray-800 border border-white/10 rounded-xl p-5">
+                  <p className="font-bold text-white text-sm mb-2">{item.q}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
                 </div>
               ))}
             </div>
