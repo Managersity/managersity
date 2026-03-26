@@ -28,7 +28,7 @@ export default function Navbar() {
           </Link>
 
           <a
-            href="https://shop.managersity.com/"
+            href="https://www.managersity.com/boutique"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
@@ -68,7 +68,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-5 flex flex-col gap-0 text-sm text-gray-700">
           <div className="flex flex-col gap-3 mt-4">
             <Link href="/tous-les-cours" onClick={() => setOpen(false)}>Tous les cours</Link>
-            <a href="https://shop.managersity.com/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Boutique</a>
+            <a href="https://www.managersity.com/boutique" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Boutique</a>
             <a href="https://ressources.managersity.co/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Ressources gratuites</a>
             <div className="flex gap-2 mt-1">
               <a

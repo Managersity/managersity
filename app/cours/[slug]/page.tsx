@@ -298,7 +298,7 @@ export default async function CoursPage({
               </div>
               <div>
                 <p className="font-black text-white text-xl mb-1">Hermann H. CAKPO</p>
-                <p className={`text-sm font-semibold mb-4 ${colors.heroText}`}>Fondateur — Managersity by H&amp;C</p>
+                <p className={`text-sm font-semibold mb-4 ${colors.heroText}`}>Chairman — H&amp;C</p>
                 <p className="text-gray-300 text-sm leading-relaxed max-w-xl">
                   Auteur de 96 livres, dirigeant de 17 entreprises et expert en management reconnu en Afrique de l&apos;Ouest et du Centre.
                   Hermann H. CAKPO est l&apos;architecte des formations Managersity, dispensées aux meilleures organisations africaines —
