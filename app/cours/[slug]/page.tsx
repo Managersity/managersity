@@ -212,10 +212,23 @@ export default async function CoursPage({
                     href={ctaUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-widest py-3.5 rounded-xl transition-all mb-4 mt-2"
+                    className="flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-widest py-3.5 rounded-xl transition-all mt-2"
                   >
                     {ctaLabel}
                     <span>→</span>
+                  </a>
+
+                  <a
+                    href={course.shopUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-400 text-white font-bold text-sm py-3 rounded-xl transition-all mb-3 mt-2"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                      <line x1="12" y1="18" x2="12.01" y2="18" />
+                    </svg>
+                    Payer par Mobile Money
                   </a>
 
                   <div className="space-y-2.5 text-xs text-gray-500 pt-1">
@@ -332,6 +345,55 @@ export default async function CoursPage({
                   <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mobile Money — green section */}
+        <section className="bg-emerald-950 py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="flex flex-col md:flex-row md:items-center gap-10">
+              {/* Left */}
+              <div className="flex-1">
+                <span className="inline-block bg-green-500/20 border border-green-500/40 text-green-400 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+                  Paiement Afrique
+                </span>
+                <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
+                  Payez par{" "}
+                  <span className="text-green-400">Mobile Money</span>
+                </h2>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Wave, Orange Money, MTN Money, Moov Money… Achetez cette formation directement depuis notre boutique en ligne avec votre mobile. Simple, rapide et sécurisé.
+                </p>
+                <a
+                  href={course.shopUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-black px-7 py-3.5 rounded-xl transition-all text-sm shadow-lg shadow-green-500/20"
+                >
+                  Payer par Mobile Money
+                  <span>→</span>
+                </a>
+              </div>
+              {/* Right — payment logos */}
+              <div className="grid grid-cols-3 gap-3 md:w-64 shrink-0">
+                {[
+                  { name: "Wave", logo: "https://cdn.brandfetch.io/domain/wave.com/fallback/lettermark/theme/dark/h/400/w/400/icon?c=1bfwsmEH20zzEfSNTed", countries: "SN, CI, ML" },
+                  { name: "Orange Money", logo: "https://www.logo.wine/a/logo/Orange_Money/Orange_Money-Logo.wine.svg", countries: "SN, CI, ML, BF" },
+                  { name: "MTN MoMo", logo: "https://www.pngfind.com/pngs/m/28-280910_595-x-842-25-logo-de-mtn-money.png", countries: "CM, GH, CI" },
+                  { name: "Moov Money", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Moov_Money_Flooz.png", countries: "BF, CI, TG" },
+                  { name: "Airtel Money", logo: "https://www.pngall.com/wp-content/uploads/17/Airtel-Money-Logo-PNG-thumb.png", countries: "CD, RW, MG" },
+                  { name: "Flooz", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM4Z6c8NKsTupLLnd6nHg_Hvj4_OluA09Q&s", countries: "BJ, TG, BF" },
+                ].map((m, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-3 flex flex-col items-center justify-center text-center hover:border-green-500/40 hover:bg-white/10 transition-all">
+                    <div className="w-10 h-7 mb-1.5 flex items-center justify-center">
+                      <img src={m.logo} alt={m.name} className="max-w-full max-h-full object-contain" loading="lazy" />
+                    </div>
+                    <p className="text-white font-bold text-[10px]">{m.name}</p>
+                    <p className="text-gray-500 text-[9px] mt-0.5">{m.countries}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
