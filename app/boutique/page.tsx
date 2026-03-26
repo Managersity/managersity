@@ -394,6 +394,11 @@ const CAT_STYLES: Record<string, { bar: string; badge: string; text: string }> =
   "Transformation Digitale":  { bar: "bg-cyan-600",    badge: "bg-cyan-100 text-cyan-700",      text: "text-cyan-600" },
 };
 
+function courseHref(p: Product): string {
+  const m = p.url.match(/\/produit\/([^/]+)/);
+  return m ? `/cours/${m[1]}` : p.url;
+}
+
 export default function BoutiquePage() {
   const [active, setActive] = useState("Tous");
 
@@ -503,9 +508,7 @@ export default function BoutiquePage() {
               return (
                 <a
                   key={i}
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={courseHref(p)}
                   className="group flex flex-col bg-white border border-gray-100 hover:border-amber-300 rounded-2xl overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
                 >
                   {/* Color top bar */}
@@ -542,7 +545,7 @@ export default function BoutiquePage() {
                         )}
                       </div>
                       <span className="block text-center bg-gray-100 group-hover:bg-amber-500 group-hover:text-white text-gray-600 text-xs font-bold uppercase tracking-widest py-2.5 rounded-lg transition-all">
-                        Acheter →
+                        Voir →
                       </span>
                     </div>
                   </div>
