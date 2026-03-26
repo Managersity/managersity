@@ -196,7 +196,38 @@ export const COURSES: CourseDetail[] = [
     price: 97000,
     originalPrice: 297000,
     shopUrl: "https://shop.managersity.com/produit/lia-pour-les-dirigeants-5-0-le-cours-complet/",
+    enrollUrl: "https://www.managersity.co/enroll/3499006",
     tagline: "Comment les DG et dirigeants 5.0 utilisent l'IA pour optimiser le cadrage stratégique, la planification et le pilotage de leurs organisations.",
+    totalChapters: 4,
+    totalLessons: 58,
+    learns: [
+      "Utiliser ChatGPT, Power BI Intelligence et Tableau AI pour analyser, décider et communiquer",
+      "Automatiser le reporting, l'analyse financière, la veille concurrentielle et la planification stratégique",
+      "Créer des dashboards prédictifs sans coder pour piloter la performance en temps réel",
+      "Anticiper les tendances marché, optimiser les coûts et identifier de nouvelles opportunités de croissance",
+      "Transformer l'organisation et accompagner les équipes dans l'adoption de l'IA",
+      "Adopter une posture de leader disruptif augmenté par l'IA",
+    ],
+    chapters: [
+      "Introduction : L'IA appliquée au management — la meilleure opportunité d'excellence managériale",
+      "Partie 1 : Immersion dans l'univers IA — ce que le dirigeant doit savoir et retenir",
+      "Partie 2 : L'excellence dirigeant optimisée IA",
+      "Partie 3 : L'entreprise augmentée — comment créer les conditions pour tirer le meilleur parti de l'IA",
+    ],
+    benefits: [
+      {
+        title: "Comprendre l'IA sans être tech",
+        desc: "Pas besoin d'être ingénieur pour révolutionner votre entreprise. La formation vous explique l'IA en termes business et comment l'intégrer stratégiquement dans votre organisation.",
+      },
+      {
+        title: "L'IA au service du leadership stratégique",
+        desc: "L'IA transforme le pilotage : anticiper les tendances marché, optimiser la chaîne de valeur, personnaliser l'expérience client et accélérer les prises de décision.",
+      },
+      {
+        title: "Devenir un dirigeant visionnaire augmenté par l'IA",
+        desc: "L'IA ne remplace pas le DG, elle amplifie sa vision. Développez un leadership plus anticipatif, plus agile et plus innovant pour guider votre organisation vers les opportunités de demain.",
+      },
+    ],
   },
 
   // ── PACKS PHARES ──────────────────────────────────────────────────────────
@@ -354,7 +385,37 @@ export const COURSES: CourseDetail[] = [
     price: 57000,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise/",
+    enrollUrl: "https://www.managersity.co/enroll/3248526",
     tagline: "Maîtrisez la méthodologie pour diagnostiquer une organisation, évaluer ses capacités et déployer sa transformation avec succès.",
+    totalChapters: 3,
+    totalLessons: 30,
+    learns: [
+      "Diagnostiquer une organisation et identifier les leviers de performance",
+      "Mettre en place l'organisation adéquate pour atteindre les performances attendues",
+      "Structurer et piloter la recapacitation organisationnelle",
+      "Réussir l'alignement stratégique et organisationnel",
+      "Traduire une vision en un projet d'entreprise avec des optimisations concrètes",
+      "Maîtriser les 6 capacités transformatives clés pour réussir la montée en régime",
+    ],
+    chapters: [
+      "Intro : Lorsque votre organisation n'est pas calibrée pour vous permettre d'atteindre vos objectifs",
+      "Partie 1 : Mettre en place l'organisation adéquate pour atteindre la performance humaine",
+      "Partie 2 : Structurer et piloter la recapacitation organisationnelle",
+    ],
+    benefits: [
+      {
+        title: "Réussir le diagnostic organisationnel",
+        desc: "Sachez sur quoi agir pour transformer une organisation et l'aligner sur de nouvelles perspectives de performance, de croissance et d'excellence.",
+      },
+      {
+        title: "Réussir l'alignement organisationnel",
+        desc: "Permettez à votre organisation d'assurer la montée en dimension requise pour devenir l'écosystème de réalisation parfaite de vos objectifs stratégiques.",
+      },
+      {
+        title: "Réussir le changement organisationnel",
+        desc: "Découvrez comment réussir la transformation culturelle et la mobilisation des équipes autour des changements organisationnels et le pilotage d'une vision.",
+      },
+    ],
   },
   {
     slug: "intelligence-emotionnelle-mecanismes-decisionnels-pour-les-dirigeants",
@@ -372,7 +433,37 @@ export const COURSES: CourseDetail[] = [
     price: 29000,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/management-de-projet-et-realisation-des-objectifs-strategiques/",
+    enrollUrl: "https://www.managersity.co/enroll/3239721",
     tagline: "Pilotez vos projets stratégiques avec méthode et faites de l'atteinte des objectifs un processus structuré et reproductible.",
+    totalChapters: 3,
+    totalLessons: 20,
+    learns: [
+      "Connecter le travail quotidien aux objectifs stratégiques via l'approche projet",
+      "Structurer l'effort de réalisation des KPI en projets d'optimisation pilotés",
+      "Créer les conditions pour optimiser l'excellence projet dans votre organisation",
+      "Appliquer la méthodologie de management de projet pour sortir du défaut de mise en œuvre",
+      "Définir des initiatives stratégiques et les opérationnaliser avec méthode",
+      "Développer la conscience projet pour accélérer la performance d'entreprise",
+    ],
+    chapters: [
+      "Intro : Utiliser les projets pour atteindre les objectifs stratégiques",
+      "Partie #1 : Structurer l'effort de réalisation des KPI en efforts de pilotage de projet d'optimisation",
+      "Partie #2 : Créer les conditions pour optimiser l'excellence projet",
+    ],
+    benefits: [
+      {
+        title: "Huiler vos initiatives stratégiques",
+        desc: "Définissez des initiatives stratégiques découlant de vrais enjeux et utilisez la méthodologie du management de projet pour les mettre en œuvre.",
+      },
+      {
+        title: "Optimiser l'opérationnalisation",
+        desc: "Grâce à la méthodologie du management de projet, traduisez vos initiatives stratégiques en termes opérationnels pour les mettre en œuvre plus aisément.",
+      },
+      {
+        title: "Échapper au défaut d'exécution",
+        desc: "Un plan d'entreprise vaut la peine quand les initiatives sont mises en œuvre. Découvrez comment la méthodologie du management de projet vous y aidera.",
+      },
+    ],
   },
   {
     slug: "management-strategique-du-capital-humain",
@@ -399,7 +490,39 @@ export const COURSES: CourseDetail[] = [
     price: 29900,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants/",
+    enrollUrl: "https://www.managersity.co/enroll/3249008",
     tagline: "Développez vos relations stratégiques et votre leadership diplomatique pour influencer vos parties prenantes et atteindre vos objectifs.",
+    totalChapters: 5,
+    totalLessons: 53,
+    learns: [
+      "Gérer vos parties prenantes (CA, actionnaires, CODIR, syndicats, clients, régulateur, État)",
+      "Pratiquer un leadership politique sans naïveté dans les organisations complexes",
+      "Bâtir et animer un réseau stratégique profitable et durable",
+      "Maîtriser le lobbying et les relations institutionnelles",
+      "Gérer les pressions et environnements professionnels difficiles",
+      "Créer un cadre de relations qui fait que les autres veulent vous faire réussir",
+    ],
+    chapters: [
+      "Intro : L'art de réussir en faisant réussir les autres",
+      "Partie #1 : Réussir avec le Conseil d'Administration et les acteurs clés au groupe",
+      "Partie #2 : Réussir avec son CODIR et faciliter les relations avec collaborateurs et partenaires sociaux",
+      "Partie #3 : Réussir avec les autres partenaires à la performance (clients, fournisseurs, banquiers)",
+      "Partie #4 : Networking, relations institutionnelles, agilité diplomatique & gestion des pressions",
+    ],
+    benefits: [
+      {
+        title: "Devenir un fin stratège relationnel",
+        desc: "Prenez le contrôle de votre écosystème et créez un cadre de management et de développement efficace et profitable de vos relations.",
+      },
+      {
+        title: "S'approprier les clés de la politique",
+        desc: "Ne soyez plus victime des manigances politiques. Devenez un animal politique qui sait protéger et animer ses intérêts.",
+      },
+      {
+        title: "Optimiser son réseau et ses relations",
+        desc: "Utilisez des méthodes de networking et de lobbying pour développer votre réseau et animer vos relations de façon profitable et durable.",
+      },
+    ],
   },
   {
     slug: "lart-de-casser-la-baraque-pour-les-commerciaux",
@@ -438,7 +561,37 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/le-coaching-managerial-4-0/",
+    enrollUrl: "https://www.managersity.co/enroll/3451712",
     tagline: "Devenez un manager-coach d'exception : techniques de coaching, feedbacks structurés et développement des talents pour une équipe haute performance.",
+    totalChapters: 3,
+    totalLessons: 33,
+    learns: [
+      "Maîtriser la méthodologie pour coacher efficacement ses collaborateurs",
+      "Amener les collaborateurs à concevoir et exécuter les tâches correctement",
+      "Éviter les 5 pièges de l'évidence managériale qui font échouer les managers",
+      "Utiliser les 5 composantes d'une instruction facile à exécuter",
+      "Appliquer la méthode du tailleur en action dans différents contextes pratiques",
+      "Déployer la formule de performance optimisée pour démultiplier les leaders",
+    ],
+    chapters: [
+      "Introduction : L'art d'amener les collaborateurs à le concevoir et le faire de la même façon que vous",
+      "Partie #1 : Créer et renforcer les bases de sa capacité d'influence",
+      "Partie #2 : Optimiser sa posture managériale",
+    ],
+    benefits: [
+      {
+        title: "Devenir un leader attractif",
+        desc: "Réussir à donner envie aux gens de venir vers vous, de vous écouter, vous suivre et s'engager pour les objectifs communs, tout en se laissant guider par vous !",
+      },
+      {
+        title: "Optimiser sa capacité d'influence",
+        desc: "Faites le parcours nécessaire à l'optimisation de votre capacité à devenir pour chacun de vos interlocuteurs critiques, celui ou celle qu'ils veulent suivre.",
+      },
+      {
+        title: "Asseoir votre autorité morale",
+        desc: "Dopez votre capacité à motiver, à vous élever et à élever les autres, à devenir la référence afin que les gens se tournent vers vous et vous suivent.",
+      },
+    ],
   },
   {
     slug: "reussir-son-management-commercial",
@@ -447,7 +600,37 @@ export const COURSES: CourseDetail[] = [
     price: 34900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/reussir-son-management-commercial/",
+    enrollUrl: "https://www.managersity.co/enroll/3303782",
     tagline: "Les méthodes et outils pour piloter une équipe commerciale performante, atteindre les quotas et créer une culture de l'excellence commerciale.",
+    totalChapters: 3,
+    totalLessons: 45,
+    learns: [
+      "Scénariser et modéliser la croissance commerciale selon vos enjeux sectoriels",
+      "Structurer votre couverture marché et réussir le maillage territorial et digital",
+      "Orchestrer et catalyser la performance commerciale en temps réel",
+      "Mettre en place les outils et dispositifs de management commercial efficaces",
+      "Gérer les 9 cycles du management commercial pour garantir la croissance",
+      "Travailler en synergie avec les autres fonctions pour atteindre vos chiffres",
+    ],
+    chapters: [
+      "Introduction : État d'esprit, réflexes et focus pour s'approprier son job de manager commercial",
+      "Partie #1 : Stratégie guerrière et méthodes d'optimisation stratégiques pour faire les chiffres",
+      "Partie #2 : Outils et dispositif de management commercial",
+    ],
+    benefits: [
+      {
+        title: "Scénariser et modéliser la croissance commerciale",
+        desc: "En fonction de votre secteur, des priorités stratégiques et de vos enjeux, définir une stratégie pour faire cartonner vos équipes.",
+      },
+      {
+        title: "Réussir le maillage territorial et digital",
+        desc: "Sachez comment structurer votre couverture marché, le déploiement et l'animation optimale de vos réseaux commerciaux.",
+      },
+      {
+        title: "Orchestrer et catalyser la performance commerciale",
+        desc: "Devenir un maître d'orchestre du monitoring et de l'optimisation continue de la performance commerciale.",
+      },
+    ],
   },
   {
     slug: "reussir-avec-son-conseil-dadministration-et-son-groupe",
@@ -528,7 +711,37 @@ export const COURSES: CourseDetail[] = [
     price: 19900,
     originalPrice: 59900,
     shopUrl: "https://shop.managersity.com/produit/batir-une-equipe-performante/",
+    enrollUrl: "https://www.managersity.co/enroll/3418989",
     tagline: "Recrutez, onboardez, motivez et fidélisez les talents pour construire une équipe de haute performance et une culture de résultats.",
+    totalChapters: 3,
+    totalLessons: 33,
+    learns: [
+      "Structurer la construction d'une équipe solide, complémentaire et performante",
+      "Attirer et intégrer les bons profils dans votre équipe",
+      "Créer l'alchimie fonctionnelle pour développer la cohésion collective",
+      "Appliquer la méthode des 4R pour éviter les pièges courants du management",
+      "Construire une feuille de route pour modéler progressivement votre équipe",
+      "Solidifier et généraliser l'excellence au sein de votre équipe",
+    ],
+    chapters: [
+      "Intro : À quel point voulez-vous une équipe qui performe et vous permette de ne plus être un manager esclave ?",
+      "Partie #1 : Les clés pour composer et constituer une équipe performante",
+      "Partie #2 : Exceller dans le projet de bâtir une équipe performante",
+    ],
+    benefits: [
+      {
+        title: "Structurer la construction de son équipe",
+        desc: "Créer une feuille de route pour affiner et optimiser le modèle de composition de son équipe.",
+      },
+      {
+        title: "Optimiser l'alchimie fonctionnelle de son équipe",
+        desc: "Définir le profil et optimiser la composition et le fonctionnement de son équipe pour maximiser la cohésion et la performance.",
+      },
+      {
+        title: "Solidifier et généraliser l'excellence",
+        desc: "Dopez votre capacité à motiver, à vous élever et à élever les autres pour que l'excellence devienne la norme dans votre équipe.",
+      },
+    ],
   },
   {
     slug: "management-du-changement-organisationnel",
@@ -537,7 +750,38 @@ export const COURSES: CourseDetail[] = [
     price: 19900,
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/management-du-changement-organisationnel/",
+    enrollUrl: "https://www.managersity.co/enroll/3373559",
     tagline: "Pilotez la transformation de votre organisation en minimisant les résistances, en maximisant l'adoption et en préservant la performance.",
+    totalChapters: 4,
+    totalLessons: 39,
+    learns: [
+      "Identifier les contraintes culturelles et structurelles qui bloquent la performance",
+      "Comprendre les 9 causes d'échec des projets de transformation d'entreprise",
+      "Élaborer un plan de transformation et de mobilisation des équipes",
+      "Modéliser la culture d'entreprise adéquate aux nouveaux enjeux",
+      "Planifier, structurer et intégrer les changements organisationnels",
+      "Maîtriser les 6 capacités transformatives clés pour une organisation performante",
+    ],
+    chapters: [
+      "Intro : Lorsque votre organisation n'est pas calibrée pour vous permettre d'atteindre vos objectifs",
+      "Partie #1 : Transformation culturelle et création de la culture de l'excellence",
+      "Partie #2 : Planifier, structurer et intégrer les changements organisationnels",
+      "Ressources gratuites",
+    ],
+    benefits: [
+      {
+        title: "Identifier les contraintes culturelles",
+        desc: "Découvrez la méthodologie pour comprendre les contraintes culturelles et pratiques à l'excellence organisationnelle.",
+      },
+      {
+        title: "Modéliser la culture d'entreprise adéquate",
+        desc: "Découvrez comment créer la culture d'entreprise adaptée aux nouveaux enjeux et l'implémenter avec méthode.",
+      },
+      {
+        title: "Structurer et intégrer efficacement les changements",
+        desc: "Découvrez les outils pour instiguer et incruster les changements avec méthode et agilité dans votre organisation.",
+      },
+    ],
   },
   {
     slug: "methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros",
@@ -555,7 +799,37 @@ export const COURSES: CourseDetail[] = [
     price: 14900,
     originalPrice: 39000,
     shopUrl: "https://shop.managersity.com/produit/optimiser-sa-posture-manageriale/",
+    enrollUrl: "https://www.managersity.co/enroll/3386488",
     tagline: "Identifiez et corrigez les comportements qui limitent votre impact managérial pour adopter une posture de leadership optimal.",
+    totalChapters: 3,
+    totalLessons: 21,
+    learns: [
+      "Comprendre les règles d'excellence et d'élévation managériale",
+      "Identifier les signes d'incompétence managériale et les corriger",
+      "Développer la maturité managériale requise pour votre rôle et fonction",
+      "Sortir de la naïveté pour adopter le bon état d'esprit et la bonne organisation",
+      "S'auto-coacher en situation de tension pour garder le contrôle",
+      "Élaborer un plan pour vous montrer à la dimension des enjeux managériaux",
+    ],
+    chapters: [
+      "Introduction : Êtes-vous prêt pour le management ?",
+      "Partie #1 : Développer la maturité managériale",
+      "Partie #2 : Optimiser sa posture managériale",
+    ],
+    benefits: [
+      {
+        title: "Sortez de la naïveté managériale",
+        desc: "Sachez ce qui fait la différence quand on est ou aspire à devenir manager et démonstrez-le au quotidien !",
+      },
+      {
+        title: "Se montrer digne du rang",
+        desc: "Montrez à travers votre maturité qu'on a bien fait de vous avoir confié le poste et méritez qu'on vous offre des next steps !",
+      },
+      {
+        title: "Optimiser votre maturité managériale",
+        desc: "Élaborez un plan pour opérer les transitions requises pour vous montrer à la dimension du rôle et de la fonction managériale.",
+      },
+    ],
   },
   {
     slug: "gestion-du-stress-et-des-pressions",
