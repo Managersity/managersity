@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
         <p className="text-xs text-gray-500">
-          © 2025 Copyright MANAGERSITY by H&amp;C — une entreprise de The H&amp;C GROUP
+          © 2026 Copyright MANAGERSITY by H&amp;C — une entreprise de The H&amp;C GROUP
         </p>
         <div className="flex items-center gap-3">
           <a

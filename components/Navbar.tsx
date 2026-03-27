@@ -12,7 +12,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <img
-            src="https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/1007726%2Fcustom_site_themes%2Fid%2F62ySJMVrR8uOQNiMoDwg_MANAGER%20SITY%20LOGO%20COLOR%20BY%20H_C_5000px.png"
+            src="/MANAGERSITY LOGO.png"  // ← remplace juste ici par le nom de ton fichier
             alt="Managersity"
             className="h-10 w-auto object-contain"
           />
