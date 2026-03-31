@@ -11,6 +11,15 @@ export const metadata: Metadata = {
    verification: {
     google: "stsK1ylyqFciHDR_w9tTmcW3EcAHQ36dwriSAomc8Ck",
   },
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4DC8KXH4C1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4DC8KXH4C1');
+</script>
 };
 
 export default function RootLayout({
