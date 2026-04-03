@@ -12,12 +12,12 @@ export default function FormatBanner() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div>
-            <span className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+            <span className="inline-block bg-brand-gold/20 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
               Multi-plateforme
             </span>
             <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white leading-tight mb-4">
               Choisissez le format<br />
-              <span className="text-amber-400">qui vous convient</span>
+              <span className="text-brand-gold">qui vous convient</span>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed mb-8">
               C&apos;est flexible de suivre nos cours&nbsp;! Vous pouvez apprendre sur ordinateur,
@@ -41,7 +41,7 @@ export default function FormatBanner() {
             {devices.map((d, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 hover:border-amber-500/30 transition-all"
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center hover:bg-white/10 hover:border-brand-gold/30 transition-all"
               >
                 <p className="text-white font-bold text-sm">{d.label}</p>
                 <p className="text-gray-500 text-xs mt-1">{d.desc}</p>

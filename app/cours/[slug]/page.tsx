@@ -21,9 +21,9 @@ const CAT_COLORS: Record<string, {
   learnsBg: string; checkBg: string; cardGrad: string;
 }> = {
   "Packs Phares": {
-    badge: "bg-amber-100 text-amber-800", text: "text-amber-500", bar: "bg-amber-500", ring: "ring-amber-500/20",
-    heroBadge: "bg-amber-500/20 text-amber-300 border border-amber-500/40", heroText: "text-amber-400",
-    learnsBg: "bg-amber-950", checkBg: "bg-amber-500", cardGrad: "bg-linear-to-br from-amber-600 to-amber-800",
+    badge: "bg-brand-gold/10 text-brand-green", text: "text-brand-gold", bar: "bg-brand-gold", ring: "ring-brand-gold/20",
+    heroBadge: "bg-brand-gold/20 text-brand-gold border border-brand-gold/40", heroText: "text-brand-gold",
+    learnsBg: "bg-brand-green", checkBg: "bg-brand-gold", cardGrad: "bg-linear-to-br from-brand-gold to-brand-green",
   },
   "Intelligence Artificielle": {
     badge: "bg-violet-100 text-violet-800", text: "text-violet-500", bar: "bg-violet-500", ring: "ring-violet-500/20",
@@ -133,9 +133,9 @@ export default async function CoursPage({
 
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-xs text-gray-500 mb-8 flex-wrap">
-              <Link href="/" className="hover:text-amber-400 transition-colors">Accueil</Link>
+              <Link href="/" className="hover:text-brand-gold transition-colors">Accueil</Link>
               <span className="text-gray-700">/</span>
-              <Link href="/boutique" className="hover:text-amber-400 transition-colors">Boutique</Link>
+              <Link href="/tous-les-cours" className="hover:text-brand-gold transition-colors">Cours</Link>
               <span className="text-gray-700">/</span>
               <span className="text-gray-400 truncate max-w-xs">{course.title}</span>
             </nav>
@@ -212,7 +212,7 @@ export default async function CoursPage({
                     href={ctaUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-widest py-3.5 rounded-xl transition-all mt-2"
+                    className="flex items-center justify-center gap-2 w-full bg-brand-gold hover:bg-brand-gold/80 text-white font-black text-sm uppercase tracking-widest py-3.5 rounded-xl transition-all mt-2"
                   >
                     {ctaLabel}
                     <span>→</span>
@@ -416,7 +416,7 @@ export default async function CoursPage({
               href={ctaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-widest px-10 py-4 rounded-xl transition-all shadow-lg shadow-amber-500/25"
+              className="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/80 text-white font-black text-sm uppercase tracking-widest px-10 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
             >
               {ctaLabel}
               <span>→</span>

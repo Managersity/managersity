@@ -24,19 +24,19 @@ export default function BannerCTA() {
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm mb-8">
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber-400" />
+                <CheckCircle size={16} className="text-brand-gold" />
                 Manager efficacement
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber-400" />
+                <CheckCircle size={16} className="text-brand-gold" />
                 Gérer votre carrière
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber-400" />
+                <CheckCircle size={16} className="text-brand-gold" />
                 Développer vous personnellement
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber-400" />
+                <CheckCircle size={16} className="text-brand-gold" />
                 Maîtriser l&apos;IA
               </span>
             </div>

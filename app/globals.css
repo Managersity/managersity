@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-brand-green: #1a5200;
+  --color-brand-gold: #c4a800;
 }
 
 body {

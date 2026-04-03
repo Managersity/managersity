@@ -66,8 +66,8 @@ export default function CertificationBanner() {
       {/* Header */}
       <div className="text-center mb-10">
         <div className="flex items-center justify-center gap-2 mb-3">
-          <Award size={20} className="text-amber-500" />
-          <span className="text-amber-500 text-xs font-bold uppercase tracking-widest">
+          <Award size={20} className="text-brand-gold" />
+          <span className="text-brand-gold text-xs font-bold uppercase tracking-widest">
             Certifications
           </span>
         </div>
@@ -107,7 +107,7 @@ export default function CertificationBanner() {
       <div className="text-center">
         <Link
           href="/tous-les-cours"
-          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg"
+          className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-green text-white font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg"
         >
           Parcours & Catégories de certifications <ArrowRight size={15} />
         </Link>

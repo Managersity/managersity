@@ -14,15 +14,15 @@ export default function FinalCTA() {
         }}
       />
       {/* Gold gradient strip at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/60 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-brand-gold/60 to-transparent" />
 
       <div className="relative max-w-4xl mx-auto px-6 text-center">
-        <span className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+        <span className="inline-block bg-brand-gold/20 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
           Passez à l&apos;action
         </span>
         <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white leading-tight mb-6">
           Démystifiez la{" "}
-          <span className="text-amber-400">complexité managériale</span>
+          <span className="text-brand-gold">complexité managériale</span>
         </h2>
         <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
           Nous avons l&apos;obsession constante de simplifier votre management au
@@ -32,7 +32,7 @@ export default function FinalCTA() {
         </p>
         <Link
           href="/tous-les-cours"
-          className="inline-block bg-amber-500 hover:bg-amber-400 text-white uppercase text-sm font-black tracking-wider px-10 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/30 hover:-translate-y-0.5"
+          className="inline-block bg-brand-gold hover:bg-brand-gold/80 text-white uppercase text-sm font-black tracking-wider px-10 py-4 rounded-xl transition-all shadow-xl shadow-brand-gold/30 hover:-translate-y-0.5"
         >
           Démarrez votre parcours d&apos;excellence managériale optimisée
         </Link>

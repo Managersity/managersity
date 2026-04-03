@@ -28,7 +28,7 @@ export default function Navbar() {
           </Link>
 
           <a
-            href="https://www.managersity.com/boutique"
+            href="https://shop.managersity.com/"
             className="px-3 py-2 rounded-md hover:bg-gray-50 transition-colors whitespace-nowrap"
           >
             Boutique
@@ -49,7 +49,7 @@ export default function Navbar() {
             href="https://www.managersity.co/users/sign_in"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors shadow-sm"
+            className="bg-brand-green text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-green/80 transition-colors shadow-sm"
           >
             Se connecter
           </a>
@@ -66,14 +66,14 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-5 flex flex-col gap-0 text-sm text-gray-700">
           <div className="flex flex-col gap-3 mt-4">
             <Link href="/tous-les-cours" onClick={() => setOpen(false)}>Tous les cours</Link>
-            <a href="https://www.managersity.com/boutique" onClick={() => setOpen(false)}>Boutique</a>
+            <a href="https://shop.managersity.com/" onClick={() => setOpen(false)}>Boutique</a>
             <a href="https://ressources.managersity.co/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Ressources gratuites</a>
             <div className="flex gap-2 mt-1">
               <a
                 href="https://www.managersity.co/users/sign_in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-amber-500 text-white px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
+                className="flex-1 bg-brand-green text-white px-4 py-2.5 rounded-lg font-semibold text-center text-sm"
               >
                 Se connecter
               </a>

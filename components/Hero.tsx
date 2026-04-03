@@ -21,20 +21,20 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-32 flex flex-col items-center text-center">
         <div className="max-w-4xl">
           {/* Badge */}
-          <span className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          <span className="inline-flex items-center gap-2 bg-brand-gold/20 border border-brand-gold/40 text-brand-gold text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
             <TrendingUp size={12} />
             #1 Formation Management en ligne
           </span>
 
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-[1.05] mb-6">
-            Dopez vos <span className="text-amber-400">compétences</span>
+            Dopez vos <span className="text-brand-gold">compétences</span>
             <br />
             managériales&nbsp;!
           </h1>
 
           <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
             Avec <strong className="text-white">MANAGERSITY by H&amp;C</strong>, choisissez parmi plus de{" "}
-            <span className="text-amber-400 font-semibold">100 modules</span> de formation en management et
+            <span className="text-brand-gold font-semibold">100 modules</span> de formation en management et
             développement professionnel. Sélectionnez, suivez et passez vos compétences à la dimension supérieure&nbsp;!
           </p>
 
@@ -42,7 +42,7 @@ export default function Hero() {
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <Link
               href="/tous-les-cours"
-              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold/80 text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/30 hover:shadow-brand-gold/50 hover:-translate-y-0.5"
             >
               Démarrer un cours
             </Link>
@@ -60,7 +60,7 @@ export default function Hero() {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-6">
             <div className="flex items-center gap-2">
-              <BookOpen size={18} className="text-amber-400" />
+              <BookOpen size={18} className="text-brand-gold" />
               <div>
                 <p className="text-base font-black text-white">100+</p>
                 <p className="text-xs text-gray-400">Modules de cours</p>
