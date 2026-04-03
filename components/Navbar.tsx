@@ -12,7 +12,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <img
-            src="/MANAGERSITY LOGO.png"  // ← remplace juste ici par le nom de ton fichier
+            src="/MANAGER SITY LOGO COLOR 1.png"
             alt="Managersity"
             className="h-10 w-auto object-contain"
           />
