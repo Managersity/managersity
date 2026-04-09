@@ -99,7 +99,7 @@ export default function RefundPage() {
               <>
                 Envoyez un e-mail à{" "}
                 <a
-                  href="mailto:contact@managersity.com"
+                  href="mailto:contact@managersity.co"
                   className="text-[#1a5200] font-bold hover:underline"
                 >
                   contact@managersity.co

@@ -40,7 +40,7 @@ export default function PrivacyPage() {
                 {[
                   ["Responsable du traitement", "The H&C GROUP — MANAGERSITY by H&C"],
                   ["Site internet", "www.managersity.com"],
-                  ["Contact Données Personnelles", "contact@managersity.com"],
+                  ["Contact Données Personnelles", "contact@managersity.co"],
                 ].map(([k, v]) => (
                   <tr key={k} className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold text-gray-900">{k}</td>
@@ -131,8 +131,8 @@ export default function PrivacyPage() {
           <div className="bg-[#c4a800]/10 border-l-4 border-[#c4a800] rounded-r-lg p-4">
             <p className="text-gray-800">
               Pour exercer vos droits, contactez-nous à :{" "}
-              <a href="mailto:contact@managersity.com" className="text-[#1a5200] font-bold hover:underline">
-                contact@managersity.com
+              <a href="mailto:contact@managersity.co" className="text-[#1a5200] font-bold hover:underline">
+                contact@managersity.co
               </a>{" "}
               — Réponse sous 48 heures.
             </p>
