@@ -1,22 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 
 type Offer = {
-  text: string;
+  content: ReactNode;
   linkText: string;
   href: string;
   endDate?: string; // ISO date — optional (no countdown if absent)
 };
 
+const gold = "text-[#c4a800] font-extrabold";
+const white = "text-white font-extrabold";
+
 const offers: Offer[] = [
   {
-    text: "Apprenez à utiliser l'IA dans votre métier à partir de 14.900 FCFA seulement en cliquant",
+    content: (
+      <>
+        <span className={white}>🚀 NOUVEAU !</span> Apprenez à utiliser{" "}
+        <span className={gold}>l&apos;IA dans votre métier</span> à partir de{" "}
+        <span className={gold}>14.900 FCFA</span> seulement — cliquez
+      </>
+    ),
     linkText: "ici",
     href: "https://www.managersity.co/collections/5015e3",
   },
   {
-    text: "Nouveau cours : RÉUSSIR SON JOB DE CHEF DE SERVICE à seulement 37.000 FCFA (-40%) — cliquez",
+    content: (
+      <>
+        <span className={white}>🔥 NOUVEAU COURS :</span>{" "}
+        <span className="font-extrabold">RÉUSSIR SON JOB DE CHEF DE SERVICE</span> à seulement{" "}
+        <span className={gold}>37.000 FCFA</span>{" "}
+        <span className="bg-red-600 text-white px-1.5 py-0.5 rounded font-extrabold">-40%</span>{" "}
+        — cliquez
+      </>
+    ),
     linkText: "ici",
     href: "https://www.managersity.co/products/courses/cours-reussir-son-job-de-chef-de-service-5-0",
     endDate: "2026-04-30T23:59:59",
@@ -69,7 +86,7 @@ export default function OfferBanner() {
     >
       <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-center text-xs sm:text-sm font-sans">
         <span className="font-medium tracking-wide">
-          {offer.text}{" "}
+          {offer.content}{" "}
           <span className="font-bold text-[#c4a800] underline underline-offset-2">
             {offer.linkText}
           </span>
