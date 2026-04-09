@@ -45,11 +45,11 @@ function getRemaining(endDate: string) {
   const now = Date.now();
   if (end - now <= 0) return null;
 
-  // Fenêtre glissante de 24h : se réinitialise chaque jour à minuit
-  // pour créer un sentiment d'urgence (jamais de "21 jours restants")
-  const midnight = new Date();
-  midnight.setHours(23, 59, 59, 999);
-  const target = Math.min(end, midnight.getTime());
+  // Fenêtre glissante de 5h : se réinitialise toutes les 5 heures
+  // pour maximiser l'urgence (jamais de "21 jours restants")
+  const WINDOW_MS = 5 * 60 * 60 * 1000;
+  const nextWindow = Math.ceil(now / WINDOW_MS) * WINDOW_MS;
+  const target = Math.min(end, nextWindow);
   const diff = target - now;
   if (diff <= 0) return null;
 
