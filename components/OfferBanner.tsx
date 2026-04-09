@@ -16,7 +16,10 @@ const offers: Offer[] = [
   {
     content: (
       <>
-        <span className="bg-red-600 text-white px-1.5 py-0.5 rounded font-extrabold">PROMO :</span>{" "}Apprenez à devenir un {" "}
+        <span className="promo-badge bg-red-600 text-white px-2 py-0.5 rounded font-extrabold uppercase tracking-wider shadow-sm">
+          Promo
+        </span>{" "}
+        Apprenez à devenir un{" "}
         <span className={gold}>manager expert</span> à partir de{" "}
         <span className={gold}>9.900 FCFA</span> seulement — cliquez
       </>
@@ -127,6 +130,13 @@ export default function OfferBanner() {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        .promo-badge {
+          animation: promoPulse 1.6s ease-in-out infinite;
+        }
+        @keyframes promoPulse {
+          0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6); }
+          50% { transform: scale(1.06); box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
         }
         .offer-flash {
           animation: flashPulse 1.2s ease-in-out infinite;
