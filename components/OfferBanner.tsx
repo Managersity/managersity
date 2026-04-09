@@ -16,9 +16,9 @@ const offers: Offer[] = [
     href: "https://www.managersity.co/collections/5015e3",
   },
   {
-    text: "Nouveau cours : RÉUSSIR SON JOB DE CHEF DE SERVICE à seulement 37.000 FCFA (-40%) —",
-    linkText: "RÉUSSIR SON JOB DE CHEF DE SERVICE - MANAGERSITY by H&C",
-    href: "https://shop.managersity.com/products/reussir-son-job-de-chef-de-service",
+    text: "Nouveau cours : RÉUSSIR SON JOB DE CHEF DE SERVICE à seulement 37.000 FCFA (-40%) — cliquez",
+    linkText: "ici",
+    href: "https://www.managersity.co/products/courses/cours-reussir-son-job-de-chef-de-service-5-0",
     endDate: "2026-04-30T23:59:59",
   },
 ];
