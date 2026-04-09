@@ -23,7 +23,7 @@ const sections: Section[] = [
         <p className="mb-4">
           La plateforme <strong>MANAGERSITY by H&amp;C</strong> (ci-après « la Plateforme »),
           accessible à l&apos;adresse{" "}
-          <a href="https://www.managersity.co" className="text-[#1a5200] hover:underline">
+          <a href="https://www.managersity.com" className="text-[#1a5200] hover:underline">
             www.managersity.co
           </a>
           , est éditée par <strong>H&amp;C DIGITAL LEARNING</strong> par{" "}

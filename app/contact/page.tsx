@@ -64,8 +64,8 @@ export default function ContactPage() {
               },
               {
                 label: "Site internet",
-                value: "www.managersity.co",
-                href: "https://www.managersity.co",
+                value: "www.managersity.com",
+                href: "https://www.managersity.com",
                 icon: "🌐",
               },
             ].map((c) => (

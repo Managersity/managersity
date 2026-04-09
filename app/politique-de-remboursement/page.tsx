@@ -33,8 +33,8 @@ export default function RefundPage() {
             qualité. Afin de garantir votre satisfaction, une politique de remboursement claire et
             transparente est mise en place. Elle s&apos;applique à tous les achats effectués
             directement sur{" "}
-            <a href="https://www.managersity.co" className="text-[#1a5200] hover:underline">
-              www.managersity.co
+            <a href="https://www.managersity.com" className="text-[#1a5200] hover:underline">
+              www.managersity.com
             </a>{" "}
             ou via les canaux de paiement officiels (Mobile Money).
           </p>
@@ -99,7 +99,7 @@ export default function RefundPage() {
               <>
                 Envoyez un e-mail à{" "}
                 <a
-                  href="mailto:contact@managersity.co"
+                  href="mailto:contact@managersity.com"
                   className="text-[#1a5200] font-bold hover:underline"
                 >
                   contact@managersity.co
