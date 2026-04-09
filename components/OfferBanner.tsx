@@ -24,13 +24,22 @@ const offers: Offer[] = [
 ];
 
 function getRemaining(endDate: string) {
-  const diff = new Date(endDate).getTime() - Date.now();
+  const end = new Date(endDate).getTime();
+  const now = Date.now();
+  if (end - now <= 0) return null;
+
+  // Fenêtre glissante de 24h : se réinitialise chaque jour à minuit
+  // pour créer un sentiment d'urgence (jamais de "21 jours restants")
+  const midnight = new Date();
+  midnight.setHours(23, 59, 59, 999);
+  const target = Math.min(end, midnight.getTime());
+  const diff = target - now;
   if (diff <= 0) return null;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+  const hours = Math.floor(diff / (1000 * 60 * 60));
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
-  return { days, hours, minutes, seconds };
+  return { hours, minutes, seconds };
 }
 
 export default function OfferBanner() {
@@ -67,7 +76,7 @@ export default function OfferBanner() {
         </span>
         {remaining && (
           <span className="font-bold text-[#1a5200] bg-[#c4a800] px-2 py-0.5 rounded whitespace-nowrap">
-            Se termine dans {remaining.days}j {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
+            ⏰ Offre flash — se termine dans {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
           </span>
         )}
       </div>
