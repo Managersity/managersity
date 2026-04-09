@@ -47,11 +47,11 @@ export default function OfferBanner() {
     return () => clearInterval(r);
   }, []);
 
-  const active = offers.filter((o) => getRemaining(o.endDate));
+  const active = offers.filter((o) => !o.endDate || getRemaining(o.endDate));
   if (active.length === 0) return null;
 
   const offer = active[index % active.length];
-  const remaining = getRemaining(offer.endDate)!;
+  const remaining = offer.endDate ? getRemaining(offer.endDate) : null;
 
   return (
     <a
@@ -59,10 +59,14 @@ export default function OfferBanner() {
       className="block w-full bg-[#1a5200] text-white hover:bg-[#143f00] transition-colors"
     >
       <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center text-sm sm:text-base">
-        <span className="font-medium">{offer.text}</span>
+        <span className="font-medium">
+          {offer.text} <span className="underline">{offer.linkText}</span>
+        </span>
+        {remaining && (
         <span className="font-bold text-[#c4a800] whitespace-nowrap">
           Se termine dans {remaining.days}j {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
         </span>
+        )}
       </div>
     </a>
   );
