@@ -11,8 +11,8 @@ type Offer = {
 
 const offers: Offer[] = [
   {
-    text: "Apprenez à utiliser l'IA dans votre métier à partir de 14.900 FCFA seulement en cliquant sur",
-    linkText: "Tous les produits - MANAGERSITY by H&C",
+    text: "Apprenez à utiliser l'IA dans votre métier à partir de 14.900 FCFA seulement en cliquant",
+    linkText: "ici",
     href: "https://www.managersity.co/collections/5015e3",
   },
   {
@@ -56,16 +56,19 @@ export default function OfferBanner() {
   return (
     <a
       href={offer.href}
-      className="block w-full bg-[#1a5200] text-white hover:bg-[#143f00] transition-colors"
+      className="block w-full bg-gradient-to-r from-[#1a5200] via-[#1a5200] to-[#143f00] text-white hover:from-[#143f00] hover:to-[#0e2e00] transition-colors border-b-2 border-[#c4a800]"
     >
-      <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center text-sm sm:text-base">
-        <span className="font-medium">
-          {offer.text} <span className="underline">{offer.linkText}</span>
+      <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-center text-xs sm:text-sm font-sans">
+        <span className="font-medium tracking-wide">
+          {offer.text}{" "}
+          <span className="font-bold text-[#c4a800] underline underline-offset-2">
+            {offer.linkText}
+          </span>
         </span>
         {remaining && (
-        <span className="font-bold text-[#c4a800] whitespace-nowrap">
-          Se termine dans {remaining.days}j {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
-        </span>
+          <span className="font-bold text-[#1a5200] bg-[#c4a800] px-2 py-0.5 rounded whitespace-nowrap">
+            Se termine dans {remaining.days}j {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
+          </span>
         )}
       </div>
     </a>
