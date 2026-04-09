@@ -61,6 +61,7 @@ function getRemaining(endDate: string) {
 
 export default function OfferBanner() {
   const [index, setIndex] = useState(0);
+  const [animKey, setAnimKey] = useState(0);
   const [, setTick] = useState(0);
 
   useEffect(() => {
@@ -69,7 +70,10 @@ export default function OfferBanner() {
   }, []);
 
   useEffect(() => {
-    const r = setInterval(() => setIndex((i) => (i + 1) % offers.length), 6000);
+    const r = setInterval(() => {
+      setIndex((i) => (i + 1) % offers.length);
+      setAnimKey((k) => k + 1);
+    }, 6000);
     return () => clearInterval(r);
   }, []);
 
@@ -84,7 +88,7 @@ export default function OfferBanner() {
       href={offer.href}
       className="block w-full bg-gradient-to-r from-[#1a5200] via-[#1a5200] to-[#143f00] text-white hover:from-[#143f00] hover:to-[#0e2e00] transition-colors border-b-2 border-[#c4a800]"
     >
-      <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-center text-xs sm:text-sm font-sans">
+      <div key={animKey} className="offer-slide max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-center text-xs sm:text-sm font-sans">
         <span className="font-medium tracking-wide">
           {offer.content}{" "}
           <span className="font-bold text-[#c4a800] underline underline-offset-2">
@@ -111,6 +115,19 @@ export default function OfferBanner() {
         )}
       </div>
       <style jsx>{`
+        .offer-slide {
+          animation: slideFade 0.7s ease-out;
+        }
+        @keyframes slideFade {
+          0% {
+            opacity: 0;
+            transform: translateY(-12px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
         .offer-flash {
           animation: flashPulse 1.2s ease-in-out infinite;
           text-shadow: 0 0 8px rgba(196, 168, 0, 0.8);
