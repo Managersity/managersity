@@ -86,7 +86,7 @@ export default function OfferBanner() {
   return (
     <a
       href={offer.href}
-      className="block w-full bg-gradient-to-r from-[#1a5200] via-[#1a5200] to-[#143f00] text-white hover:from-[#143f00] hover:to-[#0e2e00] transition-colors border-b-2 border-[#c4a800]"
+      className="sticky top-0 z-50 block w-full bg-gradient-to-r from-[#1a5200] via-[#1a5200] to-[#143f00] text-white hover:from-[#143f00] hover:to-[#0e2e00] transition-colors border-b-2 border-[#c4a800] shadow-md"
     >
       <div key={animKey} className="offer-slide max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-center text-xs sm:text-sm font-sans">
         <span className="font-medium tracking-wide">
