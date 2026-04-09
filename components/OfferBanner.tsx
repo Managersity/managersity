@@ -16,7 +16,7 @@ const offers: Offer[] = [
   {
     content: (
       <>
-        Apprenez à devenir un {" "}
+        <span className="bg-red-600 text-white px-1.5 py-0.5 rounded font-extrabold">PROMO :</span>{" "}Apprenez à devenir un {" "}
         <span className={gold}>manager expert</span> à partir de{" "}
         <span className={gold}>9.900 FCFA</span> seulement — cliquez
       </>
