@@ -92,11 +92,42 @@ export default function OfferBanner() {
           </span>
         </span>
         {remaining && (
-          <span className="font-bold text-[#1a5200] bg-[#c4a800] px-2 py-0.5 rounded whitespace-nowrap">
-            ⏰ Offre flash — se termine dans {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
+          <span className="flex items-center gap-2 whitespace-nowrap">
+            <span className="offer-flash font-extrabold uppercase tracking-wider">
+              ⚡ Offre flash
+            </span>
+            <span className="flex items-center gap-1 font-mono font-bold">
+              <span className="bg-[#c4a800] text-[#1a5200] px-1.5 py-0.5 rounded shadow-sm">
+                {String(remaining.hours).padStart(2, "0")}h
+              </span>
+              <span className="bg-[#c4a800] text-[#1a5200] px-1.5 py-0.5 rounded shadow-sm">
+                {String(remaining.minutes).padStart(2, "0")}m
+              </span>
+              <span className="bg-[#c4a800] text-[#1a5200] px-1.5 py-0.5 rounded shadow-sm tabular-nums">
+                {String(remaining.seconds).padStart(2, "0")}s
+              </span>
+            </span>
           </span>
         )}
       </div>
+      <style jsx>{`
+        .offer-flash {
+          animation: flashPulse 1.2s ease-in-out infinite;
+          text-shadow: 0 0 8px rgba(196, 168, 0, 0.8);
+        }
+        @keyframes flashPulse {
+          0%, 100% {
+            opacity: 1;
+            color: #c4a800;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 1;
+            color: #ffffff;
+            transform: scale(1.05);
+          }
+        }
+      `}</style>
     </a>
   );
 }
