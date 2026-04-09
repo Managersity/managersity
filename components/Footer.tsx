@@ -3,10 +3,13 @@ import { IconFacebook, IconLinkedIn, IconInstagram, IconTikTok } from "./Icons";
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-        <p className="text-xs text-gray-500">
-          © 2026 Copyright MANAGERSITY by H&amp;C — une entreprise de The H&amp;C GROUP
-        </p>
+      <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-gray-600">
+          <a href="/contact" className="hover:text-[#1a5200] transition-colors">Contact</a>
+          <a href="/termes-et-conditions" className="hover:text-[#1a5200] transition-colors">Termes &amp; conditions</a>
+          <a href="/politique-de-confidentialite" className="hover:text-[#1a5200] transition-colors">Politique de confidentialité</a>
+          <a href="/politique-de-remboursement" className="hover:text-[#1a5200] transition-colors">Politique de remboursement</a>
+        </nav>
         <div className="flex items-center gap-3">
           <a
             href="https://www.facebook.com/share/1Agr9QWUN3/"
@@ -44,6 +47,13 @@ export default function Footer() {
           >
             <IconTikTok className="w-4 h-4" />
           </a>
+        </div>
+      </div>
+      <div className="border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 py-4 text-center">
+          <p className="text-xs text-gray-500">
+            © 2026 Copyright MANAGERSITY by H&amp;C — une entreprise de The H&amp;C GROUP
+          </p>
         </div>
       </div>
     </footer>
