@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-gray-600">
+        <nav className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2 text-sm font-medium text-gray-900">
           <a href="/contact" className="hover:text-[#1a5200] transition-colors">Contact</a>
-          <a href="/termes-et-conditions" className="hover:text-[#1a5200] transition-colors">Termes &amp; conditions</a>
+          <a href="/termes-et-conditions" className="hover:text-[#1a5200] transition-colors">Termes &amp; Conditions</a>
           <a href="/politique-de-confidentialite" className="hover:text-[#1a5200] transition-colors">Politique de confidentialité</a>
           <a href="/politique-de-remboursement" className="hover:text-[#1a5200] transition-colors">Politique de remboursement</a>
         </nav>
