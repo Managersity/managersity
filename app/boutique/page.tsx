@@ -555,41 +555,13 @@ export default function BoutiquePage() {
           </div>
         </div>
 
-        {/* ── FOOTER CTA ───────────────────────────────────────────────────── */}
-        <div className="bg-white border-t border-gray-100 py-12">
+        {/* ── PAIEMENTS SÉCURISÉS ──────────────────────────────────────────── */}
+        <div className="bg-white border-t border-gray-100 py-10">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <p className="text-gray-900 font-bold text-sm mb-1">Paiements 100% sécurisés</p>
-            <p className="text-gray-400 text-xs mb-5">
+            <p className="text-gray-400 text-xs">
               Visa · MasterCard · Mobile Money (Wave, Orange Money, MTN, Moov) · Virement
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] text-gray-400 uppercase tracking-widest">
-              <a
-                href="http://shop.managersity.com/termes-conditions/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-600 transition-colors"
-              >
-                Termes & Conditions
-              </a>
-              <span className="text-gray-300">·</span>
-              <a
-                href="http://shop.managersity.com/politique-de-confidentialite/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-600 transition-colors"
-              >
-                Confidentialité
-              </a>
-              <span className="text-gray-300">·</span>
-              <a
-                href="http://shop.managersity.com/remboursements/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-600 transition-colors"
-              >
-                Remboursements
-              </a>
-            </div>
           </div>
         </div>
 
