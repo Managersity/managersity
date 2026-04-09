@@ -73,7 +73,7 @@ export default function OfferBanner() {
     const r = setInterval(() => {
       setIndex((i) => (i + 1) % offers.length);
       setAnimKey((k) => k + 1);
-    }, 6000);
+    }, 12000);
     return () => clearInterval(r);
   }, []);
 
