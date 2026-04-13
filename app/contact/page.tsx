@@ -46,8 +46,8 @@ export default function ContactPage() {
             {[
               {
                 label: "E-mail support",
-                value: "contact@managersity.com",
-                href: "mailto:contact@managersity.com",
+                value: "contact@managersity.co",
+                href: "mailto:contact@managersity.co",
                 icon: "✉️",
               },
               {
@@ -103,7 +103,7 @@ export default function ContactPage() {
             </p>
 
             <form
-              action="mailto:contact@managersity.com"
+              action="mailto:contact@managersity.co"
               method="post"
               encType="text/plain"
               className="grid md:grid-cols-2 gap-5"

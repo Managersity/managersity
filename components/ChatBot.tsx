@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { COURSES } from "@/lib/course-details";
 
 const WHATSAPP_URL = "https://wa.me/221771017188";
-const MAIL_URL = "mailto:contact@managersity.com";
+const MAIL_URL = "mailto:contact@managersity.co";
 
 type Action = { label: string; url: string; icon: "wa" | "mail" | "link"; newTab?: boolean };
 type Message = {
