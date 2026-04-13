@@ -5,10 +5,11 @@ import { useState, useRef, useEffect } from "react";
 const WHATSAPP_URL = "https://wa.me/221771017188";
 const MAIL_URL = "mailto:contact@managersity.com";
 
+type Action = { label: string; url: string; icon: "wa" | "mail" | "link"; newTab?: boolean };
 type Message = {
   from: "bot" | "user";
   text: string;
-  actions?: { label: string; url: string; icon: "wa" | "mail" }[];
+  actions?: Action[];
 };
 
 const GREETING: Message = {
@@ -45,7 +46,7 @@ function matchReply(input: string): Message {
     return {
       from: "bot",
       text: "Managersity propose plus de 100 modules de formation en management, leadership, développement personnel, transformation digitale et bien plus.\n\n👉 Consultez toutes nos formations ici :",
-      actions: [{ label: "Voir les formations", url: "https://www.managersity.com/tous-les-cours", icon: "wa" }],
+      actions: [{ label: "Voir les formations", url: "https://www.managersity.com/tous-les-cours", icon: "link" }],
     };
   }
 
@@ -127,6 +128,14 @@ function MailIcon() {
   );
 }
 
+function LinkIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-4 h-4">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+    </svg>
+  );
+}
+
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([GREETING]);
@@ -148,7 +157,7 @@ export default function ChatBot() {
       setMessages((m) => [
         ...m,
         userMsg,
-        { from: "bot", text: "Consultez toutes nos formations ici 👇", actions: [{ label: "Voir les formations", url: "https://www.managersity.com/tous-les-cours", icon: "wa" }] },
+        { from: "bot", text: "Consultez toutes nos formations ici 👇", actions: [{ label: "Voir les formations", url: "https://www.managersity.com/tous-les-cours", icon: "link" }] },
       ]);
       setInput("");
       return;
@@ -166,8 +175,8 @@ export default function ChatBot() {
     setInput("");
   }
 
-  function handleAction(url: string) {
-    if (url.startsWith("http") || url.startsWith("mailto")) {
+  function handleAction(url: string, newTab?: boolean) {
+    if (url.startsWith("mailto") || newTab) {
       window.open(url, "_blank", "noopener,noreferrer");
     } else {
       window.location.href = url;
@@ -221,14 +230,16 @@ export default function ChatBot() {
                       {msg.actions.map((action, j) => (
                         <button
                           key={j}
-                          onClick={() => handleAction(action.url)}
+                          onClick={() => handleAction(action.url, action.newTab ?? (action.icon === "wa" || action.icon === "mail"))}
                           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
                             action.icon === "wa"
                               ? "bg-[#25D366] hover:bg-[#1ebe5d] text-white"
+                              : action.icon === "link"
+                              ? "bg-brand-gold hover:bg-brand-gold/90 text-white"
                               : "bg-brand-green hover:bg-brand-green/90 text-white"
                           }`}
                         >
-                          {action.icon === "wa" ? <WaIcon /> : <MailIcon />}
+                          {action.icon === "wa" ? <WaIcon /> : action.icon === "link" ? <LinkIcon /> : <MailIcon />}
                           {action.label}
                         </button>
                       ))}
