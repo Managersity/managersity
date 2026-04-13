@@ -174,7 +174,14 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([GREETING]);
   const [input, setInput] = useState("");
   const [showQuickReplies, setShowQuickReplies] = useState(true);
+  const [showBubble, setShowBubble] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const show = setTimeout(() => setShowBubble(true), 2000);
+    const hide = setTimeout(() => setShowBubble(false), 10000);
+    return () => { clearTimeout(show); clearTimeout(hide); };
+  }, []);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -218,9 +225,27 @@ export default function ChatBot() {
 
   return (
     <>
+      {/* Tooltip bubble */}
+      {showBubble && !open && (
+        <div className="fixed bottom-24 right-6 z-50 max-w-[220px] animate-bounce-once">
+          <div className="relative bg-white text-gray-800 text-sm font-medium px-4 py-3 rounded-2xl shadow-xl border border-gray-200 leading-snug">
+            👋 Bonjour ! Avez-vous des questions ?
+            <button
+              onClick={() => setShowBubble(false)}
+              className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 text-xs flex items-center justify-center leading-none"
+              aria-label="Fermer"
+            >
+              ×
+            </button>
+            {/* Arrow */}
+            <span className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-r border-b border-gray-200 rotate-45 block" />
+          </div>
+        </div>
+      )}
+
       {/* Floating button */}
       <button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => { setOpen((v) => !v); setShowBubble(false); }}
         aria-label="Ouvrir le chat"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-brand-green text-white shadow-2xl flex items-center justify-center hover:scale-105 transition-transform"
       >
