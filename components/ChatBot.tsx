@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { COURSES } from "@/lib/course-details";
 
 const WHATSAPP_URL = "https://wa.me/221771017188";
 const MAIL_URL = "mailto:contact@managersity.com";
@@ -35,11 +36,43 @@ const ESCALATION: Message = {
   ],
 };
 
+function normalize(s: string) {
+  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ");
+}
+
+function findCourse(input: string) {
+  const q = normalize(input);
+  const words = q.split(/\s+/).filter((w) => w.length > 2);
+  let best: { course: (typeof COURSES)[0]; score: number } | null = null;
+  for (const course of COURSES) {
+    const titleNorm = normalize(course.title);
+    const taglineNorm = normalize(course.tagline);
+    let score = 0;
+    for (const word of words) {
+      if (titleNorm.includes(word)) score += 3;
+      else if (taglineNorm.includes(word)) score += 1;
+    }
+    if (!best || score > best.score) best = { course, score };
+  }
+  return best && best.score >= 6 ? best.course : null;
+}
+
 function matchReply(input: string): Message {
   const q = input.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
   if (/bonjour|salut|hello|bonsoir|coucou|yo/.test(q)) {
     return { from: "bot", text: "Bonjour ! 😊 Ravi de vous accueillir sur Managersity. Comment puis-je vous aider aujourd'hui ?" };
+  }
+
+  // Course-specific question? Try to find the course first
+  const matchedCourse = findCourse(input);
+  if (matchedCourse) {
+    const lessons = matchedCourse.totalLessons ? `\n🎬 ${matchedCourse.totalLessons} leçons · ${matchedCourse.totalChapters} modules` : "";
+    return {
+      from: "bot",
+      text: `📘 ${matchedCourse.title}\n\n${matchedCourse.tagline}${lessons}\n\n👉 Cliquez ci-dessous pour voir tous les détails :`,
+      actions: [{ label: "Voir le cours", url: `/cours/${matchedCourse.slug}`, icon: "link" }],
+    };
   }
 
   if (/formation|cours|apprendre|catalogue|collection|module|programme/.test(q)) {
