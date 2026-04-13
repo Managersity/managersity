@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import ChatBot from "@/components/ChatBot";
-import OfferBanner from "@/components/OfferBanner";
+import SiteWidgets from "@/components/SiteWidgets";
 
 export const metadata: Metadata = {
   title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
@@ -24,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="antialiased">
-        <OfferBanner />
+        <SiteWidgets />
 
         {/* Google Analytics */}
         <Script
@@ -41,7 +40,6 @@ export default function RootLayout({
         </Script>
         
         {children}
-        <ChatBot />
 
         {/* OptinMonster */}
         <Script id="optinmonster" strategy="afterInteractive">
