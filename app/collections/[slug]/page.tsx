@@ -4,6 +4,9 @@ import { Star, ArrowLeft, ArrowRight, BookOpen, Users, Award } from "lucide-reac
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { allCourses, categoryMeta } from "@/lib/courses-data";
+import { getCoursesByCategory } from "@/sanity/lib/queries";
+
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   return Object.keys(categoryMeta).map((slug) => ({ slug }));
@@ -32,7 +35,18 @@ export default async function CategoryPage({
   const meta = categoryMeta[slug];
   if (!meta) notFound();
 
-  const courses = allCourses.filter((c) => c.category === slug);
+  // Essaie Sanity d'abord, fallback sur les données statiques filtrées
+  let courses: typeof allCourses = [];
+  try {
+    const sanityCourses = await getCoursesByCategory(slug);
+    if (sanityCourses?.length) {
+      courses = sanityCourses;
+    } else {
+      courses = allCourses.filter((c) => c.category === slug);
+    }
+  } catch {
+    courses = allCourses.filter((c) => c.category === slug);
+  }
   const avgRating =
     courses.reduce((acc, c) => acc + c.rating, 0) / (courses.length || 1);
   const totalReviews = courses.reduce((acc, c) => acc + c.reviews, 0);

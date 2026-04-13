@@ -6,6 +6,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { COURSES } from "@/lib/course-details";
 import { allCourses } from "@/lib/courses-data";
+import { getCourseSanity, getAllCoursesSanity } from "@/sanity/lib/queries";
+
+export const revalidate = 60;
 
 function fmt(n: number) {
   return n.toLocaleString("fr-FR");
@@ -83,7 +86,19 @@ const FAQ = [
 ];
 
 export async function generateStaticParams() {
-  return COURSES.map((c) => ({ slug: c.slug }));
+  // Combine les slugs statiques + Sanity pour le build
+  const staticSlugs = COURSES.map((c) => ({ slug: c.slug }));
+  try {
+    const sanityCourses = await getAllCoursesSanity();
+    if (sanityCourses?.length) {
+      const sanitySlugSet = new Set(sanityCourses.map((c: { slug: string }) => c.slug));
+      const newSlugs = sanityCourses
+        .filter((c: { slug: string }) => !staticSlugs.some((s) => s.slug === c.slug))
+        .map((c: { slug: string }) => ({ slug: c.slug }));
+      return [...staticSlugs, ...newSlugs];
+    }
+  } catch {}
+  return staticSlugs;
 }
 
 export async function generateMetadata({
@@ -106,7 +121,18 @@ export default async function CoursPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const course = COURSES.find((c) => c.slug === slug);
+
+  // Essaie Sanity d'abord, fallback sur les données statiques
+  let course: typeof COURSES[0] | null = null;
+  try {
+    const sanityCourse = await getCourseSanity(slug);
+    if (sanityCourse) {
+      course = sanityCourse;
+    }
+  } catch {}
+  if (!course) {
+    course = COURSES.find((c) => c.slug === slug) ?? null;
+  }
   if (!course) notFound();
 
   const colors = CAT_COLORS[course.category] ?? {
@@ -118,9 +144,9 @@ export default async function CoursPage({
   const isRich = !!(course.learns && course.learns.length > 0);
   const ctaLabel = course.enrollUrl ? "S'inscrire maintenant" : "Voir sur la boutique";
 
-  // Find the course image from allCourses (by href) or fall back to a category image
+  // Image : priorité à l'image Sanity (champ img), sinon cherche dans allCourses, sinon fallback catégorie
   const courseImgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
-  const courseImg = courseImgEntry?.img ?? CAT_FALLBACK[course.category] ?? null;
+  const courseImg = (course as { img?: string }).img ?? courseImgEntry?.img ?? CAT_FALLBACK[course.category] ?? null;
 
   return (
     <>
