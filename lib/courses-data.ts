@@ -289,6 +289,30 @@ export const allCourses: Course[] = [
 
   // Management d'Équipe
   {
+    title: "Réussir son Job de Chef de Service 5.0",
+    desc: "Le mindset, les méthodes et l'organisation pour devenir le chef de service que votre N+1 n'a jamais besoin de relancer et que les autres départements respectent.",
+    price: "$69",
+    rating: 4.8,
+    reviews: 142,
+    img: "/cours/reussir-job-manager.png",
+    badge: "Nouveau",
+    type: "Cours",
+    href: "/cours/reussir-son-job-de-chef-de-service",
+    category: "management-d-equipe",
+  },
+  {
+    title: "Parcours Chef de Service 5.0",
+    desc: "Le parcours complet pour passer d'expert nommé manager à chef de service que tout le monde respecte, que le N+1 n'a jamais besoin de relancer et dont l'équipe délivre l'excellence opérationnelle.",
+    price: "$179",
+    rating: 4.9,
+    reviews: 87,
+    img: "/cours/reussir-management-commercial.jpg",
+    badge: "Nouveau",
+    type: "Parcours",
+    href: "/cours/parcours-chef-de-service-5-0",
+    category: "management-d-equipe",
+  },
+  {
     title: "Le Coaching Managérial 4.0",
     desc: "Maitriser et utiliser la méthodologie pour coacher efficacement un collaborateur (ses collaborateurs) et tirer le meilleur parti…",
     price: "$29.90",
