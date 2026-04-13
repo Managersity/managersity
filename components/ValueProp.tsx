@@ -1,70 +1,9 @@
 "use client";
 import Link from "next/link";
-
-const courses = [
-  {
-    title: "L'IA POUR LES MANAGERS COMMERCIAUX 5.0 : LE COURS COMPLET",
-    category: "TOUS LES COURS",
-    type: "Cours",
-    description:
-      "Comment les managers commerciaux innovants utilisent la DATA, l'IA et la Technologie pour avoir plusieurs coups…",
-    price: "$99",
-    img: "/cours/ia-managers-commerciaux.png",
-    href: "/cours/ia-pour-sales-managers-5-0-le-cours-complet",
-  },
-  {
-    title: "IA POUR ASSISTANTS & PROFESSIONNELS : LE COURS COMPLET",
-    category: "TOUS LES COURS",
-    type: "Cours",
-    description:
-      "Boostez votre carrière avec l'IA. Automatisation des tâches répétitives, création de contenu optimisée, productivi…",
-    price: "$57",
-    img: "/cours/ia-assistants-professionnels.png",
-    href: "/cours/ia-pour-les-professionnels",
-  },
-  {
-    title: "IA POUR MANAGER RH 5.0 : LE COURS COMPLET",
-    category: "TOUS LES COURS",
-    type: "Cours",
-    description:
-      "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
-    price: "$99",
-    img: "/cours/ia-manager-rh.png",
-    href: "/cours/ia-pour-les-rh",
-  },
-  {
-    title: "L'IA POUR LES DG ET LES DIRIGEANTS 5.0 : LE COURS COMPLET",
-    category: "TOUS LES COURS",
-    type: "Cours",
-    description:
-      "Comment les DG et dirigeants 5.0 utilisent la DATA, l'IA et la Technologie pour optimiser le cadrage visionnaire, la…",
-    price: "$179",
-    img: "/cours/ia-dg-dirigeants.png",
-    href: "/cours/lia-pour-les-dirigeants-5-0-le-cours-complet",
-  },
-  {
-    title: "INTELLIGENCE ARTIFICIELLE POUR LES MANAGERS",
-    category: "TOUS LES COURS",
-    type: "Cours",
-    description:
-      "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les…",
-    price: "$99",
-    img: "/cours/ia-pour-managers.png",
-    href: "/cours/ia-pour-les-managers",
-  },
-  {
-    title: "L'ART DE CATALYSER ET PILOTER LA PERFORMANCE",
-    category: "TOUS LES COURS",
-    type: "Cours",
-    description:
-      "Ce module vous donne les outils et méthodes pour scenariser, catalyser et orchestrer la performance au Day-to-Day !",
-    price: "$59",
-    img: "/cours/coaching-managerial.jpg",
-    href: "/cours/lart-de-catalyser-et-piloter-la-performance",
-  },
-];
+import { allCourses } from "@/lib/courses-data";
 
 export default function ValueProp() {
+  const courses = allCourses.slice(0, 6);
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-10">
@@ -80,18 +19,23 @@ export default function ValueProp() {
             className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer border border-gray-100"
           >
             {/* Image */}
-            <div className="h-48 overflow-hidden">
+            <div className="h-48 overflow-hidden relative">
               <img
                 src={course.img}
                 alt={course.title}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
+              {course.badge && (
+                <span className="absolute top-2 left-2 bg-brand-green text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                  {course.badge}
+                </span>
+              )}
             </div>
 
             {/* Content */}
             <div className="p-5">
-              <p className="text-xs font-semibold text-gray-500 tracking-wide mb-2">
-                {course.category}
+              <p className="text-xs font-semibold text-gray-500 tracking-wide mb-2 uppercase">
+                TOUS LES COURS
               </p>
               <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 uppercase">
                 {course.title}
@@ -109,7 +53,7 @@ export default function ValueProp() {
                 <span>{course.type}</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">
-                {course.description}
+                {course.desc}
               </p>
               <p className="text-xl font-semibold text-gray-900">
                 {course.price}

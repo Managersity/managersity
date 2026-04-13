@@ -240,7 +240,9 @@ export default function ChatBot() {
         <div className="fixed bottom-24 right-6 z-50 w-[340px] max-w-[calc(100vw-1.5rem)] flex flex-col rounded-2xl shadow-2xl border border-gray-200 overflow-hidden bg-white">
           {/* Header */}
           <div className="bg-brand-green px-4 py-3 flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-black text-sm shrink-0">M</div>
+            <div className="w-9 h-9 rounded-full overflow-hidden bg-white/20 shrink-0">
+              <img src="/Design sans titre (10).png" alt="Managersity" className="w-full h-full object-contain" />
+            </div>
             <div>
               <p className="text-white font-bold text-sm leading-tight">Assistant Managersity</p>
               <p className="text-white/70 text-xs">Répond instantanément</p>
