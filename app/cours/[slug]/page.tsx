@@ -268,14 +268,14 @@ export default async function CoursPage({
           </section>
         )}
 
-        {/* Bénéfices — white with gradient cards */}
+        {/* Bénéfices */}
         {course.benefits && course.benefits.length > 0 && (
           <section className="bg-white py-16">
             <div className="max-w-4xl mx-auto px-4">
               <h2 className="text-2xl font-black text-gray-900 mb-8">Pourquoi choisir cette formation</h2>
               <div className="grid sm:grid-cols-3 gap-5">
                 {course.benefits.map((b, i) => (
-                  <div key={i} className={`${colors.cardGrad} rounded-2xl p-6 text-white`}>
+                  <div key={i} className="bg-gray-900 rounded-2xl p-6 text-white">
                     <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center mb-4 text-sm font-black">
                       {i + 1}
                     </div>

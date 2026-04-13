@@ -294,7 +294,7 @@ export const allCourses: Course[] = [
     price: "$69",
     rating: 4.8,
     reviews: 142,
-    img: "/cours/reussir-job-manager.png",
+    img: "/cours/optimiser-posture-manageriale.jpg",
     badge: "Nouveau",
     type: "Cours",
     href: "/cours/reussir-son-job-de-chef-de-service",
