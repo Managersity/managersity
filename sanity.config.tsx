@@ -1,15 +1,35 @@
+import React from "react";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
+import { buildLegacyTheme } from "sanity";
 import { schema } from "./sanity/index";
 
-// Icône logo Managersity dans la navbar du studio
+// Thème Managersity : fond sombre + accent or
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const studioTheme = buildLegacyTheme({
+  "--black": "#0d0d0d",
+  "--white": "#ffffff",
+  "--gray": "#888",
+  "--gray-base": "#888",
+  "--component-bg": "#111318",
+  "--component-text-color": "#e5e5e5",
+  "--brand-primary": "#C9A84C",
+  "--default-button-primary-color": "#C9A84C",
+  "--default-button-warning-color": "#e67e22",
+  "--state-info-color": "#C9A84C",
+  "--main-navigation-color": "#0d1117",
+  "--sidebar-navigation-color": "#111318",
+  "--focus-ring-color": "#C9A84C",
+} as any);
+
+// Logo Managersity dans la navbar du studio
 function ManagersityLogo() {
   return (
     <img
       src="/MANAGERSITY LOGO.png"
       alt="Managersity"
-      style={{ height: "28px", objectFit: "contain" }}
+      style={{ height: "26px", objectFit: "contain", display: "block" }}
     />
   );
 }
@@ -21,21 +41,15 @@ export default defineConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   basePath: "/studio",
 
-  // Branding
+  // Thème couleurs Managersity
+  theme: studioTheme,
+
+  // Logo dans la navbar
   studio: {
     components: {
       logo: ManagersityLogo,
     },
   },
-
-  theme: {
-    // Couleurs Managersity : vert foncé + or
-    "--black": "#0a0a0a",
-    "--white": "#ffffff",
-    "--gray-base": "#111827",
-    "--focus-color": "#C9A84C",
-    "--brand-primary": "#C9A84C",
-  } as Record<string, string>,
 
   plugins: [
     structureTool({
