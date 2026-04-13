@@ -44,8 +44,8 @@ function matchReply(input: string): Message {
   if (/formation|cours|apprendre|catalogue|collection|module|programme/.test(q)) {
     return {
       from: "bot",
-      text: "Managersity propose plus de 100 modules de formation en management, leadership, développement personnel, transformation digitale et bien plus.\n\n👉 Consultez toutes nos formations sur la page Collections.",
-      actions: [{ label: "Voir les formations", url: "/collections", icon: "wa" }],
+      text: "Managersity propose plus de 100 modules de formation en management, leadership, développement personnel, transformation digitale et bien plus.\n\n👉 Consultez toutes nos formations ici :",
+      actions: [{ label: "Voir les formations", url: "https://www.managersity.com/tous-les-cours", icon: "wa" }],
     };
   }
 
@@ -148,7 +148,7 @@ export default function ChatBot() {
       setMessages((m) => [
         ...m,
         userMsg,
-        { from: "bot", text: "Consultez toutes nos formations ici 👇", actions: [{ label: "Voir les formations", url: "/collections", icon: "wa" }] },
+        { from: "bot", text: "Consultez toutes nos formations ici 👇", actions: [{ label: "Voir les formations", url: "https://www.managersity.com/tous-les-cours", icon: "wa" }] },
       ]);
       setInput("");
       return;
