@@ -91,7 +91,7 @@ export default function SkillsCategories() {
               <Link
                 key={start + i}
                 href={`/tous-les-cours?category=${cat.slug}`}
-                className={`group rounded-2xl overflow-hidden border-2 ${cat.color} bg-white hover:shadow-lg transition-shadow`}
+                className="group rounded-2xl overflow-hidden border border-gray-200 bg-white hover:shadow-lg transition-shadow"
               >
                 <div className="h-44 overflow-hidden">
                   <img
