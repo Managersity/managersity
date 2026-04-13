@@ -99,10 +99,10 @@ export default function RefundPage() {
               <>
                 Envoyez un e-mail à{" "}
                 <a
-                  href="mailto:contact@managersity.co"
+                  href="mailto:contact@managersity.com"
                   className="text-[#1a5200] font-bold hover:underline"
                 >
-                  contact@managersity.co
+                  contact@managersity.com
                 </a>{" "}
                 avec l&apos;objet : <em>« Demande de remboursement — [Nom du cours] »</em>.
               </>,
