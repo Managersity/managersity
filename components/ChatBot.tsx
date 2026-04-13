@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const WHATSAPP_URL = "https://wa.me/221771017188";
-const MAIL_URL = "mailto:contact@managersity.co";
+const MAIL_URL = "mailto:contact@managersity.com";
 
 type Message = {
   from: "bot" | "user";
