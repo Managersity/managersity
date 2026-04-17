@@ -147,7 +147,15 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
     let list = courses;
 
     if (activeCategory !== "all") {
-      list = list.filter((c) => c.category === activeCategory);
+      const norm = (s: string) =>
+        (s || "")
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+      const target = norm(activeCategory);
+      list = list.filter((c) => norm(c.category) === target);
     }
 
     if (search.trim()) {
