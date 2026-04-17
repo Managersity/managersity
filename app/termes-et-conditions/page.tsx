@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import OfferBanner from "@/components/OfferBanner";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -226,7 +225,6 @@ const sections: Section[] = [
 export default function TermsPage() {
   return (
     <main className="min-h-screen font-sans bg-white">
-      <OfferBanner />
       <Navbar />
 
       <section className="bg-gradient-to-b from-[#1a5200] to-[#143f00] text-white py-16">
