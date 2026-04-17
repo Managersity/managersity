@@ -33,21 +33,28 @@ export default async function TousLesCoursPage() {
     const extras = staticList.filter((c) => !seen.has(c.href));
     courses = [...merged, ...extras];
 
-    // Garantie : si aucun cours Dirigeant n'a survécu à la fusion,
-    // on réinjecte ceux des données statiques.
-    const hasDirigeant = courses.some((c) => (c.category || "").toLowerCase() === "dirigeant");
-    if (!hasDirigeant) {
-      const dirigeantStatic = staticList.filter((c) => c.category === "dirigeant");
-      const existingHrefs = new Set(courses.map((c) => c.href));
-      courses = [
-        ...courses.filter((c) => !dirigeantStatic.some((d) => d.href === c.href)),
-        ...dirigeantStatic,
-      ];
-      // dedup final
-      const dedup = new Map<string, CourseListing>();
-      courses.forEach((c) => dedup.set(c.href, c));
-      courses = Array.from(dedup.values());
+    // Garantie : pour toute catégorie présente dans les données statiques
+    // mais absente de la fusion, on réinjecte les cours statiques correspondants
+    // (cas où Sanity écrase sans catégorie).
+    const categoriesInMerged = new Set(
+      courses.map((c) => (c.category || "").toLowerCase()).filter(Boolean)
+    );
+    const categoriesInStatic = new Set(
+      staticList.map((c) => c.category.toLowerCase())
+    );
+
+    for (const cat of categoriesInStatic) {
+      if (!categoriesInMerged.has(cat)) {
+        const toAdd = staticList.filter((c) => c.category.toLowerCase() === cat);
+        const addHrefs = new Set(toAdd.map((c) => c.href));
+        courses = [...courses.filter((c) => !addHrefs.has(c.href)), ...toAdd];
+      }
     }
+
+    // dedup final par href
+    const dedup = new Map<string, CourseListing>();
+    courses.forEach((c) => dedup.set(c.href, c));
+    courses = Array.from(dedup.values());
   } catch {
     courses = staticList;
   }
