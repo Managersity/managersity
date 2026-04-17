@@ -11,11 +11,28 @@ export default async function TousLesCoursPage() {
 
   try {
     const sanityCourses = await getAllCoursesSanity();
-    // Fusion : Sanity + statique, dédupliqués par href (Sanity prioritaire)
     const staticList = allCourses as CourseListing[];
     const sanityList = (sanityCourses ?? []) as CourseListing[];
-    const seen = new Set(sanityList.map((c) => c.href));
-    courses = [...sanityList, ...staticList.filter((c) => !seen.has(c.href))];
+
+    // Map des entrées statiques indexées par href pour enrichissement rapide
+    const staticByHref = new Map(staticList.map((c) => [c.href, c]));
+
+    // Fusion : Sanity prioritaire, mais on complète les champs manquants
+    // (notamment `category`) avec ceux de la donnée statique si le href correspond.
+    const merged = sanityList.map((c) => {
+      const fallback = staticByHref.get(c.href);
+      if (!fallback) return c;
+      return {
+        ...c,
+        category: c.category || fallback.category,
+        desc: c.desc || fallback.desc,
+        img: c.img || fallback.img,
+        price: c.price || fallback.price,
+      };
+    });
+
+    const seen = new Set(merged.map((c) => c.href));
+    courses = [...merged, ...staticList.filter((c) => !seen.has(c.href))];
   } catch {
     courses = allCourses as CourseListing[];
   }
