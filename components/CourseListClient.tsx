@@ -33,6 +33,38 @@ const categoryFilters = [
   { label: "VENDEUR ELITE EXPERT 4.0", slug: "vendeur-elite-expert-4-0" },
 ];
 
+function CourseImage({
+  course,
+  isBundle,
+}: {
+  course: CourseListing;
+  isBundle: boolean;
+}) {
+  const [failed, setFailed] = useState(!course.img);
+
+  if (failed) {
+    return (
+      <div className="relative h-52 overflow-hidden bg-gradient-to-br from-[#1a5200] to-[#143f00] flex flex-col items-center justify-center text-center px-4">
+        <div className="text-[#c4a800] text-5xl mb-2">{isBundle ? "📚" : "🎓"}</div>
+        <div className="text-white text-xs font-bold uppercase tracking-wider line-clamp-3">
+          {course.title}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative h-52 overflow-hidden bg-gray-100">
+      <img
+        src={course.img}
+        alt={course.title}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
+
 function CourseCard({ course }: { course: CourseListing }) {
   const isBundle = course.type === "Parcours";
 
@@ -41,13 +73,7 @@ function CourseCard({ course }: { course: CourseListing }) {
       href={course.href}
       className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
     >
-      <div className="relative h-52 overflow-hidden bg-gray-100">
-        <img
-          src={course.img}
-          alt={course.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+      <CourseImage course={course} isBundle={isBundle} />
       <div className="p-5 flex flex-col flex-1">
         <h3 className="text-sm font-bold text-gray-900 uppercase leading-snug mb-2 line-clamp-3">
           {course.title}
