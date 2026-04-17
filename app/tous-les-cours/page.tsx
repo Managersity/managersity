@@ -9,16 +9,14 @@ export const revalidate = 60; // ISR : revalide toutes les 60 secondes
 export default async function TousLesCoursPage() {
   let courses: CourseListing[] = [];
 
+  const staticList = allCourses as CourseListing[];
+
   try {
     const sanityCourses = await getAllCoursesSanity();
-    const staticList = allCourses as CourseListing[];
     const sanityList = (sanityCourses ?? []) as CourseListing[];
-
-    // Map des entrées statiques indexées par href pour enrichissement rapide
     const staticByHref = new Map(staticList.map((c) => [c.href, c]));
 
-    // Fusion : Sanity prioritaire, mais on complète les champs manquants
-    // (notamment `category`) avec ceux de la donnée statique si le href correspond.
+    // Sanity prioritaire, mais on enrichit avec les champs statiques manquants
     const merged = sanityList.map((c) => {
       const fallback = staticByHref.get(c.href);
       if (!fallback) return c;
@@ -32,9 +30,26 @@ export default async function TousLesCoursPage() {
     });
 
     const seen = new Set(merged.map((c) => c.href));
-    courses = [...merged, ...staticList.filter((c) => !seen.has(c.href))];
+    const extras = staticList.filter((c) => !seen.has(c.href));
+    courses = [...merged, ...extras];
+
+    // Garantie : si aucun cours Dirigeant n'a survécu à la fusion,
+    // on réinjecte ceux des données statiques.
+    const hasDirigeant = courses.some((c) => (c.category || "").toLowerCase() === "dirigeant");
+    if (!hasDirigeant) {
+      const dirigeantStatic = staticList.filter((c) => c.category === "dirigeant");
+      const existingHrefs = new Set(courses.map((c) => c.href));
+      courses = [
+        ...courses.filter((c) => !dirigeantStatic.some((d) => d.href === c.href)),
+        ...dirigeantStatic,
+      ];
+      // dedup final
+      const dedup = new Map<string, CourseListing>();
+      courses.forEach((c) => dedup.set(c.href, c));
+      courses = Array.from(dedup.values());
+    }
   } catch {
-    courses = allCourses as CourseListing[];
+    courses = staticList;
   }
 
   return (
