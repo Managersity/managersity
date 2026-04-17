@@ -11,13 +11,12 @@ export default async function TousLesCoursPage() {
 
   try {
     const sanityCourses = await getAllCoursesSanity();
-    if (sanityCourses && sanityCourses.length > 0) {
-      courses = sanityCourses;
-    } else {
-      courses = allCourses as CourseListing[];
-    }
+    // Fusion : Sanity + statique, dédupliqués par href (Sanity prioritaire)
+    const staticList = allCourses as CourseListing[];
+    const sanityList = (sanityCourses ?? []) as CourseListing[];
+    const seen = new Set(sanityList.map((c) => c.href));
+    courses = [...sanityList, ...staticList.filter((c) => !seen.has(c.href))];
   } catch {
-    // Fallback sur les données statiques si Sanity est indisponible
     courses = allCourses as CourseListing[];
   }
 
