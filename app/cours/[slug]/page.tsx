@@ -10,13 +10,80 @@ import { getCourseSanity, getAllCoursesSanity } from "@/sanity/lib/queries";
 
 export const revalidate = 60;
 
-function fmt(n: number) {
-  return n.toLocaleString("fr-FR");
+function toNumber(v: number | string | undefined | null): number | null {
+  if (v == null) return null;
+  if (typeof v === "number") return isFinite(v) ? v : null;
+  const match = String(v).replace(/\s/g, "").match(/[\d]+(?:[.,]\d+)?/);
+  if (!match) return null;
+  const n = parseFloat(match[0].replace(",", "."));
+  return isNaN(n) ? null : n;
 }
 
-function discount(price: number, original: number) {
-  return Math.round((1 - price / original) * 100);
+function fmt(n: number | string | undefined | null) {
+  const num = toNumber(n);
+  return num == null ? "" : num.toLocaleString("fr-FR");
 }
+
+function discount(price: number | string, original: number | string) {
+  const p = toNumber(price);
+  const o = toNumber(original);
+  if (p == null || o == null || o === 0) return 0;
+  return Math.round((1 - p / o) * 100);
+}
+
+// Prix officiels FCFA par slug (source : cartographie prix Managersity)
+const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = {
+  "lia-pour-les-dirigeants-5-0-le-cours-complet": { price: 97000, originalPrice: 297000 },
+  "ia-pour-sales-managers-5-0-le-cours-complet": { price: 59000, originalPrice: 197000 },
+  "ia-pour-les-rh": { price: 59000, originalPrice: 197000 },
+  "ia-pour-les-managers": { price: 59000, originalPrice: 197000 },
+  "ia-pour-les-professionnels": { price: 29000, originalPrice: 97000 },
+  "enjeux-business-methodologie-de-transformation-digitale": { price: 29900, originalPrice: 149000 },
+  "parcours-dirigeant": { price: 304900, originalPrice: 597000 },
+  "le-game-de-la-strategie-disruption-marche": { price: 57000, originalPrice: 97000 },
+  "choix-complexes-mecanismes-decisionnels": { price: 34900, originalPrice: 59000 },
+  "leadership-situationnel-intelligence-emotionnelle": { price: 34900, originalPrice: 59000 },
+  "maturite-manageriale-enjeux-de-direction-generale": { price: 59000, originalPrice: 149000 },
+  "gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants": { price: 29900, originalPrice: 149000 },
+  "design-organisationnel-transformation-dentreprise": { price: 57000, originalPrice: 149000 },
+  "reussir-avec-son-conseil-dadministration-et-son-groupe": { price: 34900, originalPrice: 59000 },
+  "lart-de-structurer-et-optimiser-un-processus": { price: 21900, originalPrice: 59000 },
+  "management-du-changement-organisationnel": { price: 19900, originalPrice: 59000 },
+  "pack-25-ebooks-pour-dirigeant": { price: 99000, originalPrice: 159000 },
+  "modelisation-maitrise-financieres-pour-les-dirigeants": { price: 29000, originalPrice: 149000 },
+  "management-de-projet-et-realisation-des-objectifs-strategiques": { price: 29000, originalPrice: 149000 },
+  "intelligence-emotionnelle-mecanismes-decisionnels-pour-les-dirigeants": { price: 34900, originalPrice: 149000 },
+  "dispositif-outils-de-pilotage-commercial": { price: 21900, originalPrice: 59000 },
+  "reussir-son-management-commercial": { price: 34900, originalPrice: 59000 },
+  "lart-de-casser-la-baraque-pour-les-commerciaux": { price: 14900, originalPrice: 39000 },
+  "reussir-le-job-de-manager-commercial": { price: 21900, originalPrice: 34900 },
+  "parcours-dirigeant-delite": { price: 249000 },
+  "parcours-ia-performance-professionnelle-delite": { price: 99000 },
+  "parcours-manager-delite": { price: 79000 },
+  "parcours-manager-commercial-delite": { price: 79000 },
+  "parcours-rh-capital-humain-delite": { price: 79000 },
+  "parcours-clarte-performance-personnelle-delite": { price: 59000 },
+  "parcours-manager-dequipe-4-0-vvip": { price: 297000, originalPrice: 397000 },
+  "parcours-manager-dequipe-4-0-vvip-3-tranches": { price: 120000 },
+  "parcours-manager-dequipe-4-0-vip": { price: 97000, originalPrice: 159000 },
+  "parcours-middle-manager-4-0": { price: 127000 },
+  "le-coaching-managerial-4-0": { price: 34900, originalPrice: 59000 },
+  "batir-une-equipe-performante": { price: 19900, originalPrice: 59900 },
+  "optimiser-sa-posture-manageriale": { price: 14900, originalPrice: 39000 },
+  "lart-de-catalyser-et-piloter-la-performance": { price: 29000, originalPrice: 59000 },
+  "leadership-pouvoir-de-linfluence": { price: 34900, originalPrice: 59000 },
+  "management-strategique-du-capital-humain": { price: 29000, originalPrice: 149000 },
+  "piloter-sa-resilience-et-son-bien-etre-personnel": { price: 14900, originalPrice: 39000 },
+  "gestion-du-stress-et-des-pressions": { price: 14900, originalPrice: 39000 },
+  "developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves": { price: 11990, originalPrice: 39000 },
+  "intelligence-emotionnelle-gestion-des-relations-avec-les-autres": { price: 14900, originalPrice: 39000 },
+  "methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros": { price: 19900, originalPrice: 59000 },
+  "lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre": { price: 14900, originalPrice: 39000 },
+  "structurer-et-piloter-une-vision-dentreprise": { price: 27900, originalPrice: 59000 },
+  "etat-desprit-resilience-entrepreneuriale": { price: 14900, originalPrice: 39000 },
+  "parcours-chef-de-service-5-0": { price: 97000, originalPrice: 129000 },
+  "reussir-son-job-de-chef-de-service": { price: 37000, originalPrice: 59000 },
+};
 
 const CAT_COLORS: Record<string, {
   badge: string; text: string; bar: string; ring: string;
@@ -134,6 +201,16 @@ export default async function CoursPage({
     course = COURSES.find((c) => c.slug === slug) ?? null;
   }
   if (!course) notFound();
+
+  // Forcer les prix FCFA officiels quand le slug est connu
+  const fcfaOverride = FCFA_BY_SLUG[slug];
+  if (fcfaOverride) {
+    course = {
+      ...course,
+      price: fcfaOverride.price as unknown as typeof course.price,
+      originalPrice: (fcfaOverride.originalPrice ?? course.originalPrice) as unknown as typeof course.originalPrice,
+    };
+  }
 
   const colors = CAT_COLORS[course.category] ?? {
     badge: "bg-gray-100 text-gray-800", text: "text-gray-500", bar: "bg-gray-400", ring: "ring-gray-400/20",
