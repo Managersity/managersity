@@ -36,7 +36,7 @@ const courses = [
     href: "/cours/lart-de-catalyser-et-piloter-la-performance",
   },
   {
-    title: "Maturité Managériale & Enjeux de Direction Générale",
+    title: "Maturité Managériale et Enjeux de Direction Générale",
     author: "H&C Group",
     rating: 4.5,
     reviews: 893,

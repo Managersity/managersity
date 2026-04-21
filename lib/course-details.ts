@@ -60,7 +60,7 @@ export const COURSES: CourseDetail[] = [
 
   {
     slug: "ia-pour-sales-managers-5-0-le-cours-complet",
-    title: "IA pour Sales Managers 5.0 : Le Cours Complet",
+    title: "L'IA pour les Managers Commerciaux 5.0 : Le Cours Complet",
     category: "Intelligence Artificielle",
     price: 59000,
     originalPrice: 197000,
@@ -191,7 +191,7 @@ export const COURSES: CourseDetail[] = [
 
   {
     slug: "lia-pour-les-dirigeants-5-0-le-cours-complet",
-    title: "L'IA pour les Dirigeants 5.0 : Le Cours Complet",
+    title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
     category: "Intelligence Artificielle",
     price: 97000,
     originalPrice: 297000,
@@ -340,7 +340,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "maturite-manageriale-enjeux-de-direction-generale",
-    title: "Maturité Managériale & Enjeux de Direction Générale",
+    title: "Maturité Managériale et Enjeux de Direction Générale",
     category: "Parcours Dirigeant",
     price: 59000,
     originalPrice: 149000,
@@ -419,7 +419,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "intelligence-emotionnelle-mecanismes-decisionnels-pour-les-dirigeants",
-    title: "Jeu Intérieur du Leadership, Intelligence Émotionnelle & Mécanismes Décisionnels",
+    title: "Jeu Intérieur du Leadership, Intelligence Émotionnelle & Mécanismes Décisionnels pour les Dirigeants",
     category: "Parcours Dirigeant",
     price: 34900,
     originalPrice: 149000,
@@ -538,7 +538,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "modelisation-maitrise-financieres-pour-les-dirigeants",
-    title: "Modélisation & Maîtrise Financières pour les Dirigeants",
+    title: "Modélisation et Maîtrise Financière pour les Dirigeants",
     category: "Parcours Dirigeant",
     price: 29000,
     originalPrice: 149000,
@@ -974,7 +974,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "leadership-pouvoir-de-linfluence",
-    title: "Leadership & Pouvoir de l'Influence",
+    title: "Leadership & Le Pouvoir de l'Influence au 21è Siècle",
     category: "Modules Certifiants",
     price: 34900,
     originalPrice: 59000,
@@ -1248,7 +1248,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros",
-    title: "Méthodes de Gestion du Temps, d'Organisation et de Discipline Personnelle",
+    title: "Méthodes de Gestion du Temps & de Discipline Personnelles pour les Pros",
     category: "Modules Certifiants",
     price: 19900,
     originalPrice: 59000,
@@ -1419,7 +1419,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "gestion-du-stress-et-des-pressions",
-    title: "Gestion du Stress et des Pressions",
+    title: "Gestion du Stress : Méthodes Inédites pour Anticiper les Pressions et les Gérer",
     category: "Modules Certifiants",
     price: 14900,
     originalPrice: 39000,

@@ -29,6 +29,7 @@ const categoryFilters = [
   { label: "MANAGEMENT COMMERCIAL 4.0", slug: "management-commercial-4-0" },
   { label: "MANAGEMENT D'EQUIPE", slug: "management-d-equipe" },
   { label: "MANAGEMENT DU CAPITAL HUMAIN", slug: "management-du-capital-humain" },
+  { label: "PARCOURS", slug: "parcours" },
   { label: "TRANSFORMATION DIGITALE 4.0", slug: "transformation-digitale-4-0" },
   { label: "VENDEUR ELITE EXPERT 4.0", slug: "vendeur-elite-expert-4-0" },
 ];
@@ -181,7 +182,13 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/(^-|-$)/g, "");
       const target = norm(activeCategory);
-      list = list.filter((c) => norm(c.category) === target);
+      list = list.filter((c) => {
+        const cat = norm(c.category);
+        if (cat === target) return true;
+        // Les cours IA apparaissent aussi dans Transformation Digitale 4.0
+        if (target === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;
+        return false;
+      });
     }
 
     if (search.trim()) {

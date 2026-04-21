@@ -35,6 +35,13 @@ export default async function CategoryPage({
   const meta = categoryMeta[slug];
   if (!meta) notFound();
 
+  // Règle : les cours IA apparaissent aussi dans Transformation Digitale 4.0
+  const matchesCategory = (cat: string) => {
+    if (cat === slug) return true;
+    if (slug === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;
+    return false;
+  };
+
   // Essaie Sanity d'abord, fallback sur les données statiques filtrées
   let courses: typeof allCourses = [];
   try {
@@ -42,10 +49,10 @@ export default async function CategoryPage({
     if (sanityCourses?.length) {
       courses = sanityCourses;
     } else {
-      courses = allCourses.filter((c) => c.category === slug);
+      courses = allCourses.filter((c) => matchesCategory(c.category));
     }
   } catch {
-    courses = allCourses.filter((c) => c.category === slug);
+    courses = allCourses.filter((c) => matchesCategory(c.category));
   }
   const avgRating =
     courses.reduce((acc, c) => acc + c.rating, 0) / (courses.length || 1);

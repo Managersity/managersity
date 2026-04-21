@@ -59,7 +59,12 @@ export default function CollectionsPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-14">
             {categories.map((cat) => {
-              const count = allCourses.filter((c) => c.category === cat.slug).length;
+              const count = allCourses.filter((c) => {
+                if (c.category === cat.slug) return true;
+                // Les cours IA apparaissent aussi dans Transformation Digitale 4.0
+                if (cat.slug === "transformation-digitale-4-0" && c.category === "intelligence-artificielle") return true;
+                return false;
+              }).length;
               return (
                 <Link
                   key={cat.slug}

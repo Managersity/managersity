@@ -84,14 +84,14 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/kit-du-manager-augmente-ia/",
   },
   {
-    title: "L'IA pour les dirigeants 5.0 : Le cours complet",
+    title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
     category: "Intelligence Artificielle",
     price: 97000,
     originalPrice: 297000,
     url: "https://shop.managersity.com/produit/lia-pour-les-dirigeants-5-0-le-cours-complet/",
   },
   {
-    title: "IA pour Sales Managers 5.0 : Le cours complet",
+    title: "L'IA pour les Managers Commerciaux 5.0 : Le Cours Complet",
     category: "Intelligence Artificielle",
     price: 59000,
     originalPrice: 197000,
@@ -156,7 +156,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/pack-25-ebooks-pour-dirigeant/",
   },
   {
-    title: "Maturité Managériale & Enjeux de Direction Générale",
+    title: "Maturité Managériale et Enjeux de Direction Générale",
     category: "Parcours Dirigeant",
     price: 59000,
     originalPrice: 149000,
@@ -170,7 +170,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise/",
   },
   {
-    title: "Jeu intérieur du leadership, Intelligence émotionnelle & Mécanismes décisionnels pour les dirigeants",
+    title: "Jeu Intérieur du Leadership, Intelligence Émotionnelle & Mécanismes Décisionnels pour les Dirigeants",
     category: "Parcours Dirigeant",
     price: 34900,
     originalPrice: 149000,
@@ -191,7 +191,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/management-strategique-du-capital-humain/",
   },
   {
-    title: "Modélisation & maîtrise financières pour les dirigeants",
+    title: "Modélisation et Maîtrise Financière pour les Dirigeants",
     category: "Parcours Dirigeant",
     price: 29000,
     originalPrice: 149000,
@@ -312,7 +312,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/management-du-changement-organisationnel/",
   },
   {
-    title: "Méthodes de gestion du temps, d'organisation et de discipline personnelle",
+    title: "Méthodes de Gestion du Temps & de Discipline Personnelles pour les Pros",
     category: "Modules Certifiants",
     price: 19900,
     originalPrice: 59000,
@@ -326,7 +326,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/optimiser-sa-posture-manageriale/",
   },
   {
-    title: "Gestion du stress et des pressions",
+    title: "Gestion du Stress : Méthodes Inédites pour Anticiper les Pressions et les Gérer",
     category: "Modules Certifiants",
     price: 14900,
     originalPrice: 39000,
