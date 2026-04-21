@@ -16,13 +16,15 @@ export default async function TousLesCoursPage() {
     const sanityList = (sanityCourses ?? []) as CourseListing[];
     const staticByHref = new Map(staticList.map((c) => [c.href, c]));
 
-    // Sanity prioritaire, mais on enrichit avec les champs statiques manquants
+    // Sanity prioritaire pour les champs editoriaux, MAIS la categorie du code
+    // statique fait foi (pour que les recategorisations recentes s'appliquent
+    // sans migration manuelle dans le Studio Sanity).
     const merged = sanityList.map((c) => {
       const fallback = staticByHref.get(c.href);
       if (!fallback) return c;
       return {
         ...c,
-        category: c.category || fallback.category,
+        category: fallback.category || c.category,
         desc: c.desc || fallback.desc,
         img: c.img || fallback.img,
         price: c.price || fallback.price,

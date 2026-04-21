@@ -42,17 +42,17 @@ export default async function CategoryPage({
     return false;
   };
 
-  // Essaie Sanity d'abord, fallback sur les données statiques filtrées
+  // Fusionne Sanity + données statiques (dédoublonné par href)
+  // pour que les cours ajoutés au code apparaissent même si Sanity renvoie déjà des résultats
+  const staticMatches = allCourses.filter((c) => matchesCategory(c.category));
   let courses: typeof allCourses = [];
   try {
-    const sanityCourses = await getCoursesByCategory(slug);
-    if (sanityCourses?.length) {
-      courses = sanityCourses;
-    } else {
-      courses = allCourses.filter((c) => matchesCategory(c.category));
-    }
+    const sanityCourses = (await getCoursesByCategory(slug)) ?? [];
+    const seen = new Set((sanityCourses as typeof allCourses).map((c) => c.href));
+    const extras = staticMatches.filter((c) => !seen.has(c.href));
+    courses = [...(sanityCourses as typeof allCourses), ...extras];
   } catch {
-    courses = allCourses.filter((c) => matchesCategory(c.category));
+    courses = staticMatches;
   }
   const avgRating =
     courses.reduce((acc, c) => acc + c.rating, 0) / (courses.length || 1);
