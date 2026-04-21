@@ -66,6 +66,28 @@ function CourseImage({
   );
 }
 
+const USD_TO_FCFA = 600;
+
+function formatPriceFCFA(price: string): string {
+  if (!price) return "";
+  const cleaned = price.trim();
+
+  // Déjà en FCFA
+  if (/fcfa|xof/i.test(cleaned)) return cleaned;
+
+  // Extraire le nombre (supporte "$179", "$29.90", "179 $", "$1,299", etc.)
+  const match = cleaned.match(/[\d]+(?:[.,]\d+)?/);
+  if (!match) return cleaned;
+
+  const num = parseFloat(match[0].replace(",", "."));
+  if (isNaN(num)) return cleaned;
+
+  // Si $ présent → conversion ; sinon supposé déjà FCFA
+  const isUsd = cleaned.includes("$");
+  const fcfa = isUsd ? Math.round((num * USD_TO_FCFA) / 100) * 100 : num;
+  return `${fcfa.toLocaleString("fr-FR")} FCFA`;
+}
+
 function CourseCard({ course }: { course: CourseListing }) {
   const isBundle = course.type === "Parcours";
 
@@ -86,7 +108,7 @@ function CourseCard({ course }: { course: CourseListing }) {
         <p className="text-sm md:text-xs text-gray-600 leading-relaxed mb-4 line-clamp-3 flex-1">
           {course.desc}
         </p>
-        <p className="text-base font-bold text-gray-900">{course.price}</p>
+        <p className="text-base font-bold text-gray-900">{formatPriceFCFA(course.price)}</p>
       </div>
     </a>
   );
