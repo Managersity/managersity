@@ -462,7 +462,7 @@ export const allCourses: Course[] = [
     price: "$27",
     rating: 4.5,
     reviews: 389,
-    img: "/cours/optimiser-posture-manageriale.png",
+    img: "/cours/optimiser-posture-manageriale.jpg",
     type: "Cours",
     href: "/cours/optimiser-sa-posture-manageriale",
     category: "management-d-equipe",
