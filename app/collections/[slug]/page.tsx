@@ -55,9 +55,14 @@ export default async function CategoryPage({
   let courses: typeof allCourses = [];
   try {
     const sanityCourses = (await getCoursesByCategory(slug)) ?? [];
-    const seen = new Set((sanityCourses as typeof allCourses).map((c) => c.href));
+    const staticByHref = new Map(staticMatches.map((c) => [c.href, c]));
+    const merged = (sanityCourses as typeof allCourses).map((c) => {
+      const fallback = staticByHref.get(c.href);
+      return fallback ? { ...c, img: fallback.img || c.img } : c;
+    });
+    const seen = new Set(merged.map((c) => c.href));
     const extras = staticMatches.filter((c) => !seen.has(c.href));
-    courses = [...(sanityCourses as typeof allCourses), ...extras];
+    courses = [...merged, ...extras];
   } catch {
     courses = staticMatches;
   }

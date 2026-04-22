@@ -26,7 +26,7 @@ export default async function TousLesCoursPage() {
         ...c,
         category: fallback.category || c.category,
         desc: c.desc || fallback.desc,
-        img: c.img || fallback.img,
+        img: fallback.img || c.img,
         price: c.price || fallback.price,
       };
     });

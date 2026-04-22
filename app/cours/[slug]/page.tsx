@@ -221,9 +221,9 @@ export default async function CoursPage({
   const isRich = !!(course.learns && course.learns.length > 0);
   const ctaLabel = course.enrollUrl ? "S'inscrire maintenant" : "Voir sur la boutique";
 
-  // Image : priorité à l'image Sanity (champ img), sinon cherche dans allCourses, sinon fallback catégorie
+  // Image : priorité à l'image statique (allCourses), sinon Sanity, sinon fallback catégorie
   const courseImgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
-  const courseImg = (course as { img?: string }).img ?? courseImgEntry?.img ?? CAT_FALLBACK[course.category] ?? null;
+  const courseImg = courseImgEntry?.img ?? (course as { img?: string }).img ?? CAT_FALLBACK[course.category] ?? null;
 
   return (
     <>
