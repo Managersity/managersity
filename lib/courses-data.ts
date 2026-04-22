@@ -377,7 +377,7 @@ export const allCourses: Course[] = [
     price: "$97",
     rating: 4.8,
     reviews: 142,
-    img: "/cat-management-capital-humain.png",
+    img: "/cours/parcours-chef-de-service-5-0.jpg",
     badge: "Premium",
     type: "Parcours",
     href: "/cours/parcours-chef-de-service-5-0",
