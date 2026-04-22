@@ -587,31 +587,9 @@ export const allCourses: Course[] = [
     category: "entrepreneuriat",
   },
 
-  // Vendeur Elite
-  {
-    title: "L'Art de Casser la Baraque pour les Commerciaux",
-    desc: "Mindset, optimisation mentale et approche inédite pour la nouvelle psychologie de la vente.",
-    price: "$27",
-    rating: 4.5,
-    reviews: 712,
-    img: "/cours/art-casser-baraque-commerciaux.png",
-    badge: "Bestseller",
-    type: "Cours",
-    href: "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
-    category: "vendeur-elite-expert-4-0",
-  },
-  {
-    title: "Dispositif & Outils de Pilotage de la Performance Commerciale",
-    desc: "Plus de 50 outils et matrices pour modéliser, planifier et orchestrer la performance commerciale.",
-    price: "$37",
-    rating: 4.6,
-    reviews: 645,
-    img: "/cours/dispositif-pilotage-commercial.jpg",
-    badge: "Top noté",
-    type: "Cours",
-    href: "/cours/dispositif-outils-de-pilotage-commercial",
-    category: "vendeur-elite-expert-4-0",
-  },
+  // Note : les cours Vendeur Elite (L'Art de Casser la Baraque, Dispositif & Outils
+  // de Pilotage) sont stockes une seule fois en categorie management-commercial-4-0
+  // et apparaissent aussi dans Vendeur Elite Expert 4.0 via une regle de filtre.
 
 ];
 

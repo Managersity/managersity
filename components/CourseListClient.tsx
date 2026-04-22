@@ -280,11 +280,19 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/(^-|-$)/g, "");
       const target = norm(activeCategory);
+      // Cours "Vendeur Elite" : Dispositif & L'Art de Casser la Baraque — stockes
+      // en management-commercial-4-0 mais doivent apparaitre aussi en Vendeur Elite.
+      const VENDEUR_ELITE_FROM_MC = new Set<string>([
+        "/cours/dispositif-outils-de-pilotage-commercial",
+        "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
+      ]);
       list = list.filter((c) => {
         const cat = norm(c.category);
         if (cat === target) return true;
         // Les cours IA apparaissent aussi dans Transformation Digitale 4.0
         if (target === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;
+        // Certains cours Management Commercial apparaissent aussi en Vendeur Elite
+        if (target === "vendeur-elite-expert-4-0" && VENDEUR_ELITE_FROM_MC.has(c.href)) return true;
         return false;
       });
     }

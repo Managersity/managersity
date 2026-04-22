@@ -35,24 +35,31 @@ export default async function CategoryPage({
   const meta = categoryMeta[slug];
   if (!meta) notFound();
 
-  // Règle : les cours IA apparaissent aussi dans Transformation Digitale 4.0
-  const matchesCategory = (cat: string) => {
+  // Cours Management Commercial qui apparaissent aussi en Vendeur Elite
+  const VENDEUR_ELITE_FROM_MC = new Set<string>([
+    "/cours/dispositif-outils-de-pilotage-commercial",
+    "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
+  ]);
+  const matchesCategory = (cat: string, href?: string) => {
     if (cat === slug) return true;
+    // Les cours IA apparaissent aussi dans Transformation Digitale 4.0
     if (slug === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;
+    // Certains cours Management Commercial apparaissent aussi en Vendeur Elite
+    if (slug === "vendeur-elite-expert-4-0" && href && VENDEUR_ELITE_FROM_MC.has(href)) return true;
     return false;
   };
 
-  // Essaie Sanity d'abord, fallback sur les données statiques filtrées
+  // Fusionne Sanity + données statiques (dédoublonné par href)
+  // pour que les cours ajoutés au code apparaissent même si Sanity renvoie déjà des résultats
+  const staticMatches = allCourses.filter((c) => matchesCategory(c.category, c.href));
   let courses: typeof allCourses = [];
   try {
-    const sanityCourses = await getCoursesByCategory(slug);
-    if (sanityCourses?.length) {
-      courses = sanityCourses;
-    } else {
-      courses = allCourses.filter((c) => matchesCategory(c.category));
-    }
+    const sanityCourses = (await getCoursesByCategory(slug)) ?? [];
+    const seen = new Set((sanityCourses as typeof allCourses).map((c) => c.href));
+    const extras = staticMatches.filter((c) => !seen.has(c.href));
+    courses = [...(sanityCourses as typeof allCourses), ...extras];
   } catch {
-    courses = allCourses.filter((c) => matchesCategory(c.category));
+    courses = staticMatches;
   }
   const avgRating =
     courses.reduce((acc, c) => acc + c.rating, 0) / (courses.length || 1);
