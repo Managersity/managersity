@@ -371,6 +371,18 @@ export const allCourses: Course[] = [
     href: "/cours/parcours-clarte-performance-personnelle-delite",
     category: "parcours",
   },
+  {
+    title: "Parcours Chef de Service 5.0",
+    desc: "Le parcours complet pour passer d'expert nommé manager à chef de service que tout le monde respecte, qui délivre sans relance et dont l'équipe produit l'excellence opérationnelle.",
+    price: "$97",
+    rating: 4.8,
+    reviews: 142,
+    img: "/cat-management-capital-humain.png",
+    badge: "Premium",
+    type: "Parcours",
+    href: "/cours/parcours-chef-de-service-5-0",
+    category: "parcours",
+  },
 
   // Management d'Équipe — Parcours Sanity (images fournies via fallback)
   {
