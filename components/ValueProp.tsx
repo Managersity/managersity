@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { allCourses } from "@/lib/courses-data";
+import { formatPriceFCFA } from "@/lib/price-utils";
 
 export default function ValueProp() {
   const courses = allCourses.slice(0, 6);
@@ -56,7 +57,7 @@ export default function ValueProp() {
                 {course.desc}
               </p>
               <p className="text-xl font-semibold text-gray-900">
-                {course.price}
+                {formatPriceFCFA(course.price, course.href)}
               </p>
             </div>
           </a>

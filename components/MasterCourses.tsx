@@ -5,7 +5,7 @@ const featuredCourse = {
   type: "Offre groupée",
   description:
     "Acquérez les compétences clés pour briller en tant que dirigeant et réussir votre promotion. Empruntez un parcours diligent alliant fluidité et simplicité, avec un style direct et précis.",
-  price: "$519",
+  price: "304 900 FCFA",
   img: "/cours/parcours-dirigeant-certifie.png",
   slug: "parcours-dirigeant-certifie-pdc",
 };
@@ -16,7 +16,7 @@ const courses = [
     type: "Offre groupée",
     description:
       "Maitrisez le process et la méthodologie pour prendre une organisation, la diagnostiquer, évaluer ses capacités stratégiques,…",
-    price: "$97",
+    price: "57 000 FCFA",
     img: "/cours/design-organisationnel.jpeg",
     href: "/cours/design-organisationnel-transformation-dentreprise",
   },
@@ -25,7 +25,7 @@ const courses = [
     type: "Cours",
     description:
       "Pour les membres de CODIR qui doivent démontrer de l'excellence Top Executive, ceux qui aspirent à la fonction de DG et ce…",
-    price: "$97",
+    price: "59 000 FCFA",
     img: "/cours/maturite-manageriale.png",
     href: "/cours/maturite-manageriale-enjeux-de-direction-generale",
   },
@@ -34,7 +34,7 @@ const courses = [
     type: "Cours",
     description:
       "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes…",
-    price: "$97",
+    price: "29 900 FCFA",
     img: "/cours/gestion-parties-prenantes.png",
     href: "/cours/gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants",
   },
