@@ -274,6 +274,25 @@ export default async function CoursPage({
                     </div>
                   </div>
                 )}
+
+                {/* Ce que vous allez apprendre — intégré dans la colonne gauche pour combler l'espace vide */}
+                {isRich && course.learns && course.learns.length > 0 && (
+                  <div className="mt-8">
+                    <h2 className="text-xl font-black text-white mb-5">Ce que vous allez apprendre</h2>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {course.learns.map((item, i) => (
+                        <div key={i} className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-3.5">
+                          <span className={`shrink-0 w-5 h-5 rounded-full ${colors.checkBg} flex items-center justify-center mt-0.5`}>
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                              <path d="M2 5.5l2 2 4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </span>
+                          <p className="text-sm text-gray-200 leading-relaxed">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Right — course image + sticky price card */}
@@ -349,27 +368,6 @@ export default async function CoursPage({
         </div>
 
         {/* ── BODY ──────────────────────────────────────────────────────────── */}
-
-        {/* Ce que vous allez apprendre — dark colored section */}
-        {isRich && course.learns && (
-          <section className={`${colors.learnsBg} py-16`}>
-            <div className="max-w-4xl mx-auto px-4">
-              <h2 className="text-2xl font-black text-white mb-8">Ce que vous allez apprendre</h2>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {course.learns.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-4">
-                    <span className={`shrink-0 w-5 h-5 rounded-full ${colors.checkBg} flex items-center justify-center mt-0.5`}>
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d="M2 5.5l2 2 4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <p className="text-sm text-gray-200 leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* Bénéfices */}
         {course.benefits && course.benefits.length > 0 && (
