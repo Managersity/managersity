@@ -38,6 +38,7 @@ const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = 
   "ia-pour-les-rh": { price: 59000, originalPrice: 197000 },
   "ia-pour-les-managers": { price: 59000, originalPrice: 197000 },
   "ia-pour-les-professionnels": { price: 29000, originalPrice: 97000 },
+  "kit-du-manager-augmente-ia": { price: 39000, originalPrice: 199000 },
   "enjeux-business-methodologie-de-transformation-digitale": { price: 29900, originalPrice: 149000 },
   "parcours-dirigeant": { price: 304900, originalPrice: 597000 },
   "le-game-de-la-strategie-disruption-marche": { price: 57000, originalPrice: 97000 },
