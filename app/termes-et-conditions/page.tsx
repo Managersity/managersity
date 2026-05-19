@@ -25,8 +25,8 @@ const sections: Section[] = [
           <a href="https://www.managersity.com" className="text-[#1a5200] hover:underline">
             www.managersity.co
           </a>
-          , est éditée par <strong>H&amp;C DIGITAL LEARNING</strong> par{" "}
-          <strong>The H&amp;C GROUP</strong>. Elle propose des formations en ligne (e-learning)
+          , est éditée par <strong>H&amp;C DIGITAL LLC</strong>
+          . Elle propose des formations en ligne (e-learning)
           dans les domaines du management, du leadership, du développement personnel et de la
           transformation digitale.
         </p>
@@ -82,7 +82,7 @@ const sections: Section[] = [
         <p className="mb-4">
           L&apos;ensemble des contenus disponibles sur la Plate-forme (vidéos, textes,
           présentations, quiz, supports pédagogiques, logos, marques) sont la propriété exclusive
-          de <strong>MANAGERSITY by H&amp;C</strong> et de <strong>The H&amp;C GROUP</strong>,
+          de <strong>MANAGERSITY by H&amp;C</strong> éditer par <strong>The H&amp;C DIGITAL LLC</strong>,
           protégés par les lois relatives à la propriété intellectuelle.
         </p>
         <p className="mb-3 font-semibold">Il est strictement interdit de :</p>
@@ -169,7 +169,7 @@ const sections: Section[] = [
           espace personnel.
         </p>
         <p>
-          Les certifications sont délivrées par <strong>H&amp;C DIGITAL LEARNING</strong> et{" "}
+          Les certifications sont délivrées par <strong>H&amp;C DIGITAL LLC</strong> et{" "}
           <strong>H&amp;C Executive Education</strong>, entités du H&amp;C GROUP, partenaire de
           formations de nombreuses entreprises leaders en Afrique.
         </p>
@@ -256,7 +256,7 @@ export default function TermsPage() {
         <div className="bg-gradient-to-r from-[#1a5200]/5 to-[#c4a800]/10 border-l-4 border-[#c4a800] rounded-r-lg p-6 text-center">
           <p className="text-gray-800 font-semibold">
             CGU en vigueur à compter du <strong>10 avril 2026</strong> — MANAGERSITY by H&amp;C /
-            The H&amp;C GROUP
+            The H&amp;C DIGITAL LLC
           </p>
         </div>
       </div>
