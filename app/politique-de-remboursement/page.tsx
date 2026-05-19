@@ -131,7 +131,7 @@ export default function RefundPage() {
         <div className="bg-gradient-to-r from-[#1a5200]/5 to-[#c4a800]/10 border-l-4 border-[#c4a800] rounded-r-lg p-6 text-center">
           <p className="text-gray-800 font-semibold">
             Politique de Remboursement en vigueur à compter du <strong>10 avril 2026</strong> —
-            MANAGERSITY by H&amp;C / The H&amp;C GROUP
+            MANAGERSITY by H&amp;C / H&amp;C DIGITAL FLIX LLC
           </p>
         </div>
       </div>

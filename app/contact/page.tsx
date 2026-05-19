@@ -36,7 +36,7 @@ export default function ContactPage() {
 
           <p className="text-gray-700 mb-8 leading-relaxed">
             <strong>MANAGERSITY by H&amp;C</strong> est une plate-forme de formation en ligne
-            éditée par <strong>The H&amp;C GROUP</strong>. Pour toute question relative à vos
+            éditée par <strong>H&amp;C DIGITAL FLIX LLC</strong>. Pour toute question relative à vos
             cours, à votre compte ou à nos services, plusieurs canaux sont à votre disposition.
           </p>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
           </div>
 
           <p className="text-sm text-gray-600 italic">
-            Éditeur : The H&amp;C GROUP — MANAGERSITY by H&amp;C
+            Éditeur : H&amp;C DIGITAL FLIX LLC — MANAGERSITY by H&amp;C
           </p>
         </section>
 

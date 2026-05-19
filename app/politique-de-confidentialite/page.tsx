@@ -36,7 +36,7 @@ export default function PrivacyPage() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {[
-                  ["Responsable du traitement", "The H&C GROUP — MANAGERSITY by H&C"],
+                  ["Responsable du traitement", "H&C DIGITAL FLIX LLC — MANAGERSITY by H&C"],
                   ["Site internet", "www.managersity.com"],
                   ["Contact Données Personnelles", "contact@managersity.co"],
                 ].map(([k, v]) => (
@@ -188,7 +188,7 @@ export default function PrivacyPage() {
         <div className="bg-gradient-to-r from-[#1a5200]/5 to-[#c4a800]/10 border-l-4 border-[#c4a800] rounded-r-lg p-6 text-center">
           <p className="text-gray-800 font-semibold">
             Politique de Confidentialité en vigueur à compter du <strong>10 avril 2026</strong> —
-            MANAGERSITY by H&amp;C / The H&amp;C GROUP
+            MANAGERSITY by H&amp;C / H&amp;C DIGITAL FLIX LLC
           </p>
         </div>
       </div>
