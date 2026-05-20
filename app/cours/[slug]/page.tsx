@@ -190,16 +190,15 @@ export default async function CoursPage({
 }) {
   const { slug } = await params;
 
-  // Essaie Sanity d'abord, fallback sur les données statiques
-  let course: typeof COURSES[0] | null = null;
-  try {
-    const sanityCourse = await getCourseSanity(slug);
-    if (sanityCourse) {
-      course = sanityCourse;
-    }
-  } catch {}
+  // Priorité aux données statiques (source de vérité côté code) ; Sanity en fallback pour les cours non listés dans COURSES
+  let course: typeof COURSES[0] | null = COURSES.find((c) => c.slug === slug) ?? null;
   if (!course) {
-    course = COURSES.find((c) => c.slug === slug) ?? null;
+    try {
+      const sanityCourse = await getCourseSanity(slug);
+      if (sanityCourse) {
+        course = sanityCourse;
+      }
+    } catch {}
   }
   if (!course) notFound();
 
