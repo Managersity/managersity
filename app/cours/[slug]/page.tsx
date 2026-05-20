@@ -79,7 +79,7 @@ const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = 
   "developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves": { price: 11990, originalPrice: 39000 },
   "intelligence-emotionnelle-gestion-des-relations-avec-les-autres": { price: 14900, originalPrice: 39000 },
   "methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros": { price: 19900, originalPrice: 59000 },
-  "lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre": { price: 14900, originalPrice: 39000 },
+  "lart-de-se-fixer-les-objectifs-et-les-atteindre": { price: 14900, originalPrice: 39000 },
   "structurer-et-piloter-une-vision-dentreprise": { price: 27900, originalPrice: 59000 },
   "etat-desprit-resilience-entrepreneuriale": { price: 14900, originalPrice: 39000 },
   "parcours-chef-de-service-5-0": { price: 97000, originalPrice: 129000 },
@@ -261,12 +261,12 @@ export default async function CoursPage({
                   <div className="flex flex-wrap items-center gap-6 text-sm">
                     <div className="flex items-center gap-2">
                       <span className={`text-2xl font-black ${colors.heroText}`}>{course.totalChapters}</span>
-                      <span className="text-gray-400">chapitres</span>
+                      <span className="text-gray-400">{course.totalChapters === 1 ? "chapitre" : "chapitres"}</span>
                     </div>
                     <div className="w-px h-6 bg-gray-700" />
                     <div className="flex items-center gap-2">
                       <span className={`text-2xl font-black ${colors.heroText}`}>{course.totalLessons}</span>
-                      <span className="text-gray-400">leçons</span>
+                      <span className="text-gray-400">{course.totalLessons === 1 ? "leçon" : "leçons"}</span>
                     </div>
                     <div className="w-px h-6 bg-gray-700" />
                     <div className="flex items-center gap-2">
@@ -419,7 +419,7 @@ export default async function CoursPage({
               <h2 className="text-2xl font-black text-gray-900 mb-2">Contenu de la formation</h2>
               {course.totalChapters && course.totalLessons && (
                 <p className="text-gray-400 text-sm mb-7">
-                  {course.totalChapters} chapitres · {course.totalLessons} leçons
+                  {course.totalChapters} {course.totalChapters === 1 ? "chapitre" : "chapitres"} · {course.totalLessons} {course.totalLessons === 1 ? "leçon" : "leçons"}
                 </p>
               )}
               <div className="space-y-2">

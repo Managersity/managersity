@@ -128,7 +128,7 @@ const FCFA_PRICES: Record<string, number> = {
   "/cours/developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves": 11990,
   "/cours/intelligence-emotionnelle-gestion-des-relations-avec-les-autres": 14900,
   "/cours/methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros": 19900,
-  "/cours/lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre": 14900,
+  "/cours/lart-de-se-fixer-les-objectifs-et-les-atteindre": 14900,
   "/cours/structurer-et-piloter-une-vision-dentreprise": 27900,
   "/cours/etat-desprit-resilience-entrepreneuriale": 14900,
 

@@ -216,7 +216,7 @@ export const allCourses: Course[] = [
     category: "dirigeant",
   },
   {
-    title: "Modélisation et Maîtrise Financière pour les Dirigeants",
+    title: "Modélisation et Maîtrise Financières pour les Dirigeants",
     desc: "Comment les chiffres sont faits ? Comment partir des objectifs stratégiques et des ambitions financières à la modélisation.",
     price: "$47",
     rating: 4.6,
@@ -571,7 +571,7 @@ export const allCourses: Course[] = [
     reviews: 478,
     img: "/cours/art-fixer-objectifs.png",
     type: "Cours",
-    href: "/cours/lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre",
+    href: "/cours/lart-de-se-fixer-les-objectifs-et-les-atteindre",
     category: "developpement-personnel",
   },
 

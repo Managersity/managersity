@@ -191,7 +191,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/management-strategique-du-capital-humain/",
   },
   {
-    title: "Modélisation et Maîtrise Financière pour les Dirigeants",
+    title: "Modélisation et Maîtrise Financières pour les Dirigeants",
     category: "Parcours Dirigeant",
     price: 29000,
     originalPrice: 149000,

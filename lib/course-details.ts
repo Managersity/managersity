@@ -538,7 +538,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "modelisation-maitrise-financieres-pour-les-dirigeants",
-    title: "Modélisation et Maîtrise Financière pour les Dirigeants",
+    title: "Modélisation et Maîtrise Financières pour les Dirigeants",
     category: "Parcours Dirigeant",
     price: 29000,
     originalPrice: 149000,
@@ -909,7 +909,7 @@ export const COURSES: CourseDetail[] = [
       "Adopter une attitude supérieure face aux situations difficiles",
       "Tenir face aux tensions constantes et rester focus sur l'essentiel",
       "Arriver à traiter efficacement et opérer les bons choix",
-      "Autodire vos choix et assumer pleinement les résultats",
+      "Assumer vos choix et en porter pleinement les résultats",
       "Développer l'art de décider et agir sereinement pour créer de la performance",
       "Maîtriser des méthodes inédites d'intelligence émotionnelle",
     ],
@@ -1149,7 +1149,7 @@ export const COURSES: CourseDetail[] = [
     ],
     chapters: [
       "Introduction : État d'esprit, réflexes et focus pour s'approprier son job de manager commercial",
-      "Partie 1 : L'art de dynamiser son emprise managériale pour réussir son job de manager commercial",
+      "Partie #1 : L'art de dynamiser son emprise managériale pour réussir son job de manager commercial",
       "Partie #2 : Stratégie guerrière et méthodes d'optimisation stratégiques pour faire les chiffres",
     ],
     benefits: [
@@ -1162,7 +1162,7 @@ export const COURSES: CourseDetail[] = [
         desc: "Découvrez les conditions et facteurs clés à activer ainsi que les mécanismes à déployer pour que vos commerciaux aient la fluidité nécessaire pour faire vos chiffres.",
       },
       {
-        title: "Devenez un management commercial 4.0",
+        title: "Devenez un manager commercial 4.0",
         desc: "Occupez le terrain, protégez votre part de marché et continuez à atteindre et dépasser vos objectifs commerciaux avec un état d'esprit et des outils modernes.",
       },
     ],
@@ -1540,7 +1540,7 @@ export const COURSES: CourseDetail[] = [
     ],
   },
   {
-    slug: "lart-de-se-fixer-les-objectifs-les-atteindre-et-les-atteindre",
+    slug: "lart-de-se-fixer-les-objectifs-et-les-atteindre",
     title: "L'Art de se Fixer les Objectifs et les Atteindre",
     category: "Développement Personnel",
     price: 14900,
@@ -1642,8 +1642,8 @@ export const COURSES: CourseDetail[] = [
     chapters: [
       "Intro : À quoi s'attendre lorsqu'on veut digitaliser ?",
       "Partie #1 : Dans l'univers technologique et digital — mindset & optimisation",
-      "Partie #3 : Réduction du gap technologique et montée en régime digital",
-      "Partie #4 : Étude de cas pratique — vision digitale et plan de transformation digitale",
+      "Partie #2 : Réduction du gap technologique et montée en régime digital",
+      "Partie #3 : Étude de cas pratique — vision digitale et plan de transformation digitale",
     ],
     benefits: [
       {
