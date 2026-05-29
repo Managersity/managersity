@@ -21,7 +21,7 @@ const offers: Offer[] = [
         </span>{" "}
         Apprenez à devenir un{" "}
         <span className={gold}>manager expert</span> à partir de{" "}
-        <span className={gold}>9.900 FCFA</span> seulement — cliquez
+        <span className={gold}>11.990 FCFA</span> seulement — cliquez
       </>
     ),
     linkText: "ici",
