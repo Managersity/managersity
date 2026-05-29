@@ -25,7 +25,7 @@ const offers: Offer[] = [
       </>
     ),
     linkText: "ici",
-    href: "https://www.managersity.co/collections/5015e3",
+    href: "https://www.managersity.co/collections/products",
   },
   {
     content: (
