@@ -49,7 +49,7 @@ export default function BannerCTA() {
                 En savoir plus
               </Link>
               <p className="text-xs text-gray-400 mt-3">
-                À partir de 9 900 CFA/cours
+                À partir de 11 990 CFA/cours
               </p>
             </div>
           </div>
