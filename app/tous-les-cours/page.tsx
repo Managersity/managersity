@@ -57,6 +57,28 @@ export default async function TousLesCoursPage() {
     const dedup = new Map<string, CourseListing>();
     courses.forEach((c) => dedup.set(c.href, c));
     courses = Array.from(dedup.values());
+
+    // Dédup par titre : certains cours existent en double (ancien slug Sanity +
+    // slug statique), ce qui échappe au dédoublonnage par href. On conserve la
+    // version présente dans les données statiques (prix officiel, ex. 14 900).
+    const normTitle = (s: string) =>
+      (s || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9]+/g, "")
+        .trim();
+    const byTitle = new Map<string, CourseListing>();
+    for (const c of courses) {
+      const key = normTitle(c.title);
+      const existing = byTitle.get(key);
+      if (!existing) {
+        byTitle.set(key, c);
+      } else if (staticByHref.has(c.href) && !staticByHref.has(existing.href)) {
+        byTitle.set(key, c);
+      }
+    }
+    courses = Array.from(byTitle.values());
   } catch {
     courses = staticList;
   }
