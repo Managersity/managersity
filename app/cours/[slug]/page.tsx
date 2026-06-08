@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { COURSES } from "@/lib/course-details";
 import { allCourses } from "@/lib/courses-data";
 import { getCourseSanity, getAllCoursesSanity } from "@/sanity/lib/queries";
+import { keywordsForCategory } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -184,25 +185,17 @@ export async function generateMetadata({
       if (sanityCourse) course = sanityCourse;
     } catch {}
   }
-  if (!course) return { title: "Formation — Managersity" };
+  if (!course) return { title: "Formation" };
 
   // Image en avant : priorité image statique du cours, sinon image Sanity, sinon fallback catégorie
   const imgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
   const ogImage = imgEntry?.img ?? (course as { img?: string }).img ?? CAT_FALLBACK[course.category] ?? "/favicon.png";
 
-  // Mots-clés : ceux du cours + catégorie + base SEO
-  const keywords = [
-    ...((course as { keywords?: string[] }).keywords ?? []),
-    course.category,
-    "formation management",
-    "formation en ligne",
-    "certification managériale",
-    "Managersity",
-    "H&C",
-  ];
+  const keywords = keywordsForCategory(course.category, (course as { keywords?: string[] }).keywords ?? []);
 
   const url = `https://www.managersity.com/cours/${slug}`;
-  const title = `${course.title} — Managersity`;
+  const title = course.title;
+  const ogTitle = `${course.title} — Managersity`;
   const description = course.tagline;
 
   return {
@@ -215,13 +208,13 @@ export async function generateMetadata({
       locale: "fr_FR",
       siteName: "Managersity",
       url,
-      title,
+      title: ogTitle,
       description,
       images: [{ url: ogImage, alt: course.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: ogTitle,
       description,
       images: [ogImage],
     },

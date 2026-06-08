@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Star, ArrowLeft, ArrowRight, BookOpen, Users, Award } from "lucide-react";
@@ -5,8 +6,29 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { allCourses, categoryMeta } from "@/lib/courses-data";
 import { getCoursesByCategory } from "@/sanity/lib/queries";
+import { SITE_URL, keywordsForCategory } from "@/lib/seo";
 
 export const revalidate = 60;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const meta = categoryMeta[slug];
+  if (!meta) return { title: "Catégorie" };
+  const title = `${meta.label} : formations certifiantes en ligne`;
+  const description = `${meta.description} Formations Managersity certifiantes, accessibles en Afrique francophone (Côte d'Ivoire, Sénégal, Gabon, RDC, Cameroun…), paiement Mobile Money.`;
+  const url = `${SITE_URL}/collections/${slug}`;
+  return {
+    title,
+    description,
+    keywords: keywordsForCategory(meta.label),
+    alternates: { canonical: url },
+    openGraph: { type: "website", locale: "fr_FR", siteName: "Managersity", url, title, description },
+  };
+}
 
 export async function generateStaticParams() {
   return Object.keys(categoryMeta).map((slug) => ({ slug }));

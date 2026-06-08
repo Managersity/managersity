@@ -1,10 +1,29 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { allCourses } from "@/lib/courses-data";
 import CourseListClient, { type CourseListing } from "@/components/CourseListClient";
 import { getAllCoursesSanity } from "@/sanity/lib/queries";
+import { SITE_URL, keywordsForCategory } from "@/lib/seo";
 
 export const revalidate = 60; // ISR : revalide toutes les 60 secondes
+export const metadata: Metadata = {
+  title: "Tous les cours : formations en management, leadership, IA & dirigeants",
+  description:
+    "Explorez plus de 100 formations en ligne Managersity : management d'équipe, leadership, intelligence artificielle, développement personnel et parcours dirigeants. Certifiantes, accessibles partout en Afrique francophone, paiement Mobile Money.",
+  keywords: keywordsForCategory("Parcours Dirigeant", ["catalogue de formations", "cours management en ligne", "formations certifiantes"]),
+  alternates: { canonical: `${SITE_URL}/tous-les-cours` },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Managersity",
+    url: `${SITE_URL}/tous-les-cours`,
+    title: "Tous les cours Managersity — Management, Leadership & IA",
+    description:
+      "Plus de 100 formations certifiantes en management, leadership et IA pour managers et dirigeants en Afrique francophone.",
+  },
+};
+
 
 export default async function TousLesCoursPage() {
   let courses: CourseListing[] = [];

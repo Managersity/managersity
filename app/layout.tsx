@@ -2,33 +2,71 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import SiteWidgets from "@/components/SiteWidgets";
+import { SITE_URL, SITE_NAME, BRAND_KEYWORDS, GEO_KEYWORDS } from "@/lib/seo";
+
+const SITE_TITLE =
+  "Managersity by H&C – N°1 de la formation en ligne en management, leadership & IA en Afrique";
+const SITE_DESCRIPTION =
+  "Managersity forme les managers et dirigeants d'entreprise en Afrique francophone (Côte d'Ivoire, Sénégal, Gabon, RDC, Cameroun…) : plus de 100 formations certifiantes en management, leadership, IA et développement professionnel. Paiement Mobile Money.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.managersity.com"),
-  title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
-  description:
-    "Choisissez parmi plus de 100 modules de formation en management et développement professionnel. Sélectionnez, suivez et passez vos compétences à la dimension supérieure !",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [...BRAND_KEYWORDS, ...GEO_KEYWORDS],
+  applicationName: SITE_NAME,
+  alternates: { canonical: SITE_URL },
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Managersity",
-    url: "https://www.managersity.com",
-    title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
-    description:
-      "Choisissez parmi plus de 100 modules de formation en management et développement professionnel.",
+    siteName: SITE_NAME,
+    url: SITE_URL,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/img-CTA.jpg", alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
-    description:
-      "Choisissez parmi plus de 100 modules de formation en management et développement professionnel.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/img-CTA.jpg"],
   },
    verification: {
     google: "stsK1ylyqFciHDR_w9tTmcW3EcAHQ36dwriSAomc8Ck",
   },
+};
+
+const ORG_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Managersity by H&C",
+  alternateName: "Managersity",
+  url: SITE_URL,
+  logo: `${SITE_URL}/favicon.png`,
+  description: SITE_DESCRIPTION,
+  areaServed: [
+    "Côte d'Ivoire", "Sénégal", "Gabon", "République démocratique du Congo",
+    "Cameroun", "Burkina Faso", "Mali", "Togo", "Bénin", "Niger", "Guinée",
+    "Congo", "Tchad", "France",
+  ],
+  sameAs: [
+    "https://www.managersity.co",
+    "https://shop.managersity.com",
+  ],
+};
+
+const WEBSITE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  inLanguage: "fr",
 };
 
 export default function RootLayout({
@@ -39,6 +77,14 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_JSONLD) }}
+        />
         <SiteWidgets />
 
         {/* Google Analytics */}
