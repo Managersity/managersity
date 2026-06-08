@@ -300,7 +300,7 @@ export const COURSES: CourseDetail[] = [
     price: 29000,
     shopUrl: "https://shop.managersity.com/produit/maitriser-les-okr-pour-les-managers/",
     enrollUrl: "https://www.managersity.co/order?ct=9c108236-7d70-47ff-a4a2-38caa5760a43",
-    tagline: "Apprenez à transformer votre stratégie en objectifs mesurables, alignés et pilotables grâce aux OKR : formulation d'OKR efficaces, pondération des objectifs et des résultats clés, et cascade de la stratégie de l'entreprise jusqu'au terrain.",
+    tagline: "Apprenez à transformer votre stratégie en objectifs mesurables, alignés et pilotables grâce aux OKR : formulation des OKR efficaces, pondération des objectifs et des résultats clés, et cascade de la stratégie de l'entreprise jusqu'au terrain.",
     keywords: [
       "OKR",
       "Objectives and Key Results",
