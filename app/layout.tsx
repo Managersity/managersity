@@ -4,11 +4,27 @@ import "./globals.css";
 import SiteWidgets from "@/components/SiteWidgets";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.managersity.com"),
   title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
   description:
     "Choisissez parmi plus de 100 modules de formation en management et développement professionnel. Sélectionnez, suivez et passez vos compétences à la dimension supérieure !",
   icons: {
     icon: "/favicon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Managersity",
+    url: "https://www.managersity.com",
+    title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
+    description:
+      "Choisissez parmi plus de 100 modules de formation en management et développement professionnel.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MANAGERSITY by H&C – #1 de la formation en management en ligne",
+    description:
+      "Choisissez parmi plus de 100 modules de formation en management et développement professionnel.",
   },
    verification: {
     google: "stsK1ylyqFciHDR_w9tTmcW3EcAHQ36dwriSAomc8Ck",

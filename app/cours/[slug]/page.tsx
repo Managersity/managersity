@@ -176,11 +176,55 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const course = COURSES.find((c) => c.slug === slug);
+
+  let course: typeof COURSES[0] | null = COURSES.find((c) => c.slug === slug) ?? null;
+  if (!course) {
+    try {
+      const sanityCourse = await getCourseSanity(slug);
+      if (sanityCourse) course = sanityCourse;
+    } catch {}
+  }
   if (!course) return { title: "Formation — Managersity" };
+
+  // Image en avant : priorité image statique du cours, sinon image Sanity, sinon fallback catégorie
+  const imgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
+  const ogImage = imgEntry?.img ?? (course as { img?: string }).img ?? CAT_FALLBACK[course.category] ?? "/favicon.png";
+
+  // Mots-clés : ceux du cours + catégorie + base SEO
+  const keywords = [
+    ...((course as { keywords?: string[] }).keywords ?? []),
+    course.category,
+    "formation management",
+    "formation en ligne",
+    "certification managériale",
+    "Managersity",
+    "H&C",
+  ];
+
+  const url = `https://www.managersity.com/cours/${slug}`;
+  const title = `${course.title} — Managersity`;
+  const description = course.tagline;
+
   return {
-    title: `${course.title} — Managersity`,
-    description: course.tagline,
+    title,
+    description,
+    keywords,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      locale: "fr_FR",
+      siteName: "Managersity",
+      url,
+      title,
+      description,
+      images: [{ url: ogImage, alt: course.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 
@@ -226,8 +270,35 @@ export default async function CoursPage({
   const courseImgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
   const courseImg = courseImgEntry?.img ?? (course as { img?: string }).img ?? CAT_FALLBACK[course.category] ?? null;
 
+  // Données structurées schema.org (résultats enrichis Google)
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.title,
+    description: course.tagline,
+    url: `https://www.managersity.com/cours/${slug}`,
+    ...(courseImg ? { image: `https://www.managersity.com${courseImg}` } : {}),
+    provider: {
+      "@type": "Organization",
+      name: "Managersity by H&C",
+      sameAs: "https://www.managersity.com",
+    },
+    offers: {
+      "@type": "Offer",
+      price: course.price,
+      priceCurrency: "XOF",
+      url: ctaUrl,
+      availability: "https://schema.org/InStock",
+      category: course.category,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen">
 
