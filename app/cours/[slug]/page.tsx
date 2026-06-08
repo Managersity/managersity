@@ -68,6 +68,7 @@ const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = 
   "parcours-manager-dequipe-4-0-vvip-3-tranches": { price: 120000 },
   "parcours-manager-dequipe-4-0-vip": { price: 97000, originalPrice: 159000 },
   "parcours-middle-manager-4-0": { price: 127000 },
+  "maitriser-les-okr-configuration-cascade-pilotage-de-la-performance": { price: 29000 },
   "le-coaching-managerial-4-0": { price: 34900, originalPrice: 59000 },
   "batir-une-equipe-performante": { price: 19900, originalPrice: 59900 },
   "optimiser-sa-posture-manageriale": { price: 14900, originalPrice: 39000 },

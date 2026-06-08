@@ -435,6 +435,18 @@ export const allCourses: Course[] = [
 
   // Management d'Équipe
   {
+    title: "Maîtriser les OKR : Configuration, Cascade & Pilotage de la Performance",
+    desc: "Transformez votre stratégie en objectifs mesurables, alignés et pilotables grâce aux OKR : formulation, pondération et cascade de l'entreprise jusqu'au terrain.",
+    price: "$48",
+    rating: 4.7,
+    reviews: 86,
+    img: "/cours/maitriser-les-okr.png",
+    badge: "Nouveau",
+    type: "Cours",
+    href: "/cours/maitriser-les-okr-configuration-cascade-pilotage-de-la-performance",
+    category: "management-d-equipe",
+  },
+  {
     title: "Le Coaching Managérial 4.0",
     desc: "Maitriser et utiliser la méthodologie pour coacher efficacement un collaborateur (ses collaborateurs) et tirer le meilleur parti…",
     price: "$29.90",

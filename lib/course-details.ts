@@ -293,6 +293,43 @@ export const COURSES: CourseDetail[] = [
   // ── MANAGEMENT D'ÉQUIPE ───────────────────────────────────────────────────
 
   {
+    slug: "maitriser-les-okr-configuration-cascade-pilotage-de-la-performance",
+    title: "Maîtriser les OKR : Configuration, Cascade & Pilotage de la Performance",
+    category: "Management d'Équipe",
+    price: 29000,
+    shopUrl: "https://shop.managersity.com/produit/maitriser-les-okr-pour-les-managers/",
+    enrollUrl: "https://www.managersity.co/order?ct=9c108236-7d70-47ff-a4a2-38caa5760a43",
+    tagline: "Apprenez à transformer votre stratégie en objectifs mesurables, alignés et pilotables grâce aux OKR : formulation d'OKR efficaces, pondération des objectifs et des résultats clés, et cascade de la stratégie de l'entreprise jusqu'au terrain.",
+    totalChapters: 2,
+    totalLessons: 20,
+    learns: [
+      "Construire un système OKR complet, depuis la stratégie jusqu'à l'exécution terrain",
+      "Rédiger de bons objectifs et y associer 2 à 5 Key Results pertinents",
+      "Attribuer des poids aux objectifs selon les priorités stratégiques",
+      "Suivre l'avancement avec des scores pondérés",
+      "Relier la performance individuelle à la contribution collective",
+      "Éviter les erreurs fréquentes : objectifs vagues, KR non mesurables, cascade en copier-coller, poids identiques, excès d'objectifs ou désalignement entre niveaux",
+    ],
+    chapters: [
+      "Partie 1 : Cadre de formulation et d'utilisation des OKR (OKR vs KPI & plan stratégique, structuration Objectifs & KR, matrice de pondération, cascade stratégique, suivi & statuts, rôle du manager et du collaborateur, rituels managériaux, OKR & évaluation de la performance, cas pratique de scoring)",
+      "Partie 2 : Exemple pratique de cascade des OKR dans une entreprise (étude de cas complète : plan stratégique & OKR, cascade Direction Commerciale, BU SIRH, Support & Customer Success, vue consolidée & répartition des poids, bonnes pratiques de cascade)",
+    ],
+    benefits: [
+      {
+        title: "Clarifier les priorités stratégiques",
+        desc: "Les OKR établissent un langage commun entre dirigeants, managers et collaborateurs. Vous concentrez les efforts collectifs sur ce qui compte vraiment et rendez la performance mesurable.",
+      },
+      {
+        title: "Aligner les équipes autour de résultats mesurables",
+        desc: "En reliant les objectifs de l'entreprise, du département et des individus, vous renforcez l'alignement organisationnel et installez une culture de suivi régulier.",
+      },
+      {
+        title: "Piloter activement la performance",
+        desc: "Passez d'un management réactif à un pilotage proactif : animez des rituels réguliers (check-ins, revues mensuelles) pour identifier les blocages, ajuster les priorités et mobiliser les ressources.",
+      },
+    ],
+  },
+  {
     slug: "parcours-manager-dequipe-4-0-vvip",
     title: "Parcours Manager d'Équipe 4.0 VVIP",
     category: "Management d'Équipe",

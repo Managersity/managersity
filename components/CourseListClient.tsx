@@ -113,6 +113,7 @@ const FCFA_PRICES: Record<string, number> = {
   "/cours/parcours-manager-dequipe-4-0-vvip-3-tranches": 120000,
   "/cours/parcours-manager-dequipe-4-0-vip": 97000,
   "/cours/parcours-middle-manager-4-0": 127000,
+  "/cours/maitriser-les-okr-configuration-cascade-pilotage-de-la-performance": 29000,
   "/cours/le-coaching-managerial-4-0": 34900,
   "/cours/batir-une-equipe-performante": 19900,
   "/cours/optimiser-sa-posture-manageriale": 14900,
