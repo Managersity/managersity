@@ -512,7 +512,7 @@ export const COURSES: CourseDetail[] = [
   {
     slug: "reussir-le-design-organisationnel",
     title: "Réussir le Design Organisationnel",
-    category: "Parcours Dirigeant",
+    category: "dirigeant",
     price: 39000,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/reussir-le-design-organisationnel/",

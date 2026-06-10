@@ -240,7 +240,7 @@ export const allCourses: Course[] = [
     reviews: 256,
     img: "/cours/reussir-design-organisationnel.png",
     type: "Cours",
-    href: "/products/courses/reussir-le-design-organisationnel",
+    href: "/cours/reussir-le-design-organisationnel",
     category: "dirigeant",
     shopUrl: "https://shop.managersity.com/produit/reussir-le-design-organisationnel/",
     enrollUrl: "https://www.managersity.co/enroll/3248526",

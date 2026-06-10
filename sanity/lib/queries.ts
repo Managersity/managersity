@@ -7,6 +7,7 @@ const CATEGORY_SLUG_MAP: Record<string, string> = {
   "transformation-digitale": "transformation-digitale-4-0",
   "capital-humain-rh": "management-du-capital-humain",
   "parcours-dirigeant": "dirigeant",
+  "Parcours Dirigeant": "dirigeant",
 };
 
 function normalizeCategory(cat: string | undefined | null): string {
