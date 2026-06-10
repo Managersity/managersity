@@ -6,6 +6,7 @@ export const FCFA_PRICES: Record<string, number> = {
   "/cours/ia-pour-les-managers": 59000,
   "/cours/ia-pour-les-professionnels": 29000,
   "/cours/enjeux-business-methodologie-de-transformation-digitale": 29900,
+  "/cours/reussir-le-design-organisationnel": 39000,
   "/cours/parcours-dirigeant": 304900,
   "/cours/le-game-de-la-strategie-disruption-marche": 57000,
   "/cours/choix-complexes-mecanismes-decisionnels": 34900,
@@ -61,9 +62,14 @@ export function formatPriceFCFA(price: string, href?: string): string {
   }
 
   if (!price) return "";
-  const cleaned = price.trim();
+  const cleaned = price.trim().replace(/\s+/g, "");
 
-  if (/fcfa|xof/i.test(cleaned)) return cleaned;
+  if (/fcfa|xof/i.test(cleaned)) {
+    const match = cleaned.match(/[\d]+(?:[.,]\d+)?/);
+    if (!match) return cleaned;
+    const num = parseFloat(match[0].replace(",", "."));
+    return `${num.toLocaleString("fr-FR")} FCFA`;
+  }
 
   const match = cleaned.match(/[\d]+(?:[.,]\d+)?/);
   if (!match) return cleaned;

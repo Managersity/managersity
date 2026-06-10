@@ -79,6 +79,7 @@ const FCFA_PRICES: Record<string, number> = {
   "/cours/enjeux-business-methodologie-de-transformation-digitale": 29900,
 
   // Dirigeant
+  "/cours/reussir-le-design-organisationnel": 39000,
   "/cours/parcours-dirigeant": 304900,
   "/cours/le-game-de-la-strategie-disruption-marche": 57000,
   "/cours/choix-complexes-mecanismes-decisionnels": 34900,
@@ -147,10 +148,15 @@ function formatPriceFCFA(price: string, href?: string): string {
   }
 
   if (!price) return "";
-  const cleaned = price.trim();
+  const cleaned = price.trim().replace(/\s+/g, "");
 
   // Déjà en FCFA
-  if (/fcfa|xof/i.test(cleaned)) return cleaned;
+  if (/fcfa|xof/i.test(cleaned)) {
+    const match = cleaned.match(/[\d]+(?:[.,]\d+)?/);
+    if (!match) return cleaned;
+    const num = parseFloat(match[0].replace(",", "."));
+    return `${num.toLocaleString("fr-FR")} FCFA`;
+  }
 
   // Extraire le nombre
   const match = cleaned.match(/[\d]+(?:[.,]\d+)?/);
