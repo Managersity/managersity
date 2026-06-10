@@ -85,6 +85,7 @@ const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = 
   "structurer-et-piloter-une-vision-dentreprise": { price: 27900, originalPrice: 59000 },
   "etat-desprit-resilience-entrepreneuriale": { price: 14900, originalPrice: 39000 },
   "parcours-chef-de-service-5-0": { price: 97000, originalPrice: 129000 },
+  "reussir-le-design-organisationnel": { price: 39000, originalPrice: 149000 },
   "reussir-son-job-de-chef-de-service": { price: 37000, originalPrice: 59000 },
 };
 

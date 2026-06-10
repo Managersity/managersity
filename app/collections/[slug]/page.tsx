@@ -63,6 +63,7 @@ export default async function CategoryPage({
     "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
   ]);
   const matchesCategory = (cat: string, href?: string) => {
+    if (slug === "tous-les-cours") return true;
     if (cat === slug) return true;
     // Les cours IA apparaissent aussi dans Transformation Digitale 4.0
     if (slug === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;

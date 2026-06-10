@@ -9,6 +9,12 @@ export type Course = {
   type: "Cours" | "Parcours";
   href: string;
   category: string;
+  shopUrl?: string;
+  enrollUrl?: string;
+};
+
+const COURSE_SLUG_ALIASES: Record<string, string> = {
+  "copy-of-management-de-projet-et-realisation-des-objectifs-strategiques": "reussir-le-design-organisationnel",
 };
 
 export const allCourses: Course[] = [
@@ -228,14 +234,16 @@ export const allCourses: Course[] = [
   },
   {
     title: "Réussir le Design Organisationnel",
-    desc: "Comment s'assurer qu'une entreprise est à la dimension requise pour atteindre ses objectifs stratégiques ? Elle doit atteindre…",
-    price: "$37",
+    desc: "Maîtrisez les leviers du design organisationnel pour aligner structure, rôles, processus et performance sur vos objectifs stratégiques.",
+    price: "39 000 CFA",
     rating: 4.5,
     reviews: 256,
     img: "/cours/reussir-design-organisationnel.png",
     type: "Cours",
-    href: "/cours/management-de-projet-et-realisation-des-objectifs-strategiques",
+    href: "/products/courses/reussir-le-design-organisationnel",
     category: "dirigeant",
+    shopUrl: "https://shop.managersity.com/produit/reussir-le-design-organisationnel/",
+    enrollUrl: "https://www.managersity.co/enroll/3248526",
   },
   {
     title: "Jeu Intérieur du Leadership, Intelligence Émotionnelle & Mécanismes Décisionnels pour les Dirigeants",
@@ -626,6 +634,13 @@ export type CategoryMeta = {
 };
 
 export const categoryMeta: Record<string, CategoryMeta> = {
+  "tous-les-cours": {
+    label: "Tous les cours",
+    slug: "tous-les-cours",
+    description: "Accédez à l’ensemble des formations Managersity, parcours et modules certifiants en un seul endroit.",
+    icon: "📚",
+    color: "from-amber-500 to-yellow-400",
+  },
   "intelligence-artificielle": {
     label: "Intelligence Artificielle",
     slug: "intelligence-artificielle",
@@ -705,14 +720,20 @@ export function getCourseSlug(course: Course): string {
   return course.href.split("/").pop() || "";
 }
 
+function resolveCourseSlug(slug: string): string {
+  return COURSE_SLUG_ALIASES[slug] || slug;
+}
+
 /** Trouve un cours par son slug */
 export function getCourseBySlug(slug: string): Course | null {
-  return allCourses.find((c) => c.href.split("/").pop() === slug) || null;
+  const resolvedSlug = resolveCourseSlug(slug);
+  return allCourses.find((c) => c.href.split("/").pop() === resolvedSlug) || null;
 }
 
 /** Retourne tous les slugs (pour generateStaticParams) */
 export function getAllCourseSlugs(): string[] {
-  return [...new Set(allCourses.map((c) => c.href.split("/").pop() || "").filter(Boolean))];
+  const slugs = allCourses.map((c) => c.href.split("/").pop() || "").filter(Boolean);
+  return [...new Set([...slugs, ...Object.keys(COURSE_SLUG_ALIASES), ...Object.values(COURSE_SLUG_ALIASES)])];
 }
 
 /** Points d'apprentissage génériques par catégorie */

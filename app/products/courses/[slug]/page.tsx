@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
-  Star,
   ArrowLeft,
   CheckCircle,
   Users,
@@ -26,23 +25,6 @@ export async function generateStaticParams() {
   return getAllCourseSlugs().map((slug) => ({ slug }));
 }
 
-function Stars({ rating, size = 14 }: { rating: number; size?: number }) {
-  return (
-    <span className="flex items-center gap-0.5">
-      {[1, 2, 3, 4, 5].map((s) => (
-        <Star
-          key={s}
-          size={size}
-          className={
-            s <= Math.floor(rating)
-              ? "fill-amber-400 text-amber-400"
-              : "text-gray-300 fill-gray-300"
-          }
-        />
-      ))}
-    </span>
-  );
-}
 
 export default async function CourseProductPage({
   params,
@@ -131,23 +113,8 @@ export default async function CourseProductPage({
                   {course.desc}
                 </p>
 
-                {/* Rating */}
-                <div className="flex items-center gap-3 mb-6 flex-wrap">
-                  <span className="text-amber-400 font-black text-lg">
-                    {course.rating.toFixed(1)}
-                  </span>
-                  <Stars rating={course.rating} />
-                  <span className="text-gray-400 text-sm">
-                    ({course.reviews.toLocaleString("fr-FR")} avis)
-                  </span>
-                </div>
-
                 {/* Meta infos */}
                 <div className="flex flex-wrap gap-6 text-xs text-gray-400">
-                  <span className="flex items-center gap-1.5">
-                    <Users size={13} className="text-green-400" />
-                    {(course.reviews * 3).toLocaleString("fr-FR")} apprenants
-                  </span>
                   <span className="flex items-center gap-1.5">
                     <Globe size={13} className="text-blue-400" />
                     Français
@@ -182,21 +149,18 @@ export default async function CourseProductPage({
                     <span className="text-3xl font-black text-white">
                       {course.price}
                     </span>
-                    <span className="text-sm text-gray-500 line-through">
-                      {parseInt(course.price.replace("$", "")) * 5}$
-                    </span>
                   </div>
                   <a
-                    href={course.href}
+                    href="https://www.managersity.co/order?ct=472e6e3d-ccd0-42c6-b020-49f26bf6de00"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-400 text-white font-black text-sm uppercase tracking-wider py-4 rounded-xl transition-all mb-3 shadow-lg shadow-amber-500/30"
                   >
                     <ShoppingCart size={16} />
-                    S&apos;inscrire maintenant
+                    Suivre le cours
                   </a>
                   <a
-                    href="https://shop.managersity.com/"
+                    href="https://shop.managersity.com/produit/reussir-le-design-organisationnel/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-500 text-white font-semibold text-xs py-3 rounded-xl transition-all"
@@ -217,18 +181,15 @@ export default async function CourseProductPage({
           <div className="flex items-center justify-between">
             <div>
               <span className="text-2xl font-black text-gray-900">{course.price}</span>
-              <span className="text-xs text-gray-400 line-through ml-2">
-                {parseInt(course.price.replace("$", "")) * 5}$
-              </span>
             </div>
             <a
-              href={course.href}
+              href="https://www.managersity.co/order?ct=472e6e3d-ccd0-42c6-b020-49f26bf6de00"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-black text-xs uppercase px-5 py-3 rounded-xl transition-all"
             >
               <ShoppingCart size={14} />
-              S&apos;inscrire
+              Suivre le cours
             </a>
           </div>
         </div>
@@ -420,14 +381,8 @@ export default async function CourseProductPage({
                         <h3 className="text-sm font-bold text-gray-900 leading-snug mb-1 line-clamp-2">
                           {c.title}
                         </h3>
-                        <div className="flex items-center gap-1.5 mb-2">
-                          <span className="text-xs font-bold text-amber-600">
-                            {c.rating}
-                          </span>
-                          <Stars rating={c.rating} size={11} />
-                          <span className="text-[10px] text-gray-400">
-                            ({c.reviews.toLocaleString("fr-FR")})
-                          </span>
+                        <div className="flex items-center gap-1.5 mb-2 text-[10px] text-gray-400">
+                          {c.rating.toFixed(1)} / 5
                         </div>
                         <span className="text-sm font-black text-gray-900">
                           {c.price}

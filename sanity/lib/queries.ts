@@ -22,6 +22,8 @@ function normalizeCourse<T extends SanityCourse>(course: T): T {
 
 // Fetch all courses ordered by `order` field
 export async function getAllCoursesSanity() {
+  if (!sanityClient) return [];
+
   const results = await sanityClient.fetch(
     `*[_type == "course"] | order(order asc, _createdAt desc) {
       "slug": slug.current,
@@ -45,6 +47,8 @@ export async function getAllCoursesSanity() {
 
 // Fetch a single course by slug (full detail)
 export async function getCourseSanity(slug: string) {
+  if (!sanityClient) return null;
+
   const result = await sanityClient.fetch(
     `*[_type == "course" && slug.current == $slug][0] {
       "slug": slug.current,
@@ -79,6 +83,8 @@ export async function getCourseSanity(slug: string) {
 // Accepte aussi les anciens slugs : si on demande la nouvelle categorie, on interroge
 // Sanity avec les deux valeurs (ancienne et nouvelle) pour rattraper les cours existants.
 export async function getCoursesByCategory(categorySlug: string) {
+  if (!sanityClient) return [];
+
   // Reverse-lookup : pour un slug canonique, retrouver l'ancien slug Sanity
   const reverseMap: Record<string, string[]> = {};
   for (const [oldSlug, newSlug] of Object.entries(CATEGORY_SLUG_MAP)) {

@@ -510,6 +510,45 @@ export const COURSES: CourseDetail[] = [
     ],
   },
   {
+    slug: "reussir-le-design-organisationnel",
+    title: "Réussir le Design Organisationnel",
+    category: "Parcours Dirigeant",
+    price: 39000,
+    originalPrice: 149000,
+    shopUrl: "https://shop.managersity.com/produit/reussir-le-design-organisationnel/",
+    enrollUrl: "https://www.managersity.co/order?ct=472e6e3d-ccd0-42c6-b020-49f26bf6de00",
+    tagline: "Comment s’assurer qu’une entreprise est à la dimension requise pour atteindre ses objectifs stratégiques ? Elle doit atteindre l’alignement et l’optimisation organisationnelle. Pour ce faire, il faut procéder aux optimisations structurelles et culturelles requises. C’est ce que vous allez apprendre dans ce module dédié aux dirigeants.",
+    totalChapters: 3,
+    totalLessons: 30,
+    learns: [
+      "Réussir le diagnostic organisationnel",
+      "Réussir l’alignement organisationnel",
+      "Réussir le changement organisationnel",
+      "Devenez un architecte de la transformation d’entreprise",
+      "Fluidifiez le pilotage de la vision",
+      "Construire une organisation à la hauteur de ses ambitions stratégiques",
+    ],
+    chapters: [
+      "Intro : Lorsque votre organisation n’est pas calibrée pour vous permettre d’atteindre vos objectifs",
+      "Partie #1 : Mettre en place l’organisation adéquate pour atteindre la performance humaine",
+      "Partie #2 : Structurer et piloter la recapacitation organisationnelle",
+    ],
+    benefits: [
+      {
+        title: "Aligner structure et stratégie",
+        desc: "Découvrez comment faire coïncider la structure de votre organisation avec vos ambitions stratégiques et vos objectifs de performance.",
+      },
+      {
+        title: "Mieux piloter la transformation",
+        desc: "Apprenez à déployer un design organisationnel clair, réaliste et opérationnel pour accélérer la mise en œuvre des changements.",
+      },
+      {
+        title: "Optimiser l'exécution",
+        desc: "Passez d'une organisation fragmentée à une organisation capable de traduire les priorités en résultats concrets et durables.",
+      },
+    ],
+  },
+  {
     slug: "management-de-projet-et-realisation-des-objectifs-strategiques",
     title: "Management de Projet & Réalisation des Objectifs Stratégiques",
     category: "Parcours Dirigeant",
