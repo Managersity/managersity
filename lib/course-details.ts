@@ -25,7 +25,7 @@ export type CourseDetail = {
 export const COURSES: CourseDetail[] = [
   {
     slug: "all-ccess-ultimate",
-    title: "ALL@CCESS ULTIMATE — Accès total. Zéro limite. 12 mois.",
+    title: "ALL@CCESS ULTIMATE",
     category: "Packs Phares",
     price: 297000,
     originalPrice: 1000000,
