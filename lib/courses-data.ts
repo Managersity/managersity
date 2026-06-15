@@ -18,6 +18,20 @@ const COURSE_SLUG_ALIASES: Record<string, string> = {
 };
 
 export const allCourses: Course[] = [
+  // ── PACK ALL@CCESS ULTIMATE ───────────────────────────────────────────────
+  {
+    title: "ALL@CCESS ULTIMATE — Accès total. Zéro limite. 12 mois.",
+    desc: "Accédez à tous les cours et mastercours de la plateforme Managersity pendant 12 mois. Une seule souscription, zéro limite.",
+    price: "297 000 FCFA",
+    rating: 4.9,
+    reviews: 1250,
+    img: "/cours/parcours-dirigeant-certifie.png",
+    badge: "Bestseller",
+    type: "Parcours",
+    href: "/cours/all-ccess-ultimate",
+    category: "tous-les-cours",
+  },
+
   // Intelligence Artificielle
   {
     title: "L'IA pour les Managers Commerciaux 5.0 : Le Cours Complet",

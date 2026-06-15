@@ -23,6 +23,155 @@ export type CourseDetail = {
 };
 
 export const COURSES: CourseDetail[] = [
+  {
+    slug: "all-ccess-ultimate",
+    title: "ALL@CCESS ULTIMATE — Accès total. Zéro limite. 12 mois.",
+    category: "Packs Phares",
+    price: 297000,
+    originalPrice: 1000000,
+    shopUrl: "https://shop.managersity.com/produit/ultimate-pack-managersity-acces-total-zero-limite-12-mois/",
+    enrollUrl: "https://www.managersity.co/order?ct=472e6e3d-ccd0-42c6-b020-49f26bf6de00",
+    tagline: "Accédez à tous les cours et mastercours de la plateforme Managersity pendant 12 mois. Une seule souscription, zéro limite.",
+    learns: [
+      "Maîtriser le design organisationnel et la transformation d'entreprise",
+      "Développer votre leadership sous pression et intelligence émotionnelle",
+      "Piloter la performance commerciale et les équipes de vente",
+      "Structurer et optimiser vos processus opérationnels",
+      "Réussir le management du changement et la transformation culturelle",
+      "Gérer votre temps, discipline et développement personnel",
+      "Maîtriser la stratégie, la finance et la gestion de projet",
+      "Déployer l'IA et la transformation digitale dans votre organisation",
+    ],
+    benefits: [
+      {
+        title: "Accès illimité à tous les cours",
+        desc: "En une seule souscription, accédez à l'intégralité du catalogue Managersity : cours, mastercours et ressources exclusives pendant 12 mois.",
+      },
+      {
+        title: "Certifications multiples incluses",
+        desc: "Obtenez autant de certificats que vous voulez. Chaque cours validé avec 70% minimum génère automatiquement votre certificat H&C.",
+      },
+      {
+        title: "Meilleur rapport qualité-prix",
+        desc: "La valeur totale des cours dépasse 1 000 000 FCFA. Avec l'ALL@CCESS ULTIMATE, vous accédez à tout pour seulement 297 000 FCFA/an.",
+      },
+    ],
+    bundledCourses: [
+      {
+        title: "Pack 25 Ebooks pour Dirigeant et Futur Dirigeant",
+        slug: "pack-25-ebooks-pour-dirigeant",
+        img: "/cours/pack-25-ebooks.png",
+        price: 99000,
+        tagline: "25 ebooks sur le top management, le management, le leadership et le développement personnel.",
+      },
+      {
+        title: "L'Art de Se Fixer les Objectifs et les Atteindre",
+        slug: "lart-de-se-fixer-les-objectifs-et-les-atteindre",
+        img: "/cours/art-fixer-objectifs.png",
+        price: 14900,
+        tagline: "La méthodologie SMART des grands leaders et sportifs pour transformer vos ambitions en résultats concrets.",
+      },
+      {
+        title: "Maturité Managériale et Enjeux de Direction Générale",
+        slug: "maturite-manageriale-enjeux-de-direction-generale",
+        img: "/cours/maturite-manageriale.png",
+        price: 59000,
+        tagline: "Pour les membres du CODIR et futurs DG qui souhaitent maîtriser les enjeux du top management.",
+      },
+      {
+        title: "Intelligence Émotionnelle & Gestion des Relations avec les Autres",
+        slug: "intelligence-emotionnelle-gestion-des-relations-avec-les-autres",
+        img: "/cours/intelligence-emotionnelle.png",
+        price: 14900,
+        tagline: "Développez votre résilience émotionnelle et maîtrisez l'art des relations interpersonnelles.",
+      },
+      {
+        title: "Méthodes de Gestion du Temps & Discipline Personnelles pour les Pros",
+        slug: "methodes-de-gestion-du-temps-dorganisation-et-de-discipline-personnelle-pour-les-pros",
+        img: "/cours/gestion-temps-discipline.png",
+        price: 19900,
+        tagline: "29 méthodes inédites pour massacrer la procrastination et reprendre le contrôle de vos journées.",
+      },
+      {
+        title: "Jeu Intérieur du Leadership, Intelligence Émotionnelle & Mécanismes Décisionnels pour les Dirigeants",
+        slug: "intelligence-emotionnelle-mecanismes-decisionnels-pour-les-dirigeants",
+        img: "/cours/jeu-interieur-leadership.png",
+        price: 34900,
+        tagline: "Pour les dirigeants sous tension qui doivent décider et agir correctement sous pression.",
+      },
+      {
+        title: "État d'Esprit Résilience Entrepreneuriale",
+        slug: "etat-desprit-resilience-entrepreneuriale",
+        img: "/cours/etat-esprit-resilience.png",
+        price: 14900,
+        tagline: "Développez l'état d'esprit des entrepreneurs qui réussissent face à l'adversité et aux échecs.",
+      },
+      {
+        title: "Management de Projet & Réalisation des Objectifs Stratégiques",
+        slug: "management-de-projet-et-realisation-des-objectifs-strategiques",
+        img: "/cat-dirigeant.png",
+        price: 29000,
+        tagline: "Pilotez vos projets stratégiques avec méthode et faites de l'atteinte des objectifs un processus reproductible.",
+      },
+      {
+        title: "Réussir le Design Organisationnel",
+        slug: "reussir-le-design-organisationnel",
+        img: "/cours/reussir-design-organisationnel.png",
+        price: 39000,
+        tagline: "Comment s'assurer qu'une entreprise est à la dimension requise pour atteindre ses objectifs stratégiques ?",
+      },
+      {
+        title: "Enjeux Business & Méthodologie de Transformation Digitale",
+        slug: "enjeux-business-methodologie-de-transformation-digitale",
+        img: "/cours/enjeux-business-transformation.png",
+        price: 29900,
+        tagline: "Maîtrisez les enjeux business et la méthodologie pour piloter la transformation digitale de votre organisation.",
+      },
+      {
+        title: "Gestion des Parties Prenantes & Networking Diplomatique pour les Dirigeants",
+        slug: "gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants",
+        img: "/cours/gestion-parties-prenantes.png",
+        price: 29000,
+        tagline: "Construisez et gérez des relations stratégiques pour maximiser votre influence et celle de votre organisation.",
+      },
+      {
+        title: "Management Stratégique du Capital Humain",
+        slug: "management-strategique-du-capital-humain",
+        img: "/cours/management-strategique-capital-humain.png",
+        price: 29000,
+        tagline: "Optimisez la gestion de vos talents et construisez une organisation humainement performante.",
+      },
+      {
+        title: "Modélisation et Maîtrise Financières pour les Dirigeants",
+        slug: "modelisation-maitrise-financieres-pour-les-dirigeants",
+        img: "/cours/modelisation-financiere.png",
+        price: 29000,
+        tagline: "Maîtrisez les fondamentaux financiers indispensables à tout dirigeant pour piloter avec précision.",
+      },
+      {
+        title: "L'Art de Casser la Baraque pour les Commerciaux",
+        slug: "lart-de-casser-la-baraque-pour-les-commerciaux",
+        img: "/cours/art-casser-baraque-commerciaux.png",
+        price: 14900,
+        tagline: "Les techniques des meilleurs vendeurs pour exploser vos objectifs commerciaux.",
+      },
+      {
+        title: "Développer son Potentiel et se Mettre à la Dimension de ses Rêves",
+        slug: "developper-son-potentiel-et-se-mettre-a-la-dimension-de-ses-reves",
+        img: "/cours/developper-potentiel.png",
+        price: 11990,
+        tagline: "Débloquez votre plein potentiel et construisez la vie et la carrière que vous méritez vraiment.",
+      },
+      {
+        title: "Réussir son Management Commercial",
+        slug: "reussir-son-management-commercial",
+        img: "/cours/reussir-management-commercial.jpg",
+        price: 34900,
+        tagline: "Les méthodes des meilleurs directeurs commerciaux pour bâtir et piloter une équipe de vente performante.",
+      },
+    ],
+  },
+
 
   // ── INTELLIGENCE ARTIFICIELLE ─────────────────────────────────────────────
 
