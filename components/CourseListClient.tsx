@@ -68,6 +68,7 @@ function CourseImage({
 
 // Prix officiels FCFA (source : cartographie des prix Managersity)
 const FCFA_PRICES: Record<string, number> = {
+  "/cours/all-ccess-ultimate": 297000,
   // Intelligence Artificielle
   "/cours/lia-pour-les-dirigeants-5-0-le-cours-complet": 97000,
   "/cours/ia-pour-sales-managers-5-0-le-cours-complet": 59000,
