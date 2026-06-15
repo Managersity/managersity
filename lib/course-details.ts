@@ -443,15 +443,6 @@ export const COURSES: CourseDetail[] = [
     ],
   },
   {
-    slug: "parcours-manager-dequipe-4-0-vvip",
-    title: "Parcours Manager d'Équipe 4.0 VVIP",
-    category: "Management d'Équipe",
-    price: 297000,
-    originalPrice: 397000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-manager-dequipe-4-0-vvip/",
-    tagline: "Le parcours VVIP le plus complet pour maîtriser toutes les dimensions du management d'équipe 4.0 : leadership, performance, coaching et transformation.",
-  },
-  {
     slug: "parcours-middle-manager-4-0",
     title: "Parcours Middle Manager 4.0",
     category: "Management d'Équipe",

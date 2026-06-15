@@ -31,7 +31,6 @@ export const FCFA_PRICES: Record<string, number> = {
   "/cours/parcours-manager-commercial-delite": 79000,
   "/cours/parcours-rh-capital-humain-delite": 79000,
   "/cours/parcours-clarte-performance-personnelle-delite": 59000,
-  "/cours/parcours-manager-dequipe-4-0-vvip": 297000,
   "/cours/parcours-manager-dequipe-4-0-vvip-3-tranches": 120000,
   "/cours/parcours-manager-dequipe-4-0-vip": 97000,
   "/cours/parcours-middle-manager-4-0": 127000,

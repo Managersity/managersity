@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -58,7 +58,6 @@ const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = 
   "reussir-son-management-commercial": { price: 34900, originalPrice: 59000 },
   "lart-de-casser-la-baraque-pour-les-commerciaux": { price: 14900, originalPrice: 39000 },
   "reussir-le-job-de-manager-commercial": { price: 21900, originalPrice: 34900 },
-  "parcours-manager-dequipe-4-0-vvip": { price: 297000, originalPrice: 397000 },
   "parcours-manager-dequipe-4-0-vip": { price: 97000, originalPrice: 159000 },
   "parcours-middle-manager-4-0": { price: 127000 },
   "maitriser-les-okr-configuration-cascade-pilotage-de-la-performance": { price: 29000 },
@@ -155,6 +154,7 @@ const REMOVED_SLUGS = new Set([
   "parcours-rh-capital-humain-delite",
   "parcours-clarte-performance-personnelle-delite",
   "parcours-manager-dequipe-4-0-vvip-3-tranches",
+  "parcours-manager-dequipe-4-0-vvip",
   "kit-du-manager-augmente-ia",
   "parcours-manager-delite",
 ]);
@@ -232,7 +232,7 @@ export default async function CoursPage({
 }) {
   const { slug } = await params;
 
-  if (REMOVED_SLUGS.has(slug)) notFound();
+  if (REMOVED_SLUGS.has(slug)) redirect("/tous-les-cours");
 
   // Priorité aux données statiques (source de vérité côté code) ; Sanity en fallback pour les cours non listés dans COURSES
   let course: typeof COURSES[0] | null = COURSES.find((c) => c.slug === slug) ?? null;

@@ -335,18 +335,6 @@ export const allCourses: Course[] = [
 
   // Management d'Équipe — Parcours Sanity (images fournies via fallback)
   {
-    title: "Parcours Manager d'Équipe 4.0 VVIP",
-    desc: "Le parcours VVIP le plus complet pour maîtriser toutes les dimensions du management d'équipe 4.0 : leadership, performance, coaching et transformation.",
-    price: "$453",
-    rating: 4.9,
-    reviews: 124,
-    img: "https://shop.managersity.com/wp-content/uploads/2025/07/IMAGE__1_-1.png",
-    badge: "VVIP",
-    type: "Parcours",
-    href: "/cours/parcours-manager-dequipe-4-0-vvip",
-    category: "parcours",
-  },
-  {
     title: "Parcours Manager d'Équipe 4.0 VIP",
     desc: "Le parcours VIP pour maîtriser les fondamentaux du management d'équipe 4.0 et monter en puissance.",
     price: "$197",

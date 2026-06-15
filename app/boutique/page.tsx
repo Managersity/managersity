@@ -78,13 +78,6 @@ const PRODUCTS: Product[] = [
 
   // ── MANAGEMENT D'ÉQUIPE ───────────────────────────────────────────────────
   {
-    title: "Parcours manager d'équipe 4.0 VVIP",
-    category: "Management d'Équipe",
-    price: 297000,
-    originalPrice: 397000,
-    url: "https://shop.managersity.com/produit/parcours-manager-dequipe-4-0-vvip/",
-  },
-  {
     title: "Parcours Middle Manager 4.0",
     category: "Management d'Équipe",
     price: 127000,
