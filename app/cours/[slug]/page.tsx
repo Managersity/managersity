@@ -148,6 +148,17 @@ const FAQ = [
   },
 ];
 
+const REMOVED_SLUGS = new Set([
+  "parcours-dirigeant-delite",
+  "parcours-ia-performance-professionnelle-delite",
+  "parcours-manager-commercial-delite",
+  "parcours-rh-capital-humain-delite",
+  "parcours-clarte-performance-personnelle-delite",
+  "parcours-manager-dequipe-4-0-vvip-3-tranches",
+  "kit-du-manager-augmente-ia",
+  "parcours-manager-delite",
+]);
+
 export async function generateStaticParams() {
   // Combine les slugs statiques + Sanity pour le build
   const staticSlugs = COURSES.map((c) => ({ slug: c.slug }));
@@ -220,6 +231,8 @@ export default async function CoursPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
+  if (REMOVED_SLUGS.has(slug)) notFound();
 
   // Priorité aux données statiques (source de vérité côté code) ; Sanity en fallback pour les cours non listés dans COURSES
   let course: typeof COURSES[0] | null = COURSES.find((c) => c.slug === slug) ?? null;
