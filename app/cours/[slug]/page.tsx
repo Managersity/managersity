@@ -435,6 +435,51 @@ export default async function CoursPage({
 
         {/* ── BODY ──────────────────────────────────────────────────────────── */}
 
+        {/* Cours inclus dans le pack */}
+        {course.bundledCourses && course.bundledCourses.length > 0 && (
+          <section className="bg-gray-50 py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-black text-gray-900 mb-2">Cours inclus dans ce pack</h2>
+              <p className="text-gray-400 text-sm mb-8">{course.bundledCourses.length} cours certifiants · accès à vie</p>
+              <div className="space-y-4">
+                {course.bundledCourses.map((c, i) => (
+                  <Link
+                    key={i}
+                    href={`/cours/${c.slug}`}
+                    className="flex flex-col sm:flex-row gap-4 bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all group"
+                  >
+                    <div className="relative sm:w-44 h-36 sm:h-auto shrink-0 overflow-hidden">
+                      <img
+                        src={c.img}
+                        alt={c.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+                      <span className="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-black px-2.5 py-1 rounded-full">
+                        Module {i + 1}
+                      </span>
+                    </div>
+                    <div className="flex-1 p-5">
+                      <h3 className="text-sm font-black text-gray-900 uppercase leading-snug mb-2 group-hover:text-amber-600 transition-colors">
+                        {c.title}
+                      </h3>
+                      <p className="text-xs text-gray-500 leading-relaxed mb-4">{c.tagline}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-black text-gray-900">
+                          {c.price.toLocaleString("fr-FR")} FCFA
+                        </span>
+                        <span className="text-xs text-amber-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                          Voir le cours →
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Bénéfices */}
         {course.benefits && course.benefits.length > 0 && (
           <section className="bg-white py-16">

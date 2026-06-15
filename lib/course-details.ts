@@ -13,6 +13,13 @@ export type CourseDetail = {
   chapters?: string[];
   benefits?: { title: string; desc: string }[];
   keywords?: string[];
+  bundledCourses?: {
+    title: string;
+    slug: string;
+    img: string;
+    price: number;
+    tagline: string;
+  }[];
 };
 
 export const COURSES: CourseDetail[] = [
@@ -466,6 +473,29 @@ export const COURSES: CourseDetail[] = [
       {
         title: "Réussir le changement organisationnel",
         desc: "Découvrez comment réussir la transformation culturelle et la mobilisation des équipes autour des changements organisationnels et le pilotage d'une vision.",
+      },
+    ],
+    bundledCourses: [
+      {
+        title: "RÉUSSIR LE DESIGN ORGANISATIONNEL",
+        slug: "reussir-le-design-organisationnel",
+        img: "/cours/reussir-design-organisationnel.png",
+        price: 39000,
+        tagline: "Comment s'assurer qu'une entreprise est à la dimension requise pour atteindre ses objectifs stratégiques ?",
+      },
+      {
+        title: "MANAGEMENT DU CHANGEMENT ORGANISATIONNEL & TRANSFORMATION CULTURELLE",
+        slug: "management-du-changement-organisationnel",
+        img: "/cours/management-changement.jpeg",
+        price: 19900,
+        tagline: "Comment les leaders performants partent des contraintes culturelles et structurelles pour élaborer un plan de transformation.",
+      },
+      {
+        title: "L'ART DE STRUCTURER ET OPTIMISER UN PROCESSUS",
+        slug: "lart-de-structurer-et-optimiser-un-processus",
+        img: "/cours/structurer-optimiser-processus.jpeg",
+        price: 21900,
+        tagline: "Cartographiez, simplifiez et optimisez vos processus pour gagner en efficacité opérationnelle.",
       },
     ],
   },
