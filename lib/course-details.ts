@@ -217,7 +217,7 @@ export const COURSES: CourseDetail[] = [
 
   {
     slug: "ia-pour-sales-managers-5-0-le-cours-complet",
-    title: "L'IA pour les Managers Commerciaux 5.0 : Le Cours Complet",
+    title: "L'IA pour les Managers Commerciaux 5.0",
     category: "Intelligence Artificielle",
     price: 59000,
     originalPrice: 197000,
@@ -337,16 +337,6 @@ export const COURSES: CourseDetail[] = [
   },
 
   {
-    slug: "kit-du-manager-augmente-ia",
-    title: "Kit du Manager Augmenté IA",
-    category: "Intelligence Artificielle",
-    price: 39000,
-    originalPrice: 199000,
-    shopUrl: "https://shop.managersity.com/produit/kit-du-manager-augmente-ia/",
-    tagline: "Boîte à outils complète pour le manager moderne : templates, prompts et guides pratiques pour utiliser l'IA efficacement au quotidien.",
-  },
-
-  {
     slug: "lia-pour-les-dirigeants-5-0-le-cours-complet",
     title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
     category: "Intelligence Artificielle",
@@ -397,54 +387,6 @@ export const COURSES: CourseDetail[] = [
     originalPrice: 597000,
     shopUrl: "https://shop.managersity.com/produit/parcours-dirigeant/",
     tagline: "Le parcours complet et certifiant pour développer votre excellence de direction — stratégie, leadership, finance, capital humain et transformation.",
-  },
-  {
-    slug: "parcours-dirigeant-delite",
-    title: "Parcours Dirigeant d'Élite",
-    category: "Packs Phares",
-    price: 249000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-dirigeant-delite/",
-    tagline: "L'itinéraire d'excellence pour les dirigeants ambitieux : stratégie, leadership, impact. Tout ce qu'il faut pour exceller au sommet.",
-  },
-  {
-    slug: "parcours-ia-performance-professionnelle-delite",
-    title: "Parcours IA & Performance Professionnelle d'Élite",
-    category: "Packs Phares",
-    price: 99000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-ia-performance-professionnelle-delite/",
-    tagline: "Maîtrisez l'IA et boostez votre performance professionnelle avec ce parcours élite couvrant tous les outils et méthodes IA essentiels.",
-  },
-  {
-    slug: "parcours-manager-delite",
-    title: "Parcours Manager d'Élite",
-    category: "Packs Phares",
-    price: 79000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-manager-delite/",
-    tagline: "Devenez un manager d'élite avec ce parcours complet couvrant toutes les dimensions du management moderne : équipe, performance, communication et leadership.",
-  },
-  {
-    slug: "parcours-manager-commercial-delite",
-    title: "Parcours Manager Commercial d'Élite",
-    category: "Packs Phares",
-    price: 79000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-manager-commercial-delite/",
-    tagline: "Parcours complet pour exceller dans le management commercial à l'ère digitale : pipeline, coaching commercial, pilotage et performance.",
-  },
-  {
-    slug: "parcours-rh-capital-humain-delite",
-    title: "Parcours RH & Capital Humain d'Élite",
-    category: "Packs Phares",
-    price: 79000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-rh-capital-humain-delite/",
-    tagline: "Maîtrisez les enjeux RH modernes et devenez un expert du capital humain : acquisition, engagement, développement et fidélisation des talents.",
-  },
-  {
-    slug: "parcours-clarte-performance-personnelle-delite",
-    title: "Parcours Clarté & Performance Personnelle d'Élite",
-    category: "Packs Phares",
-    price: 59000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-clarte-performance-personnelle-delite/",
-    tagline: "Gagnez en clarté, organisation et performance personnelle avec ce parcours holistique couvrant gestion du temps, objectifs et résilience.",
   },
 
   // ── MANAGEMENT D'ÉQUIPE ───────────────────────────────────────────────────
@@ -516,14 +458,6 @@ export const COURSES: CourseDetail[] = [
     price: 127000,
     shopUrl: "https://shop.managersity.com/produit/parcours-middle-manager-4-0/",
     tagline: "Devenez un middle manager d'exception : leadership situationnel, gestion d'équipe, communication ascendante et performance opérationnelle.",
-  },
-  {
-    slug: "parcours-manager-dequipe-4-0-vvip-3-tranches",
-    title: "Parcours Manager d'Équipe 4.0 VVIP — 3 tranches",
-    category: "Management d'Équipe",
-    price: 120000,
-    shopUrl: "https://shop.managersity.com/produit/parcours-manager-dequipe-4-0-vvip-3-tranches/",
-    tagline: "Le parcours VVIP complet en 3 versements pour booster vos compétences managériales sans contrainte financière.",
   },
   {
     slug: "parcours-manager-dequipe-4-0-vip",
@@ -1166,7 +1100,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "leadership-situationnel-intelligence-emotionnelle",
-    title: "Leadership Situationnel & Intelligence Émotionnelle",
+    title: "Leadership Situationnel & IE pour les Dirigeants",
     category: "Modules Certifiants",
     price: 34900,
     originalPrice: 59000,
@@ -1244,7 +1178,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "leadership-pouvoir-de-linfluence",
-    title: "Leadership & Le Pouvoir de l'Influence au 21è Siècle",
+    title: "Leadership & le Pouvoir de l'Influence au 21è siècle",
     category: "Modules Certifiants",
     price: 34900,
     originalPrice: 59000,
@@ -1361,7 +1295,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "dispositif-outils-de-pilotage-commercial",
-    title: "Dispositif & Outils de Pilotage Commercial",
+    title: "Dispositif & Outils de Pilotage de la Performance Commerciale",
     category: "Modules Certifiants",
     price: 21900,
     originalPrice: 59000,
@@ -1478,7 +1412,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "management-du-changement-organisationnel",
-    title: "Management du Changement Organisationnel",
+    title: "Management du Changement Org. & Transformation Culturelle",
     category: "Modules Certifiants",
     price: 19900,
     originalPrice: 59000,
@@ -1689,7 +1623,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "gestion-du-stress-et-des-pressions",
-    title: "Gestion du Stress : Méthodes Inédites pour Anticiper les Pressions et les Gérer",
+    title: "Gestion du stress : méthodes inédites pour anticiper les pressions et les gérer",
     category: "Modules Certifiants",
     price: 14900,
     originalPrice: 39000,

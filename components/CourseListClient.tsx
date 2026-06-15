@@ -102,17 +102,9 @@ const FCFA_PRICES: Record<string, number> = {
   "/cours/lart-de-casser-la-baraque-pour-les-commerciaux": 14900,
   "/cours/reussir-le-job-de-manager-commercial": 21900,
 
-  // Packs Phares
-  "/cours/parcours-dirigeant-delite": 249000,
-  "/cours/parcours-ia-performance-professionnelle-delite": 99000,
-  "/cours/parcours-manager-delite": 79000,
-  "/cours/parcours-manager-commercial-delite": 79000,
-  "/cours/parcours-rh-capital-humain-delite": 79000,
-  "/cours/parcours-clarte-performance-personnelle-delite": 59000,
 
   // Management d'Équipe
   "/cours/parcours-manager-dequipe-4-0-vvip": 297000,
-  "/cours/parcours-manager-dequipe-4-0-vvip-3-tranches": 120000,
   "/cours/parcours-manager-dequipe-4-0-vip": 97000,
   "/cours/parcours-middle-manager-4-0": 127000,
   "/cours/maitriser-les-okr-configuration-cascade-pilotage-de-la-performance": 29000,

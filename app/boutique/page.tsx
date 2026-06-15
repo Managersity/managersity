@@ -38,51 +38,8 @@ const PRODUCTS: Product[] = [
     originalPrice: 597000,
     url: "https://shop.managersity.com/produit/parcours-dirigeant/",
   },
-  {
-    title: "Parcours Dirigeant d'Élite",
-    category: "Packs Phares",
-    price: 249000,
-    url: "https://shop.managersity.com/produit/parcours-dirigeant-delite/",
-  },
-  {
-    title: "Parcours IA & Performance Professionnelle d'Élite",
-    category: "Packs Phares",
-    price: 99000,
-    url: "https://shop.managersity.com/produit/parcours-ia-performance-professionnelle-delite/",
-  },
-  {
-    title: "Parcours Manager d'Élite",
-    category: "Packs Phares",
-    price: 79000,
-    url: "https://shop.managersity.com/produit/parcours-manager-delite/",
-  },
-  {
-    title: "Parcours Manager Commercial d'Élite",
-    category: "Packs Phares",
-    price: 79000,
-    url: "https://shop.managersity.com/produit/parcours-manager-commercial-delite/",
-  },
-  {
-    title: "Parcours RH & Capital Humain d'Élite",
-    category: "Packs Phares",
-    price: 79000,
-    url: "https://shop.managersity.com/produit/parcours-rh-capital-humain-delite/",
-  },
-  {
-    title: "Parcours Clarté & Performance Personnelle d'Élite",
-    category: "Packs Phares",
-    price: 59000,
-    url: "https://shop.managersity.com/produit/parcours-clarte-performance-personnelle-delite/",
-  },
 
   // ── INTELLIGENCE ARTIFICIELLE ─────────────────────────────────────────────
-  {
-    title: "Kit du manager augmenté IA",
-    category: "Intelligence Artificielle",
-    price: 39000,
-    originalPrice: 199000,
-    url: "https://shop.managersity.com/produit/kit-du-manager-augmente-ia/",
-  },
   {
     title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
     category: "Intelligence Artificielle",
@@ -132,12 +89,6 @@ const PRODUCTS: Product[] = [
     category: "Management d'Équipe",
     price: 127000,
     url: "https://shop.managersity.com/produit/parcours-middle-manager-4-0/",
-  },
-  {
-    title: "Parcours manager d'équipe 4.0 VVIP 3 tranches",
-    category: "Management d'Équipe",
-    price: 120000,
-    url: "https://shop.managersity.com/produit/parcours-manager-dequipe-4-0-vvip-3-tranches/",
   },
   {
     title: "Parcours manager d'équipe 4.0 VIP",
