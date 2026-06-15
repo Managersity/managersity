@@ -443,7 +443,7 @@ export const COURSES: CourseDetail[] = [
     category: "Parcours Dirigeant",
     price: 57000,
     originalPrice: 149000,
-    shopUrl: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise/",
+    shopUrl: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise-cours-complet/",
     enrollUrl: "https://www.managersity.co/enroll/3248526",
     tagline: "Maîtrisez la méthodologie pour diagnostiquer une organisation, évaluer ses capacités et déployer sa transformation avec succès.",
     totalChapters: 3,
