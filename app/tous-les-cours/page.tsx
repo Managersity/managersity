@@ -43,6 +43,7 @@ export default async function TousLesCoursPage() {
       if (!fallback) return c;
       return {
         ...c,
+        title: fallback.title || c.title,
         category: fallback.category || c.category,
         desc: c.desc || fallback.desc,
         img: fallback.img || c.img,
