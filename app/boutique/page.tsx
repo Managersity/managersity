@@ -167,7 +167,7 @@ const PRODUCTS: Product[] = [
     category: "Parcours Dirigeant",
     price: 57000,
     originalPrice: 149000,
-    url: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise/",
+    url: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise-cours-complet/",
   },
   {
     title: "Jeu Intérieur du Leadership, Intelligence Émotionnelle & Mécanismes Décisionnels pour les Dirigeants",
