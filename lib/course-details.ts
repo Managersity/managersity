@@ -338,7 +338,7 @@ export const COURSES: CourseDetail[] = [
 
   {
     slug: "lia-pour-les-dirigeants-5-0-le-cours-complet",
-    title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
+    title: "L'IA pour les Dirigeants 5.0",
     category: "Intelligence Artificielle",
     price: 97000,
     originalPrice: 297000,
@@ -1091,7 +1091,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "leadership-situationnel-intelligence-emotionnelle",
-    title: "Leadership Situationnel & IE pour les Dirigeants",
+    title: "Leadership Situationnel & Intelligence Émotionnelle pour les Dirigeants",
     category: "Modules Certifiants",
     price: 34900,
     originalPrice: 59000,
@@ -1403,7 +1403,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "management-du-changement-organisationnel",
-    title: "Management du Changement Org. & Transformation Culturelle",
+    title: "Management du Changement Organisationnel & Transformation Culturelle",
     category: "Modules Certifiants",
     price: 19900,
     originalPrice: 59000,

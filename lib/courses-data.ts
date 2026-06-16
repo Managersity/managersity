@@ -70,7 +70,7 @@ export const allCourses: Course[] = [
     category: "intelligence-artificielle",
   },
   {
-    title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
+    title: "L'IA pour les Dirigeants 5.0",
     desc: "Comment les DG et dirigeants 5.0 utilisent la DATA, l'IA et la Technologie pour optimiser le cadrage stratégique.",
     price: "$179",
     rating: 4.8,
@@ -144,7 +144,7 @@ export const allCourses: Course[] = [
     category: "dirigeant",
   },
   {
-    title: "Leadership Situationnel & IE pour les Dirigeants",
+    title: "Leadership Situationnel & Intelligence Émotionnelle pour les Dirigeants",
     desc: "Comment les grands leaders abordent les situations complexes avec hauteur, intelligence émotionnelle.",
     price: "$59",
     rating: 4.8,
@@ -214,7 +214,7 @@ export const allCourses: Course[] = [
     category: "dirigeant",
   },
   {
-    title: "Management du Changement Org. & Transformation Culturelle",
+    title: "Management du Changement Organisationnel & Transformation Culturelle",
     desc: "Comment les leaders performants partent des contraintes culturelles et structurelles pour élaborer un plan de transformation.",
     price: "$29.90",
     rating: 4.4,

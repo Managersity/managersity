@@ -41,7 +41,7 @@ const PRODUCTS: Product[] = [
 
   // ── INTELLIGENCE ARTIFICIELLE ─────────────────────────────────────────────
   {
-    title: "L'IA pour les DG et les Dirigeants 5.0 : Le Cours Complet",
+    title: "L'IA pour les Dirigeants 5.0",
     category: "Intelligence Artificielle",
     price: 97000,
     originalPrice: 297000,
