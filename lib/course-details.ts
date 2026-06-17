@@ -518,7 +518,7 @@ export const COURSES: CourseDetail[] = [
     price: 57000,
     originalPrice: 149000,
     shopUrl: "https://shop.managersity.com/produit/design-organisationnel-transformation-dentreprise-cours-complet/",
-    enrollUrl: "https://www.managersity.co/enroll/3248526",
+    enrollUrl: "https://www.managersity.co/order?ct=472e6e3d-ccd0-42c6-b020-49f26bf6de00",
     tagline: "Maîtrisez la méthodologie pour diagnostiquer une organisation, évaluer ses capacités et déployer sa transformation avec succès.",
     totalChapters: 3,
     totalLessons: 30,
