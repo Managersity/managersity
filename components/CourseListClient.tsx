@@ -81,7 +81,7 @@ const FCFA_PRICES: Record<string, number> = {
 
   // Dirigeant
   "/cours/reussir-le-design-organisationnel": 39000,
-  "/cours/parcours-dirigeant": 304900,
+  "/cours/parcours-dirigeant": 597000,
   "/cours/le-game-de-la-strategie-disruption-marche": 57000,
   "/cours/choix-complexes-mecanismes-decisionnels": 34900,
   "/cours/leadership-situationnel-intelligence-emotionnelle": 34900,

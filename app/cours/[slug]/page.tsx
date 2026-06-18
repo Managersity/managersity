@@ -40,7 +40,7 @@ const FCFA_BY_SLUG: Record<string, { price: number; originalPrice?: number }> = 
   "ia-pour-les-managers": { price: 59000, originalPrice: 197000 },
   "ia-pour-les-professionnels": { price: 29000, originalPrice: 97000 },
   "enjeux-business-methodologie-de-transformation-digitale": { price: 29900, originalPrice: 149000 },
-  "parcours-dirigeant": { price: 304900, originalPrice: 597000 },
+  "parcours-dirigeant": { price: 597000 },
   "le-game-de-la-strategie-disruption-marche": { price: 57000, originalPrice: 97000 },
   "choix-complexes-mecanismes-decisionnels": { price: 34900, originalPrice: 59000 },
   "leadership-situationnel-intelligence-emotionnelle": { price: 34900, originalPrice: 59000 },

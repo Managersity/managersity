@@ -34,8 +34,7 @@ const PRODUCTS: Product[] = [
   {
     title: "Parcours Dirigeant Certifié",
     category: "Packs Phares",
-    price: 304900,
-    originalPrice: 597000,
+    price: 597000,
     url: "https://shop.managersity.com/produit/parcours-dirigeant/",
   },
 
