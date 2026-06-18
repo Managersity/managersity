@@ -511,35 +511,6 @@ export default async function CoursPage({
           </section>
         )}
 
-        {/* Bonus — items à gauche, titre à droite */}
-        {course.bonuses && (
-          <section className="bg-gray-50 py-16">
-            <div className="max-w-4xl mx-auto px-4">
-              <div className="flex flex-col-reverse md:flex-row gap-10">
-                <div className="flex-1 space-y-4">
-                  {course.bonuses.items.map((b, i) => (
-                    <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-2xl p-6">
-                      <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center shrink-0">
-                        <span className="text-white text-xs font-black">{i + 1}</span>
-                      </div>
-                      <div>
-                        <h3 className="font-black text-gray-900 text-sm mb-1">{b.title}</h3>
-                        <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="md:w-2/5 shrink-0 md:text-right">
-                  <h2 className="text-2xl font-black text-gray-900 mb-3">{course.bonuses.sectionTitle}</h2>
-                  {course.bonuses.sectionDesc && (
-                    <p className="text-gray-500 text-sm">{course.bonuses.sectionDesc}</p>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Bénéfices */}
         {course.benefits && course.benefits.length > 0 && (
           <section className="bg-white py-16">
@@ -606,21 +577,46 @@ export default async function CoursPage({
           </section>
         )}
 
+        {/* Bonus — items à gauche, titre à droite */}
+        {course.bonuses && (
+          <section className="bg-gray-50 py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="flex flex-col-reverse md:flex-row gap-10">
+                <div className="flex-1 space-y-4">
+                  {course.bonuses.items.map((b, i) => (
+                    <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-2xl p-6">
+                      <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center shrink-0">
+                        <span className="text-white text-xs font-black">{i + 1}</span>
+                      </div>
+                      <div>
+                        <h3 className="font-black text-gray-900 text-sm mb-1">{b.title}</h3>
+                        <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="md:w-2/5 shrink-0 md:text-right">
+                  <h2 className="text-2xl font-black text-gray-900 mb-3">{course.bonuses.sectionTitle}</h2>
+                  {course.bonuses.sectionDesc && (
+                    <p className="text-gray-500 text-sm">{course.bonuses.sectionDesc}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* FAQ — dark */}
         <section className="bg-gray-900 py-16">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="flex flex-col-reverse md:flex-row gap-10">
-              <div className="flex-1 space-y-3">
-                {FAQ.map((item, i) => (
-                  <div key={i} className="bg-gray-800 border border-white/10 rounded-xl p-5">
-                    <p className="font-bold text-white text-sm mb-2">{item.q}</p>
-                    <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="md:w-2/5 shrink-0 md:text-right">
-                <h2 className="text-2xl font-black text-white">Questions fréquentes</h2>
-              </div>
+            <h2 className="text-2xl font-black text-white mb-8">Questions fréquentes</h2>
+            <div className="space-y-3">
+              {FAQ.map((item, i) => (
+                <div key={i} className="bg-gray-800 border border-white/10 rounded-xl p-5">
+                  <p className="font-bold text-white text-sm mb-2">{item.q}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
