@@ -20,6 +20,16 @@ export type CourseDetail = {
     price: number;
     tagline: string;
   }[];
+  objectives?: {
+    sectionTitle: string;
+    sectionDesc?: string;
+    items: string[];
+  };
+  bonuses?: {
+    sectionTitle: string;
+    sectionDesc?: string;
+    items: { title: string; desc: string }[];
+  };
 };
 
 export const COURSES: CourseDetail[] = [
@@ -386,6 +396,15 @@ export const COURSES: CourseDetail[] = [
     price: 597000,
     shopUrl: "https://shop.managersity.com/produit/parcours-dirigeant/",
     tagline: "Le parcours complet et certifiant pour développer votre excellence de direction — stratégie, leadership, finance, capital humain et transformation.",
+    learns: [
+      "S'optimiser pour le job de dirigeant",
+      "Comprendre le job de dirigeant",
+      "Plus qu'un MBA pratique",
+      "Se faciliter le job de dirigeant",
+      "Réussir le job de dirigeant",
+      "Monter en compétence & stratégies de prise en main du JOB DE DIRIGEANT",
+      "Relever les défis liés au Poste de DG",
+    ],
     bundledCourses: [
       {
         title: "Le Game de la Stratégie & Disruption Marché",
@@ -465,6 +484,35 @@ export const COURSES: CourseDetail[] = [
         tagline: "Embrassez l'aventure de la transformation digitale avec clarté, méthodes et aisance grâce à une méthodologie pour définir votre vision digitale et structurer votre déploiement.",
       },
     ],
+    objectives: {
+      sectionTitle: "LES OBJECTIFS SPECIFIQUES DU PARCOURS DIRIGEANT CERTIFIE",
+      sectionDesc: "5 bonnes raisons de suivre ce parcours",
+      items: [
+        "Développer le MINDSET et le changement de paradigmes requis pour s'élever à la dimension dirigeante et de rendre capable d'accéder et réussir au poste de directeur général",
+        "Renforcer sa capacité de structuration et de transformation visionnaire et devenir le type de Game-changer capable de diriger efficacement et faire performer une organisation du 21e siècle",
+        "Renforcer son leadership et sa capacité mobilisatrice afin de pouvoir mobiliser autour de soi des hommes et femmes requis pour faire performer durablement une organisation",
+        "Développer les autres capacités techniques et décisives afin d'optimiser son aisance stratégique, son agilité et sa facilité de pilotage et de catalysation de la performance d'entreprise",
+        "Devenir tout simplement le type de dirigeant capable de prendre n'importe quelle organisation du 21e siècle et la faire performer",
+      ],
+    },
+    bonuses: {
+      sectionTitle: "Vos Bonus",
+      sectionDesc: "Les bonus que vous recevrez en souscrivant au parcours :",
+      items: [
+        {
+          title: "12 LIVE NEXT CEO",
+          desc: "Suivez une fois par mois les lives THE NEXT CEO et facilitez vous le job du dirigeant.",
+        },
+        {
+          title: "REPLAY DES SESSIONS NEXT CEO",
+          desc: "Vous n'avez pas pu suivre une session NEXT CEO ? Pas de défi nous mettons le replay à votre disposition pour le regarder à votre guise.",
+        },
+        {
+          title: "25 EBOOKS",
+          desc: "Vous obtenez 25 ebooks sur le top management, le management, le leadership et le développement personnel pour vous accompagner dans la réussite du job de dirigeant.",
+        },
+      ],
+    },
   },
 
   // ── MANAGEMENT D'ÉQUIPE ───────────────────────────────────────────────────

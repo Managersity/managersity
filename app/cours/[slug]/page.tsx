@@ -485,6 +485,53 @@ export default async function CoursPage({
           </section>
         )}
 
+        {/* Objectifs spécifiques */}
+        {course.objectives && (
+          <section className="bg-white py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-black text-gray-900 mb-2 uppercase">{course.objectives.sectionTitle}</h2>
+              {course.objectives.sectionDesc && (
+                <p className="text-gray-500 text-sm mb-8">{course.objectives.sectionDesc}</p>
+              )}
+              <div className="space-y-4">
+                {course.objectives.items.map((item, i) => (
+                  <div key={i} className="flex gap-4 p-5 bg-gray-50 rounded-2xl">
+                    <div className="w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5">
+                      {i + 1}
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Bonus */}
+        {course.bonuses && (
+          <section className="bg-gray-50 py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-black text-gray-900 mb-2">{course.bonuses.sectionTitle}</h2>
+              {course.bonuses.sectionDesc && (
+                <p className="text-gray-500 text-sm mb-8">{course.bonuses.sectionDesc}</p>
+              )}
+              <div className="space-y-4">
+                {course.bonuses.items.map((b, i) => (
+                  <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-2xl p-6">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center shrink-0">
+                      <span className="text-white text-xs font-black">{i + 1}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-black text-gray-900 text-sm mb-1">{b.title}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Bénéfices */}
         {course.benefits && course.benefits.length > 0 && (
           <section className="bg-white py-16">
