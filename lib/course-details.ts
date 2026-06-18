@@ -395,6 +395,7 @@ export const COURSES: CourseDetail[] = [
     category: "Packs Phares",
     price: 597000,
     shopUrl: "https://shop.managersity.com/produit/parcours-dirigeant/",
+    enrollUrl: "https://www.managersity.co/order?ct=472e6e3d-ccd0-42c6-b020-49f26bf6de00",
     tagline: "Le parcours complet et certifiant pour développer votre excellence de direction — stratégie, leadership, finance, capital humain et transformation.",
     learns: [
       "S'optimiser pour le job de dirigeant",
