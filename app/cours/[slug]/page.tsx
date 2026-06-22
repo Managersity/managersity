@@ -165,7 +165,6 @@ export async function generateStaticParams() {
   try {
     const sanityCourses = await getAllCoursesSanity();
     if (sanityCourses?.length) {
-      const sanitySlugSet = new Set(sanityCourses.map((c: { slug: string }) => c.slug));
       const newSlugs = sanityCourses
         .filter((c: { slug: string }) => !staticSlugs.some((s) => s.slug === c.slug))
         .map((c: { slug: string }) => ({ slug: c.slug }));
@@ -423,6 +422,24 @@ export default async function CoursPage({
                     </svg>
                     Payer par Mobile Money
                   </a>
+
+                  {course.previewUrl ? (
+                    <a
+                      href={course.previewUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full border border-gray-300 hover:border-gray-500 text-gray-700 hover:text-gray-900 font-semibold text-sm py-3 rounded-xl transition-all mt-2"
+                    >
+                      Aperçu gratuit
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="flex items-center justify-center gap-2 w-full border border-gray-200 text-gray-400 font-semibold text-sm py-3 rounded-xl mt-2 cursor-not-allowed"
+                    >
+                      Aperçu gratuit
+                    </button>
+                  )}
 
                   <div className="space-y-2.5 text-xs text-gray-500 pt-1">
                     {["Certificat reconnu inclus", "Accès à vie à la formation", "Mobile Money accepté"].map((item) => (
@@ -684,15 +701,34 @@ export default async function CoursPage({
                 <span className="text-gray-600 line-through text-base ml-2">{fmt(course.originalPrice)}</span>
               )}
             </div>
-            <a
-              href={ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/80 text-white font-black text-sm uppercase tracking-widest px-10 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
-            >
-              {ctaLabel}
-              <span>→</span>
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/80 text-white font-black text-sm uppercase tracking-widest px-10 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
+              >
+                {ctaLabel}
+                <span>→</span>
+              </a>
+              {course.previewUrl ? (
+                <a
+                  href={course.previewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 border border-white/30 hover:border-white text-white font-semibold text-sm px-8 py-4 rounded-xl transition-all"
+                >
+                  Aperçu gratuit
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="inline-flex items-center gap-3 border border-white/20 text-white/40 font-semibold text-sm px-8 py-4 rounded-xl cursor-not-allowed"
+                >
+                  Aperçu gratuit
+                </button>
+              )}
+            </div>
           </div>
         </section>
 

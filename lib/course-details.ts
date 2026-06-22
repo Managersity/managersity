@@ -13,6 +13,7 @@ export type CourseDetail = {
   chapters?: string[];
   benefits?: { title: string; desc: string }[];
   keywords?: string[];
+  previewUrl?: string;
   bundledCourses?: {
     title: string;
     slug: string;
@@ -1615,6 +1616,7 @@ export const COURSES: CourseDetail[] = [
     originalPrice: 59000,
     shopUrl: "https://shop.managersity.com/produit/reussir-son-job-de-chef-de-service-5-0/",
     enrollUrl: "https://www.managersity.co/enroll/3724611",
+    previewUrl: "https://www.managersity.co/order?ct=752cd89c-da6d-4758-827b-0479ea9c72e5",
     tagline: "Le mindset, les méthodes et l'organisation pour devenir le chef de service que votre N+1 n'a jamais besoin de relancer et que les autres départements respectent.",
     totalChapters: 7,
     totalLessons: 121,
