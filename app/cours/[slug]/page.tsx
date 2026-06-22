@@ -414,7 +414,8 @@ export default async function CoursPage({
                     href={course.shopUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-400 text-white font-bold text-sm py-3 rounded-xl transition-all mb-3 mt-2"
+                    className="flex items-center justify-center gap-2 w-full text-white font-bold text-sm py-3 rounded-xl transition-all mb-3 mt-2"
+                    style={{ backgroundColor: "#0f3300" }}
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
@@ -658,7 +659,8 @@ export default async function CoursPage({
                   href={course.shopUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-black px-7 py-3.5 rounded-xl transition-all text-sm shadow-lg shadow-green-500/20"
+                  className="inline-flex items-center gap-2 text-white font-black px-7 py-3.5 rounded-xl transition-all text-sm"
+                  style={{ backgroundColor: "#0f3300" }}
                 >
                   Payer par Mobile Money
                   <span>→</span>
