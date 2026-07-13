@@ -285,6 +285,10 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
         "/cours/dispositif-outils-de-pilotage-commercial",
         "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
       ]);
+      const ALSO_IN_PARCOURS = new Set<string>([
+        "/cours/parcours-dirigeant",
+        "/cours/parcours-middle-manager-4-0",
+      ]);
       list = list.filter((c) => {
         const cat = norm(c.category);
         if (cat === target) return true;
@@ -292,6 +296,8 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
         if (target === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;
         // Certains cours Management Commercial apparaissent aussi en Vendeur Elite
         if (target === "vendeur-elite-expert-4-0" && VENDEUR_ELITE_FROM_MC.has(c.href)) return true;
+        // Parcours Dirigeant et Middle Manager apparaissent aussi dans Parcours
+        if (target === "parcours" && ALSO_IN_PARCOURS.has(c.href)) return true;
         return false;
       });
     }
