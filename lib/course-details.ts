@@ -576,6 +576,7 @@ export const COURSES: CourseDetail[] = [
     category: "Management d'Équipe",
     price: 127000,
     shopUrl: "https://shop.managersity.com/produit/parcours-middle-manager-4-0/",
+    enrollUrl: "https://www.managersity.co/order?ct=a096d43f-7d8b-4b7b-ac37-73add069da23",
     tagline: "Optimisez votre capacité de management et de pilotage en tant que chef d'unité, chef de service ou chef de département et maîtrisez pas à pas tout ce qu'il faut pour piloter votre équipe.",
     learns: [
       "Maîtriser le leadership situationnel et l'influence au 21e siècle",
