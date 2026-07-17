@@ -630,7 +630,38 @@ export const COURSES: CourseDetail[] = [
     price: 97000,
     originalPrice: 159000,
     shopUrl: "https://shop.managersity.com/produit/parcours-manager-dequipe-4-0-vip/",
-    tagline: "Parcours VIP pour développer toutes vos compétences de manager d'équipe à l'ère 4.0 : leadership, cohésion, performance et bien-être.",
+    tagline: "Le parcours VIP pour développer votre leadership d'influence, bâtir une équipe performante et piloter la performance collective à l'ère 4.0.",
+    totalChapters: 5,
+    totalLessons: 126,
+    learns: [
+      "Devenir un leader attractif qui inspire l'engagement volontaire de votre équipe",
+      "Développer votre capacité d'influence et affirmer votre autorité morale",
+      "Bâtir une équipe de haute performance et créer la dynamique collective",
+      "Maîtriser le management d'équipe 4.0 et optimiser la cohésion",
+      "Pratiquer le coaching managérial 4.0 pour faire grandir vos collaborateurs",
+      "Catalyser et piloter la performance au quotidien avec méthode et impact",
+    ],
+    chapters: [
+      "Module 1 : Leadership & le Pouvoir de l'Influence au 21e Siècle (38 leçons)",
+      "Module 2 : Bâtir une Équipe Performante (33 leçons)",
+      "Module 3 : Management d'Équipe 4.0 & Dynamique Collective (16 leçons)",
+      "Module 4 : Coaching Managérial 4.0 (29 leçons)",
+      "Module 5 : Catalyser et Piloter la Performance (10 leçons)",
+    ],
+    benefits: [
+      {
+        title: "Un leadership qui fait la différence",
+        desc: "Abandonnez l'autorité par le titre. Développez l'influence, la crédibilité et la capacité à mobiliser des équipes qui vous suivent volontairement.",
+      },
+      {
+        title: "Une équipe soudée et performante",
+        desc: "Maîtrisez la composition d'équipe, la dynamique collective et les rituels de cohésion pour transformer un groupe en unité d'élite.",
+      },
+      {
+        title: "Un pilotage de la performance structuré",
+        desc: "Des outils concrets pour coacher, déléguer, catalyser et mesurer la performance de votre équipe — sans vous épuiser.",
+      },
+    ],
   },
 
   // ── PARCOURS DIRIGEANT ────────────────────────────────────────────────────
