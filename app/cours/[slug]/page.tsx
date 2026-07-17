@@ -262,7 +262,7 @@ export default async function CoursPage({
   };
   const ctaUrl = course.enrollUrl ?? course.shopUrl;
   const isRich = !!(course.learns && course.learns.length > 0);
-  const ctaLabel = course.enrollUrl ? "S'inscrire maintenant" : "Voir sur la boutique";
+  const ctaLabel = "S'inscrire maintenant";
 
   // Image : priorité à l'image statique (allCourses), sinon Sanity, sinon fallback catégorie
   const courseImgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
