@@ -630,6 +630,7 @@ export const COURSES: CourseDetail[] = [
     price: 97000,
     originalPrice: 159000,
     shopUrl: "https://shop.managersity.com/produit/parcours-manager-dequipe-4-0-vip/",
+    enrollUrl: "https://www.managersity.co/order?ct=a096d43f-7d8b-4b7b-ac37-73add069da23",
     tagline: "Le parcours VIP pour développer votre leadership d'influence, bâtir une équipe performante et piloter la performance collective à l'ère 4.0.",
     totalChapters: 5,
     totalLessons: 126,
