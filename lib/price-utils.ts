@@ -51,6 +51,7 @@ export const FCFA_PRICES: Record<string, number> = {
   "/cours/etat-desprit-resilience-entrepreneuriale": 14900,
   "/cours/parcours-chef-de-service-5-0": 97000,
   "/cours/reussir-son-job-de-chef-de-service": 37000,
+  "/cours/replay-classes-digitales": 59000,
 };
 
 const USD_TO_FCFA = 600;

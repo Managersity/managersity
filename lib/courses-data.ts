@@ -540,6 +540,21 @@ export const allCourses: Course[] = [
   // de Pilotage) sont stockes une seule fois en categorie management-commercial-4-0
   // et apparaissent aussi dans Vendeur Elite Expert 4.0 via une regle de filtre.
 
+  // Replay Classe Digitale
+  {
+    title: "Pack Replay Classes Digitales MANAGERSITY",
+    desc: "Accédez aux replays des Classes Digitales MANAGERSITY pendant 12 mois : management, leadership, IA, organisation et progression professionnelle. Apprenez à votre rythme, sans dépendre du direct.",
+    price: "59 000 FCFA",
+    rating: 4.8,
+    reviews: 312,
+    img: "/cours/replay-classes-digitales.png",
+    badge: "Nouveau",
+    type: "Cours",
+    href: "/cours/replay-classes-digitales",
+    category: "replay-classe-digitale",
+    enrollUrl: "https://www.managersity.co/products/courses/replaycd",
+  },
+
 ];
 
 export type CategoryMeta = {
@@ -627,6 +642,13 @@ export const categoryMeta: Record<string, CategoryMeta> = {
     description: "Les parcours complets et certifiants Managersity pour maîtriser de bout en bout une spécialité managériale.",
     icon: "🎖️",
     color: "from-amber-600 to-yellow-400",
+  },
+  "replay-classe-digitale": {
+    label: "Replay Classe Digitale",
+    slug: "replay-classe-digitale",
+    description: "Revivez les meilleures Classes Digitales MANAGERSITY en replay : management, leadership, IA et performance professionnelle.",
+    icon: "🎬",
+    color: "from-red-600 to-rose-400",
   },
 };
 
@@ -726,6 +748,14 @@ export const learnPoints: Record<string, string[]> = {
     "Construire des relations durables avec vos clients",
     "Utiliser les outils digitaux pour booster vos ventes",
     "Dépasser vos quotas et exceller dans votre métier",
+  ],
+  "replay-classe-digitale": [
+    "Accéder aux replays des Classes Digitales MANAGERSITY pendant 12 mois",
+    "Apprendre à votre rythme sans dépendre du direct",
+    "Maîtriser le management, le leadership et l'IA en situation réelle",
+    "Appliquer des méthodes concrètes issues des sessions live",
+    "Progresser sur la gestion du temps, la délégation et la performance",
+    "Rejoindre une communauté de managers et professionnels ambitieux",
   ],
   parcours: [
     "Suivre un parcours structuré, progressif et certifiant",

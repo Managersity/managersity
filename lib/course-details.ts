@@ -2061,4 +2061,47 @@ export const COURSES: CourseDetail[] = [
       },
     ],
   },
+
+  // ── REPLAY CLASSES DIGITALES ────────────────────────────────────────────────
+  {
+    slug: "replay-classes-digitales",
+    title: "Pack Replay Classes Digitales MANAGERSITY",
+    category: "Replay Classe Digitale",
+    price: 59000,
+    shopUrl: "https://www.managersity.co/products/courses/replaycd",
+    enrollUrl: "https://www.managersity.co/products/courses/replaycd",
+    tagline: "Accédez aux replays des Classes Digitales MANAGERSITY pendant 12 mois — apprenez à votre rythme, sans dépendre du direct.",
+    totalChapters: 1,
+    totalLessons: 46,
+    learns: [
+      "Accéder à 46 replays de sessions live sur le management, le leadership et l'IA",
+      "Apprendre à votre rythme pendant 12 mois, sans contrainte de calendrier",
+      "Maîtriser la gestion du temps, la délégation et l'optimisation d'équipe",
+      "Intégrer l'IA dans vos pratiques managériales quotidiennes",
+      "Améliorer votre communication, votre prise de parole et votre leadership",
+      "Progresser sur la carrière managériale, le recrutement et la productivité",
+    ],
+    benefits: [
+      {
+        title: "12 mois d'accès illimité aux replays",
+        desc: "Visionnez et revisionnez les classes digitales à votre rythme, quand vous voulez, depuis n'importe quel appareil.",
+      },
+      {
+        title: "46 sessions couvrant tous les enjeux managériaux",
+        desc: "Management, leadership, IA, stratégies commerciales, recrutement, productivité, communication — tout est couvert.",
+      },
+      {
+        title: "Des méthodes directement applicables",
+        desc: "Chaque session est orientée pratique : repartez avec des outils et méthodes concrets pour mieux manager, mieux décider et mieux performer.",
+      },
+    ],
+    keywords: [
+      "replay classes digitales",
+      "formation management en ligne",
+      "leadership Afrique",
+      "IA management",
+      "productivité managériale",
+      "classes digitales managersity",
+    ],
+  },
 ];

@@ -30,6 +30,7 @@ const categoryFilters = [
   { label: "MANAGEMENT D'EQUIPE", slug: "management-d-equipe" },
   { label: "MANAGEMENT DU CAPITAL HUMAIN", slug: "management-du-capital-humain" },
   { label: "PARCOURS", slug: "parcours" },
+  { label: "REPLAY CLASSE DIGITALE", slug: "replay-classe-digitale" },
   { label: "TRANSFORMATION DIGITALE 4.0", slug: "transformation-digitale-4-0" },
   { label: "VENDEUR ELITE EXPERT 4.0", slug: "vendeur-elite-expert-4-0" },
 ];
@@ -129,6 +130,9 @@ const FCFA_PRICES: Record<string, number> = {
   // Chef de Service (ajoutés pour complétude)
   "/cours/parcours-chef-de-service-5-0": 97000,
   "/cours/reussir-son-job-de-chef-de-service": 37000,
+
+  // Replay Classe Digitale
+  "/cours/replay-classes-digitales": 59000,
 };
 
 const USD_TO_FCFA = 600;
