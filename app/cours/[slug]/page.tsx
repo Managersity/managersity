@@ -262,7 +262,7 @@ export default async function CoursPage({
   };
   const ctaUrl = course.enrollUrl ?? course.shopUrl;
   const isRich = !!(course.learns && course.learns.length > 0);
-  const ctaLabel = "S'inscrire maintenant";
+  const ctaLabel = course.ctaLabel ?? "S'inscrire maintenant";
 
   // Image : priorité à l'image statique (allCourses), sinon Sanity, sinon fallback catégorie
   const courseImgEntry = allCourses.find((c) => c.href === `/cours/${slug}`);
@@ -409,6 +409,17 @@ export default async function CoursPage({
                     {ctaLabel}
                     <span>→</span>
                   </a>
+
+                  {course.previewUrl && (
+                    <a
+                      href={course.previewUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full border border-gray-300 text-gray-700 hover:bg-gray-50 font-bold text-sm py-3 rounded-xl transition-all mt-2"
+                    >
+                      Free preview
+                    </a>
+                  )}
 
                   <a
                     href={course.shopUrl}
@@ -685,15 +696,27 @@ export default async function CoursPage({
                 <span className="text-gray-600 line-through text-base ml-2">{fmt(course.originalPrice)}</span>
               )}
             </div>
-            <a
-              href={ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/80 text-white font-black text-sm uppercase tracking-widest px-10 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
-            >
-              {ctaLabel}
-              <span>→</span>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/80 text-white font-black text-sm uppercase tracking-widest px-10 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
+              >
+                {ctaLabel}
+                <span>→</span>
+              </a>
+              {course.previewUrl && (
+                <a
+                  href={course.previewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 border border-gray-500 text-gray-300 hover:bg-white/10 font-bold text-sm px-8 py-4 rounded-xl transition-all"
+                >
+                  Free preview
+                </a>
+              )}
+            </div>
           </div>
         </section>
 

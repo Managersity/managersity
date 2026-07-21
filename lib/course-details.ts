@@ -14,6 +14,7 @@ export type CourseDetail = {
   benefits?: { title: string; desc: string }[];
   keywords?: string[];
   previewUrl?: string;
+  ctaLabel?: string;
   bundledCourses?: {
     title: string;
     slug: string;
@@ -2068,8 +2069,10 @@ export const COURSES: CourseDetail[] = [
     title: "Pack Replay Classes Digitales MANAGERSITY",
     category: "Replay Classe Digitale",
     price: 59000,
-    shopUrl: "https://www.managersity.co/products/courses/replaycd",
-    enrollUrl: "https://www.managersity.co/products/courses/replaycd",
+    shopUrl: "https://www.managersity.co/enroll/3702655",
+    enrollUrl: "https://www.managersity.co/enroll/3702655",
+    previewUrl: "https://www.managersity.co/enroll/3702655?et=free_trial",
+    ctaLabel: "Accéder aux replays",
     tagline: "Accédez aux replays des Classes Digitales MANAGERSITY pendant 12 mois — apprenez à votre rythme, sans dépendre du direct.",
     totalChapters: 1,
     totalLessons: 46,
