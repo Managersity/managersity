@@ -5,7 +5,7 @@ const featuredCourse = {
   type: "Offre groupée",
   description:
     "Acquérez les compétences clés pour briller en tant que dirigeant et réussir votre promotion. Empruntez un parcours diligent alliant fluidité et simplicité, avec un style direct et précis.",
-  price: "304 900 FCFA",
+  price: "597 000 FCFA",
   img: "/cours/parcours-dirigeant-certifie.png",
   slug: "parcours-dirigeant-certifie-pdc",
 };
