@@ -335,7 +335,7 @@ export const allCourses: Course[] = [
 
   // Management d'Équipe — Parcours Sanity (images fournies via fallback)
   {
-    title: "Parcours Manager d'Équipe 4.0 VIP",
+    title: "Parcours Manager d'Équipe 4.0",
     desc: "Le parcours VIP pour maîtriser les fondamentaux du management d'équipe 4.0 et monter en puissance.",
     price: "$197",
     rating: 4.8,

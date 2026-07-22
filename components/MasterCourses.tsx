@@ -34,7 +34,7 @@ const courses = [
     type: "Cours",
     description:
       "Lorsqu'un dirigeant échoue, c'est parce qu'il a échoué dans ses relations avec ses parties prenantes…",
-    price: "29 900 FCFA",
+    price: "29 000 FCFA",
     img: "/cours/gestion-parties-prenantes.png",
     href: "/cours/gestion-des-parties-prenantes-networking-diplomatique-pour-les-dirigeants",
   },

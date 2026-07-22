@@ -83,7 +83,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/parcours-middle-manager-4-0/",
   },
   {
-    title: "Parcours manager d'équipe 4.0 VIP",
+    title: "Parcours manager d'équipe 4.0",
     category: "Management d'Équipe",
     price: 97000,
     originalPrice: 159000,

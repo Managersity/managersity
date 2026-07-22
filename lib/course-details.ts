@@ -626,7 +626,7 @@ export const COURSES: CourseDetail[] = [
   },
   {
     slug: "parcours-manager-dequipe-4-0-vip",
-    title: "Parcours Manager d'Équipe 4.0 VIP",
+    title: "Parcours Manager d'Équipe 4.0",
     category: "Management d'Équipe",
     price: 97000,
     originalPrice: 159000,
