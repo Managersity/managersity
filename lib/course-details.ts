@@ -15,6 +15,10 @@ export type CourseDetail = {
   keywords?: string[];
   previewUrl?: string;
   ctaLabel?: string;
+  aboutSection?: {
+    title: string;
+    paragraphs: string[];
+  };
   bundledCourses?: {
     title: string;
     slug: string;
@@ -2073,6 +2077,14 @@ export const COURSES: CourseDetail[] = [
     enrollUrl: "https://www.managersity.co/enroll/3702655",
     previewUrl: "https://www.managersity.co/enroll/3702655?et=free_trial",
     ctaLabel: "Accéder aux replays",
+    aboutSection: {
+      title: "À propos du Pack Replay Classes Digitales",
+      paragraphs: [
+        "Les Classes Digitales MANAGERSITY sont conçues pour aider les managers, dirigeants, cadres et professionnels à progresser sur des compétences essentielles : mieux manager, mieux décider, mieux communiquer, mieux utiliser l'IA, mieux structurer leur travail et mieux piloter leur performance. Mais il n'est pas toujours possible d'être disponible au moment du direct.",
+        "C'est pour cela que nous avons créé le Pack Replay Classes Digitales MANAGERSITY. Avec ce pack, vous accédez aux replays des classes digitales disponibles sur la plateforme pendant 12 mois. Vous pouvez revoir les sessions à votre rythme, reprendre les idées fortes, réécouter les explications importantes et utiliser les contenus comme une bibliothèque de progression professionnelle.",
+        "Ce pack est idéal si vous voulez continuer à apprendre régulièrement, sans attendre la prochaine session live, et construire progressivement votre montée en compétence.",
+      ],
+    },
     tagline: "Les Classes Digitales MANAGERSITY sont conçues pour aider les managers, dirigeants, cadres et professionnels à progresser sur des compétences essentielles : mieux manager, mieux décider, mieux communiquer, mieux utiliser l'IA, mieux structurer leur travail et mieux piloter leur performance. Ce pack vous donne accès aux enregistrements de toutes les sessions en direct pendant 12 mois — apprenez à votre rythme, selon vos disponibilités.",
     totalChapters: 1,
     totalLessons: 48,

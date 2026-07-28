@@ -451,6 +451,24 @@ export default async function CoursPage({
 
         {/* ── BODY ──────────────────────────────────────────────────────────── */}
 
+        {/* À propos */}
+        {course.aboutSection && (
+          <section className="bg-[#f0eef7] py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="flex flex-col md:flex-row gap-10">
+                <div className="md:w-2/5 shrink-0">
+                  <h2 className="text-2xl font-black text-gray-900 leading-snug">{course.aboutSection.title}</h2>
+                </div>
+                <div className="flex-1 space-y-5">
+                  {course.aboutSection.paragraphs.map((p, i) => (
+                    <p key={i} className="text-gray-700 text-sm leading-relaxed">{p}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Cours inclus dans le pack */}
         {course.bundledCourses && course.bundledCourses.length > 0 && (
           <section className="bg-gray-50 py-16">
