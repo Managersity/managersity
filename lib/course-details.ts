@@ -2069,7 +2069,7 @@ export const COURSES: CourseDetail[] = [
     title: "Pack Replay Classes Digitales MANAGERSITY",
     category: "Replay Classe Digitale",
     price: 59000,
-    shopUrl: "https://www.managersity.co/enroll/3702655",
+    shopUrl: "https://shop.managersity.com/produit/pack-replay-classes-digitales-managersity/",
     enrollUrl: "https://www.managersity.co/enroll/3702655",
     previewUrl: "https://www.managersity.co/enroll/3702655?et=free_trial",
     ctaLabel: "Accéder aux replays",
