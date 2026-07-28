@@ -543,7 +543,7 @@ export const allCourses: Course[] = [
   // Replay Classe Digitale
   {
     title: "Pack Replay Classes Digitales MANAGERSITY",
-    desc: "Accédez aux replays des Classes Digitales MANAGERSITY pendant 12 mois : management, leadership, IA, organisation et progression professionnelle. Apprenez à votre rythme, sans dépendre du direct.",
+    desc: "Accédez aux 48 replays des Classes Digitales MANAGERSITY pendant 12 mois : management, leadership, IA, organisation et progression professionnelle. Apprenez à votre rythme, sans dépendre du direct.",
     price: "59 000 FCFA",
     rating: 4.8,
     reviews: 312,
