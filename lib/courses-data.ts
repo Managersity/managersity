@@ -547,7 +547,7 @@ export const allCourses: Course[] = [
     price: "59 000 FCFA",
     rating: 4.8,
     reviews: 312,
-    img: "/cours/Pack-replays-classe-digitale..png",
+    img: "/cours/replay-classes-digitales.png",
     badge: "Nouveau",
     type: "Cours",
     href: "/cours/replay-classes-digitales",
