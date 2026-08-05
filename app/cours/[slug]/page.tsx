@@ -560,27 +560,55 @@ export default async function CoursPage({
           </section>
         )}
 
-        {/* Formateur — dark section */}
-        <section className="bg-gray-900 py-16">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-2xl font-black text-white mb-8">À propos du formateur</h2>
-            <div className="flex flex-col sm:flex-row items-start gap-6">
-              <div className={`w-16 h-16 rounded-full flex items-center justify-center font-black text-xl shrink-0 ${colors.badge} ring-4 ring-white/10`}>
-                HC
-              </div>
-              <div>
-                <p className="font-black text-white text-xl mb-1">Hermann H. CAKPO</p>
-                <p className={`text-sm font-semibold mb-4 ${colors.heroText}`}>Chairman — H&amp;C</p>
-                <p className="text-gray-300 text-sm leading-relaxed max-w-xl">
-                  Auteur de 96 livres, dirigeant de 17 entreprises et expert en management reconnu en Afrique de l&apos;Ouest et du Centre.
-                  Hermann H. CAKPO est l&apos;architecte des formations Managersity, dispensées aux meilleures organisations africaines —
-                  Orange, MTN, Ecobank, Rawbank, Attijariwafa, Air Côte d&apos;Ivoire et bien d&apos;autres.
-                  Sa pédagogie : directe, concrète, applicable dès le lendemain.
-                </p>
+        {/* Formateur — affiché uniquement si pas de témoignages */}
+        {(!course.testimonials || course.testimonials.length === 0) && (
+          <section className="bg-gray-900 py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-black text-white mb-8">À propos du formateur</h2>
+              <div className="flex flex-col sm:flex-row items-start gap-6">
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center font-black text-xl shrink-0 ${colors.badge} ring-4 ring-white/10`}>
+                  HC
+                </div>
+                <div>
+                  <p className="font-black text-white text-xl mb-1">Hermann H. CAKPO</p>
+                  <p className={`text-sm font-semibold mb-4 ${colors.heroText}`}>Chairman — H&amp;C</p>
+                  <p className="text-gray-300 text-sm leading-relaxed max-w-xl">
+                    Auteur de 96 livres, dirigeant de 17 entreprises et expert en management reconnu en Afrique de l&apos;Ouest et du Centre.
+                    Hermann H. CAKPO est l&apos;architecte des formations Managersity, dispensées aux meilleures organisations africaines —
+                    Orange, MTN, Ecobank, Rawbank, Attijariwafa, Air Côte d&apos;Ivoire et bien d&apos;autres.
+                    Sa pédagogie : directe, concrète, applicable dès le lendemain.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
+
+        {/* Témoignages participants — remplace le formateur quand défini */}
+        {course.testimonials && course.testimonials.length > 0 && (
+          <section className="bg-gray-900 py-16">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-black text-white mb-10 text-center uppercase tracking-wide">Ce Que Disent Les Participants</h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {course.testimonials.map((t, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col gap-4">
+                    <p className="text-3xl text-brand-gold leading-none">&ldquo;</p>
+                    <p className="text-gray-200 text-sm leading-relaxed flex-1">{t.quote}</p>
+                    <div className="flex items-center gap-3 mt-2">
+                      <div className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-sm shrink-0 ${colors.badge}`}>
+                        {t.name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="text-white font-bold text-sm">{t.name}</p>
+                        <p className={`text-xs ${colors.heroText}`}>{t.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Contenu de la formation — gray section */}
         {isRich && course.chapters && (

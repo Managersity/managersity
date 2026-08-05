@@ -19,6 +19,11 @@ export type CourseDetail = {
     title: string;
     paragraphs: string[];
   };
+  testimonials?: {
+    name: string;
+    role: string;
+    quote: string;
+  }[];
   bundledCourses?: {
     title: string;
     slug: string;
@@ -2119,6 +2124,18 @@ export const COURSES: CourseDetail[] = [
       {
         title: "Recruter vos meilleurs talents",
         desc: "Identifier et attirer les professionnels IA, évaluer leurs compétences et structurer leur intégration dans votre équipe.",
+      },
+    ],
+    testimonials: [
+      {
+        name: "Amadou-Diouldé BAH",
+        role: "Co-Gérant, FRIELCO ENGINEERING",
+        quote: "Ce workshop m'a apporté des outils formidables pour augmenter ma productivité. Les stratégies présentées sont concrètes et directement applicables. Je suis vraiment impressionné.",
+      },
+      {
+        name: "Wenceslas WOUEDJE",
+        role: "DRH, Nouvelle PSP Côte d'Ivoire",
+        quote: "Ce Workshop a été une opportunité de comprendre comment l'IA redessine le monde du travail et comment s'y préparer concrètement en tant que dirigeant RH.",
       },
     ],
     keywords: [
