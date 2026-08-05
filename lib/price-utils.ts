@@ -52,6 +52,7 @@ export const FCFA_PRICES: Record<string, number> = {
   "/cours/parcours-chef-de-service-5-0": 97000,
   "/cours/reussir-son-job-de-chef-de-service": 37000,
   "/cours/replay-classes-digitales": 59000,
+  "/cours/workshop-ia-recruter-employes": 39000,
 };
 
 const USD_TO_FCFA = 600;

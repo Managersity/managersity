@@ -542,6 +542,19 @@ export const allCourses: Course[] = [
 
   // Replay Classe Digitale
   {
+    title: "REPLAY IA Digital Workshop — Recruter ses Employés IA",
+    desc: "En 90 minutes, découvrez comment les entreprises leaders utilisent l'IA pour transformer leur recrutement. Stratégies concrètes, outils pratiques et ressources incluses.",
+    price: "39 000 FCFA",
+    rating: 4.9,
+    reviews: 87,
+    img: "/cours/workshop-ia-recruter-employes.png",
+    badge: "Nouveau",
+    type: "Cours",
+    href: "/cours/workshop-ia-recruter-employes",
+    category: "replay-classe-digitale",
+    enrollUrl: "https://www.managersity.co/enroll/3846524",
+  },
+  {
     title: "Pack Replay Classes Digitales MANAGERSITY",
     desc: "Accédez aux 48 replays des Classes Digitales MANAGERSITY pendant 12 mois : management, leadership, IA, organisation et progression professionnelle. Apprenez à votre rythme, sans dépendre du direct.",
     price: "59 000 FCFA",

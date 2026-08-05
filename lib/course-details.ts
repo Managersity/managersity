@@ -2067,6 +2067,70 @@ export const COURSES: CourseDetail[] = [
     ],
   },
 
+  // ── WORKSHOP IA — RECRUTER SES EMPLOYÉS IA ─────────────────────────────────
+  {
+    slug: "workshop-ia-recruter-employes",
+    title: "REPLAY IA Digital Workshop — Recruter ses Employés IA",
+    category: "Replay Classe Digitale",
+    price: 39000,
+    shopUrl: "https://shop.monpotentielcertifie.com/",
+    enrollUrl: "https://www.managersity.co/enroll/3846524",
+    ctaLabel: "Accéder à la Formation",
+    tagline: "Vous savez que l'IA est l'avenir. Mais comment l'intégrer vraiment dans votre organisation ? Ce workshop interactif de 90 minutes vous donne les réponses concrètes pour recruter les talents IA qui feront la différence.",
+    totalChapters: 2,
+    totalLessons: 10,
+    aboutSection: {
+      title: "À propos du Workshop",
+      paragraphs: [
+        "Vous savez que l'IA est l'avenir. Mais comment l'intégrer vraiment dans votre organisation ? Comment trouver et recruter les talents IA qui feront la différence ? Ce workshop interactif vous donne les réponses.",
+        "En 90 minutes, découvrez comment les entreprises leaders utilisent l'IA pour transformer leurs processus de recrutement. Ce replay s'adresse aux directeurs RH, responsables talent et entrepreneurs qui veulent des stratégies concrètes et immédiatement applicables.",
+        "Repartez avec un plan d'action clair, des outils prêts à l'emploi et la clarté nécessaire pour éviter les erreurs coûteuses dans votre transition IA.",
+      ],
+    },
+    learns: [
+      "Comprendre comment l'IA transforme le recrutement et la gestion des talents",
+      "Identifier les rôles et profils IA prioritaires pour votre organisation",
+      "Mettre en place des processus de recrutement IA efficaces et fiables",
+      "Construire un plan d'action concret sur 30 jours",
+      "Évaluer les compétences IA des candidats avec méthode",
+      "Éviter les erreurs coûteuses lors de l'intégration de l'IA dans vos équipes",
+    ],
+    chapters: [
+      "JOUR 1 — 30/07/2026 : Replay IA Digital Workshop",
+      "JOUR 2 — 31/07/2026 : Replay IA Digital Workshop",
+      "COMPTE RENDU DES 2 JOURS",
+      "KIT Fiche de Poste de mon Employé IA",
+      "KIT Mes 4 Fichiers de Contexte",
+      "KIT Créer mes Compétences Métier IA",
+      "CANEVAS de mon Système de Travail Augmenté",
+      "PLAN D'ACTION IA — 30 Jours",
+      "CAHIER D'EXERCICE — Ma Cartographie Métier",
+      "CHECKLIST de Fiabilité IA",
+    ],
+    benefits: [
+      {
+        title: "Maîtriser les fondamentaux",
+        desc: "Comprendre comment l'IA transforme le recrutement et la gestion des talents dans les organisations modernes.",
+      },
+      {
+        title: "Construire votre stratégie",
+        desc: "Développer un plan d'action concret avec les outils et bonnes pratiques pour recruter des talents IA.",
+      },
+      {
+        title: "Recruter vos meilleurs talents",
+        desc: "Identifier et attirer les professionnels IA, évaluer leurs compétences et structurer leur intégration dans votre équipe.",
+      },
+    ],
+    keywords: [
+      "workshop IA recrutement",
+      "recruter employes IA",
+      "intelligence artificielle RH",
+      "formation IA management",
+      "talents IA Afrique",
+      "classes digitales managersity",
+    ],
+  },
+
   // ── REPLAY CLASSES DIGITALES ────────────────────────────────────────────────
   {
     slug: "replay-classes-digitales",
