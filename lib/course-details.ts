@@ -2073,7 +2073,7 @@ export const COURSES: CourseDetail[] = [
     title: "REPLAY IA Digital Workshop — Recruter ses Employés IA",
     category: "Replay Classe Digitale",
     price: 39000,
-    shopUrl: "https://shop.monpotentielcertifie.com/",
+    shopUrl: "https://shop.managersity.com/produit/digital-workshop-recruter-ses-employes-ia/",
     enrollUrl: "https://www.managersity.co/order?ct=a96bd4a0-9f0e-42fc-b4e0-a9c9bab5c056",
     ctaLabel: "Accéder à la Formation",
     tagline: "Vous savez que l'IA est l'avenir. Mais comment l'intégrer vraiment dans votre organisation ? Ce workshop interactif de 90 minutes vous donne les réponses concrètes pour recruter les talents IA qui feront la différence.",
