@@ -2078,6 +2078,7 @@ export const COURSES: CourseDetail[] = [
     title: "REPLAY IA Digital Workshop — Recruter ses Employés IA",
     category: "Replay Classe Digitale",
     price: 39000,
+    originalPrice: 79000,
     shopUrl: "https://shop.managersity.com/produit/digital-workshop-recruter-ses-employes-ia/",
     enrollUrl: "https://www.managersity.co/order?ct=a96bd4a0-9f0e-42fc-b4e0-a9c9bab5c056",
     ctaLabel: "Accéder à la Formation",
