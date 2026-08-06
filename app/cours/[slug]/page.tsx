@@ -337,11 +337,6 @@ export default async function CoursPage({
                       <span className={`text-2xl font-black ${colors.heroText}`}>{course.totalLessons}</span>
                       <span className="text-gray-400">{course.totalLessons === 1 ? "leçon" : "leçons"}</span>
                     </div>
-                    <div className="w-px h-6 bg-gray-700" />
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                      <span className="text-gray-300">Certificat inclus</span>
-                    </div>
                   </div>
                 )}
 
@@ -436,7 +431,7 @@ export default async function CoursPage({
                   </a>
 
                   <div className="space-y-2.5 text-xs text-gray-500 pt-1">
-                    {["Certificat reconnu inclus", "Accès à vie à la formation", "Mobile Money accepté"].map((item) => (
+                    {["Accès à vie à la formation", "Mobile Money accepté"].map((item) => (
                       <p key={item} className="flex items-center gap-2">
                         <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-[9px] font-black">✓</span>
                         {item}
