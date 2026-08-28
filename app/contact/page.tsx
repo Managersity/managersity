@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CreditCard, Globe2, Mail, Phone } from "lucide-react";
 
 export const metadata = {
   title: "Contact — MANAGERSITY by H&C",
@@ -46,25 +47,25 @@ export default function ContactPage() {
                 label: "E-mail support",
                 value: "contact@managersity.co",
                 href: "mailto:contact@managersity.co",
-                icon: "✉️",
+                icon: Mail,
               },
               {
                 label: "Téléphone",
                 value: "+221 78 190 74 84",
                 href: "tel:+221781907484",
-                icon: "📞",
+                icon: Phone,
               },
               {
                 label: "Paiement Mobile Money",
-                value: "shop.monpotentielcertifie.com",
-                href: "https://shop.monpotentielcertifie.com",
-                icon: "💳",
+                value: "shop.managersity.com",
+                href: "https://shop.managersity.com",
+                icon: CreditCard,
               },
               {
                 label: "Site internet",
                 value: "www.managersity.com",
                 href: "https://www.managersity.com",
-                icon: "🌐",
+                icon: Globe2,
               },
             ].map((c) => (
               <a
@@ -73,7 +74,7 @@ export default function ContactPage() {
                 className="flex items-center gap-4 p-5 bg-white border-2 border-[#1a5200]/10 rounded-xl shadow-sm hover:shadow-md hover:border-[#c4a800] transition-all"
               >
                 <div className="w-12 h-12 rounded-full bg-[#1a5200]/5 flex items-center justify-center text-2xl shrink-0">
-                  {c.icon}
+                  <c.icon aria-hidden="true" className="w-6 h-6 text-[#1a5200]" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs uppercase tracking-wide text-gray-500 font-semibold">
