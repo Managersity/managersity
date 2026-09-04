@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 
 const COURSE_URL = "https://www.managersity.co/products/courses/data-analytics-ia-pour-dirigeants";
@@ -20,6 +20,7 @@ export default function FreeCoursePopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [lead, setLead] = useState<Lead>(emptyLead);
+  const kartraSubmissionStarted = useRef(false);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsOpen(true), 3000);
@@ -81,16 +82,21 @@ export default function FreeCoursePopup() {
               </button>
             ) : (
               <form
-                className="mt-6 grid gap-3"
+                className="form_class_Q6a8qIiUY3Za js_kartra_trackable_object mt-6 grid gap-3"
                 action={KARTRA_FORM_ACTION}
                 method="post"
                 target="kartra-free-course-submission"
+                data-kt-type="optin"
+                data-kt-value="Q6a8qIiUY3Za"
+                data-kt-owner="Agq60LWk"
+                acceptCharset="UTF-8"
                 onSubmit={() => {
-                  window.setTimeout(() => window.location.assign(COURSE_URL), 700);
+                  kartraSubmissionStarted.current = true;
                 }}
               >
                 <input type="hidden" name="aaddress_url" value="" aria-hidden="true" tabIndex={-1} readOnly />
-                <input type="hidden" name="first_name" value={`${lead.firstName.trim()} ${lead.lastName.trim()}`.trim()} readOnly />
+                <input type="hidden" name="first_name" value={lead.firstName.trim()} readOnly />
+                <input type="hidden" name="last_name" value={lead.lastName.trim()} readOnly />
                 <div className="grid gap-3 sm:grid-cols-2">
                   <label className="grid gap-1 text-sm font-medium text-slate-700">Prenom<input required value={lead.firstName} onChange={(event) => setLead({ ...lead, firstName: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
                   <label className="grid gap-1 text-sm font-medium text-slate-700">Nom<input required value={lead.lastName} onChange={(event) => setLead({ ...lead, lastName: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
@@ -105,7 +111,16 @@ export default function FreeCoursePopup() {
             )}
           </div>
         </div>
-        <iframe name="kartra-free-course-submission" title="Soumission Kartra" className="hidden" />
+        <iframe
+          name="kartra-free-course-submission"
+          title="Soumission Kartra"
+          className="hidden"
+          onLoad={() => {
+            if (!kartraSubmissionStarted.current) return;
+            kartraSubmissionStarted.current = false;
+            window.location.assign(COURSE_URL);
+          }}
+        />
       </div>
     </div>
   );
