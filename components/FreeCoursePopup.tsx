@@ -20,12 +20,13 @@ const emptyLead: Lead = { firstName: "", lastName: "", email: "", phone: "", rol
 export default function FreeCoursePopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [isExitIntent, setIsExitIntent] = useState(false);
   const [lead, setLead] = useState<Lead>(emptyLead);
   const [isKartraReady, setIsKartraReady] = useState(false);
   const kartraSubmissionStarted = useRef(false);
 
   useEffect(() => {
-    const openOnce = () => {
+    const openOnce = (fromExitIntent = false) => {
       if (window.sessionStorage.getItem(POPUP_SESSION_KEY)) return;
       window.sessionStorage.setItem(POPUP_SESSION_KEY, "true");
       setIsOpen(true);
@@ -35,7 +36,7 @@ export default function FreeCoursePopup() {
 
     const timer = window.setTimeout(openOnce, 3000);
     const handleExitIntent = (event: MouseEvent) => {
-      if (event.clientY <= 0) openOnce();
+      if (event.clientY <= 0) openOnce(true);
     };
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setIsOpen(false);
@@ -109,6 +110,11 @@ export default function FreeCoursePopup() {
           />
 
           <div className="p-6 sm:p-8">
+{isExitIntent && (
+              <p className="mb-3 rounded-lg bg-brand-gold/15 px-3 py-2 text-sm font-semibold text-brand-green">
+                Avant de quitter, profitez gratuitement de ce cours exclusif.
+              </p>
+            )}
             <p className="mb-2 text-sm font-bold uppercase tracking-wide text-brand-gold">Cours gratuit - 100 % en ligne</p>
             <h2 id="free-course-title" className="text-3xl font-bold leading-tight text-brand-green">Data Analytics &amp; IA pour les dirigeants</h2>
             <p className="mt-4 text-base leading-relaxed text-slate-600">Comment exploiter les donnees de votre organisation, construire des analyses utiles et faire de l&apos;IA un veritable outil de decision.</p>
