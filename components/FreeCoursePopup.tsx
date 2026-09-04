@@ -93,7 +93,7 @@ export default function FreeCoursePopup() {
         if (event.target === event.currentTarget) close();
       }}
     >
-      <div className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
+      <div className={`relative max-h-[90vh] w-full overflow-y-auto rounded-2xl bg-white shadow-2xl ${!showForm ? "max-w-[310px]" : "max-w-xl"}`}>
         <button
           type="button"
           onClick={close}
@@ -113,7 +113,7 @@ export default function FreeCoursePopup() {
             <img
               src="/Cours%20Gratuit.png"
               alt="Cours gratuit Data Analytics et IA pour les dirigeants"
-              className="max-h-[85vh] w-full object-contain"
+              className="h-[min(85vh,710px)] w-full object-cover object-right"
             />
           </button>
         ) : (
