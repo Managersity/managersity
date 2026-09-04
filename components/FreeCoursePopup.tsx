@@ -88,13 +88,16 @@ export default function FreeCoursePopup() {
         </button>
 
         <div className="grid md:grid-cols-[0.8fr_1.2fr]">
-          <div className="bg-slate-100">
-            <img
-              src="/Cours%20Gratuit.png"
-              alt="Cours gratuit Data Analytics et IA pour les dirigeants"
-              className="h-full max-h-[460px] w-full object-cover object-top"
-            />
-          </div>
+          <div
+            className="min-h-[350px] bg-slate-100 bg-no-repeat md:min-h-[500px]"
+            role="img"
+            aria-label="Portrait du dirigeant"
+            style={{
+              backgroundImage: "url('/Cours%20Gratuit.png')",
+              backgroundPosition: "right 20%",
+              backgroundSize: "240% auto",
+            }}
+          />
 
           <div className="p-6 sm:p-8">
             <p className="mb-2 text-sm font-bold uppercase tracking-wide text-brand-gold">Cours gratuit - 100 % en ligne</p>
