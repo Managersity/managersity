@@ -102,7 +102,7 @@ export default function FreeCoursePopup() {
           <div className="p-6 sm:p-8">
             <p className="mb-2 text-sm font-bold uppercase tracking-wide text-brand-gold">Cours gratuit - 100 % en ligne</p>
             <h2 id="free-course-title" className="text-3xl font-bold leading-tight text-brand-green">Data Analytics &amp; IA pour les dirigeants</h2>
-            <p className="mt-4 text-base leading-relaxed text-slate-600">Apprenez a exploiter les donnees de votre organisation, construire des analyses utiles et faire de l&apos;IA un veritable outil de decision.</p>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">Comment exploiter les donnees de votre organisation, construire des analyses utiles et faire de l&apos;IA un veritable outil de decision.</p>
 
             {!showForm ? (
               <button type="button" onClick={() => setShowForm(true)} className="mt-7 w-full rounded-lg bg-brand-green px-5 py-3 font-semibold text-white transition hover:bg-brand-green/85">
