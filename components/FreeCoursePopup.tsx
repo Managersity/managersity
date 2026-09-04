@@ -103,15 +103,20 @@ export default function FreeCoursePopup() {
           <X className="h-5 w-5" />
         </button>
 
-        <div className="grid md:grid-cols-[0.8fr_1.2fr]">
-          <div className="bg-slate-100">
+        {!showForm ? (
+          <button
+            type="button"
+            onClick={() => setShowForm(true)}
+            className="block w-full overflow-hidden text-left"
+            aria-label="Ouvrir le formulaire d'accès au cours gratuit"
+          >
             <img
               src="/Cours%20Gratuit.png"
               alt="Cours gratuit Data Analytics et IA pour les dirigeants"
-              className="h-full max-h-[460px] w-full object-cover object-top"
+              className="max-h-[85vh] w-full object-contain"
             />
-          </div>
-
+          </button>
+        ) : (
           <div className="p-6 sm:p-8">
             <p className="mb-2 text-sm font-bold uppercase tracking-wide text-brand-gold">
               Cours gratuit · 100 % en ligne
@@ -123,15 +128,7 @@ export default function FreeCoursePopup() {
               Apprenez à exploiter les données de votre organisation, construire des analyses utiles et faire de l&apos;IA un véritable outil de décision.
             </p>
 
-            {!showForm ? (
-              <button
-                type="button"
-                onClick={() => setShowForm(true)}
-                className="mt-7 w-full rounded-lg bg-brand-green px-5 py-3 font-semibold text-white transition hover:bg-brand-green/85"
-              >
-                Accéder gratuitement au cours
-              </button>
-            ) : isSubmitted ? (
+            {isSubmitted ? (
               <div className="mt-7 rounded-xl border border-brand-green/20 bg-green-50 p-5">
                 <p className="font-semibold text-brand-green">Votre inscription est bien enregistrée.</p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -177,7 +174,7 @@ export default function FreeCoursePopup() {
               </form>
             )}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
