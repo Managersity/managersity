@@ -20,6 +20,7 @@ export default function FreeCoursePopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [lead, setLead] = useState<Lead>(emptyLead);
+  const [isKartraReady, setIsKartraReady] = useState(false);
   const kartraSubmissionStarted = useRef(false);
 
   useEffect(() => {
@@ -40,6 +41,30 @@ export default function FreeCoursePopup() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!showForm) return;
+
+    const loadScript = (src: string) => new Promise<void>((resolve) => {
+      if (document.querySelector(`script[src="${src}"]`)) {
+        resolve();
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = src;
+      script.async = true;
+      script.onload = () => resolve();
+      script.onerror = () => resolve();
+      document.body.appendChild(script);
+    });
+
+    void (async () => {
+      await loadScript("https://app.kartra.com/js/node_modules/kartra-jquery/jquery-1.11.3/jquery-1.11.3.min.js");
+      await loadScript("https://app.kartra.com/resources/js/analytics/Agq60LWk");
+      await loadScript("https://app.kartra.com/resources/js/optin_front_javascript?form_id=e034fb6b66aacc1d48f445ddfb08da98&optin_hash=Q6a8qIiUY3Za&khoi=Agq60LWk");
+      await loadScript("https://app.kartra.com/js/santitation.js");
+      setIsKartraReady(true);
+    })();
+  }, [showForm]);
   if (!isOpen) return null;
 
   return (
@@ -95,18 +120,19 @@ export default function FreeCoursePopup() {
                 }}
               >
                 <input type="hidden" name="aaddress_url" value="" aria-hidden="true" tabIndex={-1} readOnly />
-                <input type="hidden" name="first_name" value={lead.firstName.trim()} readOnly />
-                <input type="hidden" name="last_name" value={lead.lastName.trim()} readOnly />
+                <input type="hidden" className="js_kartra_santitation" data-santitation-type="front_name" name="first_name" value={lead.firstName.trim()} readOnly />
+                <input type="hidden" className="js_kartra_santitation" data-santitation-type="front_name" name="last_name" value={lead.lastName.trim()} readOnly />
                 <div className="grid gap-3 sm:grid-cols-2">
                   <label className="grid gap-1 text-sm font-medium text-slate-700">Prenom<input required value={lead.firstName} onChange={(event) => setLead({ ...lead, firstName: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
                   <label className="grid gap-1 text-sm font-medium text-slate-700">Nom<input required value={lead.lastName} onChange={(event) => setLead({ ...lead, lastName: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
                 </div>
-                <label className="grid gap-1 text-sm font-medium text-slate-700">Adresse e-mail<input required type="email" name="email" value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
+                <label className="grid gap-1 text-sm font-medium text-slate-700">Adresse e-mail<input required type="email" className="js_kartra_santitation rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" data-santitation-type="email" name="email" value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} /></label>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <label className="grid gap-1 text-sm font-medium text-slate-700">Numero de telephone<input required type="tel" name="custom_801" value={lead.phone} onChange={(event) => setLead({ ...lead, phone: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
-                  <label className="grid gap-1 text-sm font-medium text-slate-700">Fonction<input required name="custom_913" value={lead.role} onChange={(event) => setLead({ ...lead, role: event.target.value })} className="rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" /></label>
+                  <label className="grid gap-1 text-sm font-medium text-slate-700">Numero de telephone<input required type="tel" className="js_kartra_santitation rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" data-santitation-type="normal" name="custom_801" value={lead.phone} onChange={(event) => setLead({ ...lead, phone: event.target.value })} /></label>
+                  <label className="grid gap-1 text-sm font-medium text-slate-700">Fonction<input required className="js_kartra_santitation rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20" data-santitation-type="normal" name="custom_913" value={lead.role} onChange={(event) => setLead({ ...lead, role: event.target.value })} /></label>
                 </div>
-                <button className="mt-2 rounded-lg bg-brand-green px-5 py-3 font-semibold text-white transition hover:bg-brand-green/85">Envoyer et acceder au cours</button>
+                <div className="js_captcha_wrapper" />
+                <button type="submit" disabled={!isKartraReady} className="mt-2 rounded-lg bg-brand-green px-5 py-3 font-semibold text-white transition hover:bg-brand-green/85 disabled:cursor-wait disabled:opacity-60">{isKartraReady ? "Envoyer et acceder au cours" : "Preparation du formulaire..."}</button>
               </form>
             )}
           </div>
