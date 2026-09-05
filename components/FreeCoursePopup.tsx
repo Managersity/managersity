@@ -5,7 +5,6 @@ import { X } from "lucide-react";
 
 const COURSE_URL = "https://www.managersity.co/products/courses/data-analytics-ia-pour-dirigeants";
 const KARTRA_FORM_ACTION = "https://app.kartra.com/process/add_lead/Q6a8qIiUY3Za";
-const POPUP_SESSION_KEY = "managersity-free-course-popup-shown";
 
 type Lead = {
   firstName: string;
@@ -26,17 +25,14 @@ export default function FreeCoursePopup() {
   const kartraSubmissionStarted = useRef(false);
 
   useEffect(() => {
-    const openOnce = (fromExitIntent = false) => {
-      if (window.sessionStorage.getItem(POPUP_SESSION_KEY)) return;
-      window.sessionStorage.setItem(POPUP_SESSION_KEY, "true");
+    const openPopup = (fromExitIntent = false) => {
+      setIsExitIntent(fromExitIntent);
       setIsOpen(true);
     };
 
-    if (window.sessionStorage.getItem(POPUP_SESSION_KEY)) return;
-
-    const timer = window.setTimeout(openOnce, 3000);
+    const timer = window.setTimeout(() => openPopup(), 3000);
     const handleExitIntent = (event: MouseEvent) => {
-      if (event.clientY <= 0) openOnce(true);
+      if (event.clientY <= 0) openPopup(true);
     };
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setIsOpen(false);
