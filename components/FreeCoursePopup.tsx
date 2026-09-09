@@ -83,7 +83,7 @@ export default function FreeCoursePopup() {
         if (event.target === event.currentTarget) setIsOpen(false);
       }}
     >
-      <div className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
+      <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
         <button
           type="button"
           onClick={() => setIsOpen(false)}
@@ -93,9 +93,9 @@ export default function FreeCoursePopup() {
           <X className="h-5 w-5" />
         </button>
 
-        <div className="grid md:grid-cols-[0.8fr_1.2fr]">
+        <div className="grid md:grid-cols-2">
           <div
-            className="min-h-[350px] bg-slate-100 bg-no-repeat md:min-h-[500px]"
+            className="h-48 bg-slate-100 bg-no-repeat sm:h-56 md:h-auto"
             role="img"
             aria-label="Portrait du dirigeant"
             style={{
@@ -117,7 +117,7 @@ export default function FreeCoursePopup() {
 
             {!showForm ? (
               <button type="button" onClick={() => setShowForm(true)} className="mt-7 w-full rounded-lg bg-brand-green px-5 py-3 font-semibold text-white transition hover:bg-brand-green/85">
-                Acceder gratuitement au cours
+                Je m&apos;inscris gratuitement
               </button>
             ) : (
               <form
