@@ -94,15 +94,16 @@ export default function FreeCoursePopup() {
         </button>
 
         <div className="grid md:grid-cols-2">
-          <div className="h-48 bg-slate-100 sm:h-56 md:h-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/Cours%20Gratuit.png"
-              alt="Portrait du dirigeant"
-              className="h-full w-full object-cover"
-              style={{ objectPosition: "78% 12%" }}
-            />
-          </div>
+          <div
+            className="h-48 bg-slate-100 bg-no-repeat sm:h-56 md:h-auto"
+            role="img"
+            aria-label="Portrait du dirigeant"
+            style={{
+              backgroundImage: "url('/Cours%20Gratuit.png')",
+              backgroundPosition: "96% 24%",
+              backgroundSize: "260% auto",
+            }}
+          />
 
           <div className="p-6 sm:p-8">
 {isExitIntent && (
