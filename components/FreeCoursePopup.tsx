@@ -99,9 +99,9 @@ export default function FreeCoursePopup() {
             role="img"
             aria-label="Portrait du dirigeant"
             style={{
-              backgroundImage: "url('/Cours%20Gratuit.png')",
-              backgroundPosition: "96% 24%",
-              backgroundSize: "260% auto",
+              backgroundImage: "url('/le%20monsieur.png')",
+              backgroundPosition: "center top",
+              backgroundSize: "cover",
             }}
           />
 
