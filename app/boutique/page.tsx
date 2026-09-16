@@ -68,7 +68,7 @@ const PRODUCTS: Product[] = [
     url: "https://shop.managersity.com/produit/ia-pour-les-managers/",
   },
   {
-    title: "IA pour Assistants & Professionnels : Le cours complet",
+    title: "IA pour Assistants & Professionnels",
     category: "Intelligence Artificielle",
     price: 29000,
     originalPrice: 97000,

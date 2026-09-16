@@ -46,8 +46,8 @@ export const allCourses: Course[] = [
     category: "intelligence-artificielle",
   },
   {
-    title: "IA pour Assistants & Professionnels : Le Cours Complet",
-    desc: "Boostez votre carrière avec l'IA. Automatisation des tâches répétitives, création de contenu optimisée, productivité x3.",
+    title: "IA pour Assistants & Professionnels",
+    desc: "Formation IA pour professionnels : maîtrisez ChatGPT, Claude et Gemini pour rédiger, analyser et décider 3x plus vite au quotidien.",
     price: "$57",
     rating: 4.7,
     reviews: 2024,

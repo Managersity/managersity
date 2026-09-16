@@ -280,13 +280,23 @@ export const COURSES: CourseDetail[] = [
 
   {
     slug: "ia-pour-les-professionnels",
-    title: "IA pour Assistants & Professionnels : Le Cours Complet",
+    title: "IA pour Assistants & Professionnels",
     category: "Intelligence Artificielle",
     price: 29000,
     originalPrice: 97000,
     shopUrl: "https://shop.managersity.com/produit/ia-pour-les-professionnels/",
     enrollUrl: "https://www.managersity.co/enroll/3499319",
-    tagline: "Comment les professionnels qui maîtrisent l'IA produisent en 2 heures ce qui prend 2 jours à leurs collègues. L'IA devient votre copilote.",
+    tagline: "Formation IA pour professionnels et assistants : maîtrisez ChatGPT, Claude et Gemini pour produire en 2 heures ce que vos collègues font en 2 jours.",
+    keywords: [
+      "IA pour professionnels",
+      "IA pour assistants",
+      "formation ChatGPT",
+      "prompt engineering",
+      "productivité IA au travail",
+      "assistant IA personnel",
+      "IA pour le travail de bureau",
+      "formation intelligence artificielle en ligne",
+    ],
     totalChapters: 1,
     totalLessons: 5,
     learns: [
