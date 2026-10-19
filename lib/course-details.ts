@@ -2165,8 +2165,7 @@ export const COURSES: CourseDetail[] = [
     title: "REPLAY Workshop — Planification Stratégique, Budget et Pilotage Optimisés par l'IA",
     category: "Replay Classe Digitale",
     price: 59000,
-    // TODO: remplacer par le lien de paiement mobile money dédié
-    shopUrl: "https://shop.managersity.com/",
+    shopUrl: "https://shop.managersity.com/produit/planification-strategique-budget-pilotage-optimises-par-lia/",
     enrollUrl: "https://www.managersity.co/enroll/3912840",
     ctaLabel: "Accéder maintenant",
     tagline: "Intégrez l'IA dans la préparation et l'exécution de votre plan 2027. Affinez votre plan stratégique, alignez vos budgets et structurez vos plans d'action grâce à des outils et agents IA. Le replay du workshop pour les DG, CODIR et managers d'Afrique francophone.",
