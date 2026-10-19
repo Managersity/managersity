@@ -542,6 +542,19 @@ export const allCourses: Course[] = [
 
   // Replay Classe Digitale
   {
+    title: "REPLAY Workshop — Data Analytics et IA pour les Dirigeants",
+    desc: "Transformez vos données en décisions plus rapides : identifiez les bons indicateurs, détectez les écarts plus tôt et utilisez l'IA pour analyser, anticiper et automatiser, sans coder.",
+    price: "39 000 FCFA",
+    rating: 4.9,
+    reviews: 58,
+    img: "/cours/data-analytics-ai-dirigeants.jpg",
+    badge: "Nouveau",
+    type: "Cours",
+    href: "/cours/data-analytics-ai-dirigeants",
+    category: "replay-classe-digitale",
+    enrollUrl: "https://www.managersity.co/enroll/3893431",
+  },
+  {
     title: "REPLAY Workshop — Planification Stratégique, Budget et Pilotage Optimisés par l'IA",
     desc: "Intégrez l'IA dans la préparation et l'exécution de votre plan 2027 : affinez votre stratégie, alignez budgets et plans d'action, pilotez votre CODIR avec des outils et agents IA.",
     price: "59 000 FCFA",

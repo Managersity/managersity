@@ -2159,6 +2159,79 @@ export const COURSES: CourseDetail[] = [
     ],
   },
 
+  // ── REPLAY WORKSHOP — DATA ANALYTICS ET IA POUR LES DIRIGEANTS ─────────────
+  {
+    slug: "data-analytics-ai-dirigeants",
+    title: "REPLAY Workshop — Data Analytics et IA pour les Dirigeants",
+    category: "Replay Classe Digitale",
+    price: 39000,
+    shopUrl: "https://shop.managersity.com/produit/replay-workshop-data-analytics-et-ia-pour-les-dirigeants/",
+    enrollUrl: "https://www.managersity.co/enroll/3893431",
+    ctaLabel: "Accéder maintenant",
+    tagline: "Transformez vos données en décisions plus rapides. Revivez le workshop Data Analytics & AI en replay. Apprenez à identifier les bons indicateurs, à détecter les écarts plus tôt et à utiliser l'IA pour analyser, anticiper et automatiser, sans avoir besoin de coder.",
+    totalChapters: 2,
+    totalLessons: 8,
+    aboutSection: {
+      title: "À propos de cette formation",
+      paragraphs: [
+        "Vos données sont déjà là. Mais vos décisions arrivent-elles assez vite ?",
+        "Dans beaucoup d'organisations, les informations existent mais restent dispersées entre fichiers, outils et équipes. Les tableaux de bord affichent des chiffres sans dire où regarder, et les écarts sont détectés quand ils ont déjà impacté la performance.",
+        "Ce workshop de deux journées vous donne une méthode simple pour passer de la donnée disponible à l'action automatisée : Voir, Comprendre, Anticiper, Automatiser.",
+        "Que vous dirigiez une entreprise, une direction ou une équipe, ou que vous travailliez avec des KPI, des reportings ou des analyses, cette formation vous équipera avec des méthodes concrètes. Aucun prérequis technique n'est nécessaire. Rejoignez-nous et commencez votre transformation dès aujourd'hui !",
+      ],
+    },
+    learns: [
+      "Cartographier les données utiles de votre organisation (ventes, finance, opérations, clients, RH)",
+      "Distinguer les indicateurs de résultat, d'alerte et réellement actionnables",
+      "Utiliser l'IA pour analyser, résumer et anticiper, sans coder",
+      "Bâtir un plan Data & AI concret sur 90 jours",
+    ],
+    chapters: [
+      "REPLAY WORKSHOP JOUR 1",
+      "REPLAY WORKSHOP JOUR 2",
+      "CAS PRATIQUE 1 - BANQUE PARCOURS-ANALYSE DONNEES",
+      "ETUDE DE CAS PRATIQUE DE LA DONNEE A LA MODELISATION",
+      "ETUDE DE CAS: SEGMENTATION 4V PORTEFEUILLE BANCAIRE",
+      "OUTIL ANALYSE PORTEFEUILLE ASSURANCE 2",
+      "GUIDE 40 FORMULES DATA ANALYTICS IA",
+      "FICHE PREPARER VOS DONNEES AVANT IA",
+    ],
+    benefits: [
+      {
+        title: "Pilotez avec les bons indicateurs",
+        desc: "Repérez les données déjà présentes dans votre organisation et reliez-les aux décisions à prendre. Construisez un tableau de bord minimal de 8 à 12 KPI réellement actionnables.",
+      },
+      {
+        title: "Anticipez avec l'IA",
+        desc: "Passez des analyses descriptives aux analyses diagnostiques, prédictives et prescriptives. Interrogez, résumez et analysez vos données avec l'IA, sans coder.",
+      },
+      {
+        title: "Automatisez l'essentiel",
+        desc: "Accélérez vos analyses récurrentes, vos reportings et vos alertes. Priorisez vos cas d'usage par valeur et effort, puis installez un rituel de pilotage.",
+      },
+    ],
+    testimonials: [
+      {
+        name: "Ghislain OMANI ONDAMBI",
+        role: "Inspecteur des finances",
+        quote: "Un workshop très enrichissant qui renforce ma compréhension de la Data Analytics et de l'IA comme leviers d'aide à la décision : des acquis particulièrement utiles dans le cadre de ma formation en Management Stratégique et Intelligence Économique à l'EGE de Paris.",
+      },
+      {
+        name: "FORTUNE BLAISE",
+        role: "Chef de Service Développement du Capital Humain",
+        quote: "Une nouvelle approche de l'IA, directement applicable dans la mise en œuvre de mes activités.",
+      },
+    ],
+    keywords: [
+      "data analytics dirigeants",
+      "IA pour dirigeants",
+      "KPI tableau de bord",
+      "analyse de données sans coder",
+      "workshop data IA Afrique",
+      "classes digitales managersity",
+    ],
+  },
+
   // ── REPLAY WORKSHOP — PLANIFICATION STRATÉGIQUE, BUDGET ET PILOTAGE IA ──────
   {
     slug: "planification-strategique-budget-pilotage",

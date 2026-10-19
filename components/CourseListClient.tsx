@@ -135,6 +135,7 @@ const FCFA_PRICES: Record<string, number> = {
   "/cours/replay-classes-digitales": 59000,
   "/cours/workshop-ia-recruter-employes": 39000,
   "/cours/planification-strategique-budget-pilotage": 59000,
+  "/cours/data-analytics-ai-dirigeants": 39000,
 };
 
 const USD_TO_FCFA = 600;
@@ -305,7 +306,7 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
         // Parcours Dirigeant et Middle Manager apparaissent aussi dans Parcours
         if (target === "parcours" && ALSO_IN_PARCOURS.has(c.href)) return true;
         // Certains replays apparaissent aussi en Intelligence Artificielle
-        if (target === "intelligence-artificielle" && c.href === "/cours/planification-strategique-budget-pilotage") return true;
+        if (target === "intelligence-artificielle" && (c.href === "/cours/planification-strategique-budget-pilotage" || c.href === "/cours/data-analytics-ai-dirigeants")) return true;
         return false;
       });
     }

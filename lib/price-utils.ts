@@ -54,6 +54,7 @@ export const FCFA_PRICES: Record<string, number> = {
   "/cours/replay-classes-digitales": 59000,
   "/cours/workshop-ia-recruter-employes": 39000,
   "/cours/planification-strategique-budget-pilotage": 59000,
+  "/cours/data-analytics-ai-dirigeants": 39000,
 };
 
 const USD_TO_FCFA = 600;

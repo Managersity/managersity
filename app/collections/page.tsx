@@ -70,7 +70,7 @@ export default function CollectionsPage() {
                 // Certains cours Management Commercial apparaissent aussi en Vendeur Elite
                 if (cat.slug === "vendeur-elite-expert-4-0" && VENDEUR_ELITE_FROM_MC.has(c.href)) return true;
                 // Certains replays apparaissent aussi en Intelligence Artificielle
-                if (cat.slug === "intelligence-artificielle" && c.href === "/cours/planification-strategique-budget-pilotage") return true;
+                if (cat.slug === "intelligence-artificielle" && (c.href === "/cours/planification-strategique-budget-pilotage" || c.href === "/cours/data-analytics-ai-dirigeants")) return true;
                 return false;
               }).length;
               return (

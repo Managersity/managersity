@@ -64,6 +64,7 @@ export default async function CategoryPage({
   ]);
   const REPLAY_ALSO_IN_IA = new Set<string>([
     "/cours/planification-strategique-budget-pilotage",
+    "/cours/data-analytics-ai-dirigeants",
   ]);
   const matchesCategory = (cat: string, href?: string) => {
     if (slug === "tous-les-cours") return true;
