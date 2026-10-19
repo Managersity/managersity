@@ -2159,6 +2159,81 @@ export const COURSES: CourseDetail[] = [
     ],
   },
 
+  // ── REPLAY WORKSHOP — PLANIFICATION STRATÉGIQUE, BUDGET ET PILOTAGE IA ──────
+  {
+    slug: "planification-strategique-budget-pilotage",
+    title: "REPLAY Workshop — Planification Stratégique, Budget et Pilotage Optimisés par l'IA",
+    category: "Replay Classe Digitale",
+    price: 39000,
+    originalPrice: 59000,
+    // TODO: remplacer par le lien de paiement mobile money dédié
+    shopUrl: "https://shop.managersity.com/",
+    enrollUrl: "https://www.managersity.co/enroll/3912840",
+    ctaLabel: "Accéder maintenant",
+    tagline: "Intégrez l'IA dans la préparation et l'exécution de votre plan 2027. Affinez votre plan stratégique, alignez vos budgets et structurez vos plans d'action grâce à des outils et agents IA. Le replay du workshop pour les DG, CODIR et managers d'Afrique francophone.",
+    totalChapters: 2,
+    totalLessons: 20,
+    aboutSection: {
+      title: "À propos de cette formation",
+      paragraphs: [
+        "Votre stratégie est claire. Mais vos budgets et vos plans d'action suivent-ils vraiment ?",
+        "Dans beaucoup d'entreprises, la stratégie est claire en CODIR mais se dilue en route : les budgets suivent leur propre logique, les plans d'action restent flous pour les directions, et les écarts apparaissent quand la performance est déjà touchée.",
+        "Ce workshop de deux sessions vous donne une méthode et des outils IA pour passer de la stratégie à l'exécution : relier vos choix stratégiques, votre budget, vos plans d'action et votre pilotage CODIR.",
+        "Que vous soyez DG, DGA, membre de CODIR ou manager, ce replay vous équipera avec des méthodes concrètes. Accédez au replay et commencez dès aujourd'hui !",
+      ],
+    },
+    learns: [
+      "Affiner vos choix stratégiques et traiter les vrais enjeux de votre entreprise",
+      "Construire des budgets cohérents avec vos ambitions et défendre vos arbitrages",
+      "Transformer vos orientations en plans d'action que chaque direction peut exécuter",
+      "Renforcer le pilotage CODIR avec des outils IA et un agent IA de pilotage",
+    ],
+    chapters: [
+      "REPLAY WORKSHOP - JOUR 1",
+      "REPLAY WORKSHOP - JOUR 2",
+      "CAHIER D'EXERCICE - BUDGET_COHERENT_PARTICIPANT",
+      "CANEVAS_DE TRAVAIL - Diagnostic_FeuilleDeRoute_IA",
+      "ATELIER 1 - L'EXCELLENCE VISIONNAIRE POUR TRANSFORMER UNE ORGANISATION",
+      "ATELIER 2 - CONCRETISER POUR LA TRANSFORMATION VISIONNAIRE",
+      "ATELIER 3 - FEUILLE DE ROUTE - TRANSFORMATION ENTREPRISE",
+      "DEPLOIEMENT VISIONNAIRE AUGMENTE IA",
+      "DEFINIR ET STRUCTURER UNE VISION DE A à Z",
+      "L'AUDACE DE TRANSFORMER UNE ORGANISATION",
+      "STRUCTURATION VISIONNAIRE : MODE D'EMPLOI",
+      "L'ART DE STRUCTURER SON AUDACE DE REVER",
+      "PROMPT UTILISE EN LIVE",
+      "FORMULE DE PROMPT A UTILISER PEU IMPORTE NOTRE SECTEUR",
+      "CS - CEO ADVISOR",
+      "DU PLAN STRATEGIQUE AU BUDGET COHERENT",
+      "ATELIER BUDGET COHERENT - CORRIGE ANIMATEUR",
+      "ATELIER BUDGET COHERENT - PARTICIPANT",
+      "ATELIER PLAN DE DIRECTION - PARTICIPANT",
+      "LE PROMPT EN LIVE",
+    ],
+    benefits: [
+      {
+        title: "Affinez votre stratégie",
+        desc: "Clarifiez vos choix et traitez les vrais enjeux de votre entreprise, au-delà de ce que le plan affiche.",
+      },
+      {
+        title: "Alignez budget et plans d'action",
+        desc: "Construisez des budgets cohérents avec vos ambitions et donnez à chaque direction un plan qu'elle peut exécuter.",
+      },
+      {
+        title: "Pilotez avec l'IA",
+        desc: "Renforcez votre CODIR avec des outils et un agent IA de pilotage, configuré à partir des prompts et du canevas du workshop.",
+      },
+    ],
+    keywords: [
+      "planification stratégique IA",
+      "budget et pilotage CODIR",
+      "plan stratégique 2027",
+      "workshop IA dirigeants",
+      "agent IA de pilotage",
+      "classes digitales managersity",
+    ],
+  },
+
   // ── REPLAY CLASSES DIGITALES ────────────────────────────────────────────────
   {
     slug: "replay-classes-digitales",

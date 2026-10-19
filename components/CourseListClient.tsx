@@ -134,6 +134,7 @@ const FCFA_PRICES: Record<string, number> = {
   // Replay Classe Digitale
   "/cours/replay-classes-digitales": 59000,
   "/cours/workshop-ia-recruter-employes": 39000,
+  "/cours/planification-strategique-budget-pilotage": 39000,
 };
 
 const USD_TO_FCFA = 600;
@@ -303,6 +304,8 @@ function CourseListContent({ courses }: { courses: CourseListing[] }) {
         if (target === "vendeur-elite-expert-4-0" && VENDEUR_ELITE_FROM_MC.has(c.href)) return true;
         // Parcours Dirigeant et Middle Manager apparaissent aussi dans Parcours
         if (target === "parcours" && ALSO_IN_PARCOURS.has(c.href)) return true;
+        // Certains replays apparaissent aussi en Intelligence Artificielle
+        if (target === "intelligence-artificielle" && c.href === "/cours/planification-strategique-budget-pilotage") return true;
         return false;
       });
     }

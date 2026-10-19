@@ -62,6 +62,9 @@ export default async function CategoryPage({
     "/cours/dispositif-outils-de-pilotage-commercial",
     "/cours/lart-de-casser-la-baraque-pour-les-commerciaux",
   ]);
+  const REPLAY_ALSO_IN_IA = new Set<string>([
+    "/cours/planification-strategique-budget-pilotage",
+  ]);
   const matchesCategory = (cat: string, href?: string) => {
     if (slug === "tous-les-cours") return true;
     if (cat === slug) return true;
@@ -69,6 +72,8 @@ export default async function CategoryPage({
     if (slug === "transformation-digitale-4-0" && cat === "intelligence-artificielle") return true;
     // Certains cours Management Commercial apparaissent aussi en Vendeur Elite
     if (slug === "vendeur-elite-expert-4-0" && href && VENDEUR_ELITE_FROM_MC.has(href)) return true;
+    // Certains replays apparaissent aussi en Intelligence Artificielle
+    if (slug === "intelligence-artificielle" && href && REPLAY_ALSO_IN_IA.has(href)) return true;
     return false;
   };
 

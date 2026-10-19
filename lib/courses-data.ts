@@ -542,6 +542,19 @@ export const allCourses: Course[] = [
 
   // Replay Classe Digitale
   {
+    title: "REPLAY Workshop — Planification Stratégique, Budget et Pilotage Optimisés par l'IA",
+    desc: "Intégrez l'IA dans la préparation et l'exécution de votre plan 2027 : affinez votre stratégie, alignez budgets et plans d'action, pilotez votre CODIR avec des outils et agents IA.",
+    price: "39 000 FCFA",
+    rating: 4.9,
+    reviews: 64,
+    img: "/cours/planification-strategique-budget-pilotage.jpg",
+    badge: "Nouveau",
+    type: "Cours",
+    href: "/cours/planification-strategique-budget-pilotage",
+    category: "replay-classe-digitale",
+    enrollUrl: "https://www.managersity.co/enroll/3912840",
+  },
+  {
     title: "REPLAY IA Digital Workshop — Recruter ses Employés IA",
     desc: "En 90 minutes, découvrez comment les entreprises leaders utilisent l'IA pour transformer leur recrutement. Stratégies concrètes, outils pratiques et ressources incluses.",
     price: "39 000 FCFA",

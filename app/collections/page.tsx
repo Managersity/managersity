@@ -69,6 +69,8 @@ export default function CollectionsPage() {
                 if (cat.slug === "transformation-digitale-4-0" && c.category === "intelligence-artificielle") return true;
                 // Certains cours Management Commercial apparaissent aussi en Vendeur Elite
                 if (cat.slug === "vendeur-elite-expert-4-0" && VENDEUR_ELITE_FROM_MC.has(c.href)) return true;
+                // Certains replays apparaissent aussi en Intelligence Artificielle
+                if (cat.slug === "intelligence-artificielle" && c.href === "/cours/planification-strategique-budget-pilotage") return true;
                 return false;
               }).length;
               return (
