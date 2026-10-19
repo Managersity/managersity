@@ -2164,8 +2164,7 @@ export const COURSES: CourseDetail[] = [
     slug: "planification-strategique-budget-pilotage",
     title: "REPLAY Workshop — Planification Stratégique, Budget et Pilotage Optimisés par l'IA",
     category: "Replay Classe Digitale",
-    price: 39000,
-    originalPrice: 59000,
+    price: 59000,
     // TODO: remplacer par le lien de paiement mobile money dédié
     shopUrl: "https://shop.managersity.com/",
     enrollUrl: "https://www.managersity.co/enroll/3912840",

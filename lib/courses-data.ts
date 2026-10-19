@@ -544,7 +544,7 @@ export const allCourses: Course[] = [
   {
     title: "REPLAY Workshop — Planification Stratégique, Budget et Pilotage Optimisés par l'IA",
     desc: "Intégrez l'IA dans la préparation et l'exécution de votre plan 2027 : affinez votre stratégie, alignez budgets et plans d'action, pilotez votre CODIR avec des outils et agents IA.",
-    price: "39 000 FCFA",
+    price: "59 000 FCFA",
     rating: 4.9,
     reviews: 64,
     img: "/cours/planification-strategique-budget-pilotage.jpg",
