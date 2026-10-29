@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import ChatBot from "@/components/ChatBot";
 import OfferBanner from "@/components/OfferBanner";
-import FreeCoursePopup from "@/components/FreeCoursePopup";
 
 export default function SiteWidgets() {
   const pathname = usePathname();
@@ -15,7 +14,6 @@ export default function SiteWidgets() {
     <>
       <OfferBanner />
       <ChatBot />
-      <FreeCoursePopup />
     </>
   );
 }
